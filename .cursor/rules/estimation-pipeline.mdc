@@ -1,0 +1,18 @@
+---
+description: Follow CONTROL.md estimation pipeline when extracting modules or features from SOW/FRS/BRD/RFP documents
+alwaysApply: true
+---
+
+# Estimation Pipeline Rule
+
+When the user asks to extract modules, generate features, estimate effort, or run estimation from any SOW / FRS / BRD / RFP / functional document:
+
+1. **Read and follow** `CONTROL.md` (repo root) as the main control file.
+2. **Step 1:** Prepare a production-grade SOW from the draft/source as **both** `SoW_{ProjectCode}_Detailed.md` and `SoW_{ProjectCode}_Detailed.docx` (always dual format); ask clarifying questions first if gaps affect scope. Stop for SOW confirmation unless user skips.
+3. **Step 2–3:** Use `module_schema.md` — extract modules, write `{ProjectCode}_Modules.md`, create `modules/{NN}-{slug}/` folders.
+4. **Step 4:** Stop for user confirmation before features (unless user explicitly skips review).
+5. **Step 5:** Use `feature_schema.md` — one feature file per feature under each module’s `features/` folder.
+6. **Step 6:** Write internal `{ProjectCode}_Estimation_Summary.md` and `{ProjectCode}_Estimation_Summary_FeatureWise.md`.
+7. **Step 7:** Export `{ProjectCode}_Estimation_Summary_FeatureWise_Client.docx` — client-safe Word copy with no pipeline, schema, folder-path, or “generated” language.
+
+Do not invent a parallel workflow. Do not estimate during SOW drafting or module extraction. Do not design APIs, DB schemas, class diagrams, or wireframes. Do not share internal markdown summaries with the client; use the Step 7 Word export.
