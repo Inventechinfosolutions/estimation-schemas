@@ -11,6 +11,14 @@ DO NOT generate UI wireframes.
 
 Instead, understand the functional requirements and estimate the implementation required.
 
+Write each feature to:
+
+`{OutputRoot}/modules/{NN}-{slug}/features/F{NN}-{nnn}-{feature-slug}.md`
+
+Maintain `{OutputRoot}/modules/{NN}-{slug}/features/_index.md` with feature IDs, names, and hours.
+
+(OutputRoot defaults to `Projects/{ProjectFolder}/` per CONTROL.md.)
+
 For every feature generate the following sections.
 
 ***SECTION 1 - FEATURE SPECIFICATION
@@ -114,3 +122,29 @@ Use the Estimation Master for every estimate.
 Mention major complexity drivers in the Assumptions section.
 
 Be conservative and estimate for enterprise-grade implementation with production-quality code, validation, error handling, logging, security and unit testing.
+
+***FEATURE QUALITY RULES (hard)
+***
+- Each feature must be **specific** to the SOW capability — no generic template journeys (“provide a controlled enterprise capability”, “standard CRUD for the domain”).
+- Estimation tables must name **concrete** UI/API artefacts (e.g. “Role permission matrix screen”, “Payment reconciliation register”), not vague labels like “User experience and screens”.
+- Vary hours using the Estimation Master — do not stamp every feature in a module with the same total.
+- Prefer fewer, estimable features over screen-by-screen fragmentation, unless the SOW clearly separates capabilities.
+- After any feature hour or name change, regenerate CONTROL Steps 6–7 (internal summaries + client Word).
+
+***ACCESS / AUTHORISATION FEATURES
+***
+Model User & Role / access features according to the **access model confirmed in the SOW** (or Step 1 answers). Common patterns include:
+
+- Direct **User → Role → Permissions**
+- **Org-unit / department** scoped roles
+- **Person → Post/Position → Role → Permissions**, optionally with **Post → Manager Post**
+
+Do not impose any one pattern unless the source or user requires it. Keep external/customer portal login separate from internal staff access when the SOW distinguishes them.
+
+--------------------------------------------------
+TYPICAL WORKFLOW (aligned with CONTROL.md)
+--------------------------------------------------
+
+CONTROL Step 5: Generate features module-by-module using this schema
+CONTROL Step 6: Roll up `{ProjectCode}_Estimation_Summary.md` + `_FeatureWise.md`
+CONTROL Step 7: Client Word export (no pipeline/AI language)

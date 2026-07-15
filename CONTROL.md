@@ -16,11 +16,12 @@ When the user provides any SOW / FRS / BRD / RFP / functional document for modul
 Before starting, confirm:
 
 1. **Source document** — path to draft SOW / FRS / BRD / RFP / spec (`.md`, `.docx`, or other readable form)
-2. **Project code** — short code for file naming (e.g. `CPMS`, `LMS`, `HMS`)
-3. **Project name** — display name (e.g. `BDA Commercial Property Management System`)
+2. **Project code** — short code for file naming (e.g. `ERP`, `CRM`, `HMS`)
+3. **Project name** — display name (e.g. `Enterprise Housing Management System`)
 4. **Output root** — folder where SOW, modules file, and `modules/` will be created  
-   - Default: same directory as the source document  
-   - Example: `BDA_CMPS/`
+   - **Default:** `Projects/{ProjectFolder}/`  
+   - If the source already lives under a project folder, use that folder as OutputRoot  
+   - Do not create project outputs at the repo root next to CONTROL/schemas
 5. **SOW purpose** — RFP / internal estimation / both (default: RFP-ready business SOW)
 
 Do not proceed without a source document and project code.
@@ -94,15 +95,16 @@ Source Document (draft / outline)
 
 Before writing the detailed SOW, ask concise questions where answers change scope. Typical areas:
 
-1. Project code / display name / output filename  
-2. Audience: RFP for BDA vs internal estimation only  
+1. Project code / display name / output folder under `Projects/`  
+2. Audience: external RFP vs internal estimation only  
 3. In-scope vs out-of-scope boundaries (related systems, portals, migration)  
-4. Channels: officer portal, citizen portal, both  
-5. Integrations (payment, SMS, email, GIS, other BDA apps)  
-6. Whether Document Management / Workflow are separate modules or **embedded** in processes  
-7. Phasing (single Phase 1 vs multi-phase)  
-8. Legacy data migration yes/no  
-9. Any stack/hosting constraints — usually **no deep technical design** in BDA RFP SOWs  
+4. Channels: staff/officer portal, citizen/customer portal, both, or other  
+5. Integrations (payment, SMS, email, GIS, ERP, third-party apps)  
+6. Whether Document Management / Workflow are separate modules or **embedded** in processes (default: **embedded** unless source or user says otherwise)  
+7. Access / authorisation model — confirm what the source implies (e.g. user→role, org-unit based, or post/position based); do not assume a specific model  
+8. Phasing (single Phase 1 vs multi-phase)  
+9. Legacy data migration yes/no  
+10. Any stack/hosting constraints — usually **no deep technical design** in RFP-style business SOWs  
 
 If the user answers “assume defaults”, proceed with defaults stated as Assumptions in the SOW.
 
@@ -115,19 +117,20 @@ If the user answers “assume defaults”, proceed with defaults stated as Assum
 {OutputRoot}/SoW_{ProjectCode}_Detailed.docx
 ```
 
-Examples:
+Example pattern:
 
-- `BDA_CMPS/SoW_CPMS_Detailed.md` + `.docx`
-- `BDA_LayoutMaster/SoW_LMS_Detailed.md` + `.docx`
-- `BDA_Housing_Management/SoW_BHMS_Detailed.md` + `.docx`
+```text
+Projects/{ProjectFolder}/SoW_{ProjectCode}_Detailed.md
+Projects/{ProjectFolder}/SoW_{ProjectCode}_Detailed.docx
+```
 
 Keep the original draft source file unchanged (e.g. original draft `.docx` / short `SOW.md`).
 
-The `.md` file is the working source of truth for the pipeline. The `.docx` is the BDA/RFP review copy and must stay content-equivalent to the markdown (plain professional formatting; no pipeline/AI language).
+The `.md` file is the working source of truth for the pipeline. The `.docx` is the review/RFP copy and must stay content-equivalent to the markdown (plain professional formatting; no pipeline/AI language).
 
-### 1.3 Required SOW structure (RFP / BDA style)
+### 1.3 Required SOW structure (RFP / business style)
 
-Model quality and structure on existing production SOWs in this repo (e.g. `SoW_CPMS_Detailed.md`, `SoW_LMS_Detailed.md`). Include at minimum:
+Produce a clear, vendor-ready structure. Include at minimum (adapt section titles to the domain):
 
 1. Introduction  
 2. Project Overview  
@@ -136,8 +139,8 @@ Model quality and structure on existing production SOWs in this repo (e.g. `SoW_
 5. Solution Expectations (business-level; avoid deep tech stack / API design)  
 6. Consolidated Functional Modules (purpose, functional requirements, acceptance criteria)  
 7. End-to-End Workflows  
-8. Role-Based Access Control  
-9. Channels (officer / citizen) where applicable  
+8. Access Control / RBAC (describe the model confirmed with the user / implied by the source)  
+9. Channels (staff / citizen / customer / partner) where applicable  
 10. Integrations  
 11. Audit, Compliance & Security  
 12. Non-Functional Requirements  
@@ -152,10 +155,12 @@ Model quality and structure on existing production SOWs in this repo (e.g. `SoW_
 
 ### 1.4 SOW writing rules
 
-- Prefer **business / functional** language suitable for BDA RFP.  
+- Prefer **business / functional** language suitable for RFP or estimation review.  
 - Consolidate related capabilities; avoid one “module” per screen.  
-- Embed Document Management and Workflow **inside** business processes unless the user explicitly wants separate modules.  
-- Do **not** invent commercial property / layout / housing scope that the source does not support.  
+- Embed Document Management and Workflow **inside** business processes unless the user or source explicitly requires separate modules.  
+- Describe access control as confirmed (user→role, post/position based, etc.); do not invent an authorisation model the source does not support.  
+- Approval routing should match the confirmed access model (e.g. roles, posts, or org units — not hard-coded named individuals unless the source says so).  
+- Do **not** invent business scope that the source does not support.  
 - Do **not** estimate hours in this step.  
 - Do **not** design APIs, DB schemas, class diagrams, or wireframes.
 
@@ -183,7 +188,7 @@ Stop and ask the user to review/confirm the detailed SOW.
 {OutputRoot}/{ProjectCode}_Modules.md
 ```
 
-Example: `BDA_CMPS/CPMS_Modules.md`
+Example: `Projects/{ProjectFolder}/{ProjectCode}_Modules.md`
 
 **Output must include** (per `module_schema.md`)
 
@@ -268,8 +273,8 @@ For each module:
 Examples:
 
 ```text
-modules/04-revenue-billing-collections/features/F04-001-monthly-rent-demand.md
-modules/04-revenue-billing-collections/features/F04-002-online-payment-collection.md
+modules/04-revenue-billing/features/F04-001-monthly-demand.md
+modules/04-revenue-billing/features/F04-002-online-payment-collection.md
 ```
 
 **Feature ID convention**
@@ -303,6 +308,14 @@ With a table:
 - Invent business scope not supported by the source document / module definition
 
 **Batching:** If there are many modules, generate one module at a time and show a short progress summary after each, unless the user asks to run all in one pass.
+
+**Feature quality (hard rules)**
+
+- Each feature must be **specific** to the SOW capability (no generic template journeys such as “provide a controlled enterprise capability”).  
+- Estimation tables must name concrete UI/API artefacts (screens, registers, ledgers), not vague labels like “User experience and screens”.  
+- Vary hours using the Estimation Master — do not stamp every feature with the same total.  
+- Model **access / authorisation features** according to the confirmed access model from Step 1 / the SOW — do not impose a project-specific hierarchy unless the source or user requires it.  
+- After any feature hour or name change, regenerate Steps 6–7 (summaries + client docx).
 
 ---
 
@@ -352,14 +365,11 @@ Produce a **client-facing Word document** after Step 6. The client must not be a
 {OutputRoot}/{ProjectCode}_Estimation_Summary_FeatureWise_Client.docx
 ```
 
-Examples:
-
-- `BDA_CMPS/CPMS_Estimation_Summary_FeatureWise_Client.docx`
-- `BDA_LayoutMaster/LMS_Estimation_Summary_FeatureWise_Client.docx`
+Example: `Projects/{ProjectFolder}/{ProjectCode}_Estimation_Summary_FeatureWise_Client.docx`
 
 ### Content to include
 
-1. Cover block: organisation, project name, “Module & Feature-wise Effort Estimate”, “Client Copy · Effort in person-hours”  
+1. Cover block: organisation (if known), project name, “Module & Feature-wise Effort Estimate”, “Client Copy · Effort in person-hours”  
 2. Short plain-language intro (what the hours cover / do not cover)  
 3. Summary totals (recommended go-live / optional / all-in)  
 4. Module-wise summary (module name, type, feature count, hours, % of go-live)  
@@ -387,7 +397,7 @@ Do **not** include any of the following:
 
 ### Style rules
 
-- Write as a senior estimation / consulting deliverable for government RFP discussion.  
+- Write as a senior estimation / consulting deliverable suitable for RFP or commercial discussion.  
 - Keep Notes short and business-facing (what the feature does), not how hours were calculated.  
 - Prefer “Integrations” over raw technical module nicknames when speaking to the client, if clearer.  
 - Use professional Word formatting (clear headings, grid tables, readable fonts such as Calibri).  
@@ -407,25 +417,27 @@ If Steps 1–6 already exist, run **Step 7 only**: rebuild the `.docx` from the 
 ## Target Folder Layout
 
 ```text
-{OutputRoot}/
-├── {SourceDocument}                                      # user-provided draft
-├── SoW_{ProjectCode}_Detailed.md                         # Step 1 (production SOW — MD)
-├── SoW_{ProjectCode}_Detailed.docx                       # Step 1 (production SOW — DOCX)
-├── {ProjectCode}_Modules.md                              # Step 2
-├── {ProjectCode}_Estimation_Summary.md                   # Step 6 (internal)
-├── {ProjectCode}_Estimation_Summary_FeatureWise.md       # Step 6 (internal)
-├── {ProjectCode}_Estimation_Summary_FeatureWise_Client.docx  # Step 7 (client)
-└── modules/
-    ├── 01-{slug}/
-    │   ├── README.md                                     # optional
-    │   └── features/
-    │       ├── _index.md
-    │       ├── F01-001-{slug}.md
-    │       └── ...
-    ├── 02-{slug}/
-    │   └── features/
-    │       └── ...
-    └── ...
+{RepoRoot}/                            # CONTROL + schemas only
+├── CONTROL.md
+├── module_schema.md
+├── feature_schema.md
+├── README.md
+└── Projects/
+    └── {ProjectFolder}/               # OutputRoot for a project
+        ├── {SourceDocument}           # user-provided draft
+        ├── SoW_{ProjectCode}_Detailed.md
+        ├── SoW_{ProjectCode}_Detailed.docx
+        ├── {ProjectCode}_Modules.md
+        ├── {ProjectCode}_Estimation_Summary.md
+        ├── {ProjectCode}_Estimation_Summary_FeatureWise.md
+        ├── {ProjectCode}_Estimation_Summary_FeatureWise_Client.docx
+        └── modules/
+            ├── 01-{slug}/
+            │   ├── README.md
+            │   └── features/
+            │       ├── _index.md
+            │       └── F01-001-{slug}.md
+            └── ...
 ```
 
 ---
@@ -435,10 +447,10 @@ If Steps 1–6 already exist, run **Step 7 only**: rebuild the `.docx` from the 
 In Cursor chat, attach or reference:
 
 1. This control file: `@CONTROL.md`
-2. The source document: e.g. `@BDA_Housing_Management/SoW_BDA Housing Management System.docx`
+2. The source document: e.g. `@Projects/{ProjectFolder}/{SourceDocument}`
 3. Say what to run, for example:
-   - `Prepare a production-grade SOW first, then run estimation. Project code: HMS`
-   - `Run the estimation pipeline for this document. Project code: CPMS`
+   - `Prepare a production-grade SOW first, then run estimation. Project code: HMS. Output root: Projects/Housing_System/`
+   - `Run the estimation pipeline for this document. Project code: ERP`
    - `Continue pipeline — confirm modules and generate features for all`
    - `Generate features only for module 04`
    - `Create / refresh the client Word estimation summary`
@@ -472,7 +484,9 @@ Always re-read `CONTROL.md` + the relevant schema before resuming.
 4. Keep this repo’s schemas (`module_schema.md`, `feature_schema.md`) as the single source of estimation rules.
 5. When in doubt, stop and ask — especially at Step 1 (SOW questions) and Step 4 (module confirmation).
 6. **Client vs internal:** Step 6 markdown = internal; Step 7 Word = client. Never paste pipeline metadata into the client export.
-7. Estimation always uses the **production-grade SOW** from Step 1 (not the raw draft) unless the user explicitly designates another source.
+7. Estimation always uses the **production-grade SOW** from Step 1 (not the raw draft) unless the user explicitly designates another source.  
+8. New project outputs go under **`Projects/{ProjectFolder}/`**, not the repo root.  
+9. Access model, document/workflow embedding, and channel choices come from the **user and source document** — not from hardcoded project defaults.
 
 ---
 
@@ -484,3 +498,5 @@ Always re-read `CONTROL.md` + the relevant schema before resuming.
 | 1.1 | Added feature-wise internal summary + client Word export (no pipeline/AI tells) |
 | 1.2 | Added Step 1 production-grade SOW preparation; renumbered module→client steps to 2–7 |
 | 1.3 | Step 1 always outputs SOW in both Markdown and Word (`.md` + `.docx`) |
+| 1.4 | `Projects/` output root; feature quality rules; README/schema alignment |
+| 1.5 | Prompts made org/project-agnostic — no hardcoded client, domain, or access-model defaults |

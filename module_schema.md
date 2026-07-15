@@ -103,11 +103,12 @@ For each gap:
 
 ***DEFAULT TECHNICAL MODULE GUIDANCE***
 
-Use the following defaults unless the user overrides them:
+Use the following defaults unless the user or source overrides them:
 
 - User & Role Management covers Identity & Access
+- Reflect the **access model confirmed in the SOW** (user→role, org-unit based, post/position based, etc.) in Scope Notes / Key Actors — do not invent a separate org-hierarchy module unless the source requires it
 - Workflow Engine is not a separate module; generic workflow is used inside business modules
-- Document Management remains a module if documents are a major capability in the document
+- Document Management: **embed** inside business modules by default — create a standalone Document Management module only if the user requests it or the source clearly mandates a separate document product
 - API / Integration Hub should be added when external or internal system integrations are listed
 - Notification Service should be added when SMS, email, in-app alerts, or notice automation are required
 - Do not add File Store, Job Scheduler, Audit & Logging, Reporting Engine, or Search Service as separate modules unless the user explicitly requests them
@@ -118,9 +119,11 @@ SECTION 2 - MODULE LIST OUTPUT
 
 Generate a markdown file named:
 
-{ProjectCode}_Modules.md
+{OutputRoot}/{ProjectCode}_Modules.md
 
-Example: CPMS_Modules.md
+Example: `Projects/{ProjectFolder}/{ProjectCode}_Modules.md`
+
+(OutputRoot defaults to `Projects/{ProjectFolder}/` per CONTROL.md.)
 
 Use the following structure:
 
@@ -168,13 +171,13 @@ For each identified module, prepare the implementation folder structure.
 
 Create one folder per module using this naming pattern:
 
-modules/{NN}-{module-slug}/
+{OutputRoot}/modules/{NN}-{module-slug}/
 
 Examples:
 
-modules/01-master-management/
-modules/02-commercial-property-management/
-modules/21-api-integration-hub/
+Projects/{ProjectFolder}/modules/01-master-management/
+Projects/{ProjectFolder}/modules/02-core-business/
+Projects/{ProjectFolder}/modules/13-api-integration-hub/
 
 Rules:
 
@@ -211,11 +214,14 @@ OUTPUT RULES
 - Wait for user confirmation before generating features for a module
 
 --------------------------------------------------
-TYPICAL WORKFLOW
+TYPICAL WORKFLOW (aligned with CONTROL.md)
 --------------------------------------------------
 
-Step 1: User provides SOW / FRS / BRD document
-Step 2: Generate module list using this schema
-Step 3: User reviews and confirms module additions/removals
-Step 4: Create module folders
-Step 5: Use feature_schema.md to generate features module by module
+This schema is used at CONTROL Steps 2–3 (after production SOW exists).
+
+CONTROL Step 1: Production-grade SOW (MD + DOCX) — done before this schema
+CONTROL Step 2: Generate module list using this schema → `{ProjectCode}_Modules.md`
+CONTROL Step 3: Create module folders under `{OutputRoot}/modules/`
+CONTROL Step 4: User reviews and confirms modules
+CONTROL Step 5: Use feature_schema.md for features + hours
+CONTROL Steps 6–7: Internal summaries + client Word export
