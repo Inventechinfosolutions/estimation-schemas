@@ -11,11 +11,15 @@ DO NOT generate UI wireframes.
 
 Instead, understand the functional requirements and estimate the implementation required.
 
+**Numbering:** Reuse `F{NN}-{SEQ}` assigned in the SOW Key capabilities table (`sow_schema.md` §4A). Full rules: [`numbering_schema.md`](numbering_schema.md). `{NN}` must match the parent module folder; do not invent new IDs at Step 5 unless the user adds scope.
+
 Write each feature to:
 
-`{OutputRoot}/modules/{NN}-{slug}/features/F{NN}-{nnn}-{feature-slug}.md`
+`{OutputRoot}/modules/{NN}-{slug}/features/F{NN}-{SEQ}-{feature-slug}.md`
 
-Maintain `{OutputRoot}/modules/{NN}-{slug}/features/_index.md` with feature IDs, names, and hours.
+Maintain `{OutputRoot}/modules/{NN}-{slug}/features/_index.md` with Feature ID, Feature Name, Total Hours, Notes.
+
+After each feature (or each module), update `{OutputRoot}/{ProjectCode}_Registry.json`.
 
 (OutputRoot defaults to `Projects/{ProjectFolder}/` per CONTROL.md.)
 
@@ -25,9 +29,9 @@ For every feature generate the following sections.
 ***
 Generate a structured feature specification containing:
 
-Feature ID
+Feature ID (format `F{NN}-{SEQ}` — required)
 Feature Name
-Module
+Module (format `{NN} — {Module Name}` — required)
 Description
 Business Objective
 Actors

@@ -23,8 +23,9 @@ A module is a cohesive, independently estimable unit of work that groups related
 
 For every module, determine:
 
-- Module Number
+- Module Number (`{NN}` — assign in SOW first per `sow_schema.md` §4A; reuse here per [`numbering_schema.md`](numbering_schema.md))
 - Module Name
+- Module Slug (`{module-slug}`)
 - Module Type (Business | Technical | Shared)
 - Summary (one-line purpose)
 - Source (Explicit in document | Derived from document | Added for implementation)
@@ -134,6 +135,8 @@ Source: {Document Name}
 | # | Module | Type | Summary | Source |
 |---|--------|------|---------|--------|
 
+`#` column = two-digit `{NN}` (`01`, `02`, …). Assign automatically in implementation order (see `numbering_schema.md`).
+
 After the table, add the following sections.
 
 ***Module Details***
@@ -164,8 +167,10 @@ Document assumptions made while identifying modules.
 Document risks that may affect module boundaries or future estimation.
 
 --------------------------------------------------
-SECTION 3 - FOLDER STRUCTURE
+SECTION 3 - FOLDER STRUCTURE & NUMBERING
 --------------------------------------------------
+
+**Numbering rules:** Read and apply [`numbering_schema.md`](numbering_schema.md) for `{NN}`, slugs, folders, and `{ProjectCode}_Registry.json`.
 
 For each identified module, prepare the implementation folder structure.
 
@@ -185,6 +190,7 @@ Rules:
 - Use lowercase kebab-case for module slug
 - One folder per module
 - Do not create feature files in this step unless explicitly requested
+- After folders are created, write or update `{OutputRoot}/{ProjectCode}_Registry.json` with module entries (`nn`, `name`, `slug`, `folder`; `features` = `[]`)
 
 --------------------------------------------------
 SECTION 4 - REVIEW CHECKLIST

@@ -1,21 +1,16 @@
 ---
-description: Follow CONTROL.md estimation pipeline when extracting modules or features from SOW/FRS/BRD/RFP documents
-alwaysApply: true
+description: Optional Cursor shortcut — CONTROL.md is the real entry point; this rule is not required
+alwaysApply: false
 ---
 
-# Estimation Pipeline Rule
+# Estimation Pipeline Rule (optional)
 
-When the user asks to extract modules, generate features, estimate effort, or run estimation from any SOW / FRS / BRD / RFP / functional document:
+**Not required.** The pipeline is fully defined in `CONTROL.md`. Use `@CONTROL.md` + source document in chat instead.
 
-1. **Read and follow** `CONTROL.md` (repo root) as the main control file.
-2. **Output root:** put project artefacts under `Projects/{ProjectFolder}/` (not next to schemas at repo root).
-3. **Step 1:** Prepare a production-grade SOW from the draft/source as **both** `SoW_{ProjectCode}_Detailed.md` and `SoW_{ProjectCode}_Detailed.docx` (always dual format); ask clarifying questions first if gaps affect scope. Stop for SOW confirmation unless user skips.
-4. **Step 2–3:** Use `module_schema.md` — extract modules, write `{ProjectCode}_Modules.md`, create `modules/{NN}-{slug}/` folders.
-5. **Step 4:** Stop for user confirmation before features (unless user explicitly skips review).
-6. **Step 5:** Use `feature_schema.md` — one feature file per feature under each module’s `features/` folder.
-7. **Step 6:** Write internal `{ProjectCode}_Estimation_Summary.md` and `{ProjectCode}_Estimation_Summary_FeatureWise.md`.
-8. **Step 7:** Export `{ProjectCode}_Estimation_Summary_FeatureWise_Client.docx` — client-safe Word copy with no pipeline, schema, folder-path, or “generated” language.
+If this rule is enabled, when the user asks to extract modules, generate features, estimate effort, or run estimation from any SOW / FRS / BRD / RFP / functional document:
 
-**Configurable (ask if unclear):** Document Management / Workflow embedded vs separate modules; access model (user→role, org-unit, post/position); channels and integrations. Do not hardcode org- or project-specific defaults.
+1. **Read and follow** `CONTROL.md` (repo root) — including the **Schema loading** table for the active step.
+2. **Output root:** `Projects/{ProjectFolder}/` (not next to schemas at repo root).
+3. Run Steps 1–7 per CONTROL; load `sow_schema.md`, `module_schema.md`, `feature_schema.md`, and `numbering_schema.md` as listed in CONTROL for each step.
 
 Do not invent a parallel workflow. Do not estimate during SOW drafting or module extraction. Do not design APIs, DB schemas, class diagrams, or wireframes. Do not share internal markdown summaries with the client; use the Step 7 Word export.

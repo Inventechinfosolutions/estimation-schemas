@@ -1,13 +1,30 @@
 # Estimation Pipeline — Main Control File
 
-**This is the entry point for every estimation run.**  
+**This is the only entry point required.**  
+Attach or pass **`CONTROL.md`** plus the source document to any agent (Cursor chat, API, or custom orchestrator). **No Cursor rules, MCP, or other config are required.**
+
 When the user provides any SOW / FRS / BRD / RFP / functional document for module or feature extraction, follow this file end to end. Do not invent a parallel process.
 
 | Schema / Artefact | Path | Used in |
 |-------------------|------|---------|
-| Production-grade SOW | `{OutputRoot}/SoW_{ProjectCode}_Detailed.md` **and** `.docx` | Step 1 |
+| Production-grade SOW | [`sow_schema.md`](sow_schema.md) → `{OutputRoot}/SoW_{ProjectCode}_Detailed.md` **and** `.docx` | Step 1 |
+| Module & feature numbering | [`numbering_schema.md`](numbering_schema.md) | Steps 1–6 |
 | Module extraction | [`module_schema.md`](module_schema.md) | Step 2–3 |
 | Feature specification & estimation | [`feature_schema.md`](feature_schema.md) | Step 5 |
+
+### Schema loading (mandatory per step)
+
+Before executing a step, **read the schema files listed below** from this repo (same directory as `CONTROL.md`). Do not rely on memory from earlier turns; re-read when resuming.
+
+| Step | Read these files |
+|------|------------------|
+| 1 — SOW | `sow_schema.md`, `numbering_schema.md` |
+| 2–3 — Modules + folders | `module_schema.md`, `numbering_schema.md` |
+| 4 — Confirm | This file (gates only) |
+| 5 — Features | `feature_schema.md`, `numbering_schema.md` |
+| 6–7 — Summaries + client export | This file (Step 6–7 sections) |
+
+Optional: `.cursor/rules/estimation-pipeline.mdc` is a **Cursor-only shortcut** that points at this file. It is not part of the pipeline definition.
 
 ---
 
@@ -88,99 +105,39 @@ Source Document (draft / outline)
 
 ## STEP 1 — Production-Grade SOW
 
+**Instruction source:** Read and obey [`sow_schema.md`](sow_schema.md) and [`numbering_schema.md`](numbering_schema.md) fully.
+
 **When to run:** Always when the source is a draft outline, section list, short note, or incomplete SOW.  
 **When to skip:** Only if the user points to an already detailed, RFP-ready SOW (e.g. prior `SoW_*_Detailed.md`) and says to skip SOW preparation.
 
-### 1.1 Ask clarifying questions first (mandatory if material gaps exist)
+**Actions (summary — details in `sow_schema.md`)**
 
-Before writing the detailed SOW, ask concise questions where answers change scope. Typical areas:
-
-1. Project code / display name / output folder under `Projects/`  
-2. Audience: external RFP vs internal estimation only  
-3. In-scope vs out-of-scope boundaries (related systems, portals, migration)  
-4. Channels: staff/officer portal, citizen/customer portal, both, or other  
-5. Integrations (payment, SMS, email, GIS, ERP, third-party apps)  
-6. Whether Document Management / Workflow are separate modules or **embedded** in processes (default: **embedded** unless source or user says otherwise)  
-7. Access / authorisation model — confirm what the source implies (e.g. user→role, org-unit based, or post/position based); do not assume a specific model  
-8. Phasing (single Phase 1 vs multi-phase)  
-9. Legacy data migration yes/no  
-10. Any stack/hosting constraints — usually **no deep technical design** in RFP-style business SOWs  
-
-If the user answers “assume defaults”, proceed with defaults stated as Assumptions in the SOW.
-
-### 1.2 Write the production-grade SOW (MD + DOCX — always)
-
-**Always produce both formats** for every production-grade SOW (hard rule):
+1. Ask clarifying questions if material gaps affect scope.  
+2. Write production-grade SOW as **both**:
 
 ```text
 {OutputRoot}/SoW_{ProjectCode}_Detailed.md
 {OutputRoot}/SoW_{ProjectCode}_Detailed.docx
 ```
 
-Example pattern:
+3. Keep the original draft unchanged.  
+4. No hours, APIs, DB design, wireframes, or pipeline/AI language.
 
-```text
-Projects/{ProjectFolder}/SoW_{ProjectCode}_Detailed.md
-Projects/{ProjectFolder}/SoW_{ProjectCode}_Detailed.docx
-```
-
-Keep the original draft source file unchanged (e.g. original draft `.docx` / short `SOW.md`).
-
-The `.md` file is the working source of truth for the pipeline. The `.docx` is the review/RFP copy and must stay content-equivalent to the markdown (plain professional formatting; no pipeline/AI language).
-
-### 1.3 Required SOW structure (RFP / business style)
-
-Produce a clear, vendor-ready structure. Include at minimum (adapt section titles to the domain):
-
-1. Introduction  
-2. Project Overview  
-3. Project Objectives  
-4. In Scope / Out of Scope  
-5. Solution Expectations (business-level; avoid deep tech stack / API design)  
-6. Consolidated Functional Modules (purpose, functional requirements, acceptance criteria)  
-7. End-to-End Workflows  
-8. Access Control / RBAC (describe the model confirmed with the user / implied by the source)  
-9. Channels (staff / citizen / customer / partner) where applicable  
-10. Integrations  
-11. Audit, Compliance & Security  
-12. Non-Functional Requirements  
-13. Data Migration (if in scope)  
-14. Phased Delivery  
-15. Deliverables  
-16. Acceptance Criteria (program level)  
-17. Expected Benefits  
-18. Assumptions & Dependencies  
-19. Vendor Response Expectations  
-20. Appendices as needed (module consolidation map, entities, document types)
-
-### 1.4 SOW writing rules
-
-- Prefer **business / functional** language suitable for RFP or estimation review.  
-- Consolidate related capabilities; avoid one “module” per screen.  
-- Embed Document Management and Workflow **inside** business processes unless the user or source explicitly requires separate modules.  
-- Describe access control as confirmed (user→role, post/position based, etc.); do not invent an authorisation model the source does not support.  
-- Approval routing should match the confirmed access model (e.g. roles, posts, or org units — not hard-coded named individuals unless the source says so).  
-- Do **not** invent business scope that the source does not support.  
-- Do **not** estimate hours in this step.  
-- Do **not** design APIs, DB schemas, class diagrams, or wireframes.
-
-### 1.5 Gate
-
-Stop and ask the user to review/confirm the detailed SOW.  
-**Only after confirmation** continue to Step 2 (module extraction), unless the user says to continue without review.
+**Gate:** Stop for user review/confirm.  
+**Only after confirmation** continue to Step 2, unless the user says to continue without review.
 
 ---
 
 ## STEP 2 — Extract Modules
 
-**Instruction source:** Read and obey [`module_schema.md`](module_schema.md) fully.
+**Instruction source:** Read and obey [`module_schema.md`](module_schema.md) and [`numbering_schema.md`](numbering_schema.md) fully.
 
-**Source of truth for scope:** the Step 1 production-grade SOW (or the user-confirmed production SOW if Step 1 was skipped).
+**Source of truth for scope:** the Step 1 production-grade SOW (module `{NN}` and feature `F{NN}-{SEQ}` from SOW must be preserved).
 
 **Actions**
 
 1. Read the production-grade SOW end to end.
-2. Identify modules using the schema rules (merge related capabilities; prefer fewer stronger modules).
+2. Identify modules using the schema rules — **reuse `{NN}` and names from the SOW**; do not renumber unless the user requests changes.
 3. Perform the technical gap review from the schema.
 4. Write:
 
@@ -206,11 +163,13 @@ Example: `Projects/{ProjectFolder}/{ProjectCode}_Modules.md`
 
 **When done:** Briefly list the modules for the user and proceed to Step 3 (folders are part of module schema Section 3; create them next, then pause for confirmation).
 
+After Step 3, create or update `{OutputRoot}/{ProjectCode}_Registry.json` with module numbers and slugs (per `numbering_schema.md` §4).
+
 ---
 
 ## STEP 3 — Create Module Folders
 
-**Instruction source:** `module_schema.md` → Section 3 (Folder Structure).
+**Instruction source:** `module_schema.md` → Section 3; numbering per [`numbering_schema.md`](numbering_schema.md).
 
 For each module in `{ProjectCode}_Modules.md`, create:
 
@@ -256,18 +215,18 @@ If the user requests changes, update `{ProjectCode}_Modules.md` and folders firs
 
 ## STEP 5 — Generate Features Per Module
 
-**Instruction source:** Read and obey [`feature_schema.md`](feature_schema.md) fully.
+**Instruction source:** Read and obey [`feature_schema.md`](feature_schema.md) and [`numbering_schema.md`](numbering_schema.md) fully.
 
 **Default order:** Process modules in sequence order (`01`, `02`, …), unless the user names specific modules.
 
 For each module:
 
 1. Read that module’s section in `{ProjectCode}_Modules.md` and the relevant parts of the production-grade SOW.
-2. Identify every feature in the module.
-3. For **each** feature, write one markdown file:
+2. Identify every feature in the module — **reuse `F{NN}-{SEQ}` from the SOW Key capabilities table**; expand into full specs without changing IDs unless the user requests changes.
+3. For **each** feature, auto-assign `F{NN}-{SEQ}` and write one markdown file (formats in [`numbering_schema.md`](numbering_schema.md)):
 
 ```text
-{OutputRoot}/modules/{NN}-{module-slug}/features/{FeatureID}-{feature-slug}.md
+{OutputRoot}/modules/{NN}-{module-slug}/features/F{NN}-{SEQ}-{feature-slug}.md
 ```
 
 Examples:
@@ -277,14 +236,7 @@ modules/04-revenue-billing/features/F04-001-monthly-demand.md
 modules/04-revenue-billing/features/F04-002-online-payment-collection.md
 ```
 
-**Feature ID convention**
-
-```text
-F{NN}-{SEQ}
-```
-
-- `{NN}` = module number  
-- `{SEQ}` = three-digit sequence within the module (`001`, `002`, …)
+**Numbering:** `{NN}` = parent module number; `{SEQ}` = `001`, `002`, … per module. Update `{ProjectCode}_Registry.json` after each module (per `numbering_schema.md` §4).
 
 **Each feature file must contain** (per `feature_schema.md`)
 
@@ -419,6 +371,8 @@ If Steps 1–6 already exist, run **Step 7 only**: rebuild the `.docx` from the 
 ```text
 {RepoRoot}/                            # CONTROL + schemas only
 ├── CONTROL.md
+├── sow_schema.md
+├── numbering_schema.md
 ├── module_schema.md
 ├── feature_schema.md
 ├── README.md
@@ -428,6 +382,7 @@ If Steps 1–6 already exist, run **Step 7 only**: rebuild the `.docx` from the 
         ├── SoW_{ProjectCode}_Detailed.md
         ├── SoW_{ProjectCode}_Detailed.docx
         ├── {ProjectCode}_Modules.md
+        ├── {ProjectCode}_Registry.json
         ├── {ProjectCode}_Estimation_Summary.md
         ├── {ProjectCode}_Estimation_Summary_FeatureWise.md
         ├── {ProjectCode}_Estimation_Summary_FeatureWise_Client.docx
@@ -444,18 +399,25 @@ If Steps 1–6 already exist, run **Step 7 only**: rebuild the `.docx` from the 
 
 ## How to Invoke (for users)
 
-In Cursor chat, attach or reference:
+**Minimum:** `CONTROL.md` + source document. Nothing else is required.
 
-1. This control file: `@CONTROL.md`
-2. The source document: e.g. `@Projects/{ProjectFolder}/{SourceDocument}`
-3. Say what to run, for example:
-   - `Prepare a production-grade SOW first, then run estimation. Project code: HMS. Output root: Projects/Housing_System/`
+### Cursor / chat
+
+1. Attach: `@CONTROL.md` and `@Projects/{ProjectFolder}/{SourceDocument}`  
+2. Example prompts:
+   - `Prepare a production-grade SOW first, then run estimation. Project code: HMS. Output root: Projects/{ProjectFolder}/`
    - `Run the estimation pipeline for this document. Project code: ERP`
    - `Continue pipeline — confirm modules and generate features for all`
    - `Generate features only for module 04`
    - `Create / refresh the client Word estimation summary`
 
-The agent must follow **this file** and load the linked schemas for the active step.
+### Custom engine / API
+
+1. Load `CONTROL.md` into the system prompt (or first user message).  
+2. At each step, inject the **Schema loading** files for that step (see table above).  
+3. Write artefacts under `{OutputRoot}`; persist job state between steps.
+
+The agent must follow **this file** and load the linked schemas for the active step. The Cursor rule file is optional convenience only.
 
 ---
 
@@ -481,7 +443,7 @@ Always re-read `CONTROL.md` + the relevant schema before resuming.
 1. Schemas win on field-level format; this file wins on **order of steps and gates**.
 2. Prefer consolidating related capabilities (aligned with `module_schema.md`).
 3. Keep project work under `{OutputRoot}`; do not copy schemas into project folders.
-4. Keep this repo’s schemas (`module_schema.md`, `feature_schema.md`) as the single source of estimation rules.
+4. Keep this repo’s schemas (`sow_schema.md`, `numbering_schema.md`, `module_schema.md`, `feature_schema.md`) as the single source of estimation rules.
 5. When in doubt, stop and ask — especially at Step 1 (SOW questions) and Step 4 (module confirmation).
 6. **Client vs internal:** Step 6 markdown = internal; Step 7 Word = client. Never paste pipeline metadata into the client export.
 7. Estimation always uses the **production-grade SOW** from Step 1 (not the raw draft) unless the user explicitly designates another source.  
@@ -500,3 +462,6 @@ Always re-read `CONTROL.md` + the relevant schema before resuming.
 | 1.3 | Step 1 always outputs SOW in both Markdown and Word (`.md` + `.docx`) |
 | 1.4 | `Projects/` output root; feature quality rules; README/schema alignment |
 | 1.5 | Prompts made org/project-agnostic — no hardcoded client, domain, or access-model defaults |
+| 1.6 | Extracted Step 1 into dedicated `sow_schema.md` |
+| 1.7 | Added `numbering_schema.md` — auto module/feature IDs + `{ProjectCode}_Registry.json` |
+| 1.8 | `CONTROL.md` standalone — no Cursor rule required; mandatory schema-loading table per step |
