@@ -1,0 +1,335 @@
+{
+  "project_code": "KSCW_CMS",
+  "project_name": "KSCW Complaint Management System",
+  "source_sow": "SoW_KSCW_CMS_Detailed.md",
+  "module_count": 7,
+  "feature_count": 31,
+  "total_hours": 1012,
+  "modules": [
+    {
+      "nn": "01",
+      "name": "User Access & Role Management",
+      "slug": "user-access-role-management",
+      "folder": "modules/01-user-access-role-management",
+      "type": "Shared",
+      "features": [
+        {
+          "id": "F01-001",
+          "seq": "001",
+          "name": "User Lifecycle Management",
+          "slug": "user-lifecycle-management",
+          "file": "modules/01-user-access-role-management/features/F01-001-user-lifecycle-management.md",
+          "hours": 26
+        },
+        {
+          "id": "F01-002",
+          "seq": "002",
+          "name": "Role & Permission Assignment",
+          "slug": "role-permission-assignment",
+          "file": "modules/01-user-access-role-management/features/F01-002-role-permission-assignment.md",
+          "hours": 34
+        },
+        {
+          "id": "F01-003",
+          "seq": "003",
+          "name": "Authentication & Session Control",
+          "slug": "authentication-session-control",
+          "file": "modules/01-user-access-role-management/features/F01-003-authentication-session-control.md",
+          "hours": 32
+        },
+        {
+          "id": "F01-004",
+          "seq": "004",
+          "name": "Access Audit",
+          "slug": "access-audit",
+          "file": "modules/01-user-access-role-management/features/F01-004-access-audit.md",
+          "hours": 22
+        }
+      ],
+      "feature_count": 4,
+      "total_hours": 114
+    },
+    {
+      "nn": "02",
+      "name": "Master Data & System Configuration",
+      "slug": "master-data-system-configuration",
+      "folder": "modules/02-master-data-system-configuration",
+      "type": "Shared",
+      "features": [
+        {
+          "id": "F02-001",
+          "seq": "001",
+          "name": "Complaint Taxonomy Masters",
+          "slug": "complaint-taxonomy-masters",
+          "file": "modules/02-master-data-system-configuration/features/F02-001-complaint-taxonomy-masters.md",
+          "hours": 26
+        },
+        {
+          "id": "F02-002",
+          "seq": "002",
+          "name": "Location / Jurisdiction Masters",
+          "slug": "location-jurisdiction-masters",
+          "file": "modules/02-master-data-system-configuration/features/F02-002-location-jurisdiction-masters.md",
+          "hours": 28
+        },
+        {
+          "id": "F02-003",
+          "seq": "003",
+          "name": "SLA & Escalation Configuration",
+          "slug": "sla-escalation-configuration",
+          "file": "modules/02-master-data-system-configuration/features/F02-003-sla-escalation-configuration.md",
+          "hours": 39
+        },
+        {
+          "id": "F02-004",
+          "seq": "004",
+          "name": "Notification Templates",
+          "slug": "notification-templates",
+          "file": "modules/02-master-data-system-configuration/features/F02-004-notification-templates.md",
+          "hours": 24
+        },
+        {
+          "id": "F02-005",
+          "seq": "005",
+          "name": "Status & Parameter Configuration",
+          "slug": "status-parameter-configuration",
+          "file": "modules/02-master-data-system-configuration/features/F02-005-status-parameter-configuration.md",
+          "hours": 18
+        }
+      ],
+      "feature_count": 5,
+      "total_hours": 135
+    },
+    {
+      "nn": "03",
+      "name": "Multi-Channel Complaint Registration",
+      "slug": "multi-channel-complaint-registration",
+      "folder": "modules/03-multi-channel-complaint-registration",
+      "type": "Business",
+      "features": [
+        {
+          "id": "F03-001",
+          "seq": "001",
+          "name": "Web Complaint Registration",
+          "slug": "web-complaint-registration",
+          "file": "modules/03-multi-channel-complaint-registration/features/F03-001-web-complaint-registration.md",
+          "hours": 39
+        },
+        {
+          "id": "F03-002",
+          "seq": "002",
+          "name": "Mobile Complaint Registration",
+          "slug": "mobile-complaint-registration",
+          "file": "modules/03-multi-channel-complaint-registration/features/F03-002-mobile-complaint-registration.md",
+          "hours": 37
+        },
+        {
+          "id": "F03-003",
+          "seq": "003",
+          "name": "Email Channel Intake",
+          "slug": "email-channel-intake",
+          "file": "modules/03-multi-channel-complaint-registration/features/F03-003-email-channel-intake.md",
+          "hours": 44
+        },
+        {
+          "id": "F03-004",
+          "seq": "004",
+          "name": "Call-Center Intake",
+          "slug": "call-center-intake",
+          "file": "modules/03-multi-channel-complaint-registration/features/F03-004-call-center-intake.md",
+          "hours": 24
+        },
+        {
+          "id": "F03-005",
+          "seq": "005",
+          "name": "Complaint Acknowledgement",
+          "slug": "complaint-acknowledgement",
+          "file": "modules/03-multi-channel-complaint-registration/features/F03-005-complaint-acknowledgement.md",
+          "hours": 20
+        },
+        {
+          "id": "F03-006",
+          "seq": "006",
+          "name": "Attachment / Evidence Capture",
+          "slug": "attachment-evidence-capture",
+          "file": "modules/03-multi-channel-complaint-registration/features/F03-006-attachment-evidence-capture.md",
+          "hours": 28
+        }
+      ],
+      "feature_count": 6,
+      "total_hours": 192
+    },
+    {
+      "nn": "04",
+      "name": "Categorization, Auto-Routing & Assignment",
+      "slug": "categorization-auto-routing-assignment",
+      "folder": "modules/04-categorization-auto-routing-assignment",
+      "type": "Business",
+      "features": [
+        {
+          "id": "F04-001",
+          "seq": "001",
+          "name": "Complaint Categorization",
+          "slug": "complaint-categorization",
+          "file": "modules/04-categorization-auto-routing-assignment/features/F04-001-complaint-categorization.md",
+          "hours": 22
+        },
+        {
+          "id": "F04-002",
+          "seq": "002",
+          "name": "Auto-Routing Engine",
+          "slug": "auto-routing-engine",
+          "file": "modules/04-categorization-auto-routing-assignment/features/F04-002-auto-routing-engine.md",
+          "hours": 41
+        },
+        {
+          "id": "F04-003",
+          "seq": "003",
+          "name": "Worklist & Assignment",
+          "slug": "worklist-assignment",
+          "file": "modules/04-categorization-auto-routing-assignment/features/F04-003-worklist-assignment.md",
+          "hours": 38
+        },
+        {
+          "id": "F04-004",
+          "seq": "004",
+          "name": "Reassignment / Reclassification",
+          "slug": "reassignment-reclassification",
+          "file": "modules/04-categorization-auto-routing-assignment/features/F04-004-reassignment-reclassification.md",
+          "hours": 26
+        }
+      ],
+      "feature_count": 4,
+      "total_hours": 127
+    },
+    {
+      "nn": "05",
+      "name": "Workflow Automation, Escalation & SLA Tracking",
+      "slug": "workflow-escalation-sla-tracking",
+      "folder": "modules/05-workflow-escalation-sla-tracking",
+      "type": "Business",
+      "features": [
+        {
+          "id": "F05-001",
+          "seq": "001",
+          "name": "Workflow Stage Processing",
+          "slug": "workflow-stage-processing",
+          "file": "modules/05-workflow-escalation-sla-tracking/features/F05-001-workflow-stage-processing.md",
+          "hours": 45
+        },
+        {
+          "id": "F05-002",
+          "seq": "002",
+          "name": "Escalation Matrix Execution",
+          "slug": "escalation-matrix-execution",
+          "file": "modules/05-workflow-escalation-sla-tracking/features/F05-002-escalation-matrix-execution.md",
+          "hours": 28
+        },
+        {
+          "id": "F05-003",
+          "seq": "003",
+          "name": "SLA Tracking & Aging",
+          "slug": "sla-tracking-aging",
+          "file": "modules/05-workflow-escalation-sla-tracking/features/F05-003-sla-tracking-aging.md",
+          "hours": 41
+        },
+        {
+          "id": "F05-004",
+          "seq": "004",
+          "name": "Resolution & Closure",
+          "slug": "resolution-closure",
+          "file": "modules/05-workflow-escalation-sla-tracking/features/F05-004-resolution-closure.md",
+          "hours": 28
+        },
+        {
+          "id": "F05-005",
+          "seq": "005",
+          "name": "Supervisor Oversight",
+          "slug": "supervisor-oversight",
+          "file": "modules/05-workflow-escalation-sla-tracking/features/F05-005-supervisor-oversight.md",
+          "hours": 34
+        }
+      ],
+      "feature_count": 5,
+      "total_hours": 176
+    },
+    {
+      "nn": "06",
+      "name": "Notifications & Alerts (SMS / Email)",
+      "slug": "notifications-alerts",
+      "folder": "modules/06-notifications-alerts",
+      "type": "Technical",
+      "features": [
+        {
+          "id": "F06-001",
+          "seq": "001",
+          "name": "SMS Notification Dispatch",
+          "slug": "sms-notification-dispatch",
+          "file": "modules/06-notifications-alerts/features/F06-001-sms-notification-dispatch.md",
+          "hours": 40
+        },
+        {
+          "id": "F06-002",
+          "seq": "002",
+          "name": "Email Notification Dispatch",
+          "slug": "email-notification-dispatch",
+          "file": "modules/06-notifications-alerts/features/F06-002-email-notification-dispatch.md",
+          "hours": 32
+        },
+        {
+          "id": "F06-003",
+          "seq": "003",
+          "name": "Notification Log & Retry Support",
+          "slug": "notification-log-retry-support",
+          "file": "modules/06-notifications-alerts/features/F06-003-notification-log-retry-support.md",
+          "hours": 31
+        }
+      ],
+      "feature_count": 3,
+      "total_hours": 103
+    },
+    {
+      "nn": "07",
+      "name": "Dashboards, Analytics, Real-time Monitoring & MIS",
+      "slug": "dashboards-analytics-mis",
+      "folder": "modules/07-dashboards-analytics-mis",
+      "type": "Business",
+      "features": [
+        {
+          "id": "F07-001",
+          "seq": "001",
+          "name": "Operational Dashboards",
+          "slug": "operational-dashboards",
+          "file": "modules/07-dashboards-analytics-mis/features/F07-001-operational-dashboards.md",
+          "hours": 39
+        },
+        {
+          "id": "F07-002",
+          "seq": "002",
+          "name": "Real-time Monitoring",
+          "slug": "real-time-monitoring",
+          "file": "modules/07-dashboards-analytics-mis/features/F07-002-real-time-monitoring.md",
+          "hours": 46
+        },
+        {
+          "id": "F07-003",
+          "seq": "003",
+          "name": "Analytics Views",
+          "slug": "analytics-views",
+          "file": "modules/07-dashboards-analytics-mis/features/F07-003-analytics-views.md",
+          "hours": 41
+        },
+        {
+          "id": "F07-004",
+          "seq": "004",
+          "name": "MIS Reports & Export",
+          "slug": "mis-reports-export",
+          "file": "modules/07-dashboards-analytics-mis/features/F07-004-mis-reports-export.md",
+          "hours": 39
+        }
+      ],
+      "feature_count": 4,
+      "total_hours": 165
+    }
+  ]
+}

@@ -1,0 +1,341 @@
+{
+  "project_code": "CDRMS",
+  "project_name": "Correct Dimension Report Management System",
+  "output_root": "Projects/BDA_Mobile_App",
+  "updated_at": "2026-07-23T11:54:34Z",
+  "modules": [
+    {
+      "nn": "01",
+      "name": "User & Access Management",
+      "slug": "user-access-management",
+      "type": "Shared",
+      "folder": "modules/01-user-access-management",
+      "features": [
+        {
+          "id": "F01-001",
+          "seq": "001",
+          "name": "User Management",
+          "slug": "user-management",
+          "file": "modules/01-user-access-management/features/F01-001-user-management.md",
+          "hours": 26
+        },
+        {
+          "id": "F01-002",
+          "seq": "002",
+          "name": "Role Assignment",
+          "slug": "role-assignment",
+          "file": "modules/01-user-access-management/features/F01-002-role-assignment.md",
+          "hours": 14
+        },
+        {
+          "id": "F01-003",
+          "seq": "003",
+          "name": "Engineer Credential & Geo Binding",
+          "slug": "engineer-credential-geo-binding",
+          "file": "modules/01-user-access-management/features/F01-003-engineer-credential-geo-binding.md",
+          "hours": 22
+        },
+        {
+          "id": "F01-004",
+          "seq": "004",
+          "name": "CAO & Super Admin Credentials",
+          "slug": "cao-super-admin-credentials",
+          "file": "modules/01-user-access-management/features/F01-004-cao-super-admin-credentials.md",
+          "hours": 14
+        },
+        {
+          "id": "F01-005",
+          "seq": "005",
+          "name": "Access Deactivation & Reset",
+          "slug": "access-deactivation-reset",
+          "file": "modules/01-user-access-management/features/F01-005-access-deactivation-reset.md",
+          "hours": 16
+        }
+      ],
+      "feature_count": 5,
+      "total_hours": 92
+    },
+    {
+      "nn": "02",
+      "name": "Master Data & System Configuration",
+      "slug": "master-data-system-configuration",
+      "type": "Business",
+      "folder": "modules/02-master-data-system-configuration",
+      "features": [
+        {
+          "id": "F02-001",
+          "seq": "001",
+          "name": "Geo-Location Master",
+          "slug": "geo-location-master",
+          "file": "modules/02-master-data-system-configuration/features/F02-001-geo-location-master.md",
+          "hours": 26
+        },
+        {
+          "id": "F02-002",
+          "seq": "002",
+          "name": "Site Visit Attribute Masters",
+          "slug": "site-visit-attribute-masters",
+          "file": "modules/02-master-data-system-configuration/features/F02-002-site-visit-attribute-masters.md",
+          "hours": 27
+        },
+        {
+          "id": "F02-003",
+          "seq": "003",
+          "name": "Application Status Configuration",
+          "slug": "application-status-configuration",
+          "file": "modules/02-master-data-system-configuration/features/F02-003-application-status-configuration.md",
+          "hours": 14
+        },
+        {
+          "id": "F02-004",
+          "seq": "004",
+          "name": "System Parameters & Media Limits",
+          "slug": "system-parameters-media-limits",
+          "file": "modules/02-master-data-system-configuration/features/F02-004-system-parameters-media-limits.md",
+          "hours": 22
+        },
+        {
+          "id": "F02-005",
+          "seq": "005",
+          "name": "Master Search Filter Export",
+          "slug": "master-search-filter-export",
+          "file": "modules/02-master-data-system-configuration/features/F02-005-master-search-filter-export.md",
+          "hours": 28
+        }
+      ],
+      "feature_count": 5,
+      "total_hours": 117
+    },
+    {
+      "nn": "03",
+      "name": "Mobile Onboarding & Geo Enforcement",
+      "slug": "mobile-onboarding-geo-enforcement",
+      "type": "Business",
+      "folder": "modules/03-mobile-onboarding-geo-enforcement",
+      "features": [
+        {
+          "id": "F03-001",
+          "seq": "001",
+          "name": "Engineer Mobile Login",
+          "slug": "engineer-mobile-login",
+          "file": "modules/03-mobile-onboarding-geo-enforcement/features/F03-001-engineer-mobile-login.md",
+          "hours": 26
+        },
+        {
+          "id": "F03-002",
+          "seq": "002",
+          "name": "Mandatory OTP Login (Every Session)",
+          "slug": "mandatory-otp-login-every-session",
+          "file": "modules/03-mobile-onboarding-geo-enforcement/features/F03-002-mandatory-otp-login-every-session.md",
+          "hours": 33
+        },
+        {
+          "id": "F03-003",
+          "seq": "003",
+          "name": "Mandatory Location Enablement",
+          "slug": "mandatory-location-enablement",
+          "file": "modules/03-mobile-onboarding-geo-enforcement/features/F03-003-mandatory-location-enablement.md",
+          "hours": 14
+        },
+        {
+          "id": "F03-004",
+          "seq": "004",
+          "name": "Assigned Geo-Location Enforcement",
+          "slug": "assigned-geo-location-enforcement",
+          "file": "modules/03-mobile-onboarding-geo-enforcement/features/F03-004-assigned-geo-location-enforcement.md",
+          "hours": 29
+        },
+        {
+          "id": "F03-005",
+          "seq": "005",
+          "name": "Engineer Profile & Assignment View",
+          "slug": "engineer-profile-assignment-view",
+          "file": "modules/03-mobile-onboarding-geo-enforcement/features/F03-005-engineer-profile-assignment-view.md",
+          "hours": 8
+        }
+      ],
+      "feature_count": 5,
+      "total_hours": 110
+    },
+    {
+      "nn": "04",
+      "name": "Field Site Visit Capture",
+      "slug": "field-site-visit-capture",
+      "type": "Business",
+      "folder": "modules/04-field-site-visit-capture",
+      "features": [
+        {
+          "id": "F04-001",
+          "seq": "001",
+          "name": "Site Visit Application Create & Draft",
+          "slug": "site-visit-application-create-draft",
+          "file": "modules/04-field-site-visit-capture/features/F04-001-site-visit-application-create-draft.md",
+          "hours": 24
+        },
+        {
+          "id": "F04-002",
+          "seq": "002",
+          "name": "Site Details Capture",
+          "slug": "site-details-capture",
+          "file": "modules/04-field-site-visit-capture/features/F04-002-site-details-capture.md",
+          "hours": 37
+        },
+        {
+          "id": "F04-003",
+          "seq": "003",
+          "name": "Check Bandi Capture",
+          "slug": "check-bandi-capture",
+          "file": "modules/04-field-site-visit-capture/features/F04-003-check-bandi-capture.md",
+          "hours": 15
+        },
+        {
+          "id": "F04-004",
+          "seq": "004",
+          "name": "Directions & Width Capture",
+          "slug": "directions-width-capture",
+          "file": "modules/04-field-site-visit-capture/features/F04-004-directions-width-capture.md",
+          "hours": 22
+        },
+        {
+          "id": "F04-005",
+          "seq": "005",
+          "name": "Surroundings Capture",
+          "slug": "surroundings-capture",
+          "file": "modules/04-field-site-visit-capture/features/F04-005-surroundings-capture.md",
+          "hours": 22
+        },
+        {
+          "id": "F04-006",
+          "seq": "006",
+          "name": "Photo Capture (10 \u00d7 10 MB)",
+          "slug": "photo-capture-10-x-10-mb",
+          "file": "modules/04-field-site-visit-capture/features/F04-006-photo-capture-10-x-10-mb.md",
+          "hours": 39
+        },
+        {
+          "id": "F04-007",
+          "seq": "007",
+          "name": "Video Capture",
+          "slug": "video-capture",
+          "file": "modules/04-field-site-visit-capture/features/F04-007-video-capture.md",
+          "hours": 36
+        },
+        {
+          "id": "F04-008",
+          "seq": "008",
+          "name": "Application Validation & Submit",
+          "slug": "application-validation-submit",
+          "file": "modules/04-field-site-visit-capture/features/F04-008-application-validation-submit.md",
+          "hours": 26
+        },
+        {
+          "id": "F04-009",
+          "seq": "009",
+          "name": "Engineer Application Status View",
+          "slug": "engineer-application-status-view",
+          "file": "modules/04-field-site-visit-capture/features/F04-009-engineer-application-status-view.md",
+          "hours": 17
+        }
+      ],
+      "feature_count": 9,
+      "total_hours": 238
+    },
+    {
+      "nn": "05",
+      "name": "CAO Verification & PDF Export",
+      "slug": "cao-verification-pdf-export",
+      "type": "Business",
+      "folder": "modules/05-cao-verification-pdf-export",
+      "features": [
+        {
+          "id": "F05-001",
+          "seq": "001",
+          "name": "CAO Application Workbench",
+          "slug": "cao-application-workbench",
+          "file": "modules/05-cao-verification-pdf-export/features/F05-001-cao-application-workbench.md",
+          "hours": 24
+        },
+        {
+          "id": "F05-002",
+          "seq": "002",
+          "name": "Application Detail & Media Review",
+          "slug": "application-detail-media-review",
+          "file": "modules/05-cao-verification-pdf-export/features/F05-002-application-detail-media-review.md",
+          "hours": 28
+        },
+        {
+          "id": "F05-003",
+          "seq": "003",
+          "name": "Verify / Return / Reject Workflow",
+          "slug": "verify-return-reject-workflow",
+          "file": "modules/05-cao-verification-pdf-export/features/F05-003-verify-return-reject-workflow.md",
+          "hours": 29
+        },
+        {
+          "id": "F05-004",
+          "seq": "004",
+          "name": "PDF Generation & Download",
+          "slug": "pdf-generation-download",
+          "file": "modules/05-cao-verification-pdf-export/features/F05-004-pdf-generation-download.md",
+          "hours": 31
+        },
+        {
+          "id": "F05-005",
+          "seq": "005",
+          "name": "Resubmission Handling",
+          "slug": "resubmission-handling",
+          "file": "modules/05-cao-verification-pdf-export/features/F05-005-resubmission-handling.md",
+          "hours": 22
+        }
+      ],
+      "feature_count": 5,
+      "total_hours": 134
+    },
+    {
+      "nn": "06",
+      "name": "Dashboards, KPIs & MIS",
+      "slug": "dashboards-kpis-mis",
+      "type": "Business",
+      "folder": "modules/06-dashboards-kpis-mis",
+      "features": [
+        {
+          "id": "F06-001",
+          "seq": "001",
+          "name": "Super Admin Basic KPIs",
+          "slug": "super-admin-basic-kpis",
+          "file": "modules/06-dashboards-kpis-mis/features/F06-001-super-admin-basic-kpis.md",
+          "hours": 43
+        },
+        {
+          "id": "F06-002",
+          "seq": "002",
+          "name": "CAO Basic KPIs",
+          "slug": "cao-basic-kpis",
+          "file": "modules/06-dashboards-kpis-mis/features/F06-002-cao-basic-kpis.md",
+          "hours": 24
+        }
+      ],
+      "feature_count": 2,
+      "total_hours": 67
+    },
+    {
+      "nn": "07",
+      "name": "Notification Service",
+      "slug": "notification-service",
+      "type": "Technical",
+      "folder": "modules/07-notification-service",
+      "features": [
+        {
+          "id": "F07-001",
+          "seq": "001",
+          "name": "SMS OTP Dispatch & Validation",
+          "slug": "sms-otp-dispatch-validation",
+          "file": "modules/07-notification-service/features/F07-001-sms-otp-dispatch-validation.md",
+          "hours": 39
+        }
+      ],
+      "feature_count": 1,
+      "total_hours": 39
+    }
+  ]
+}

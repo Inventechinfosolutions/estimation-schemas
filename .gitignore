@@ -13,3 +13,11 @@ __pycache__/
 
 # OS
 Thumbs.db
+
+# Local archives (not project deliverables)
+**/modules.zip
+**/*.zip
+
+# Word lock / temp files
+~$*.docx
+~$*.doc
