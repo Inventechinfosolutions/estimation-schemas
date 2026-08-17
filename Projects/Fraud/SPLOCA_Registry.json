@@ -1,0 +1,717 @@
+{
+  "project_code": "SPLOCA",
+  "project_name": "SPLOCA Legal Management Application",
+  "output_root": "Projects/Fraud",
+  "updated_at": "2026-08-11T13:20:48Z",
+  "grand_total_hours": 2952,
+  "modules": [
+    {
+      "nn": "01",
+      "name": "Access Control & Need-To-Know Security",
+      "slug": "access-control-need-to-know-security",
+      "type": "Shared",
+      "folder": "modules/01-access-control-need-to-know-security",
+      "feature_count": 5,
+      "total_hours": 302,
+      "features": [
+        {
+          "id": "F01-001",
+          "seq": "001",
+          "name": "User, Role & Post/Position Identity",
+          "slug": "user-role-post-position-identity",
+          "file": "modules/01-access-control-need-to-know-security/features/F01-001-user-role-post-position-identity.md",
+          "hours": 73
+        },
+        {
+          "id": "F01-002",
+          "seq": "002",
+          "name": "Hierarchy & Need-To-Know Visibility",
+          "slug": "hierarchy-need-to-know-visibility",
+          "file": "modules/01-access-control-need-to-know-security/features/F01-002-hierarchy-need-to-know-visibility.md",
+          "hours": 82
+        },
+        {
+          "id": "F01-003",
+          "seq": "003",
+          "name": "Limited vs Community Access",
+          "slug": "limited-vs-community-access",
+          "file": "modules/01-access-control-need-to-know-security/features/F01-003-limited-vs-community-access.md",
+          "hours": 42
+        },
+        {
+          "id": "F01-004",
+          "seq": "004",
+          "name": "Controlled Document Rights",
+          "slug": "controlled-document-rights",
+          "file": "modules/01-access-control-need-to-know-security/features/F01-004-controlled-document-rights.md",
+          "hours": 72
+        },
+        {
+          "id": "F01-005",
+          "seq": "005",
+          "name": "Web & Mobile Authentication",
+          "slug": "web-mobile-authentication",
+          "file": "modules/01-access-control-need-to-know-security/features/F01-005-web-mobile-authentication.md",
+          "hours": 33
+        }
+      ]
+    },
+    {
+      "nn": "02",
+      "name": "Keyword & Reference Masters",
+      "slug": "keyword-reference-masters",
+      "type": "Shared",
+      "folder": "modules/02-keyword-reference-masters",
+      "feature_count": 3,
+      "total_hours": 134,
+      "features": [
+        {
+          "id": "F02-001",
+          "seq": "001",
+          "name": "Keyword Entity Masters",
+          "slug": "keyword-entity-masters",
+          "file": "modules/02-keyword-reference-masters/features/F02-001-keyword-entity-masters.md",
+          "hours": 49
+        },
+        {
+          "id": "F02-002",
+          "seq": "002",
+          "name": "Act & Rules Coding Catalogue",
+          "slug": "act-rules-coding-catalogue",
+          "file": "modules/02-keyword-reference-masters/features/F02-002-act-rules-coding-catalogue.md",
+          "hours": 53
+        },
+        {
+          "id": "F02-003",
+          "seq": "003",
+          "name": "Keyword–Document Link Maintenance",
+          "slug": "keyword-document-link-maintenance",
+          "file": "modules/02-keyword-reference-masters/features/F02-003-keyword-document-link-maintenance.md",
+          "hours": 32
+        }
+      ]
+    },
+    {
+      "nn": "03",
+      "name": "Legal Database",
+      "slug": "legal-database",
+      "type": "Business",
+      "folder": "modules/03-legal-database",
+      "feature_count": 8,
+      "total_hours": 327,
+      "features": [
+        {
+          "id": "F03-001",
+          "seq": "001",
+          "name": "Acts & Rules Register",
+          "slug": "acts-rules-register",
+          "file": "modules/03-legal-database/features/F03-001-acts-rules-register.md",
+          "hours": 36
+        },
+        {
+          "id": "F03-002",
+          "seq": "002",
+          "name": "Research & Legal Opinions Register",
+          "slug": "research-legal-opinions-register",
+          "file": "modules/03-legal-database/features/F03-002-research-legal-opinions-register.md",
+          "hours": 43
+        },
+        {
+          "id": "F03-003",
+          "seq": "003",
+          "name": "Special Court & High Court Orders Register",
+          "slug": "special-high-court-orders-register",
+          "file": "modules/03-legal-database/features/F03-003-special-high-court-orders-register.md",
+          "hours": 45
+        },
+        {
+          "id": "F03-004",
+          "seq": "004",
+          "name": "Petitions Register",
+          "slug": "petitions-register",
+          "file": "modules/03-legal-database/features/F03-004-petitions-register.md",
+          "hours": 30
+        },
+        {
+          "id": "F03-005",
+          "seq": "005",
+          "name": "SOB Register",
+          "slug": "sob-register",
+          "file": "modules/03-legal-database/features/F03-005-sob-register.md",
+          "hours": 32
+        },
+        {
+          "id": "F03-006",
+          "seq": "006",
+          "name": "Written Arguments Register",
+          "slug": "written-arguments-register",
+          "file": "modules/03-legal-database/features/F03-006-written-arguments-register.md",
+          "hours": 27
+        },
+        {
+          "id": "F03-007",
+          "seq": "007",
+          "name": "Keyword Hyperlink Navigation",
+          "slug": "keyword-hyperlink-navigation",
+          "file": "modules/03-legal-database/features/F03-007-keyword-hyperlink-navigation.md",
+          "hours": 38
+        },
+        {
+          "id": "F03-008",
+          "seq": "008",
+          "name": "Legal Corpus Migration",
+          "slug": "legal-corpus-migration",
+          "file": "modules/03-legal-database/features/F03-008-legal-corpus-migration.md",
+          "hours": 76
+        }
+      ]
+    },
+    {
+      "nn": "04",
+      "name": "Search Facility",
+      "slug": "search-facility",
+      "type": "Business",
+      "folder": "modules/04-search-facility",
+      "feature_count": 5,
+      "total_hours": 197,
+      "features": [
+        {
+          "id": "F04-001",
+          "seq": "001",
+          "name": "Search Box & Corpus Indexing",
+          "slug": "search-box-corpus-indexing",
+          "file": "modules/04-search-facility/features/F04-001-search-box-corpus-indexing.md",
+          "hours": 64
+        },
+        {
+          "id": "F04-002",
+          "seq": "002",
+          "name": "Natural Language Search",
+          "slug": "natural-language-search",
+          "file": "modules/04-search-facility/features/F04-002-natural-language-search.md",
+          "hours": 40
+        },
+        {
+          "id": "F04-003",
+          "seq": "003",
+          "name": "Search Within Results",
+          "slug": "search-within-results",
+          "file": "modules/04-search-facility/features/F04-003-search-within-results.md",
+          "hours": 17
+        },
+        {
+          "id": "F04-004",
+          "seq": "004",
+          "name": "Boolean & Connector Search",
+          "slug": "boolean-connector-search",
+          "file": "modules/04-search-facility/features/F04-004-boolean-connector-search.md",
+          "hours": 52
+        },
+        {
+          "id": "F04-005",
+          "seq": "005",
+          "name": "Highlighted Hyperlinked Results",
+          "slug": "highlighted-hyperlinked-results",
+          "file": "modules/04-search-facility/features/F04-005-highlighted-hyperlinked-results.md",
+          "hours": 24
+        }
+      ]
+    },
+    {
+      "nn": "05",
+      "name": "Unified Contact Database",
+      "slug": "unified-contact-database",
+      "type": "Business",
+      "folder": "modules/05-unified-contact-database",
+      "feature_count": 6,
+      "total_hours": 239,
+      "features": [
+        {
+          "id": "F05-001",
+          "seq": "001",
+          "name": "Office & Organisation Contact Coverage",
+          "slug": "office-organisation-contact-coverage",
+          "file": "modules/05-unified-contact-database/features/F05-001-office-organisation-contact-coverage.md",
+          "hours": 26
+        },
+        {
+          "id": "F05-002",
+          "seq": "002",
+          "name": "Categorized Contact Types",
+          "slug": "categorized-contact-types",
+          "file": "modules/05-unified-contact-database/features/F05-002-categorized-contact-types.md",
+          "hours": 32
+        },
+        {
+          "id": "F05-003",
+          "seq": "003",
+          "name": "Unified Address Book & Custom Categories",
+          "slug": "unified-address-book-custom-categories",
+          "file": "modules/05-unified-contact-database/features/F05-003-unified-address-book-custom-categories.md",
+          "hours": 43
+        },
+        {
+          "id": "F05-004",
+          "seq": "004",
+          "name": "Contact Free-Text Search",
+          "slug": "contact-free-text-search",
+          "file": "modules/05-unified-contact-database/features/F05-004-contact-free-text-search.md",
+          "hours": 19
+        },
+        {
+          "id": "F05-005",
+          "seq": "005",
+          "name": "SMS / Email / Team Contact Actions",
+          "slug": "sms-email-team-contact-actions",
+          "file": "modules/05-unified-contact-database/features/F05-005-sms-email-team-contact-actions.md",
+          "hours": 49
+        },
+        {
+          "id": "F05-006",
+          "seq": "006",
+          "name": "Contact Data Migration",
+          "slug": "contact-data-migration",
+          "file": "modules/05-unified-contact-database/features/F05-006-contact-data-migration.md",
+          "hours": 70
+        }
+      ]
+    },
+    {
+      "nn": "06",
+      "name": "Matter Management",
+      "slug": "matter-management",
+      "type": "Business",
+      "folder": "modules/06-matter-management",
+      "feature_count": 10,
+      "total_hours": 362,
+      "features": [
+        {
+          "id": "F06-001",
+          "seq": "001",
+          "name": "Matter Create & Classify",
+          "slug": "matter-create-classify",
+          "file": "modules/06-matter-management/features/F06-001-matter-create-classify.md",
+          "hours": 28
+        },
+        {
+          "id": "F06-002",
+          "seq": "002",
+          "name": "Matter Variable Capture",
+          "slug": "matter-variable-capture",
+          "file": "modules/06-matter-management/features/F06-002-matter-variable-capture.md",
+          "hours": 26
+        },
+        {
+          "id": "F06-003",
+          "seq": "003",
+          "name": "Matter Dashboard",
+          "slug": "matter-dashboard",
+          "file": "modules/06-matter-management/features/F06-003-matter-dashboard.md",
+          "hours": 51
+        },
+        {
+          "id": "F06-004",
+          "seq": "004",
+          "name": "Matter Search",
+          "slug": "matter-search",
+          "file": "modules/06-matter-management/features/F06-004-matter-search.md",
+          "hours": 19
+        },
+        {
+          "id": "F06-005",
+          "seq": "005",
+          "name": "Matter Reports",
+          "slug": "matter-reports",
+          "file": "modules/06-matter-management/features/F06-005-matter-reports.md",
+          "hours": 39
+        },
+        {
+          "id": "F06-006",
+          "seq": "006",
+          "name": "Matter Documents & Versions",
+          "slug": "matter-documents-versions",
+          "file": "modules/06-matter-management/features/F06-006-matter-documents-versions.md",
+          "hours": 42
+        },
+        {
+          "id": "F06-007",
+          "seq": "007",
+          "name": "Consultations",
+          "slug": "consultations",
+          "file": "modules/06-matter-management/features/F06-007-consultations.md",
+          "hours": 17
+        },
+        {
+          "id": "F06-008",
+          "seq": "008",
+          "name": "Matter Tasks & Key Dates",
+          "slug": "matter-tasks-key-dates",
+          "file": "modules/06-matter-management/features/F06-008-matter-tasks-key-dates.md",
+          "hours": 38
+        },
+        {
+          "id": "F06-009",
+          "seq": "009",
+          "name": "Matter Data Migration",
+          "slug": "matter-data-migration",
+          "file": "modules/06-matter-management/features/F06-009-matter-data-migration.md",
+          "hours": 70
+        },
+        {
+          "id": "F06-010",
+          "seq": "010",
+          "name": "Matter Time Entry",
+          "slug": "matter-time-entry",
+          "file": "modules/06-matter-management/features/F06-010-matter-time-entry.md",
+          "hours": 32
+        }
+      ]
+    },
+    {
+      "nn": "07",
+      "name": "Client – Legal Section Collaboration",
+      "slug": "client-legal-section-collaboration",
+      "type": "Business",
+      "folder": "modules/07-client-legal-section-collaboration",
+      "feature_count": 4,
+      "total_hours": 176,
+      "features": [
+        {
+          "id": "F07-001",
+          "seq": "001",
+          "name": "Advocate Court Reporting Pack",
+          "slug": "advocate-court-reporting-pack",
+          "file": "modules/07-client-legal-section-collaboration/features/F07-001-advocate-court-reporting-pack.md",
+          "hours": 49
+        },
+        {
+          "id": "F07-002",
+          "seq": "002",
+          "name": "Client Queries, Tasks & Meetings",
+          "slug": "client-queries-tasks-meetings",
+          "file": "modules/07-client-legal-section-collaboration/features/F07-002-client-queries-tasks-meetings.md",
+          "hours": 50
+        },
+        {
+          "id": "F07-003",
+          "seq": "003",
+          "name": "Collaboration Document Sharing",
+          "slug": "collaboration-document-sharing",
+          "file": "modules/07-client-legal-section-collaboration/features/F07-003-collaboration-document-sharing.md",
+          "hours": 48
+        },
+        {
+          "id": "F07-004",
+          "seq": "004",
+          "name": "Limited / Community Collaboration Spaces",
+          "slug": "limited-community-collaboration-spaces",
+          "file": "modules/07-client-legal-section-collaboration/features/F07-004-limited-community-collaboration-spaces.md",
+          "hours": 29
+        }
+      ]
+    },
+    {
+      "nn": "08",
+      "name": "Legal Team Communication & Task Management",
+      "slug": "legal-team-communication-task-management",
+      "type": "Business",
+      "folder": "modules/08-legal-team-communication-task-management",
+      "feature_count": 9,
+      "total_hours": 351,
+      "features": [
+        {
+          "id": "F08-001",
+          "seq": "001",
+          "name": "Task Assignment & Due Dates",
+          "slug": "task-assignment-due-dates",
+          "file": "modules/08-legal-team-communication-task-management/features/F08-001-task-assignment-due-dates.md",
+          "hours": 32
+        },
+        {
+          "id": "F08-002",
+          "seq": "002",
+          "name": "Task Status, Accept/Reject, Reassign",
+          "slug": "task-status-accept-reject-reassign",
+          "file": "modules/08-legal-team-communication-task-management/features/F08-002-task-status-accept-reject-reassign.md",
+          "hours": 36
+        },
+        {
+          "id": "F08-003",
+          "seq": "003",
+          "name": "Task Alerts, Reminders, Overdue",
+          "slug": "task-alerts-reminders-overdue",
+          "file": "modules/08-legal-team-communication-task-management/features/F08-003-task-alerts-reminders-overdue.md",
+          "hours": 34
+        },
+        {
+          "id": "F08-004",
+          "seq": "004",
+          "name": "Reprimand / Warning",
+          "slug": "reprimand-warning",
+          "file": "modules/08-legal-team-communication-task-management/features/F08-004-reprimand-warning.md",
+          "hours": 25
+        },
+        {
+          "id": "F08-005",
+          "seq": "005",
+          "name": "Task Completion & Schedule Publish",
+          "slug": "task-completion-schedule-publish",
+          "file": "modules/08-legal-team-communication-task-management/features/F08-005-task-completion-schedule-publish.md",
+          "hours": 39
+        },
+        {
+          "id": "F08-006",
+          "seq": "006",
+          "name": "Sidebar Team Communication",
+          "slug": "sidebar-team-communication",
+          "file": "modules/08-legal-team-communication-task-management/features/F08-006-sidebar-team-communication.md",
+          "hours": 18
+        },
+        {
+          "id": "F08-007",
+          "seq": "007",
+          "name": "Matter Communication Records & Search",
+          "slug": "matter-communication-records-search",
+          "file": "modules/08-legal-team-communication-task-management/features/F08-007-matter-communication-records-search.md",
+          "hours": 36
+        },
+        {
+          "id": "F08-008",
+          "seq": "008",
+          "name": "Email Sync & Messaging",
+          "slug": "email-sync-messaging",
+          "file": "modules/08-legal-team-communication-task-management/features/F08-008-email-sync-messaging.md",
+          "hours": 80
+        },
+        {
+          "id": "F08-009",
+          "seq": "009",
+          "name": "Team Calendar & Share-With-Alert",
+          "slug": "team-calendar-share-with-alert",
+          "file": "modules/08-legal-team-communication-task-management/features/F08-009-team-calendar-share-with-alert.md",
+          "hours": 51
+        }
+      ]
+    },
+    {
+      "nn": "09",
+      "name": "Court Attendance & Expense Management",
+      "slug": "court-attendance-expense-management",
+      "type": "Business",
+      "folder": "modules/09-court-attendance-expense-management",
+      "feature_count": 4,
+      "total_hours": 130,
+      "features": [
+        {
+          "id": "F09-001",
+          "seq": "001",
+          "name": "Court Attendance Capture",
+          "slug": "court-attendance-capture",
+          "file": "modules/09-court-attendance-expense-management/features/F09-001-court-attendance-capture.md",
+          "hours": 34
+        },
+        {
+          "id": "F09-002",
+          "seq": "002",
+          "name": "Category-Wise Expense Capture",
+          "slug": "category-wise-expense-capture",
+          "file": "modules/09-court-attendance-expense-management/features/F09-002-category-wise-expense-capture.md",
+          "hours": 36
+        },
+        {
+          "id": "F09-003",
+          "seq": "003",
+          "name": "Attendance & Expense Search",
+          "slug": "attendance-expense-search",
+          "file": "modules/09-court-attendance-expense-management/features/F09-003-attendance-expense-search.md",
+          "hours": 23
+        },
+        {
+          "id": "F09-004",
+          "seq": "004",
+          "name": "Expense Bill Submission",
+          "slug": "expense-bill-submission",
+          "file": "modules/09-court-attendance-expense-management/features/F09-004-expense-bill-submission.md",
+          "hours": 37
+        }
+      ]
+    },
+    {
+      "nn": "10",
+      "name": "Knowledge, Expertise, Tools & Training",
+      "slug": "knowledge-expertise-tools-training",
+      "type": "Business",
+      "folder": "modules/10-knowledge-expertise-tools-training",
+      "feature_count": 8,
+      "total_hours": 310,
+      "features": [
+        {
+          "id": "F10-001",
+          "seq": "001",
+          "name": "Manuals, Guidelines & SOP Library",
+          "slug": "manuals-guidelines-sop-library",
+          "file": "modules/10-knowledge-expertise-tools-training/features/F10-001-manuals-guidelines-sop-library.md",
+          "hours": 37
+        },
+        {
+          "id": "F10-002",
+          "seq": "002",
+          "name": "Forms & Format Templates",
+          "slug": "forms-format-templates",
+          "file": "modules/10-knowledge-expertise-tools-training/features/F10-002-forms-format-templates.md",
+          "hours": 26
+        },
+        {
+          "id": "F10-003",
+          "seq": "003",
+          "name": "Key Judgement Database",
+          "slug": "key-judgement-database",
+          "file": "modules/10-knowledge-expertise-tools-training/features/F10-003-key-judgement-database.md",
+          "hours": 37
+        },
+        {
+          "id": "F10-004",
+          "seq": "004",
+          "name": "OM, GO & Guard File Database",
+          "slug": "om-go-guard-file-database",
+          "file": "modules/10-knowledge-expertise-tools-training/features/F10-004-om-go-guard-file-database.md",
+          "hours": 39
+        },
+        {
+          "id": "F10-005",
+          "seq": "005",
+          "name": "Training Modules",
+          "slug": "training-modules",
+          "file": "modules/10-knowledge-expertise-tools-training/features/F10-005-training-modules.md",
+          "hours": 31
+        },
+        {
+          "id": "F10-006",
+          "seq": "006",
+          "name": "Knowledge Share & Searchable Repository",
+          "slug": "knowledge-share-searchable-repository",
+          "file": "modules/10-knowledge-expertise-tools-training/features/F10-006-knowledge-share-searchable-repository.md",
+          "hours": 62
+        },
+        {
+          "id": "F10-007",
+          "seq": "007",
+          "name": "Knowledge-Leak Prevention",
+          "slug": "knowledge-leak-prevention",
+          "file": "modules/10-knowledge-expertise-tools-training/features/F10-007-knowledge-leak-prevention.md",
+          "hours": 45
+        },
+        {
+          "id": "F10-008",
+          "seq": "008",
+          "name": "Knowledge Rights Management",
+          "slug": "knowledge-rights-management",
+          "file": "modules/10-knowledge-expertise-tools-training/features/F10-008-knowledge-rights-management.md",
+          "hours": 33
+        }
+      ]
+    },
+    {
+      "nn": "11",
+      "name": "Mobile Application (Android) for Advocates & Legal Cell",
+      "slug": "mobile-application-android-advocates-legal-cell",
+      "type": "Business",
+      "folder": "modules/11-mobile-application-android-advocates-legal-cell",
+      "feature_count": 7,
+      "total_hours": 296,
+      "features": [
+        {
+          "id": "F11-001",
+          "seq": "001",
+          "name": "Mobile Add Contact & Matter",
+          "slug": "mobile-add-contact-matter",
+          "file": "modules/11-mobile-application-android-advocates-legal-cell/features/F11-001-mobile-add-contact-matter.md",
+          "hours": 41
+        },
+        {
+          "id": "F11-002",
+          "seq": "002",
+          "name": "Mobile Task Management",
+          "slug": "mobile-task-management",
+          "file": "modules/11-mobile-application-android-advocates-legal-cell/features/F11-002-mobile-task-management.md",
+          "hours": 76
+        },
+        {
+          "id": "F11-003",
+          "seq": "003",
+          "name": "Mobile Communication & Messaging",
+          "slug": "mobile-communication-messaging",
+          "file": "modules/11-mobile-application-android-advocates-legal-cell/features/F11-003-mobile-communication-messaging.md",
+          "hours": 43
+        },
+        {
+          "id": "F11-004",
+          "seq": "004",
+          "name": "Mobile Time Entry",
+          "slug": "mobile-time-entry",
+          "file": "modules/11-mobile-application-android-advocates-legal-cell/features/F11-004-mobile-time-entry.md",
+          "hours": 28
+        },
+        {
+          "id": "F11-005",
+          "seq": "005",
+          "name": "Mobile Matter Dashboard",
+          "slug": "mobile-matter-dashboard",
+          "file": "modules/11-mobile-application-android-advocates-legal-cell/features/F11-005-mobile-matter-dashboard.md",
+          "hours": 36
+        },
+        {
+          "id": "F11-006",
+          "seq": "006",
+          "name": "Mobile Attendance & Expense",
+          "slug": "mobile-attendance-expense",
+          "file": "modules/11-mobile-application-android-advocates-legal-cell/features/F11-006-mobile-attendance-expense.md",
+          "hours": 35
+        },
+        {
+          "id": "F11-007",
+          "seq": "007",
+          "name": "Mobile Documents",
+          "slug": "mobile-documents",
+          "file": "modules/11-mobile-application-android-advocates-legal-cell/features/F11-007-mobile-documents.md",
+          "hours": 37
+        }
+      ]
+    },
+    {
+      "nn": "12",
+      "name": "Platform Security, Backup & Encryption",
+      "slug": "platform-security-backup-encryption",
+      "type": "Technical",
+      "folder": "modules/12-platform-security-backup-encryption",
+      "feature_count": 3,
+      "total_hours": 128,
+      "features": [
+        {
+          "id": "F12-001",
+          "seq": "001",
+          "name": "Instant Backup & Server Storage",
+          "slug": "instant-backup-server-storage",
+          "file": "modules/12-platform-security-backup-encryption/features/F12-001-instant-backup-server-storage.md",
+          "hours": 68
+        },
+        {
+          "id": "F12-002",
+          "seq": "002",
+          "name": "HTTPS/SSL Transport Security",
+          "slug": "https-ssl-transport-security",
+          "file": "modules/12-platform-security-backup-encryption/features/F12-002-https-ssl-transport-security.md",
+          "hours": 23
+        },
+        {
+          "id": "F12-003",
+          "seq": "003",
+          "name": "AES 256-bit Encryption",
+          "slug": "aes-256-bit-encryption",
+          "file": "modules/12-platform-security-backup-encryption/features/F12-003-aes-256-bit-encryption.md",
+          "hours": 37
+        }
+      ]
+    }
+  ]
+}

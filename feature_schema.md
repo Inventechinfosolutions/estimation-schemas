@@ -73,7 +73,7 @@ Complexity	Hours	Typical Characteristics
 Simple	2	Popup, confirmation, read-only page
 Easy	4	Simple CRUD form, lookup dialog
 Medium	6	Standard form with validations and dependent dropdowns
-Complex	8	Large forms, tabs, child grids, calculations
+Complex	12	Large forms, tabs, child grids, calculations
 Very High	16	Dashboard, Wizard, GIS, Workflow, Dynamic UI
 	API Estimation
 

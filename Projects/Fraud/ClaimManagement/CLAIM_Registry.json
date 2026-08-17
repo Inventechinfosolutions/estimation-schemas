@@ -1,0 +1,587 @@
+{
+  "project_code": "CLAIM",
+  "project_name": "Claim Management System (KPID / SPLOCA)",
+  "output_root": "/Users/vadiraj/dev/BDA-repos/estimation-schemas/Projects/Fraud/ClaimManagement",
+  "updated_at": "2026-08-17T10:01:20Z",
+  "modules": [
+    {
+      "nn": "01",
+      "name": "Access Control, Person–Post–Role & Forensic Audit",
+      "slug": "access-control-person-post-role",
+      "type": "Shared",
+      "folder": "modules/01-access-control-person-post-role",
+      "feature_count": 10,
+      "total_hours": 503,
+      "features": [
+        {
+          "id": "F01-001",
+          "seq": "001",
+          "name": "Person master",
+          "slug": "person-master",
+          "file": "modules/01-access-control-person-post-role/features/F01-001-person-master.md",
+          "hours": 45
+        },
+        {
+          "id": "F01-002",
+          "seq": "002",
+          "name": "Post, Role-to-Post and Post-to-Person mapping",
+          "slug": "post-role-to-post-and-post-to-person-mapping",
+          "file": "modules/01-access-control-person-post-role/features/F01-002-post-role-to-post-and-post-to-person-mapping.md",
+          "hours": 78
+        },
+        {
+          "id": "F01-003",
+          "seq": "003",
+          "name": "RBAC menus and need-to-know visibility",
+          "slug": "rbac-menus-and-need-to-know-visibility",
+          "file": "modules/01-access-control-person-post-role/features/F01-003-rbac-menus-and-need-to-know-visibility.md",
+          "hours": 61
+        },
+        {
+          "id": "F01-004",
+          "seq": "004",
+          "name": "Official staff identity",
+          "slug": "official-staff-identity",
+          "file": "modules/01-access-control-person-post-role/features/F01-004-official-staff-identity.md",
+          "hours": 32
+        },
+        {
+          "id": "F01-005",
+          "seq": "005",
+          "name": "OTP before account activation",
+          "slug": "otp-before-account-activation",
+          "file": "modules/01-access-control-person-post-role/features/F01-005-otp-before-account-activation.md",
+          "hours": 43
+        },
+        {
+          "id": "F01-006",
+          "seq": "006",
+          "name": "Two-Factor Authentication (staff)",
+          "slug": "two-factor-authentication-staff",
+          "file": "modules/01-access-control-person-post-role/features/F01-006-two-factor-authentication-staff.md",
+          "hours": 70
+        },
+        {
+          "id": "F01-007",
+          "seq": "007",
+          "name": "Joiner–mover–leaver; no credential sharing",
+          "slug": "joiner-mover-leaver-no-credential-sharing",
+          "file": "modules/01-access-control-person-post-role/features/F01-007-joiner-mover-leaver-no-credential-sharing.md",
+          "hours": 41
+        },
+        {
+          "id": "F01-008",
+          "seq": "008",
+          "name": "Constrained OOK claimant access",
+          "slug": "constrained-ook-claimant-access",
+          "file": "modules/01-access-control-person-post-role/features/F01-008-constrained-ook-claimant-access.md",
+          "hours": 39
+        },
+        {
+          "id": "F01-009",
+          "seq": "009",
+          "name": "Claim-pack document rights",
+          "slug": "claim-pack-document-rights",
+          "file": "modules/01-access-control-person-post-role/features/F01-009-claim-pack-document-rights.md",
+          "hours": 32
+        },
+        {
+          "id": "F01-010",
+          "seq": "010",
+          "name": "Forensic and login/security audit",
+          "slug": "forensic-and-login-security-audit",
+          "file": "modules/01-access-control-person-post-role/features/F01-010-forensic-and-login-security-audit.md",
+          "hours": 62
+        }
+      ]
+    },
+    {
+      "nn": "02",
+      "name": "FE Master Import (from existing application)",
+      "slug": "fe-master-import",
+      "type": "Business",
+      "folder": "modules/02-fe-master-import",
+      "feature_count": 4,
+      "total_hours": 267,
+      "features": [
+        {
+          "id": "F02-001",
+          "seq": "001",
+          "name": "Import FE details",
+          "slug": "import-fe-details",
+          "file": "modules/02-fe-master-import/features/F02-001-import-fe-details.md",
+          "hours": 78
+        },
+        {
+          "id": "F02-002",
+          "seq": "002",
+          "name": "Import Directors and Promoters",
+          "slug": "import-directors-and-promoters",
+          "file": "modules/02-fe-master-import/features/F02-002-import-directors-and-promoters.md",
+          "hours": 59
+        },
+        {
+          "id": "F02-003",
+          "seq": "003",
+          "name": "Import Investment Schemes",
+          "slug": "import-investment-schemes",
+          "file": "modules/02-fe-master-import/features/F02-003-import-investment-schemes.md",
+          "hours": 57
+        },
+        {
+          "id": "F02-004",
+          "seq": "004",
+          "name": "Refresh imported FE reference data",
+          "slug": "refresh-imported-fe-reference-data",
+          "file": "modules/02-fe-master-import/features/F02-004-refresh-imported-fe-reference-data.md",
+          "hours": 73
+        }
+      ]
+    },
+    {
+      "nn": "03",
+      "name": "Asset Attachment & Recovered Funds",
+      "slug": "asset-attachment-recovered-funds",
+      "type": "Business",
+      "folder": "modules/03-asset-attachment-recovered-funds",
+      "feature_count": 6,
+      "total_hours": 234,
+      "features": [
+        {
+          "id": "F03-001",
+          "seq": "001",
+          "name": "Attached asset register",
+          "slug": "attached-asset-register",
+          "file": "modules/03-asset-attachment-recovered-funds/features/F03-001-attached-asset-register.md",
+          "hours": 41
+        },
+        {
+          "id": "F03-002",
+          "seq": "002",
+          "name": "Title, e-Khata and dues tracking",
+          "slug": "title-e-khata-and-dues-tracking",
+          "file": "modules/03-asset-attachment-recovered-funds/features/F03-002-title-e-khata-and-dues-tracking.md",
+          "hours": 32
+        },
+        {
+          "id": "F03-003",
+          "seq": "003",
+          "name": "Attachment order and valuation e-format",
+          "slug": "attachment-order-and-valuation-e-format",
+          "file": "modules/03-asset-attachment-recovered-funds/features/F03-003-attachment-order-and-valuation-e-format.md",
+          "hours": 43
+        },
+        {
+          "id": "F03-004",
+          "seq": "004",
+          "name": "Auction tracking and recovered funds",
+          "slug": "auction-tracking-and-recovered-funds",
+          "file": "modules/03-asset-attachment-recovered-funds/features/F03-004-auction-tracking-and-recovered-funds.md",
+          "hours": 56
+        },
+        {
+          "id": "F03-005",
+          "seq": "005",
+          "name": "Asset documents, status and history",
+          "slug": "asset-documents-status-and-history",
+          "file": "modules/03-asset-attachment-recovered-funds/features/F03-005-asset-documents-status-and-history.md",
+          "hours": 34
+        },
+        {
+          "id": "F03-006",
+          "seq": "006",
+          "name": "Depositor and FE asset association",
+          "slug": "depositor-and-fe-asset-association",
+          "file": "modules/03-asset-attachment-recovered-funds/features/F03-006-depositor-and-fe-asset-association.md",
+          "hours": 28
+        }
+      ]
+    },
+    {
+      "nn": "04",
+      "name": "Depositor Master & Identity Verification",
+      "slug": "depositor-master-identity-verification",
+      "type": "Business",
+      "folder": "modules/04-depositor-master-identity-verification",
+      "feature_count": 10,
+      "total_hours": 495,
+      "features": [
+        {
+          "id": "F04-001",
+          "seq": "001",
+          "name": "OCR, translation and format conversion",
+          "slug": "ocr-translation-and-format-conversion",
+          "file": "modules/04-depositor-master-identity-verification/features/F04-001-ocr-translation-and-format-conversion.md",
+          "hours": 76
+        },
+        {
+          "id": "F04-002",
+          "seq": "002",
+          "name": "Unique depositor profile (four-parameter match)",
+          "slug": "unique-depositor-profile-four-parameter-match",
+          "file": "modules/04-depositor-master-identity-verification/features/F04-002-unique-depositor-profile-four-parameter-match.md",
+          "hours": 55
+        },
+        {
+          "id": "F04-003",
+          "seq": "003",
+          "name": "KYC capture",
+          "slug": "kyc-capture",
+          "file": "modules/04-depositor-master-identity-verification/features/F04-003-kyc-capture.md",
+          "hours": 37
+        },
+        {
+          "id": "F04-004",
+          "seq": "004",
+          "name": "Address and pin-code verification",
+          "slug": "address-and-pin-code-verification",
+          "file": "modules/04-depositor-master-identity-verification/features/F04-004-address-and-pin-code-verification.md",
+          "hours": 30
+        },
+        {
+          "id": "F04-005",
+          "seq": "005",
+          "name": "Name and address tally across ID sources",
+          "slug": "name-and-address-tally-across-id-sources",
+          "file": "modules/04-depositor-master-identity-verification/features/F04-005-name-and-address-tally-across-id-sources.md",
+          "hours": 35
+        },
+        {
+          "id": "F04-006",
+          "seq": "006",
+          "name": "Auto mismatch query generation",
+          "slug": "auto-mismatch-query-generation",
+          "file": "modules/04-depositor-master-identity-verification/features/F04-006-auto-mismatch-query-generation.md",
+          "hours": 49
+        },
+        {
+          "id": "F04-007",
+          "seq": "007",
+          "name": "Penny-drop verification recording",
+          "slug": "penny-drop-verification-recording",
+          "file": "modules/04-depositor-master-identity-verification/features/F04-007-penny-drop-verification-recording.md",
+          "hours": 51
+        },
+        {
+          "id": "F04-008",
+          "seq": "008",
+          "name": "Special depositor and claim situations",
+          "slug": "special-depositor-and-claim-situations",
+          "file": "modules/04-depositor-master-identity-verification/features/F04-008-special-depositor-and-claim-situations.md",
+          "hours": 66
+        },
+        {
+          "id": "F04-009",
+          "seq": "009",
+          "name": "Aadhaar and PAN verification",
+          "slug": "aadhaar-and-pan-verification",
+          "file": "modules/04-depositor-master-identity-verification/features/F04-009-aadhaar-and-pan-verification.md",
+          "hours": 62
+        },
+        {
+          "id": "F04-010",
+          "seq": "010",
+          "name": "Depositor documents, status and history",
+          "slug": "depositor-documents-status-and-history",
+          "file": "modules/04-depositor-master-identity-verification/features/F04-010-depositor-documents-status-and-history.md",
+          "hours": 34
+        }
+      ]
+    },
+    {
+      "nn": "05",
+      "name": "Investment Portfolio Management",
+      "slug": "investment-portfolio-management",
+      "type": "Business",
+      "folder": "modules/05-investment-portfolio-management",
+      "feature_count": 8,
+      "total_hours": 386,
+      "features": [
+        {
+          "id": "F05-001",
+          "seq": "001",
+          "name": "Investment record capture",
+          "slug": "investment-record-capture",
+          "file": "modules/05-investment-portfolio-management/features/F05-001-investment-record-capture.md",
+          "hours": 43
+        },
+        {
+          "id": "F05-002",
+          "seq": "002",
+          "name": "Interest and outstanding auto-calculation",
+          "slug": "interest-and-outstanding-auto-calculation",
+          "file": "modules/05-investment-portfolio-management/features/F05-002-interest-and-outstanding-auto-calculation.md",
+          "hours": 44
+        },
+        {
+          "id": "F05-003",
+          "seq": "003",
+          "name": "Maturity and violation analytics",
+          "slug": "maturity-and-violation-analytics",
+          "file": "modules/05-investment-portfolio-management/features/F05-003-maturity-and-violation-analytics.md",
+          "hours": 39
+        },
+        {
+          "id": "F05-004",
+          "seq": "004",
+          "name": "Depositor / colluder / accused categorisation",
+          "slug": "depositor-colluder-accused-categorisation",
+          "file": "modules/05-investment-portfolio-management/features/F05-004-depositor-colluder-accused-categorisation.md",
+          "hours": 43
+        },
+        {
+          "id": "F05-005",
+          "seq": "005",
+          "name": "Bank returns analysis and claim cross-check",
+          "slug": "bank-returns-analysis-and-claim-cross-check",
+          "file": "modules/05-investment-portfolio-management/features/F05-005-bank-returns-analysis-and-claim-cross-check.md",
+          "hours": 66
+        },
+        {
+          "id": "F05-006",
+          "seq": "006",
+          "name": "Bank-officer verification requests",
+          "slug": "bank-officer-verification-requests",
+          "file": "modules/05-investment-portfolio-management/features/F05-006-bank-officer-verification-requests.md",
+          "hours": 32
+        },
+        {
+          "id": "F05-007",
+          "seq": "007",
+          "name": "Cross-FE comparison (FIR / seized-FE via existing app)",
+          "slug": "cross-fe-comparison-fir-seized-fe-via-existing-app",
+          "file": "modules/05-investment-portfolio-management/features/F05-007-cross-fe-comparison-fir-seized-fe-via-existing-app.md",
+          "hours": 76
+        },
+        {
+          "id": "F05-008",
+          "seq": "008",
+          "name": "Excess payment analysis",
+          "slug": "excess-payment-analysis",
+          "file": "modules/05-investment-portfolio-management/features/F05-008-excess-payment-analysis.md",
+          "hours": 43
+        }
+      ]
+    },
+    {
+      "nn": "06",
+      "name": "Claim Notification & Intake",
+      "slug": "claim-notification-intake",
+      "type": "Business",
+      "folder": "modules/06-claim-notification-intake",
+      "feature_count": 5,
+      "total_hours": 268,
+      "features": [
+        {
+          "id": "F06-001",
+          "seq": "001",
+          "name": "Claim notification and window",
+          "slug": "claim-notification-and-window",
+          "file": "modules/06-claim-notification-intake/features/F06-001-claim-notification-and-window.md",
+          "hours": 41
+        },
+        {
+          "id": "F06-002",
+          "seq": "002",
+          "name": "Staff-mediated claim intake (in-Karnataka)",
+          "slug": "staff-mediated-claim-intake-in-karnataka",
+          "file": "modules/06-claim-notification-intake/features/F06-002-staff-mediated-claim-intake-in-karnataka.md",
+          "hours": 66
+        },
+        {
+          "id": "F06-003",
+          "seq": "003",
+          "name": "Constrained online claim submission (OOK)",
+          "slug": "constrained-online-claim-submission-ook",
+          "file": "modules/06-claim-notification-intake/features/F06-003-constrained-online-claim-submission-ook.md",
+          "hours": 60
+        },
+        {
+          "id": "F06-004",
+          "seq": "004",
+          "name": "Claim pack validation and document uploads",
+          "slug": "claim-pack-validation-and-document-uploads",
+          "file": "modules/06-claim-notification-intake/features/F06-004-claim-pack-validation-and-document-uploads.md",
+          "hours": 56
+        },
+        {
+          "id": "F06-005",
+          "seq": "005",
+          "name": "Existing limited online access outcomes",
+          "slug": "existing-limited-online-access-outcomes",
+          "file": "modules/06-claim-notification-intake/features/F06-005-existing-limited-online-access-outcomes.md",
+          "hours": 45
+        }
+      ]
+    },
+    {
+      "nn": "07",
+      "name": "Claim Verification, Evaluation & Approval",
+      "slug": "claim-verification-evaluation-approval",
+      "type": "Business",
+      "folder": "modules/07-claim-verification-evaluation-approval",
+      "feature_count": 5,
+      "total_hours": 233,
+      "features": [
+        {
+          "id": "F07-001",
+          "seq": "001",
+          "name": "Officer verification checklist",
+          "slug": "officer-verification-checklist",
+          "file": "modules/07-claim-verification-evaluation-approval/features/F07-001-officer-verification-checklist.md",
+          "hours": 46
+        },
+        {
+          "id": "F07-002",
+          "seq": "002",
+          "name": "Additional document request loop",
+          "slug": "additional-document-request-loop",
+          "file": "modules/07-claim-verification-evaluation-approval/features/F07-002-additional-document-request-loop.md",
+          "hours": 49
+        },
+        {
+          "id": "F07-003",
+          "seq": "003",
+          "name": "Agentic verification assists (non-generative)",
+          "slug": "agentic-verification-assists-non-generative",
+          "file": "modules/07-claim-verification-evaluation-approval/features/F07-003-agentic-verification-assists-non-generative.md",
+          "hours": 52
+        },
+        {
+          "id": "F07-004",
+          "seq": "004",
+          "name": "Verification report for Competent Authority",
+          "slug": "verification-report-for-competent-authority",
+          "file": "modules/07-claim-verification-evaluation-approval/features/F07-004-verification-report-for-competent-authority.md",
+          "hours": 39
+        },
+        {
+          "id": "F07-005",
+          "seq": "005",
+          "name": "Claim approval decisions",
+          "slug": "claim-approval-decisions",
+          "file": "modules/07-claim-verification-evaluation-approval/features/F07-005-claim-approval-decisions.md",
+          "hours": 47
+        }
+      ]
+    },
+    {
+      "nn": "08",
+      "name": "Settlement, Payment & Closure",
+      "slug": "settlement-payment-closure",
+      "type": "Business",
+      "folder": "modules/08-settlement-payment-closure",
+      "feature_count": 5,
+      "total_hours": 255,
+      "features": [
+        {
+          "id": "F08-001",
+          "seq": "001",
+          "name": "Settlement fund and net payable calculation",
+          "slug": "settlement-fund-and-net-payable-calculation",
+          "file": "modules/08-settlement-payment-closure/features/F08-001-settlement-fund-and-net-payable-calculation.md",
+          "hours": 56
+        },
+        {
+          "id": "F08-002",
+          "seq": "002",
+          "name": "Payment batch generation (NEFT / RTGS)",
+          "slug": "payment-batch-generation-neft-rtgs",
+          "file": "modules/08-settlement-payment-closure/features/F08-002-payment-batch-generation-neft-rtgs.md",
+          "hours": 60
+        },
+        {
+          "id": "F08-003",
+          "seq": "003",
+          "name": "Payment reference and status recording",
+          "slug": "payment-reference-and-status-recording",
+          "file": "modules/08-settlement-payment-closure/features/F08-003-payment-reference-and-status-recording.md",
+          "hours": 57
+        },
+        {
+          "id": "F08-004",
+          "seq": "004",
+          "name": "Claim closure and balance update",
+          "slug": "claim-closure-and-balance-update",
+          "file": "modules/08-settlement-payment-closure/features/F08-004-claim-closure-and-balance-update.md",
+          "hours": 43
+        },
+        {
+          "id": "F08-005",
+          "seq": "005",
+          "name": "Payment forensic audit",
+          "slug": "payment-forensic-audit",
+          "file": "modules/08-settlement-payment-closure/features/F08-005-payment-forensic-audit.md",
+          "hours": 39
+        }
+      ]
+    },
+    {
+      "nn": "09",
+      "name": "Operational Reports, Lists & Special Court Outputs",
+      "slug": "operational-reports-lists-special-court",
+      "type": "Business",
+      "folder": "modules/09-operational-reports-lists-special-court",
+      "feature_count": 7,
+      "total_hours": 348,
+      "features": [
+        {
+          "id": "F09-001",
+          "seq": "001",
+          "name": "Equitable distribution statement",
+          "slug": "equitable-distribution-statement",
+          "file": "modules/09-operational-reports-lists-special-court/features/F09-001-equitable-distribution-statement.md",
+          "hours": 50
+        },
+        {
+          "id": "F09-002",
+          "seq": "002",
+          "name": "Special Court filing report",
+          "slug": "special-court-filing-report",
+          "file": "modules/09-operational-reports-lists-special-court/features/F09-002-special-court-filing-report.md",
+          "hours": 48
+        },
+        {
+          "id": "F09-003",
+          "seq": "003",
+          "name": "Parameterised operational lists",
+          "slug": "parameterised-operational-lists",
+          "file": "modules/09-operational-reports-lists-special-court/features/F09-003-parameterised-operational-lists.md",
+          "hours": 41
+        },
+        {
+          "id": "F09-004",
+          "seq": "004",
+          "name": "Claim decision dashboards",
+          "slug": "claim-decision-dashboards",
+          "file": "modules/09-operational-reports-lists-special-court/features/F09-004-claim-decision-dashboards.md",
+          "hours": 53
+        },
+        {
+          "id": "F09-005",
+          "seq": "005",
+          "name": "Legacy web app and document-software hooks",
+          "slug": "legacy-web-app-and-document-software-hooks",
+          "file": "modules/09-operational-reports-lists-special-court/features/F09-005-legacy-web-app-and-document-software-hooks.md",
+          "hours": 64
+        },
+        {
+          "id": "F09-006",
+          "seq": "006",
+          "name": "Structured operational reports",
+          "slug": "structured-operational-reports",
+          "file": "modules/09-operational-reports-lists-special-court/features/F09-006-structured-operational-reports.md",
+          "hours": 56
+        },
+        {
+          "id": "F09-007",
+          "seq": "007",
+          "name": "Role / Post mapping reports",
+          "slug": "role-post-mapping-reports",
+          "file": "modules/09-operational-reports-lists-special-court/features/F09-007-role-post-mapping-reports.md",
+          "hours": 36
+        }
+      ]
+    }
+  ]
+}
