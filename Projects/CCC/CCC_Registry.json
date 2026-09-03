@@ -1,0 +1,380 @@
+{
+  "project_code": "CCC",
+  "project_name": "FCS Karnataka State Command and Control Centre",
+  "output_root": "/Users/vadiraj/dev/BDA-repos/estimation-schemas/Projects/CCC",
+  "updated_at": "2026-08-24T06:42:51.101191+00:00",
+  "modules": [
+    {
+      "nn": "01",
+      "name": "Person, Post, Role and Access Governance",
+      "slug": "person-post-role-and-access-governance",
+      "type": "Shared",
+      "folder": "modules/01-person-post-role-and-access-governance",
+      "feature_count": 6,
+      "total_hours": 529,
+      "features": [
+        {
+          "id": "F01-001",
+          "seq": "001",
+          "name": "Person Master",
+          "slug": "person-master",
+          "file": "modules/01-person-post-role-and-access-governance/features/F01-001-person-master.md",
+          "hours": 87
+        },
+        {
+          "id": "F01-002",
+          "seq": "002",
+          "name": "Post Master and Organisational Placement",
+          "slug": "post-master-and-organisational-placement",
+          "file": "modules/01-person-post-role-and-access-governance/features/F01-002-post-master-and-organisational-placement.md",
+          "hours": 87
+        },
+        {
+          "id": "F01-003",
+          "seq": "003",
+          "name": "Post-to-Person Mapping with Effective Dates",
+          "slug": "post-to-person-mapping-with-effective-dates",
+          "file": "modules/01-person-post-role-and-access-governance/features/F01-003-post-to-person-mapping-with-effective-dates.md",
+          "hours": 121
+        },
+        {
+          "id": "F01-004",
+          "seq": "004",
+          "name": "Role-to-Post Mapping and Permission Matrix",
+          "slug": "role-to-post-mapping-and-permission-matrix",
+          "file": "modules/01-person-post-role-and-access-governance/features/F01-004-role-to-post-mapping-and-permission-matrix.md",
+          "hours": 106
+        },
+        {
+          "id": "F01-005",
+          "seq": "005",
+          "name": "Authentication, Session and Optional 2FA",
+          "slug": "authentication-session-and-optional-2fa",
+          "file": "modules/01-person-post-role-and-access-governance/features/F01-005-authentication-session-and-optional-2fa.md",
+          "hours": 79
+        },
+        {
+          "id": "F01-006",
+          "seq": "006",
+          "name": "Access Audit Log",
+          "slug": "access-audit-log",
+          "file": "modules/01-person-post-role-and-access-governance/features/F01-006-access-audit-log.md",
+          "hours": 49
+        }
+      ]
+    },
+    {
+      "nn": "02",
+      "name": "Organisation and Location Masters",
+      "slug": "organisation-and-location-masters",
+      "type": "Business",
+      "folder": "modules/02-organisation-and-location-masters",
+      "feature_count": 2,
+      "total_hours": 178,
+      "features": [
+        {
+          "id": "F02-001",
+          "seq": "001",
+          "name": "District, Taluk and Administrative Unit Master",
+          "slug": "district-taluk-and-administrative-unit-master",
+          "file": "modules/02-organisation-and-location-masters/features/F02-001-district-taluk-and-administrative-unit-master.md",
+          "hours": 81
+        },
+        {
+          "id": "F02-002",
+          "seq": "002",
+          "name": "Wholesale Godown and FPS Location Master",
+          "slug": "wholesale-godown-and-fps-location-master",
+          "file": "modules/02-organisation-and-location-masters/features/F02-002-wholesale-godown-and-fps-location-master.md",
+          "hours": 97
+        }
+      ]
+    },
+    {
+      "nn": "03",
+      "name": "Vehicle and GPS Device Onboarding",
+      "slug": "vehicle-and-gps-device-onboarding",
+      "type": "Business",
+      "folder": "modules/03-vehicle-and-gps-device-onboarding",
+      "feature_count": 2,
+      "total_hours": 220,
+      "features": [
+        {
+          "id": "F03-001",
+          "seq": "001",
+          "name": "Vehicle and Transporter Master",
+          "slug": "vehicle-and-transporter-master",
+          "file": "modules/03-vehicle-and-gps-device-onboarding/features/F03-001-vehicle-and-transporter-master.md",
+          "hours": 95
+        },
+        {
+          "id": "F03-002",
+          "seq": "002",
+          "name": "GPS Device Onboarding and Health Monitoring",
+          "slug": "gps-device-onboarding-and-health-monitoring",
+          "file": "modules/03-vehicle-and-gps-device-onboarding/features/F03-002-gps-device-onboarding-and-health-monitoring.md",
+          "hours": 125
+        }
+      ]
+    },
+    {
+      "nn": "04",
+      "name": "Route Master and Route Compliance",
+      "slug": "route-master-and-route-compliance",
+      "type": "Business",
+      "folder": "modules/04-route-master-and-route-compliance",
+      "feature_count": 2,
+      "total_hours": 209,
+      "features": [
+        {
+          "id": "F04-001",
+          "seq": "001",
+          "name": "Route Master, Geo-fence and Stoppage Configuration",
+          "slug": "route-master-geo-fence-and-stoppage-configuration",
+          "file": "modules/04-route-master-and-route-compliance/features/F04-001-route-master-geo-fence-and-stoppage-configuration.md",
+          "hours": 126
+        },
+        {
+          "id": "F04-002",
+          "seq": "002",
+          "name": "Vehicle-to-Route Assignment and Compliance Rules",
+          "slug": "vehicle-to-route-assignment-and-compliance-rules",
+          "file": "modules/04-route-master-and-route-compliance/features/F04-002-vehicle-to-route-assignment-and-compliance-rules.md",
+          "hours": 83
+        }
+      ]
+    },
+    {
+      "nn": "05",
+      "name": "GPS Live Monitoring and Trip Lifecycle",
+      "slug": "gps-live-monitoring-and-trip-lifecycle",
+      "type": "Business",
+      "folder": "modules/05-gps-live-monitoring-and-trip-lifecycle",
+      "feature_count": 2,
+      "total_hours": 302,
+      "features": [
+        {
+          "id": "F05-001",
+          "seq": "001",
+          "name": "Live Vehicle Tracking Dashboard",
+          "slug": "live-vehicle-tracking-dashboard",
+          "file": "modules/05-gps-live-monitoring-and-trip-lifecycle/features/F05-001-live-vehicle-tracking-dashboard.md",
+          "hours": 138
+        },
+        {
+          "id": "F05-002",
+          "seq": "002",
+          "name": "Trip Lifecycle, Replay and Utilization",
+          "slug": "trip-lifecycle-replay-and-utilization",
+          "file": "modules/05-gps-live-monitoring-and-trip-lifecycle/features/F05-002-trip-lifecycle-replay-and-utilization.md",
+          "hours": 164
+        }
+      ]
+    },
+    {
+      "nn": "06",
+      "name": "RFID Vehicle Identification",
+      "slug": "rfid-vehicle-identification",
+      "type": "Business",
+      "folder": "modules/06-rfid-vehicle-identification",
+      "feature_count": 2,
+      "total_hours": 216,
+      "features": [
+        {
+          "id": "F06-001",
+          "seq": "001",
+          "name": "RFID Tag and Reader Master",
+          "slug": "rfid-tag-and-reader-master",
+          "file": "modules/06-rfid-vehicle-identification/features/F06-001-rfid-tag-and-reader-master.md",
+          "hours": 115
+        },
+        {
+          "id": "F06-002",
+          "seq": "002",
+          "name": "RFID Entry Exit Detection and Compliance Log",
+          "slug": "rfid-entry-exit-detection-and-compliance-log",
+          "file": "modules/06-rfid-vehicle-identification/features/F06-002-rfid-entry-exit-detection-and-compliance-log.md",
+          "hours": 101
+        }
+      ]
+    },
+    {
+      "nn": "07",
+      "name": "ANPR Vehicle Detection",
+      "slug": "anpr-vehicle-detection",
+      "type": "Business",
+      "folder": "modules/07-anpr-vehicle-detection",
+      "feature_count": 2,
+      "total_hours": 220,
+      "features": [
+        {
+          "id": "F07-001",
+          "seq": "001",
+          "name": "ANPR Camera Registration and Site Mapping",
+          "slug": "anpr-camera-registration-and-site-mapping",
+          "file": "modules/07-anpr-vehicle-detection/features/F07-001-anpr-camera-registration-and-site-mapping.md",
+          "hours": 111
+        },
+        {
+          "id": "F07-002",
+          "seq": "002",
+          "name": "ANPR Capture, Entry Exit Log and Unauthorized Detection",
+          "slug": "anpr-capture-entry-exit-log-and-unauthorized-detection",
+          "file": "modules/07-anpr-vehicle-detection/features/F07-002-anpr-capture-entry-exit-log-and-unauthorized-detection.md",
+          "hours": 109
+        }
+      ]
+    },
+    {
+      "nn": "08",
+      "name": "CCTV Surveillance Monitoring",
+      "slug": "cctv-surveillance-monitoring",
+      "type": "Business",
+      "folder": "modules/08-cctv-surveillance-monitoring",
+      "feature_count": 3,
+      "total_hours": 416,
+      "features": [
+        {
+          "id": "F08-001",
+          "seq": "001",
+          "name": "CCTV Camera Onboarding and Health",
+          "slug": "cctv-camera-onboarding-and-health",
+          "file": "modules/08-cctv-surveillance-monitoring/features/F08-001-cctv-camera-onboarding-and-health.md",
+          "hours": 144
+        },
+        {
+          "id": "F08-002",
+          "seq": "002",
+          "name": "Live CCTV Monitoring and Playback",
+          "slug": "live-cctv-monitoring-and-playback",
+          "file": "modules/08-cctv-surveillance-monitoring/features/F08-002-live-cctv-monitoring-and-playback.md",
+          "hours": 116
+        },
+        {
+          "id": "F08-003",
+          "seq": "003",
+          "name": "Video Analytics Rules and Events",
+          "slug": "video-analytics-rules-and-events",
+          "file": "modules/08-cctv-surveillance-monitoring/features/F08-003-video-analytics-rules-and-events.md",
+          "hours": 156
+        }
+      ]
+    },
+    {
+      "nn": "09",
+      "name": "Alerts, Incidents and Escalation",
+      "slug": "alerts-incidents-and-escalation",
+      "type": "Business",
+      "folder": "modules/09-alerts-incidents-and-escalation",
+      "feature_count": 2,
+      "total_hours": 240,
+      "features": [
+        {
+          "id": "F09-001",
+          "seq": "001",
+          "name": "Alert Rules and Notification Dispatch",
+          "slug": "alert-rules-and-notification-dispatch",
+          "file": "modules/09-alerts-incidents-and-escalation/features/F09-001-alert-rules-and-notification-dispatch.md",
+          "hours": 117
+        },
+        {
+          "id": "F09-002",
+          "seq": "002",
+          "name": "Incident Register, Escalation and Closure",
+          "slug": "incident-register-escalation-and-closure",
+          "file": "modules/09-alerts-incidents-and-escalation/features/F09-002-incident-register-escalation-and-closure.md",
+          "hours": 123
+        }
+      ]
+    },
+    {
+      "nn": "10",
+      "name": "Command Control Dashboards and GIS",
+      "slug": "command-control-dashboards-and-gis",
+      "type": "Business",
+      "folder": "modules/10-command-control-dashboards-and-gis",
+      "feature_count": 2,
+      "total_hours": 242,
+      "features": [
+        {
+          "id": "F10-001",
+          "seq": "001",
+          "name": "Role-based Operational and Executive Dashboards",
+          "slug": "role-based-operational-and-executive-dashboards",
+          "file": "modules/10-command-control-dashboards-and-gis/features/F10-001-role-based-operational-and-executive-dashboards.md",
+          "hours": 140
+        },
+        {
+          "id": "F10-002",
+          "seq": "002",
+          "name": "GIS Monitoring Map",
+          "slug": "gis-monitoring-map",
+          "file": "modules/10-command-control-dashboards-and-gis/features/F10-002-gis-monitoring-map.md",
+          "hours": 102
+        }
+      ]
+    },
+    {
+      "nn": "11",
+      "name": "Reports, MIS and Analytics",
+      "slug": "reports-mis-and-analytics",
+      "type": "Business",
+      "folder": "modules/11-reports-mis-and-analytics",
+      "feature_count": 2,
+      "total_hours": 182,
+      "features": [
+        {
+          "id": "F11-001",
+          "seq": "001",
+          "name": "Operational and Compliance Reports",
+          "slug": "operational-and-compliance-reports",
+          "file": "modules/11-reports-mis-and-analytics/features/F11-001-operational-and-compliance-reports.md",
+          "hours": 71
+        },
+        {
+          "id": "F11-002",
+          "seq": "002",
+          "name": "Analytical Dashboards KPIs and Scheduled Reports",
+          "slug": "analytical-dashboards-kpis-and-scheduled-reports",
+          "file": "modules/11-reports-mis-and-analytics/features/F11-002-analytical-dashboards-kpis-and-scheduled-reports.md",
+          "hours": 111
+        }
+      ]
+    },
+    {
+      "nn": "12",
+      "name": "External Integrations Hub",
+      "slug": "external-integrations-hub",
+      "type": "Technical",
+      "folder": "modules/12-external-integrations-hub",
+      "feature_count": 3,
+      "total_hours": 438,
+      "features": [
+        {
+          "id": "F12-001",
+          "seq": "001",
+          "name": "VLTS and Multi-vendor GPS Integration",
+          "slug": "vlts-and-multi-vendor-gps-integration",
+          "file": "modules/12-external-integrations-hub/features/F12-001-vlts-and-multi-vendor-gps-integration.md",
+          "hours": 142
+        },
+        {
+          "id": "F12-002",
+          "seq": "002",
+          "name": "CCTV ONVIF and Multi-vendor Video Integration",
+          "slug": "cctv-onvif-and-multi-vendor-video-integration",
+          "file": "modules/12-external-integrations-hub/features/F12-002-cctv-onvif-and-multi-vendor-video-integration.md",
+          "hours": 130
+        },
+        {
+          "id": "F12-003",
+          "seq": "003",
+          "name": "SMART-PDS Vahan Sarathi and API Management",
+          "slug": "smart-pds-vahan-sarathi-and-api-management",
+          "file": "modules/12-external-integrations-hub/features/F12-003-smart-pds-vahan-sarathi-and-api-management.md",
+          "hours": 166
+        }
+      ]
+    }
+  ]
+}

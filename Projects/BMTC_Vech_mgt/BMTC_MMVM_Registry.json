@@ -1,0 +1,544 @@
+{
+  "project_code": "BMTC_MMVM",
+  "project_name": "BMTC Integrated Material Management and Vehicle Maintenance",
+  "output_root": "/Users/vadiraj/dev/BDA-repos/estimation-schemas/Projects/BMTC_Vech_mgt",
+  "updated_at": "2026-08-19T12:40:14.450108+00:00",
+  "modules": [
+    {
+      "nn": "01",
+      "name": "Person, Post, Role & Access Governance",
+      "slug": "person-post-role-and-access-governance",
+      "type": "Shared",
+      "folder": "modules/01-person-post-role-and-access-governance",
+      "feature_count": 6,
+      "total_hours": 692,
+      "features": [
+        {
+          "id": "F01-001",
+          "seq": "001",
+          "name": "Person Master",
+          "slug": "person-master",
+          "file": "modules/01-person-post-role-and-access-governance/features/F01-001-person-master.md",
+          "hours": 91
+        },
+        {
+          "id": "F01-002",
+          "seq": "002",
+          "name": "Post Master and Unit Placement",
+          "slug": "post-master-and-unit-placement",
+          "file": "modules/01-person-post-role-and-access-governance/features/F01-002-post-master-and-unit-placement.md",
+          "hours": 91
+        },
+        {
+          "id": "F01-003",
+          "seq": "003",
+          "name": "Post-to-Person Mapping with Effective Dates",
+          "slug": "post-to-person-mapping-with-effective-dates",
+          "file": "modules/01-person-post-role-and-access-governance/features/F01-003-post-to-person-mapping-with-effective-dates.md",
+          "hours": 125
+        },
+        {
+          "id": "F01-004",
+          "seq": "004",
+          "name": "Role-to-Post Mapping and Permission Matrix",
+          "slug": "role-to-post-mapping-and-permission-matrix",
+          "file": "modules/01-person-post-role-and-access-governance/features/F01-004-role-to-post-mapping-and-permission-matrix.md",
+          "hours": 119
+        },
+        {
+          "id": "F01-005",
+          "seq": "005",
+          "name": "Authentication, Session, OTP and 2FA",
+          "slug": "authentication-session-otp-and-2fa",
+          "file": "modules/01-person-post-role-and-access-governance/features/F01-005-authentication-session-otp-and-2fa.md",
+          "hours": 115
+        },
+        {
+          "id": "F01-006",
+          "seq": "006",
+          "name": "Access Audit Log and Recertification",
+          "slug": "access-audit-log-and-recertification",
+          "file": "modules/01-person-post-role-and-access-governance/features/F01-006-access-audit-log-and-recertification.md",
+          "hours": 151
+        }
+      ]
+    },
+    {
+      "nn": "02",
+      "name": "Organisation and Location Masters",
+      "slug": "organisation-and-location-masters",
+      "type": "Business",
+      "folder": "modules/02-organisation-and-location-masters",
+      "feature_count": 2,
+      "total_hours": 182,
+      "features": [
+        {
+          "id": "F02-001",
+          "seq": "001",
+          "name": "Depot, Zone and Workshop Master",
+          "slug": "depot-zone-and-workshop-master",
+          "file": "modules/02-organisation-and-location-masters/features/F02-001-depot-zone-and-workshop-master.md",
+          "hours": 91
+        },
+        {
+          "id": "F02-002",
+          "seq": "002",
+          "name": "Stores Location and Section Master",
+          "slug": "stores-location-and-section-master",
+          "file": "modules/02-organisation-and-location-masters/features/F02-002-stores-location-and-section-master.md",
+          "hours": 91
+        }
+      ]
+    },
+    {
+      "nn": "03",
+      "name": "Item Master and Catalogue",
+      "slug": "item-master-and-catalogue",
+      "type": "Business",
+      "folder": "modules/03-item-master-and-catalogue",
+      "feature_count": 2,
+      "total_hours": 182,
+      "features": [
+        {
+          "id": "F03-001",
+          "seq": "001",
+          "name": "BMTC Item ID and OEM Linkage",
+          "slug": "bmtc-item-id-and-oem-linkage",
+          "file": "modules/03-item-master-and-catalogue/features/F03-001-bmtc-item-id-and-oem-linkage.md",
+          "hours": 91
+        },
+        {
+          "id": "F03-002",
+          "seq": "002",
+          "name": "Schedule Hierarchy, ABC and Substitute Items",
+          "slug": "schedule-hierarchy-abc-and-substitute-items",
+          "file": "modules/03-item-master-and-catalogue/features/F03-002-schedule-hierarchy-abc-and-substitute-items.md",
+          "hours": 91
+        }
+      ]
+    },
+    {
+      "nn": "04",
+      "name": "Vehicle Master, KM and Fleet History",
+      "slug": "vehicle-master-km-and-fleet-history",
+      "type": "Business",
+      "folder": "modules/04-vehicle-master-km-and-fleet-history",
+      "feature_count": 3,
+      "total_hours": 411,
+      "features": [
+        {
+          "id": "F04-001",
+          "seq": "001",
+          "name": "Vehicle Master and Depot Allocation",
+          "slug": "vehicle-master-and-depot-allocation",
+          "file": "modules/04-vehicle-master-km-and-fleet-history/features/F04-001-vehicle-master-and-depot-allocation.md",
+          "hours": 91
+        },
+        {
+          "id": "F04-002",
+          "seq": "002",
+          "name": "Daily KM Entry and AVLS KM",
+          "slug": "daily-km-entry-and-avls-km",
+          "file": "modules/04-vehicle-master-km-and-fleet-history/features/F04-002-daily-km-entry-and-avls-km.md",
+          "hours": 169
+        },
+        {
+          "id": "F04-003",
+          "seq": "003",
+          "name": "Vehicle Lifecycle, Transfer and History",
+          "slug": "vehicle-lifecycle-transfer-and-history",
+          "file": "modules/04-vehicle-master-km-and-fleet-history/features/F04-003-vehicle-lifecycle-transfer-and-history.md",
+          "hours": 151
+        }
+      ]
+    },
+    {
+      "nn": "05",
+      "name": "Digital Job Card and Fitment",
+      "slug": "digital-job-card-and-fitment",
+      "type": "Business",
+      "folder": "modules/05-digital-job-card-and-fitment",
+      "feature_count": 3,
+      "total_hours": 371,
+      "features": [
+        {
+          "id": "F05-001",
+          "seq": "001",
+          "name": "Digital Job Card Creation and Work Capture",
+          "slug": "digital-job-card-creation-and-work-capture",
+          "file": "modules/05-digital-job-card-and-fitment/features/F05-001-digital-job-card-creation-and-work-capture.md",
+          "hours": 151
+        },
+        {
+          "id": "F05-002",
+          "seq": "002",
+          "name": "Stores Issue and Fitment Recording",
+          "slug": "stores-issue-and-fitment-recording",
+          "file": "modules/05-digital-job-card-and-fitment/features/F05-002-stores-issue-and-fitment-recording.md",
+          "hours": 97
+        },
+        {
+          "id": "F05-003",
+          "seq": "003",
+          "name": "Job Card Closure and Labour Hours",
+          "slug": "job-card-closure-and-labour-hours",
+          "file": "modules/05-digital-job-card-and-fitment/features/F05-003-job-card-closure-and-labour-hours.md",
+          "hours": 123
+        }
+      ]
+    },
+    {
+      "nn": "06",
+      "name": "Component Removal, Lifecycle, Warranty and Scrap",
+      "slug": "component-removal-lifecycle-warranty-and-scrap",
+      "type": "Business",
+      "folder": "modules/06-component-removal-lifecycle-warranty-and-scrap",
+      "feature_count": 3,
+      "total_hours": 383,
+      "features": [
+        {
+          "id": "F06-001",
+          "seq": "001",
+          "name": "Item Removal and Inter-Vehicle Transfer",
+          "slug": "item-removal-and-inter-vehicle-transfer",
+          "file": "modules/06-component-removal-lifecycle-warranty-and-scrap/features/F06-001-item-removal-and-inter-vehicle-transfer.md",
+          "hours": 119
+        },
+        {
+          "id": "F06-002",
+          "seq": "002",
+          "name": "Reusable Return and Scrap Routing",
+          "slug": "reusable-return-and-scrap-routing",
+          "file": "modules/06-component-removal-lifecycle-warranty-and-scrap/features/F06-002-reusable-return-and-scrap-routing.md",
+          "hours": 145
+        },
+        {
+          "id": "F06-003",
+          "seq": "003",
+          "name": "Warranty Claim against Supplier",
+          "slug": "warranty-claim-against-supplier",
+          "file": "modules/06-component-removal-lifecycle-warranty-and-scrap/features/F06-003-warranty-claim-against-supplier.md",
+          "hours": 119
+        }
+      ]
+    },
+    {
+      "nn": "07",
+      "name": "Tyre and Major Assembly Management",
+      "slug": "tyre-and-major-assembly-management",
+      "type": "Business",
+      "folder": "modules/07-tyre-and-major-assembly-management",
+      "feature_count": 3,
+      "total_hours": 423,
+      "features": [
+        {
+          "id": "F07-001",
+          "seq": "001",
+          "name": "Tyre History Card, Position and Inflation",
+          "slug": "tyre-history-card-position-and-inflation",
+          "file": "modules/07-tyre-and-major-assembly-management/features/F07-001-tyre-history-card-position-and-inflation.md",
+          "hours": 153
+        },
+        {
+          "id": "F07-002",
+          "seq": "002",
+          "name": "Tyre Life Analysis and Scrap Tyres",
+          "slug": "tyre-life-analysis-and-scrap-tyres",
+          "file": "modules/07-tyre-and-major-assembly-management/features/F07-002-tyre-life-analysis-and-scrap-tyres.md",
+          "hours": 139
+        },
+        {
+          "id": "F07-003",
+          "seq": "003",
+          "name": "New and RC Major Assembly Tracking",
+          "slug": "new-and-rc-major-assembly-tracking",
+          "file": "modules/07-tyre-and-major-assembly-management/features/F07-003-new-and-rc-major-assembly-tracking.md",
+          "hours": 131
+        }
+      ]
+    },
+    {
+      "nn": "08",
+      "name": "Fuel Management",
+      "slug": "fuel-management",
+      "type": "Business",
+      "folder": "modules/08-fuel-management",
+      "feature_count": 3,
+      "total_hours": 419,
+      "features": [
+        {
+          "id": "F08-001",
+          "seq": "001",
+          "name": "Underground Tank Master",
+          "slug": "underground-tank-master",
+          "file": "modules/08-fuel-management/features/F08-001-underground-tank-master.md",
+          "hours": 91
+        },
+        {
+          "id": "F08-002",
+          "seq": "002",
+          "name": "Fuel GRN and Fuel Register",
+          "slug": "fuel-grn-and-fuel-register",
+          "file": "modules/08-fuel-management/features/F08-002-fuel-grn-and-fuel-register.md",
+          "hours": 139
+        },
+        {
+          "id": "F08-003",
+          "seq": "003",
+          "name": "Daily Fuel Issue and KMPL",
+          "slug": "daily-fuel-issue-and-kmpl",
+          "file": "modules/08-fuel-management/features/F08-003-daily-fuel-issue-and-kmpl.md",
+          "hours": 189
+        }
+      ]
+    },
+    {
+      "nn": "09",
+      "name": "Preventive Maintenance Scheduling",
+      "slug": "preventive-maintenance-scheduling",
+      "type": "Business",
+      "folder": "modules/09-preventive-maintenance-scheduling",
+      "feature_count": 1,
+      "total_hours": 155,
+      "features": [
+        {
+          "id": "F09-001",
+          "seq": "001",
+          "name": "PM Schedule, Due Calculation and Alerts",
+          "slug": "pm-schedule-due-calculation-and-alerts",
+          "file": "modules/09-preventive-maintenance-scheduling/features/F09-001-pm-schedule-due-calculation-and-alerts.md",
+          "hours": 155
+        }
+      ]
+    },
+    {
+      "nn": "10",
+      "name": "Stores Receipt and Inspection",
+      "slug": "stores-receipt-and-inspection",
+      "type": "Business",
+      "folder": "modules/10-stores-receipt-and-inspection",
+      "feature_count": 2,
+      "total_hours": 272,
+      "features": [
+        {
+          "id": "F10-001",
+          "seq": "001",
+          "name": "Gate Entry (Receipt Control)",
+          "slug": "gate-entry-receipt-control",
+          "file": "modules/10-stores-receipt-and-inspection/features/F10-001-gate-entry-receipt-control.md",
+          "hours": 119
+        },
+        {
+          "id": "F10-002",
+          "seq": "002",
+          "name": "Inspection Report and Receipt Voucher",
+          "slug": "inspection-report-and-receipt-voucher",
+          "file": "modules/10-stores-receipt-and-inspection/features/F10-002-inspection-report-and-receipt-voucher.md",
+          "hours": 153
+        }
+      ]
+    },
+    {
+      "nn": "11",
+      "name": "Distribution, Stock Visibility and Replenishment",
+      "slug": "distribution-stock-visibility-and-replenishment",
+      "type": "Business",
+      "folder": "modules/11-distribution-stock-visibility-and-replenishment",
+      "feature_count": 3,
+      "total_hours": 417,
+      "features": [
+        {
+          "id": "F11-001",
+          "seq": "001",
+          "name": "Indent, Stock Transfer and Acknowledgement",
+          "slug": "indent-stock-transfer-and-acknowledgement",
+          "file": "modules/11-distribution-stock-visibility-and-replenishment/features/F11-001-indent-stock-transfer-and-acknowledgement.md",
+          "hours": 135
+        },
+        {
+          "id": "F11-002",
+          "seq": "002",
+          "name": "Real-Time Stock Visibility",
+          "slug": "real-time-stock-visibility",
+          "file": "modules/11-distribution-stock-visibility-and-replenishment/features/F11-002-real-time-stock-visibility.md",
+          "hours": 95
+        },
+        {
+          "id": "F11-003",
+          "seq": "003",
+          "name": "Min/Reorder Alerts, Average Cost and Physical Verification",
+          "slug": "minreorder-alerts-average-cost-and-physical-verification",
+          "file": "modules/11-distribution-stock-visibility-and-replenishment/features/F11-003-minreorder-alerts-average-cost-and-physical-verification.md",
+          "hours": 187
+        }
+      ]
+    },
+    {
+      "nn": "12",
+      "name": "Purchase and Supplier Management",
+      "slug": "purchase-and-supplier-management",
+      "type": "Business",
+      "folder": "modules/12-purchase-and-supplier-management",
+      "feature_count": 3,
+      "total_hours": 369,
+      "features": [
+        {
+          "id": "F12-001",
+          "seq": "001",
+          "name": "Supplier Master",
+          "slug": "supplier-master",
+          "file": "modules/12-purchase-and-supplier-management/features/F12-001-supplier-master.md",
+          "hours": 91
+        },
+        {
+          "id": "F12-002",
+          "seq": "002",
+          "name": "Auto Purchase Request and Manual PR",
+          "slug": "auto-purchase-request-and-manual-pr",
+          "file": "modules/12-purchase-and-supplier-management/features/F12-002-auto-purchase-request-and-manual-pr.md",
+          "hours": 127
+        },
+        {
+          "id": "F12-003",
+          "seq": "003",
+          "name": "CPO, LPO, LOI and PO Amendment",
+          "slug": "cpo-lpo-loi-and-po-amendment",
+          "file": "modules/12-purchase-and-supplier-management/features/F12-003-cpo-lpo-loi-and-po-amendment.md",
+          "hours": 151
+        }
+      ]
+    },
+    {
+      "nn": "13",
+      "name": "Barcode, QR, Notifications and External Integrations",
+      "slug": "barcode-qr-notifications-and-external-integrations",
+      "type": "Technical",
+      "folder": "modules/13-barcode-qr-notifications-and-external-integrations",
+      "feature_count": 3,
+      "total_hours": 449,
+      "features": [
+        {
+          "id": "F13-001",
+          "seq": "001",
+          "name": "Barcode and QR Generation and Scanning",
+          "slug": "barcode-and-qr-generation-and-scanning",
+          "file": "modules/13-barcode-qr-notifications-and-external-integrations/features/F13-001-barcode-and-qr-generation-and-scanning.md",
+          "hours": 109
+        },
+        {
+          "id": "F13-002",
+          "seq": "002",
+          "name": "SMS and Email Notifications",
+          "slug": "sms-and-email-notifications",
+          "file": "modules/13-barcode-qr-notifications-and-external-integrations/features/F13-002-sms-and-email-notifications.md",
+          "hours": 155
+        },
+        {
+          "id": "F13-003",
+          "seq": "003",
+          "name": "AVLS and BMTC IT Integration Hooks",
+          "slug": "avls-and-bmtc-it-integration-hooks",
+          "file": "modules/13-barcode-qr-notifications-and-external-integrations/features/F13-003-avls-and-bmtc-it-integration-hooks.md",
+          "hours": 185
+        }
+      ]
+    },
+    {
+      "nn": "14",
+      "name": "Reporting and Dashboards",
+      "slug": "reporting-and-dashboards",
+      "type": "Business",
+      "folder": "modules/14-reporting-and-dashboards",
+      "feature_count": 3,
+      "total_hours": 395,
+      "features": [
+        {
+          "id": "F14-001",
+          "seq": "001",
+          "name": "Job Card and Maintenance Reports",
+          "slug": "job-card-and-maintenance-reports",
+          "file": "modules/14-reporting-and-dashboards/features/F14-001-job-card-and-maintenance-reports.md",
+          "hours": 91
+        },
+        {
+          "id": "F14-002",
+          "seq": "002",
+          "name": "CME Analysis Reports (Defect, KMPL, DVP)",
+          "slug": "cme-analysis-reports-defect-kmpl-dvp",
+          "file": "modules/14-reporting-and-dashboards/features/F14-002-cme-analysis-reports-defect-kmpl-dvp.md",
+          "hours": 125
+        },
+        {
+          "id": "F14-003",
+          "seq": "003",
+          "name": "Role-based Dashboards and Accounts Views",
+          "slug": "role-based-dashboards-and-accounts-views",
+          "file": "modules/14-reporting-and-dashboards/features/F14-003-role-based-dashboards-and-accounts-views.md",
+          "hours": 179
+        }
+      ]
+    },
+    {
+      "nn": "15",
+      "name": "Data Migration and Record Digitisation",
+      "slug": "data-migration-and-record-digitisation",
+      "type": "Business",
+      "folder": "modules/15-data-migration-and-record-digitisation",
+      "feature_count": 2,
+      "total_hours": 346,
+      "features": [
+        {
+          "id": "F15-001",
+          "seq": "001",
+          "name": "Legacy Data Migration",
+          "slug": "legacy-data-migration",
+          "file": "modules/15-data-migration-and-record-digitisation/features/F15-001-legacy-data-migration.md",
+          "hours": 195
+        },
+        {
+          "id": "F15-002",
+          "seq": "002",
+          "name": "Paper Record Digitisation into System Structures",
+          "slug": "paper-record-digitisation-into-system-structures",
+          "file": "modules/15-data-migration-and-record-digitisation/features/F15-002-paper-record-digitisation-into-system-structures.md",
+          "hours": 151
+        }
+      ]
+    },
+    {
+      "nn": "16",
+      "name": "Hosting, Helpdesk and Post Go-Live Maintenance",
+      "slug": "hosting-helpdesk-and-post-go-live-maintenance",
+      "type": "Technical",
+      "folder": "modules/16-hosting-helpdesk-and-post-go-live-maintenance",
+      "feature_count": 3,
+      "total_hours": 541,
+      "features": [
+        {
+          "id": "F16-001",
+          "seq": "001",
+          "name": "MeitY Cloud Hosting Provision and Operations Console",
+          "slug": "meity-cloud-hosting-provision-and-operations-console",
+          "file": "modules/16-hosting-helpdesk-and-post-go-live-maintenance/features/F16-001-meity-cloud-hosting-provision-and-operations-console.md",
+          "hours": 229
+        },
+        {
+          "id": "F16-002",
+          "seq": "002",
+          "name": "Standalone Complaint Registering and Monitoring",
+          "slug": "standalone-complaint-registering-and-monitoring",
+          "file": "modules/16-hosting-helpdesk-and-post-go-live-maintenance/features/F16-002-standalone-complaint-registering-and-monitoring.md",
+          "hours": 149
+        },
+        {
+          "id": "F16-003",
+          "seq": "003",
+          "name": "CERT-IN Audit, VAPT and Safe-to-Host Cycle",
+          "slug": "cert-in-audit-vapt-and-safe-to-host-cycle",
+          "file": "modules/16-hosting-helpdesk-and-post-go-live-maintenance/features/F16-003-cert-in-audit-vapt-and-safe-to-host-cycle.md",
+          "hours": 163
+        }
+      ]
+    }
+  ]
+}

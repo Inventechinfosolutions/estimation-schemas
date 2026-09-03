@@ -18,10 +18,14 @@ Open a court matter as the hub record with classification, FE/CA references, cou
 Legal Cell; Advocate.
 
 ### User Journey
-1. User selects Create Matter.
-2. Enters classification, description, imported FE, CA, court, opponents and date.
-3. Saves; the matter appears in Matter Search and on that user’s dashboard.
-4. FE is a programme reference, not a new FE dossier.
+1. Who creates: Legal Cell
+2. How they create: User selects Create Matter.
+3. How they edit: Enters classification, description, imported FE, CA, court, opponents and date.
+4. How they send for approval: Saves; the matter appears in Matter Search and on that user’s dashboard. Create Matter → enter fields → save → list/dashboard.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Legal Cell works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Legal Cell opens history on the record. FE is a programme reference, not a new FE dossier.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Create Matter form
@@ -29,6 +33,25 @@ Legal Cell; Advocate.
 - Classification, description, imported FE, CA, court, opponents, date
 - Matter visible on the creator’s dashboard after save
 - No Claim settlement or eValueI case create
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Create Matter form | Complex |
+| Matter Search/List | Medium |
+| Create and classify matter history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Create and classify operations | Complex |
+| Update create and classify matter | Medium |
+| Search create and classify matter | Medium |
+| Read create and classify matter history | Easy |
 
 ### Inputs
 Classification; description; FE reference; CA; court; opponents; date.
@@ -42,7 +65,7 @@ Matter record; search listing; dashboard card.
 - Citizen matter portal is out of scope.
 
 ### Validations
-Classification, court and date required; FE/CA format as programme reference; opponents may be linked to contacts (Module 06) when known.
+- Classification, court and date required; FE/CA format as programme reference; opponents may be linked to contacts (Module 06) when known.
 
 ### Calculations
 None.
@@ -72,7 +95,7 @@ FE/CA reference import from programme/common data (Easy) — not Claim settlemen
 F01-001; F02-001; F02-005; F04-002 dashboard.
 
 ### Assumptions
-Matter numbering scheme is agreed with SPLOCA.
+- Matter numbering scheme is agreed with SPLOCA.
 
 ### Risks
 Creating a matter without FE/CA linkage fragments later reports.
@@ -85,16 +108,22 @@ Save available for court-day use; auditable create.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
 | Create Matter form | UI | Complex | 12 |
 | Matter Search/List | UI | Medium | 6 |
+| Create and classify matter history | UI | Medium | 6 |
 | Create and classify operations | API | Complex | 8 |
-| Matter entities | Database | Medium | 4 |
+| Update create and classify matter | API | Medium | 6 |
+| Search create and classify matter | API | Medium | 6 |
+| Read create and classify matter history | API | Easy | 4 |
+| Create and classify matter persistence | DB | Medium | 4 |
 | FE/CA programme reference import | Integration | Easy | 8 |
-| Create matter tests | Testing | Medium | 6 |
-| Create and classify matter guide | Documentation | Easy | 2 |
-| **Total** | | | **46** |
+| Create and classify matter feature tests | Testing | Medium | 6 |
+| Create and classify matter implementation documentation | Documentation | Easy | 2 |
+| **Total** | | | **68** |
 
 ### Estimation Assumptions
-- Dashboard widgets are F04-002.
-- Variables edit is F04-003.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

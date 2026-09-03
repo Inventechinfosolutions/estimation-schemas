@@ -18,15 +18,38 @@ Give each valuation module in-application training and FAQ for the Posts that us
 Office user; Approved Valuer; Competent Authority; Administrator.
 
 ### User Journey
-1. User opens Help / FAQ on valuation web or Android while in a module (assignment, GIS capture, Form V-1, billing, or other).
-2. The topic for that module and Post is shown.
-3. Administrator adds or updates topics.
-4. Classroom scheduling is not offered unless separately ordered.
+1. Who creates: Office user
+2. How they create: User opens Help / FAQ on valuation web or Android while in a module (assignment, GIS capture, Form V-1, billing, or other).
+3. How they edit: The topic for that module and Post is shown.
+4. How they send for approval: Administrator adds or updates topics. Open Help → resolve module + Post → show topic; Administrator save → next open sees update.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Office user works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Office user opens history on the record. Classroom scheduling is not offered unless separately ordered.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Context Help/FAQ per valuation module on web and Android
 - Administrator maintains topics
 - No classroom timetable and no second identity product
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| In-app Help/FAQ reader | Medium |
+| FAQ topic maintenance | Easy |
+| In-app training and faq for valuation history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Context FAQ retrieve and save | Medium |
+| Update in-app training and faq for valuation | Medium |
+| Search in-app training and faq for valuation | Medium |
+| Read in-app training and faq for valuation history | Easy |
 
 ### Inputs
 Current module context; Post; topic text; Administrator save.
@@ -83,15 +106,22 @@ Help available offline on Android for already-downloaded topics where the device
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
 | In-app Help/FAQ reader | UI | Medium | 6 |
 | FAQ topic maintenance | UI | Easy | 4 |
+| In-app training and faq for valuation history | UI | Medium | 6 |
 | Context FAQ retrieve and save | API | Medium | 6 |
-| FAQ topics store | Database | Easy | 2 |
+| Update in-app training and faq for valuation | API | Medium | 6 |
+| Search in-app training and faq for valuation | API | Medium | 6 |
+| Read in-app training and faq for valuation history | API | Easy | 4 |
+| In-app training and faq for valuation persistence | DB | Medium | 4 |
 | Help embed on web and Android shells | Integration | Simple | 4 |
-| Help/FAQ tests | Testing | Easy | 4 |
-| In-app FAQ note | Documentation | Easy | 2 |
-| **Total** | | | **28** |
+| In-app training and FAQ for valuation feature tests | Testing | Easy | 4 |
+| In-app training and FAQ for valuation implementation documentation | Documentation | Easy | 2 |
+| **Total** | | | **52** |
 
 ### Estimation Assumptions
-- Classroom / LMS is out of scope unless separately ordered.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

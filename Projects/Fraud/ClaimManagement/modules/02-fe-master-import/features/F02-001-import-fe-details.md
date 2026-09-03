@@ -18,17 +18,39 @@ Supply claim modules with authoritative FE identity from the existing applicatio
 Officer; Administrator.
 
 ### User Journey
-1. Officer or Administrator opens FE import and starts an import or initial load from the existing FE Management application.
-2. The system brings unique ID, name and aliases in as read-only references.
-3. Officer searches the imported FE register and confirms the FE is selectable.
-4. Officer later selects that FE on depositor, investment, asset, notification, intake and settlement screens.
-5. Officer finds no Create FE dossier, FIR, court or seized-corpus screens in this application.
+1. Who creates: Officer
+2. How they create: Officer or Administrator opens FE import and starts an import or initial load from the existing FE Management application.
+3. How they edit: The system brings unique ID, name and aliases in as read-only references.
+4. How they send for approval: Officer searches the imported FE register and confirms the FE is selectable. Authorised trigger → pull from existing FE application → store references → available for selection. No dossier workflow.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Officer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Officer opens history on the record. Officer later selects that FE on depositor, investment, asset, notification, intake and settlement screens. Officer finds no Create FE dossier, FIR, court or seized-corpus screens in this application.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Trigger FE details import / initial load from the existing FE application.
 - Store unique ID, name and aliases as read-only references.
 - Provide FE lookup used by Modules 03–09.
 - Omit any Create FE dossier action.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| FE import run screen | Complex |
+| Imported FE reference register | Medium |
+| Import fe details history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| FE import orchestration | Very High |
+| Update import fe details | Medium |
+| Search import fe details | Medium |
+| Read import fe details history | Easy |
 
 ### Inputs
 Import trigger, source FE unique ID/name/aliases as supplied by the existing application.
@@ -89,14 +111,19 @@ Import runs are auditable. Claim screens use searchable / type-ahead FE dropdown
 |---|---|---|---|
 | FE import run screen | UI | Complex | 12 |
 | Imported FE reference register | UI | Medium | 6 |
+| Import fe details history | UI | Medium | 6 |
 | FE import orchestration | API | Very High | 16 |
+| Update import fe details | API | Medium | 6 |
+| Search import fe details | API | Medium | 6 |
+| Read import fe details history | API | Easy | 4 |
 | FE reference persistence | DB | Medium | 4 |
 | Existing FE application FE-details import | Integration | Complex | 24 |
-| FE import tests | Testing | Very High | 12 |
-| FE import interface notes | Documentation | Complex | 4 |
-| **Total** | | | **78** |
+| Import FE details feature tests | Testing | Very High | 12 |
+| Import FE details implementation documentation | Documentation | Complex | 4 |
+| **Total** | | | **100** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- Import/export class API is Very High; multi-system FE master sync is Integration Complex (24), not a GIS Very High (40).
-- Directors/promoters and schemes are estimated in F02-002 and F02-003.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

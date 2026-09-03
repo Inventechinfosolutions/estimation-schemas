@@ -18,17 +18,39 @@ Stop personal consumer email being used as the primary department identity for s
 Administrator; staff member being provisioned.
 
 ### User Journey
-1. Administrator opens staff provisioning for a Person (F01-001).
-2. Administrator enters official or administered email and staff identity particulars.
-3. If a personal consumer email is offered as the primary department identity, the system refuses it.
-4. Provisioning cannot be completed until official identity is recorded.
-5. The staff member later uses that official identity on the login path (activation still requires F01-005 OTP).
+1. Who creates: Administrator
+2. How they create: Administrator opens staff provisioning for a Person (F01-001).
+3. How they edit: Administrator enters official or administered email and staff identity particulars.
+4. How they send for approval: If a personal consumer email is offered as the primary department identity, the system refuses it. Administrator-driven provisioning. Account remains non-Active until OTP in F01-005.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Administrator works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Administrator opens history on the record. Provisioning cannot be completed until official identity is recorded. The staff member later uses that official identity on the login path (activation still requires F01-005 OTP).
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Capture official / administered email as primary staff identity.
 - Refuse personal consumer email as primary department identity.
 - Block completion of staff provisioning until official identity is recorded.
 - Keep official identity distinct from OOK claimant login (F01-008).
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My official staff identity list / queue | Medium |
+| Staff official-identity provisioning form | Medium |
+| Official staff identity history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Official-identity policy enforcement | Complex |
+| Update official staff identity | Medium |
+| Search official staff identity | Medium |
+| Read official staff identity history | Easy |
 
 ### Inputs
 Person, official email, administered staff identity markers, optional secondary contact.
@@ -88,15 +110,21 @@ This is the programme-wide identity product consumed by Legal Management and GIS
 
 | Artifact | Category | Complexity | Hours |
 |---|---|---|---|
+| My official staff identity list / queue | UI | Medium | 6 |
 | Staff official-identity provisioning form | UI | Medium | 6 |
+| Official staff identity history | UI | Medium | 6 |
 | Official-identity policy enforcement | API | Complex | 8 |
+| Update official staff identity | API | Medium | 6 |
+| Search official staff identity | API | Medium | 6 |
+| Read official staff identity history | API | Easy | 4 |
 | Official identity persistence | DB | Easy | 2 |
 | Administered email / domain identity check | Integration | Easy | 8 |
-| Official identity tests | Testing | Medium | 6 |
-| Staff identity provisioning note | Documentation | Easy | 2 |
-| **Total** | | | **32** |
+| Official staff identity feature tests | Testing | Medium | 6 |
+| Official staff identity implementation documentation | Documentation | Easy | 2 |
+| **Total** | | | **60** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- OTP-before-activation is estimated in F01-005.
-- 2FA enrolment is estimated in F01-006.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

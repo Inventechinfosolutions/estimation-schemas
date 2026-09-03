@@ -18,10 +18,14 @@ Give Officers a searchable working copy without altering the original evidence f
 Officer; assisting staff.
 
 ### User Journey
-1. Officer or assisting staff uploads a hard-copy scan or photo (JPEG/PDF) against the depositor/claim work.
-2. The system produces searchable OCR text, optional translation, and format conversion (for example JPEG to PDF to DOC).
-3. Officer works on the text/working copy.
-4. The original file stays unchanged and remains the source.
+1. Who creates: Officer
+2. How they create: Officer or assisting staff uploads a hard-copy scan or photo (JPEG/PDF) against the depositor/claim work.
+3. How they edit: The system produces searchable OCR text, optional translation, and format conversion (for example JPEG to PDF to DOC).
+4. How they send for approval: Officer works on the text/working copy. Upload original → OCR/convert/translate → Officer works on copy. Human remains responsible for identity decisions.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Officer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Officer opens history on the record. The original file stays unchanged and remains the source.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Upload JPEG/PDF originals.
@@ -29,6 +33,25 @@ Officer; assisting staff.
 - Optional translation for analysis.
 - Format conversion for working copies.
 - Keep original immutable and separately identifiable from working copies.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My ocr, translation and format conversion list / queue | Medium |
+| Scan upload and OCR workbench | Very High |
+| Ocr, translation and format conversion history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| OCR, translation and conversion operations | Very High |
+| Update ocr, translation and format conversion | Medium |
+| Search ocr, translation and format conversion | Medium |
+| Read ocr, translation and format conversion history | Easy |
 
 ### Inputs
 JPEG/PDF (or similar) original scan/photo.
@@ -85,15 +108,21 @@ Integrity: source files immutable; working copies identifiable. Usable staff scr
 
 | Artifact | Category | Complexity | Hours |
 |---|---|---|---|
+| My ocr, translation and format conversion list / queue | UI | Medium | 6 |
 | Scan upload and OCR workbench | UI | Very High | 16 |
+| Ocr, translation and format conversion history | UI | Medium | 6 |
 | OCR, translation and conversion operations | API | Very High | 16 |
+| Update ocr, translation and format conversion | API | Medium | 6 |
+| Search ocr, translation and format conversion | API | Medium | 6 |
+| Read ocr, translation and format conversion history | API | Easy | 4 |
 | Original and working-copy persistence | DB | Medium | 4 |
 | OCR/translation/conversion engine | Integration | Complex | 24 |
-| OCR and conversion tests | Testing | Very High | 12 |
-| OCR working-copy guide | Documentation | Complex | 4 |
-| **Total** | | | **76** |
+| OCR, translation and format conversion feature tests | Testing | Very High | 12 |
+| OCR, translation and format conversion implementation documentation | Documentation | Complex | 4 |
+| **Total** | | | **104** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- OCR is estimated above the typical range (engine Integration Complex 24, UI Very High workbench).
-- No generative model is included.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

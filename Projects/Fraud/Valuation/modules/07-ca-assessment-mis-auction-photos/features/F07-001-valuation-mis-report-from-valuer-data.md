@@ -18,14 +18,38 @@ Produce MIS/valuation reports from valuer-entered data, including tagged media, 
 Office user (authorised); Competent Authority.
 
 ### User Journey
-1. Authorised Office user or CA selects a valuation report format, enters the asset code, and generates the report from valuer-entered data (not a blank).
-2. Photos and videos tagged in F05-009 appear on the report.
-3. Re-generate after a valuer correction; prior versions remain in history.
+1. Who creates: Office user (authorised)
+2. How they create: Authorised Office user or CA selects a valuation report format, enters the asset code, and generates the report from valuer-entered data (not a blank).
+3. How they edit: Photos and videos tagged in F05-009 appear on the report.
+4. How they send for approval: Re-generate after a valuer correction; prior versions remain in history. Select format → enter code → generate from valuer data → history on regenerate.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Office user (authorised) works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Office user (authorised) opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Generate report from valuer details by asset code
 - Include tagged photos/videos
 - Keep prior versions on regenerate
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My valuation mis report from valuer data list / queue | Medium |
+| Valuation MIS report generator | Very High |
+| Valuation mis report from valuer data history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Report from valuer data | Very High |
+| Update valuation mis report from valuer data | Medium |
+| Search valuation mis report from valuer data | Medium |
+| Read valuation mis report from valuer data history | Easy |
 
 ### Inputs
 Report format; asset code.
@@ -82,14 +106,22 @@ Version history retained.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
+| My valuation mis report from valuer data list / queue | UI | Medium | 6 |
 | Valuation MIS report generator | UI | Very High | 16 |
+| Valuation mis report from valuer data history | UI | Medium | 6 |
 | Report from valuer data | API | Very High | 16 |
-| Report version store | Database | Medium | 4 |
+| Update valuation mis report from valuer data | API | Medium | 6 |
+| Search valuation mis report from valuer data | API | Medium | 6 |
+| Read valuation mis report from valuer data history | API | Easy | 4 |
+| Valuation mis report from valuer data persistence | DB | Medium | 4 |
 | Valuer-data and media consume | Integration | Simple | 4 |
-| MIS report tests | Testing | Complex | 8 |
-| Valuation MIS guide | Documentation | Complex | 4 |
-| **Total** | | | **52** |
+| Valuation MIS report from valuer data feature tests | Testing | Complex | 8 |
+| Valuation MIS report from valuer data implementation documentation | Documentation | Complex | 4 |
+| **Total** | | | **80** |
 
 ### Estimation Assumptions
-- UI Very High 16 for report/dashboard-class generation.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

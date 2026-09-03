@@ -1,0 +1,167 @@
+{
+  "project_code": "BDAIT",
+  "project_name": "BDA IT Asset Request and Helpdesk",
+  "output_root": "/Users/vadiraj/dev/BDA-repos/estimation-schemas/Projects/BDA-IT",
+  "updated_at": "2026-08-24T08:15:00+00:00",
+  "modules": [
+    {
+      "nn": "01",
+      "name": "User Account and Access Management",
+      "slug": "user-account-and-access-management",
+      "type": "Shared",
+      "folder": "modules/01-user-account-and-access-management",
+      "feature_count": 4,
+      "total_hours": 188,
+      "features": [
+        {
+          "id": "F01-001",
+          "seq": "001",
+          "name": "Employee and Contractor Accounts",
+          "slug": "employee-and-contractor-accounts",
+          "file": "modules/01-user-account-and-access-management/features/F01-001-employee-and-contractor-accounts.md",
+          "hours": 58
+        },
+        {
+          "id": "F01-002",
+          "seq": "002",
+          "name": "Username and Password Administration",
+          "slug": "username-and-password-administration",
+          "file": "modules/01-user-account-and-access-management/features/F01-002-username-and-password-administration.md",
+          "hours": 44
+        },
+        {
+          "id": "F01-003",
+          "seq": "003",
+          "name": "Login and Role Session",
+          "slug": "login-and-role-session",
+          "file": "modules/01-user-account-and-access-management/features/F01-003-login-and-role-session.md",
+          "hours": 48
+        },
+        {
+          "id": "F01-004",
+          "seq": "004",
+          "name": "Account Enable and Disable",
+          "slug": "account-enable-and-disable",
+          "file": "modules/01-user-account-and-access-management/features/F01-004-account-enable-and-disable.md",
+          "hours": 38
+        }
+      ]
+    },
+    {
+      "nn": "02",
+      "name": "Dropdown Values",
+      "slug": "dropdown-values",
+      "type": "Business",
+      "folder": "modules/02-dropdown-values",
+      "feature_count": 1,
+      "total_hours": 16,
+      "features": [
+        {
+          "id": "F02-001",
+          "seq": "001",
+          "name": "Create Dropdown Values",
+          "slug": "create-dropdown-values",
+          "file": "modules/02-dropdown-values/features/F02-001-create-dropdown-values.md",
+          "hours": 16
+        }
+      ]
+    },
+    {
+      "nn": "03",
+      "name": "Asset Request Management",
+      "slug": "asset-request-management",
+      "type": "Business",
+      "folder": "modules/03-asset-request-management",
+      "feature_count": 3,
+      "total_hours": 122,
+      "features": [
+        {
+          "id": "F03-001",
+          "seq": "001",
+          "name": "Raise Asset Request",
+          "slug": "raise-asset-request",
+          "file": "modules/03-asset-request-management/features/F03-001-raise-asset-request.md",
+          "hours": 40
+        },
+        {
+          "id": "F03-002",
+          "seq": "002",
+          "name": "User Status Tracking for Asset Requests",
+          "slug": "user-status-tracking-for-asset-requests",
+          "file": "modules/03-asset-request-management/features/F03-002-user-status-tracking-for-asset-requests.md",
+          "hours": 36
+        },
+        {
+          "id": "F03-003",
+          "seq": "003",
+          "name": "Admin Processing of Asset Requests",
+          "slug": "admin-processing-of-asset-requests",
+          "file": "modules/03-asset-request-management/features/F03-003-admin-processing-of-asset-requests.md",
+          "hours": 46
+        }
+      ]
+    },
+    {
+      "nn": "04",
+      "name": "Ticket Management",
+      "slug": "ticket-management",
+      "type": "Business",
+      "folder": "modules/04-ticket-management",
+      "feature_count": 3,
+      "total_hours": 120,
+      "features": [
+        {
+          "id": "F04-001",
+          "seq": "001",
+          "name": "Raise Ticket",
+          "slug": "raise-ticket",
+          "file": "modules/04-ticket-management/features/F04-001-raise-ticket.md",
+          "hours": 40
+        },
+        {
+          "id": "F04-002",
+          "seq": "002",
+          "name": "User Status Tracking for Tickets",
+          "slug": "user-status-tracking-for-tickets",
+          "file": "modules/04-ticket-management/features/F04-002-user-status-tracking-for-tickets.md",
+          "hours": 36
+        },
+        {
+          "id": "F04-003",
+          "seq": "003",
+          "name": "Admin Processing of Tickets",
+          "slug": "admin-processing-of-tickets",
+          "file": "modules/04-ticket-management/features/F04-003-admin-processing-of-tickets.md",
+          "hours": 44
+        }
+      ]
+    },
+    {
+      "nn": "05",
+      "name": "Admin Dashboard",
+      "slug": "admin-dashboard",
+      "type": "Business",
+      "folder": "modules/05-admin-dashboard",
+      "feature_count": 2,
+      "total_hours": 95,
+      "features": [
+        {
+          "id": "F05-001",
+          "seq": "001",
+          "name": "Request and Ticket Snapshot",
+          "slug": "request-and-ticket-snapshot",
+          "file": "modules/05-admin-dashboard/features/F05-001-request-and-ticket-snapshot.md",
+          "hours": 55
+        },
+        {
+          "id": "F05-002",
+          "seq": "002",
+          "name": "Dashboard Filters",
+          "slug": "dashboard-filters",
+          "file": "modules/05-admin-dashboard/features/F05-002-dashboard-filters.md",
+          "hours": 40
+        }
+      ]
+    }
+  ]
+}

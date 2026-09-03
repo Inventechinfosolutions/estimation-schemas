@@ -18,9 +18,14 @@ Keep team sidebar/matter messages as a searchable record per matter (Person, Dat
 Legal Cell; Advocate; authorised team members.
 
 ### User Journey
-1. User sends a sidebar or matter message.
-2. System saves it against the matter.
-3. Another user searches communications by Person, Date, Case or Key Word and opens the brief.
+1. Who creates: Legal Cell
+2. How they create: User sends a sidebar or matter message.
+3. How they edit: System saves it against the matter.
+4. How they send for approval: Another user searches communications by Person, Date, Case or Key Word and opens the brief. Send → save on matter → search → open brief.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Legal Cell works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Legal Cell opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Matter Sidebar Messages
@@ -28,6 +33,25 @@ Legal Cell; Advocate; authorised team members.
 - Save every message against the matter
 - Open the brief from search
 - Not a consumer chat product
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Matter Sidebar Messages | Complex |
+| Communication Search (Person, Date, Case, Key Word) | Complex |
+| Team messages saved and searchable per matter history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Message save and search operations | Complex |
+| Update team messages saved and searchable per matter | Medium |
+| Search team messages saved and searchable per matter | Medium |
+| Read team messages saved and searchable per matter history | Easy |
 
 ### Inputs
 Message text; matter; optional keyword; sender Person.
@@ -41,7 +65,7 @@ Saved message; search hits; brief view.
 - Need-to-know still applies.
 
 ### Validations
-Matter required; empty message rejected; search scoped to matters the user can open.
+- Matter required; empty message rejected; search scoped to matters the user can open.
 
 ### Calculations
 None.
@@ -71,7 +95,7 @@ Matter linkage (Simple).
 F04-001; F01-002; F05-008 for email sync.
 
 ### Assumptions
-Email bodies synced in F05-008 are also searchable once stored against the matter.
+- Email bodies synced in F05-008 are also searchable once stored against the matter.
 
 ### Risks
 Sidebar used for sensitive advice without Limited space.
@@ -84,15 +108,22 @@ Search over typical matter message volume.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
 | Matter Sidebar Messages | UI | Complex | 12 |
 | Communication Search (Person, Date, Case, Key Word) | UI | Complex | 12 |
+| Team messages saved and searchable per matter history | UI | Medium | 6 |
 | Message save and search operations | API | Complex | 8 |
-| Message store | Database | Medium | 4 |
+| Update team messages saved and searchable per matter | API | Medium | 6 |
+| Search team messages saved and searchable per matter | API | Medium | 6 |
+| Read team messages saved and searchable per matter history | API | Easy | 4 |
+| Team messages saved and searchable per matter persistence | DB | Medium | 4 |
 | Matter linkage | Integration | Simple | 4 |
-| Matter message tests | Testing | Medium | 6 |
-| Matter messages search guide | Documentation | Easy | 2 |
-| **Total** | | | **48** |
+| Team messages saved and searchable per matter feature tests | Testing | Medium | 6 |
+| Team messages saved and searchable per matter implementation documentation | Documentation | Easy | 2 |
+| **Total** | | | **70** |
 
 ### Estimation Assumptions
-- Email mailbox sync is F05-008.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

@@ -18,17 +18,39 @@ Enforce one complete-pack Submit rule for counter and OOK so incomplete packs ar
 Officer (F06-002); OOK claimant (F06-003); system validation.
 
 ### User Journey
-1. User (Officer or OOK claimant) attempts Submit.
-2. System checks mandatory fields and the pack: identity proof, investment proof, bank documents, affidavit, statement of investment, and nominee/heir papers if applicable.
-3. If any mandatory item is missing, Submit is blocked and gaps are listed.
-4. Only a complete pack is stored as a submitted claim.
-5. Later F07-002 additional documents cannot replace this first complete Submit.
+1. Who creates: Officer (F06-002)
+2. How they create: User (Officer or OOK claimant) attempts Submit.
+3. How they edit: System checks mandatory fields and the pack: identity proof, investment proof, bank documents, affidavit, statement of investment, and nominee/heir papers if applicable.
+4. How they send for approval: If any mandatory item is missing, Submit is blocked and gaps are listed. Upload → validate → block or accept as submitted.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Officer (F06-002) works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Officer (F06-002) opens history on the record. Only a complete pack is stored as a submitted claim. Later F07-002 additional documents cannot replace this first complete Submit.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Shared document upload for the mandatory pack types.
 - Shared field and pack validation.
 - Block Submit and list gaps.
 - Store as submitted only when complete.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Mandatory document upload pack | Complex |
+| Submit gap list | Medium |
+| Claim pack validation and document uploads history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Pack validation engine | Very High |
+| Update claim pack validation and document uploads | Medium |
+| Search claim pack validation and document uploads | Medium |
+| Read claim pack validation and document uploads history | Easy |
 
 ### Inputs
 Uploaded files by type, mandatory field set, applicability of nominee/heir.
@@ -88,12 +110,18 @@ Validation must be identical on both channels at Submit time.
 |---|---|---|---|
 | Mandatory document upload pack | UI | Complex | 12 |
 | Submit gap list | UI | Medium | 6 |
+| Claim pack validation and document uploads history | UI | Medium | 6 |
 | Pack validation engine | API | Very High | 16 |
+| Update claim pack validation and document uploads | API | Medium | 6 |
+| Search claim pack validation and document uploads | API | Medium | 6 |
+| Read claim pack validation and document uploads history | API | Easy | 4 |
 | Submitted-pack persistence | DB | Complex | 6 |
-| Pack validation tests | Testing | Very High | 12 |
-| Mandatory pack rule guide | Documentation | Complex | 4 |
-| **Total** | | | **56** |
+| Claim pack validation and document uploads feature tests | Testing | Very High | 12 |
+| Claim pack validation and document uploads implementation documentation | Documentation | Complex | 4 |
+| **Total** | | | **78** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- This is the shared Submit engine; channel shells are F06-002/F06-003.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

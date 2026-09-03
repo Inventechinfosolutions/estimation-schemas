@@ -18,15 +18,38 @@ Flag excess payments on bank and cash transactions and keep analysis plus Office
 Officer; auditor.
 
 ### User Journey
-1. Officer opens bank and cash transactions for a depositor or FE.
-2. Officer runs excess-payment analysis and reviews flagged excesses.
-3. Officer records the outcome.
-4. The system keeps an audit trail of the analysis and the Officer’s decision (F01-010).
+1. Who creates: Officer
+2. How they create: Officer opens bank and cash transactions for a depositor or FE.
+3. How they edit: Officer runs excess-payment analysis and reviews flagged excesses.
+4. How they send for approval: Officer records the outcome. Open transactions → run analysis → review flags → record outcome.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Officer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Officer opens history on the record. The system keeps an audit trail of the analysis and the Officer’s decision (F01-010).
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Run excess-payment analysis on bank and cash transactions.
 - Present flagged excesses.
 - Record Officer outcome with audit trail.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My excess payment analysis list / queue | Medium |
+| Excess-payment analysis screen | Complex |
+| Excess payment analysis history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Excess-payment analysis operations | Very High |
+| Update excess payment analysis | Medium |
+| Search excess payment analysis | Medium |
+| Read excess payment analysis history | Easy |
 
 ### Inputs
 Bank and cash transactions, portfolio/claim payments, Officer decision.
@@ -82,13 +105,20 @@ Forensic trail of analysis and decision is retrievable.
 
 | Artifact | Category | Complexity | Hours |
 |---|---|---|---|
+| My excess payment analysis list / queue | UI | Medium | 6 |
 | Excess-payment analysis screen | UI | Complex | 12 |
+| Excess payment analysis history | UI | Medium | 6 |
 | Excess-payment analysis operations | API | Very High | 16 |
+| Update excess payment analysis | API | Medium | 6 |
+| Search excess payment analysis | API | Medium | 6 |
+| Read excess payment analysis history | API | Easy | 4 |
 | Analysis and decision audit persistence | DB | Medium | 4 |
-| Excess-payment analysis tests | Testing | Complex | 8 |
-| Excess-payment analysis note | Documentation | Medium | 3 |
-| **Total** | | | **43** |
+| Excess payment analysis feature tests | Testing | Complex | 8 |
+| Excess payment analysis implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **71** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- Payment forensic UI is additionally estimated in F08-005.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

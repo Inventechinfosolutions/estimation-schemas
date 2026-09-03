@@ -18,15 +18,38 @@ Report current and historical Person–Post–Role mappings for access audit wit
 Administrator; auditor.
 
 ### User Journey
-1. Administrator or auditor generates Role-to-Post and Post-to-Person mapping reports.
-2. Report includes current and history: who was mapped, effective dates, who changed the mapping.
-3. The report is used for access audit, not for granting access (granting remains F01-002).
+1. Who creates: Administrator
+2. How they create: Administrator or auditor generates Role-to-Post and Post-to-Person mapping reports.
+3. How they edit: Report includes current and history: who was mapped, effective dates, who changed the mapping.
+4. How they send for approval: The report is used for access audit, not for granting access (granting remains F01-002). Filter → generate → export. No mapping change from this screen.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Administrator works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Administrator opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Role-to-Post mapping report.
 - Post-to-Person current and history report.
 - Show who changed the mapping and effective dates.
 - Read-only audit use.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Mapping report parameters | Medium |
+| Current and history mapping report | Complex |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Mapping report operations | Medium |
+| Update role / post mapping reports | Medium |
+| Search role / post mapping reports | Medium |
+| Read role / post mapping reports history | Easy |
 
 ### Inputs
 As-of date, Post, Person, Role filters.
@@ -85,11 +108,16 @@ Mapping history retrievable for access audit.
 | Mapping report parameters | UI | Medium | 6 |
 | Current and history mapping report | UI | Complex | 12 |
 | Mapping report operations | API | Medium | 6 |
+| Update role / post mapping reports | API | Medium | 6 |
+| Search role / post mapping reports | API | Medium | 6 |
+| Read role / post mapping reports history | API | Easy | 4 |
 | Mapping report query support | DB | Medium | 4 |
-| Mapping report tests | Testing | Medium | 6 |
-| Mapping report note | Documentation | Easy | 2 |
-| **Total** | | | **36** |
+| Role / Post mapping reports feature tests | Testing | Medium | 6 |
+| Role / Post mapping reports implementation documentation | Documentation | Easy | 2 |
+| **Total** | | | **52** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- Mapping administration UI is estimated in F01-002; this feature is the audit report.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

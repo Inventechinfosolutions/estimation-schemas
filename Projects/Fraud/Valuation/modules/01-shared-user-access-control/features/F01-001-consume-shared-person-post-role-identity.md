@@ -18,16 +18,39 @@ Give eValueI/eValueM a single official identity with Claims and Legal, without r
 Administrator (shared IAM); Office user; Approved Valuer; Competent Authority.
 
 ### User Journey
-1. Administrator provisions the Person and Post on Claim Management Module 01 (OTP before activation and 2FA as specified there).
-2. The Person opens valuation web and signs in with that same official identity.
-3. Valuation resolves the shared Person identifier and Post; no local user master row is created.
-4. If the Person is deactivated on the shared component, the next valuation sign-in is refused.
+1. Who creates: Administrator (shared IAM)
+2. How they create: Administrator provisions the Person and Post on Claim Management Module 01 (OTP before activation and 2FA as specified there).
+3. How they edit: The Person opens valuation web and signs in with that same official identity.
+4. How they send for approval: Valuation resolves the shared Person identifier and Post; no local user master row is created. Sign-in → shared-identity handshake → bind Person/Post to valuation session → allow or refuse.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Administrator (shared IAM) works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Administrator (shared IAM) opens history on the record. If the Person is deactivated on the shared component, the next valuation sign-in is refused.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Authenticate valuation web against the shared Person–Post–Role store
 - Refuse sign-in when the shared Person is inactive or not mapped to a valuation-usable Post
 - Display a clear identity-source failure when the shared component is unreachable
 - Do not expose Person create/update, OTP enrolment, 2FA enrolment or credential lifecycle in this application
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My consume shared person–post–role identity list / queue | Medium |
+| Valuation web sign-in against shared identity | Easy |
+| Consume shared person–post–role identity history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Shared-identity session handshake | Easy |
+| Update consume shared person–post–role identity | Medium |
+| Search consume shared person–post–role identity | Medium |
+| Read consume shared person–post–role identity history | Easy |
 
 ### Inputs
 Shared Person credentials; session challenge from Claim Module 01 (OTP/2FA as already specified there).
@@ -87,15 +110,22 @@ Secure handshake; no plaintext credentials stored locally; clear failure when th
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
+| My consume shared person–post–role identity list / queue | UI | Medium | 6 |
 | Valuation web sign-in against shared identity | UI | Easy | 4 |
+| Consume shared person–post–role identity history | UI | Medium | 6 |
 | Shared-identity session handshake | API | Easy | 4 |
-| Local session binding to shared Person id | Database | Simple | 1 |
+| Update consume shared person–post–role identity | API | Medium | 6 |
+| Search consume shared person–post–role identity | API | Medium | 6 |
+| Read consume shared person–post–role identity history | API | Easy | 4 |
+| Consume shared person–post–role identity persistence | DB | Medium | 4 |
 | Claim Module 01 IAM consume (auth, mapping, retry) | Integration | Medium | 16 |
-| Shared-identity login tests | Testing | Easy | 4 |
-| Shared-identity consume note | Documentation | Easy | 2 |
-| **Total** | | | **31** |
+| Consume shared Person–Post–Role identity feature tests | Testing | Easy | 4 |
+| Consume shared Person–Post–Role identity implementation documentation | Documentation | Easy | 2 |
+| **Total** | | | **62** |
 
 ### Estimation Assumptions
-- Integration is consume-only (Medium 16), not GIS/ERP Very High 40 and not a second IAM product
-- Android channel session is estimated in F01-004 / F09-001
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

@@ -18,17 +18,39 @@ Make email and mobile OTP complete before activation so staff accounts cannot go
 Administrator; staff member being activated.
 
 ### User Journey
-1. Administrator (or staff member) enters official email and mobile on the activation path.
-2. The system sends OTP to email and to mobile.
-3. The user enters both OTPs on the OTP entry screens.
-4. Only after both OTPs succeed can the account be marked Active.
-5. If OTP is skipped, or attempted after a premature success message, login as Active is refused.
+1. Who creates: Administrator
+2. How they create: Administrator (or staff member) enters official email and mobile on the activation path.
+3. How they edit: The system sends OTP to email and to mobile.
+4. How they send for approval: The user enters both OTPs on the OTP entry screens. Provisioning → OTP send → dual verify → Active. No staff module access before Active.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Administrator works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Administrator opens history on the record. Only after both OTPs succeed can the account be marked Active. If OTP is skipped, or attempted after a premature success message, login as Active is refused.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Send OTP to official email and mobile.
 - Capture and verify both OTPs before activation.
 - Block Active status and staff login until both succeed.
 - Record OTP success/failure for forensic audit (F01-010).
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My otp before account activation list / queue | Medium |
+| Email and mobile OTP entry screens | Medium |
+| Otp before account activation history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| OTP send, verify and activation-gate operations | Complex |
+| Update otp before account activation | Medium |
+| Search otp before account activation | Medium |
+| Read otp before account activation history | Easy |
 
 ### Inputs
 Official email, mobile, OTP values, resend requests.
@@ -88,15 +110,21 @@ This is the programme-wide identity product consumed by Legal Management and GIS
 
 | Artifact | Category | Complexity | Hours |
 |---|---|---|---|
+| My otp before account activation list / queue | UI | Medium | 6 |
 | Email and mobile OTP entry screens | UI | Medium | 6 |
+| Otp before account activation history | UI | Medium | 6 |
 | OTP send, verify and activation-gate operations | API | Complex | 8 |
+| Update otp before account activation | API | Medium | 6 |
+| Search otp before account activation | API | Medium | 6 |
+| Read otp before account activation history | API | Easy | 4 |
 | OTP attempt persistence | DB | Easy | 2 |
 | SMS/email OTP delivery | Integration | Medium | 16 |
-| OTP-before-activation tests | Testing | Complex | 8 |
-| Activation OTP guide | Documentation | Medium | 3 |
-| **Total** | | | **43** |
+| OTP before account activation feature tests | Testing | Complex | 8 |
+| OTP before account activation implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **71** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- Login 2FA challenge is estimated in F01-006, not as this activation OTP.
-- Integration Medium covers OTP gateway mapping and retry, not a payment gateway.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

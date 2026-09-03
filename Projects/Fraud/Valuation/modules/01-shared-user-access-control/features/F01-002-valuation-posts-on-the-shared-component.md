@@ -18,15 +18,38 @@ Expose the correct valuation menus from shared Posts, without a second Post dire
 Administrator (shared IAM); Office user; Approved Valuer; Competent Authority; contract staff / security-guard Persons as configured.
 
 ### User Journey
-1. Administrator creates or selects Posts (Office user, Approved Valuer, Competent Authority, others named by the Authority) on the shared component.
-2. Administrator maps Persons, including contract staff or security guards used on a valuation site, to those Posts.
-3. On next valuation login the Person sees only menus allowed for the mapped Post.
-4. Changing the mapping changes menus on the subsequent session; no local account is created.
+1. Who creates: Administrator (shared IAM)
+2. How they create: Administrator creates or selects Posts (Office user, Approved Valuer, Competent Authority, others named by the Authority) on the shared component.
+3. How they edit: Administrator maps Persons, including contract staff or security guards used on a valuation site, to those Posts.
+4. How they send for approval: On next valuation login the Person sees only menus allowed for the mapped Post. Configure Post on shared component → map Person → valuation reads mapping at login → menus.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Administrator (shared IAM) works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Administrator (shared IAM) opens history on the record. Changing the mapping changes menus on the subsequent session; no local account is created.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Map valuation menu sets to shared Posts (Office user, Approved Valuer, CA, others named by SPLOCA)
 - Treat contract staff and security-guard Persons as shared Persons, not local accounts
 - Refresh menu visibility from the current Post mapping at login
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My valuation posts on the shared component list / queue | Medium |
+| Valuation Post-to-menu mapping | Medium |
+| Valuation posts on the shared component history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Post-to-menu resolution at login | Medium |
+| Update valuation posts on the shared component | Medium |
+| Search valuation posts on the shared component | Medium |
+| Read valuation posts on the shared component history | Easy |
 
 ### Inputs
 Shared Post identifier; Person–Post mapping; valuation menu-set selection.
@@ -86,15 +109,22 @@ Mapping changes are attributable to the Administrator Person; next-login consist
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
+| My valuation posts on the shared component list / queue | UI | Medium | 6 |
 | Valuation Post-to-menu mapping | UI | Medium | 6 |
+| Valuation posts on the shared component history | UI | Medium | 6 |
 | Post-to-menu resolution at login | API | Medium | 6 |
-| Valuation menu-set configuration | Database | Easy | 2 |
+| Update valuation posts on the shared component | API | Medium | 6 |
+| Search valuation posts on the shared component | API | Medium | 6 |
+| Read valuation posts on the shared component history | API | Easy | 4 |
+| Valuation posts on the shared component persistence | DB | Medium | 4 |
 | Shared Post/Role consume | Integration | Easy | 8 |
-| Post menu-visibility tests | Testing | Medium | 6 |
-| Valuation Posts configuration note | Documentation | Easy | 2 |
-| **Total** | | | **30** |
+| Valuation Posts on the shared component feature tests | Testing | Medium | 6 |
+| Valuation Posts on the shared component implementation documentation | Documentation | Easy | 2 |
+| **Total** | | | **60** |
 
 ### Estimation Assumptions
-- Person/Post CRUD remains Claim Module 01
-- Professional valuer rates are F02-001, not this feature
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

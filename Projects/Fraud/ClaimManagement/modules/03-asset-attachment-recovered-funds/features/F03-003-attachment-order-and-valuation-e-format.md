@@ -18,15 +18,38 @@ Keep the attachment order and a valuation e-format summary on the claim-side ass
 Officer; settlement Officer (later reader); Competent Authority (view).
 
 ### User Journey
-1. Officer opens the asset and uploads the attachment order.
-2. Officer enters valuation particulars in the prescribed e-format based on the valuation manual and saves.
-3. If a Valuation pack is linked (EVAL F07-007), Officer consumes the accepted summary / display photos rather than recapturing GIS field data.
-4. The order file remains available on the asset for settlement and audit.
+1. Who creates: Officer
+2. How they create: Officer opens the asset and uploads the attachment order.
+3. How they edit: Officer enters valuation particulars in the prescribed e-format based on the valuation manual and saves.
+4. How they send for approval: If a Valuation pack is linked (EVAL F07-007), Officer consumes the accepted summary / display photos rather than recapturing GIS field data. Upload order → enter/consume e-format → save. No GIS survey workflow.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Officer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Officer opens history on the record. The order file remains available on the asset for settlement and audit.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Upload and retain the attachment order on the asset.
 - Capture valuation particulars in the prescribed e-format (summary, not field GIS).
 - Consume linked accepted Valuation pack when present.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My attachment order and valuation e-format list / queue | Medium |
+| Attachment order upload and e-format form | Complex |
+| Attachment order and valuation e-format history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| E-format save operations | Complex |
+| Update attachment order and valuation e-format | Medium |
+| Search attachment order and valuation e-format | Medium |
+| Read attachment order and valuation e-format history | Easy |
 
 ### Inputs
 Attachment order file; e-format valuation fields; optional linked Valuation pack reference.
@@ -83,14 +106,21 @@ Order file remains retrievable. E-format is structured, not a homepage PDF.
 
 | Artifact | Category | Complexity | Hours |
 |---|---|---|---|
+| My attachment order and valuation e-format list / queue | UI | Medium | 6 |
 | Attachment order upload and e-format form | UI | Complex | 12 |
+| Attachment order and valuation e-format history | UI | Medium | 6 |
 | E-format save operations | API | Complex | 8 |
+| Update attachment order and valuation e-format | API | Medium | 6 |
+| Search attachment order and valuation e-format | API | Medium | 6 |
+| Read attachment order and valuation e-format history | API | Easy | 4 |
 | Order and e-format persistence | DB | Medium | 4 |
 | Accepted Valuation pack consume (when linked) | Integration | Easy | 8 |
-| Attachment order and e-format tests | Testing | Complex | 8 |
-| E-format note | Documentation | Medium | 3 |
-| **Total** | | | **43** |
+| Attachment order and valuation e-format feature tests | Testing | Complex | 8 |
+| Attachment order and valuation e-format implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **71** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- Integration Easy is REST/internal pack consume, not GIS Very High 40.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

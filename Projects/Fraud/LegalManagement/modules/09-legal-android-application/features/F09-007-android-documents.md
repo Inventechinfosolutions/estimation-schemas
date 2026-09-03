@@ -18,9 +18,14 @@ Give Android the Annexure-I document actions — view, download, create folder, 
 Advocate; Legal Cell.
 
 ### User Journey
-1. User views or downloads a document, creates a folder, uploads a file, or opens a shared document.
-2. Same rights as web (F01-003, F04-004, F05-006).
-3. View-without-download still withheld when not granted.
+1. Who creates: Advocate
+2. How they create: User views or downloads a document, creates a folder, uploads a file, or opens a shared document.
+3. How they edit: Same rights as web (F01-003, F04-004, F05-006).
+4. How they send for approval: View-without-download still withheld when not granted. Browse → view/download/upload/create folder/open shared.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Advocate works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Advocate opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Android Document list/folder
@@ -28,6 +33,25 @@ Advocate; Legal Cell.
 - Create folder
 - Open shared documents
 - Same rights as web
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Android Document list/folder | Complex |
+| View / Download / Upload | Complex |
+| Android documents history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Document operations | Complex |
+| Update android documents | Medium |
+| Search android documents | Medium |
+| Read android documents history | Easy |
 
 ### Inputs
 Matter/folder; file; action (view/download/upload).
@@ -41,7 +65,7 @@ Folder; uploaded version; viewer/download per rights.
 - No generative-AI on-device drafting.
 
 ### Validations
-Rights evaluated server-side; download withheld when not granted; folder name required.
+- Rights evaluated server-side; download withheld when not granted; folder name required.
 
 ### Calculations
 None.
@@ -71,7 +95,7 @@ Rights + web documents (Medium).
 F01-003; F04-004; F05-006; F01-004.
 
 ### Assumptions
-Preview formats as web allows; large PDFs stream.
+- Preview formats as web allows; large PDFs stream.
 
 ### Risks
 Downloaded copy on a shared phone.
@@ -84,15 +108,22 @@ View/download over HTTPS; folder create synced.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
 | Android Document list/folder | UI | Complex | 12 |
 | View / Download / Upload | UI | Complex | 12 |
+| Android documents history | UI | Medium | 6 |
 | Document operations | API | Complex | 8 |
-| Device folder cache | Database | Medium | 4 |
+| Update android documents | API | Medium | 6 |
+| Search android documents | API | Medium | 6 |
+| Read android documents history | API | Easy | 4 |
+| Android documents persistence | DB | Medium | 4 |
 | Rights and web documents | Integration | Medium | 16 |
-| Android document tests | Testing | Complex | 8 |
-| Android documents guide | Documentation | Medium | 3 |
-| **Total** | | | **63** |
+| Android documents feature tests | Testing | Complex | 8 |
+| Android documents implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **85** |
 
 ### Estimation Assumptions
-- Rights matrix remains F01-003.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

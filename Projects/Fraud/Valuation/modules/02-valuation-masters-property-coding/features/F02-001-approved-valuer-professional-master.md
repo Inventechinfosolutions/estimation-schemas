@@ -18,16 +18,39 @@ Register approved valuers as professional master data (category, order, rates) d
 Office user; Administrator.
 
 ### User Journey
-1. Office user opens Valuer master and records name, Valuer Code, Category, Order Number, Rates of Valuation and Incidental Costs.
-2. User links the master to the shared Person who will log in as that valuer.
-3. Another Officer searches by Valuer Code and sees current rates.
-4. Deactivating the master stops new assignments (F04-001) without creating a local password.
+1. Who creates: Office user
+2. How they create: Office user opens Valuer master and records name, Valuer Code, Category, Order Number, Rates of Valuation and Incidental Costs.
+3. How they edit: User links the master to the shared Person who will log in as that valuer.
+4. How they send for approval: Create/update master → link Person → active for assignment; deactivate → no new assignment.
+5. How the approver sees pending items: No approval inbox unless maker–checker is later required. Auditor opens the register.
+6. How the approver decides: No decision on this master beyond save; auditor reads history.
+7. How the maker sees history: Office user opens change history on the record (who changed what, when).
+8. How the checker / auditor sees history: Auditor (and checker if used) open the same history.
 
 ### Functional Capabilities
 - Maintain Approved Valuer name, code, category, order number, rates and incidental costs
 - Link each active master to one shared Person
 - Search by Valuer Code
 - Deactivate master to stop new assignments
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Valuer professional master register | Complex |
+| Approved valuer professional master create/edit form | Medium |
+| Approved valuer professional master change history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Valuer master CRUD and Person link | Complex |
+| Update approved valuer professional master | Medium |
+| Search approved valuer professional master register | Medium |
+| Read approved valuer professional master change history | Easy |
 
 ### Inputs
 Valuer name, Valuer Code, Category, Order Number, Rates of Valuation, Incidental Costs, linked shared Person, deactivate reason.
@@ -87,14 +110,22 @@ Rate history retained when rates change; current rate used unless bill override 
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
 | Valuer professional master register | UI | Complex | 12 |
+| Approved valuer professional master create/edit form | UI | Medium | 6 |
+| Approved valuer professional master change history | UI | Medium | 6 |
 | Valuer master CRUD and Person link | API | Complex | 8 |
-| Valuer master and rate history | Database | Medium | 4 |
+| Update approved valuer professional master | API | Medium | 6 |
+| Search approved valuer professional master register | API | Medium | 6 |
+| Read approved valuer professional master change history | API | Easy | 4 |
+| Approved valuer professional master identity persistence | DB | Medium | 4 |
 | Shared Person link (no password store) | Integration | Easy | 8 |
-| Valuer master tests | Testing | Complex | 8 |
-| Valuer professional master guide | Documentation | Medium | 3 |
-| **Total** | | | **43** |
+| Approved valuer professional master feature tests | Testing | Complex | 8 |
+| Approved valuer professional master implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **71** |
 
 ### Estimation Assumptions
-- Assignment UI is F04-001; billing application of rates is F08-002.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

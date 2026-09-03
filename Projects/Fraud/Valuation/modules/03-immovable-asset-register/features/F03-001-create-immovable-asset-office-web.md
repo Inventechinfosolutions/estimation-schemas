@@ -18,14 +18,38 @@ Let the office create the seized/attached immovable record before any valuer fie
 Office user.
 
 ### User Journey
-1. Office user opens Asset create and selects an allotted FE (F03-008) and CA from programme references (F02-005).
-2. User enters description, location, latitude and longitude (or obtains them via F02-008), dates of attachment and absolute, court-order reference, IO valuation, Section 7(1) valuation and guidance/market value as known to the office.
-3. User saves. Another Officer allotted to that FE can open the same asset and see those office-entered fields.
+1. Who creates: Office user
+2. How they create: Office user opens Asset create and selects an allotted FE (F03-008) and CA from programme references (F02-005).
+3. How they edit: User enters description, location, latitude and longitude (or obtains them via F02-008), dates of attachment and absolute, court-order reference, IO valuation, Section 7(1) valuation and guidance/market value as known to the office.
+4. How they send for approval: User saves. Another Officer allotted to that FE can open the same asset and see those office-entered fields. Select allotted FE/CA → enter office particulars → geocode if needed → save.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Office user works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Office user opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Create immovable asset on staff web with FE/CA, location, attachment dates and office-known values
 - Obtain lat/long from address via F02-008 when typed
 - Stamp Office user ID/Name/Designation/Mobile from the shared Person
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My create immovable asset list / queue | Medium |
+| Immovable asset create (office web) | Complex |
+| Create immovable asset history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Asset create with office validations | Complex |
+| Update create immovable asset | Medium |
+| Search create immovable asset | Medium |
+| Read create immovable asset history | Easy |
 
 ### Inputs
 Allotted FE; CA; Asset Description; Asset Location; Latitude & Longitude; Date of Attachment; Date of Absolute; Court Order reference; IO Valuation; Section 7(1) Valuation; Guidance / Market Value.
@@ -84,14 +108,22 @@ Staff web only for this create; Android does not create the 3(2) asset.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
+| My create immovable asset list / queue | UI | Medium | 6 |
 | Immovable asset create (office web) | UI | Complex | 12 |
+| Create immovable asset history | UI | Medium | 6 |
 | Asset create with office validations | API | Complex | 8 |
-| Immovable asset office record | Database | Medium | 4 |
+| Update create immovable asset | API | Medium | 6 |
+| Search create immovable asset | API | Medium | 6 |
+| Read create immovable asset history | API | Easy | 4 |
+| Create immovable asset persistence | DB | Medium | 4 |
 | Geocode and FE/CA consume on create | Integration | Medium | 16 |
-| Asset create tests | Testing | Complex | 8 |
-| Office asset-create guide | Documentation | Medium | 3 |
-| **Total** | | | **51** |
+| Create immovable asset (office web) feature tests | Testing | Complex | 8 |
+| Create immovable asset (office web) implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **79** |
 
 ### Estimation Assumptions
-- Particulars/boundaries are F03-002; 3(2) gate is F03-004.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

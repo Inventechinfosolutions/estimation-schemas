@@ -2,7 +2,7 @@
   "project_code": "LEGAL",
   "project_name": "Legal Management Application (KPID / SPLOCA)",
   "output_root": "/Users/vadiraj/dev/BDA-repos/estimation-schemas/Projects/Fraud/LegalManagement",
-  "updated_at": "2026-08-17T10:03:35Z",
+  "updated_at": "2026-08-18T10:29:36Z",
   "modules": [
     {
       "nn": "01",
@@ -11,7 +11,7 @@
       "type": "Shared",
       "folder": "modules/01-shared-user-access-control",
       "feature_count": 4,
-      "total_hours": 200,
+      "total_hours": 292,
       "features": [
         {
           "id": "F01-001",
@@ -19,7 +19,7 @@
           "name": "Consume shared Person\u2013Post\u2013Role identity",
           "slug": "consume-shared-person-post-role-identity",
           "file": "modules/01-shared-user-access-control/features/F01-001-consume-shared-person-post-role-identity.md",
-          "hours": 52
+          "hours": 76
         },
         {
           "id": "F01-002",
@@ -27,7 +27,7 @@
           "name": "Limited vs Community legal spaces",
           "slug": "limited-vs-community-legal-spaces",
           "file": "modules/01-shared-user-access-control/features/F01-002-limited-vs-community-legal-spaces.md",
-          "hours": 45
+          "hours": 67
         },
         {
           "id": "F01-003",
@@ -35,7 +35,7 @@
           "name": "Legal document rights",
           "slug": "legal-document-rights",
           "file": "modules/01-shared-user-access-control/features/F01-003-legal-document-rights.md",
-          "hours": 42
+          "hours": 64
         },
         {
           "id": "F01-004",
@@ -43,7 +43,7 @@
           "name": "Legal web and Android on shared identity",
           "slug": "legal-web-and-android-on-shared-identity",
           "file": "modules/01-shared-user-access-control/features/F01-004-legal-web-and-android-on-shared-identity.md",
-          "hours": 61
+          "hours": 85
         }
       ]
     },
@@ -54,7 +54,7 @@
       "type": "Shared",
       "folder": "modules/02-legal-masters-keywords-templates",
       "feature_count": 6,
-      "total_hours": 269,
+      "total_hours": 403,
       "features": [
         {
           "id": "F02-001",
@@ -62,7 +62,7 @@
           "name": "Keyword and entity catalogues",
           "slug": "keyword-and-entity-catalogues",
           "file": "modules/02-legal-masters-keywords-templates/features/F02-001-keyword-and-entity-catalogues.md",
-          "hours": 46
+          "hours": 68
         },
         {
           "id": "F02-002",
@@ -70,7 +70,7 @@
           "name": "Act and Rules coding",
           "slug": "act-and-rules-coding",
           "file": "modules/02-legal-masters-keywords-templates/features/F02-002-act-and-rules-coding.md",
-          "hours": 42
+          "hours": 64
         },
         {
           "id": "F02-003",
@@ -78,7 +78,7 @@
           "name": "Court-approved legal templates",
           "slug": "court-approved-legal-templates",
           "file": "modules/02-legal-masters-keywords-templates/features/F02-003-court-approved-legal-templates.md",
-          "hours": 49
+          "hours": 71
         },
         {
           "id": "F02-004",
@@ -86,7 +86,7 @@
           "name": "Generate draft from template",
           "slug": "generate-draft-from-template",
           "file": "modules/02-legal-masters-keywords-templates/features/F02-004-generate-draft-from-template.md",
-          "hours": 72
+          "hours": 94
         },
         {
           "id": "F02-005",
@@ -94,7 +94,7 @@
           "name": "Central static and master data",
           "slug": "central-static-and-master-data",
           "file": "modules/02-legal-masters-keywords-templates/features/F02-005-central-static-and-master-data.md",
-          "hours": 30
+          "hours": 52
         },
         {
           "id": "F02-006",
@@ -102,7 +102,7 @@
           "name": "Keyword\u2013document link maintenance",
           "slug": "keyword-document-link-maintenance",
           "file": "modules/02-legal-masters-keywords-templates/features/F02-006-keyword-document-link-maintenance.md",
-          "hours": 30
+          "hours": 54
         }
       ]
     },
@@ -113,7 +113,7 @@
       "type": "Business",
       "folder": "modules/03-legal-knowledge-library-search",
       "feature_count": 7,
-      "total_hours": 375,
+      "total_hours": 523,
       "features": [
         {
           "id": "F03-001",
@@ -121,7 +121,7 @@
           "name": "Acts and Rules library",
           "slug": "acts-and-rules-library",
           "file": "modules/03-legal-knowledge-library-search/features/F03-001-acts-and-rules-library.md",
-          "hours": 40
+          "hours": 62
         },
         {
           "id": "F03-002",
@@ -129,7 +129,7 @@
           "name": "Research and legal opinions",
           "slug": "research-and-legal-opinions",
           "file": "modules/03-legal-knowledge-library-search/features/F03-002-research-and-legal-opinions.md",
-          "hours": 42
+          "hours": 64
         },
         {
           "id": "F03-003",
@@ -137,7 +137,7 @@
           "name": "Special Court and High Court orders",
           "slug": "special-court-and-high-court-orders",
           "file": "modules/03-legal-knowledge-library-search/features/F03-003-special-court-and-high-court-orders.md",
-          "hours": 43
+          "hours": 65
         },
         {
           "id": "F03-004",
@@ -145,7 +145,7 @@
           "name": "Petitions, SOBs and written arguments",
           "slug": "petitions-sobs-and-written-arguments",
           "file": "modules/03-legal-knowledge-library-search/features/F03-004-petitions-sobs-and-written-arguments.md",
-          "hours": 42
+          "hours": 64
         },
         {
           "id": "F03-005",
@@ -153,7 +153,7 @@
           "name": "Natural-language search and search-within-results",
           "slug": "natural-language-search-and-search-within-results",
           "file": "modules/03-legal-knowledge-library-search/features/F03-005-natural-language-search-and-search-within-results.md",
-          "hours": 82
+          "hours": 102
         },
         {
           "id": "F03-006",
@@ -161,7 +161,7 @@
           "name": "Boolean terms and connectors",
           "slug": "boolean-terms-and-connectors",
           "file": "modules/03-legal-knowledge-library-search/features/F03-006-boolean-terms-and-connectors.md",
-          "hours": 88
+          "hours": 104
         },
         {
           "id": "F03-007",
@@ -169,7 +169,7 @@
           "name": "Highlight and hyperlink in results",
           "slug": "highlight-and-hyperlink-in-results",
           "file": "modules/03-legal-knowledge-library-search/features/F03-007-highlight-and-hyperlink-in-results.md",
-          "hours": 38
+          "hours": 62
         }
       ]
     },
@@ -180,7 +180,7 @@
       "type": "Business",
       "folder": "modules/04-matter-management",
       "feature_count": 7,
-      "total_hours": 357,
+      "total_hours": 507,
       "features": [
         {
           "id": "F04-001",
@@ -188,7 +188,7 @@
           "name": "Create and classify matter",
           "slug": "create-and-classify-matter",
           "file": "modules/04-matter-management/features/F04-001-create-and-classify-matter.md",
-          "hours": 46
+          "hours": 68
         },
         {
           "id": "F04-002",
@@ -196,7 +196,7 @@
           "name": "Matter dashboard",
           "slug": "matter-dashboard",
           "file": "modules/04-matter-management/features/F04-002-matter-dashboard.md",
-          "hours": 76
+          "hours": 96
         },
         {
           "id": "F04-003",
@@ -204,7 +204,7 @@
           "name": "Capture and edit matter variables",
           "slug": "capture-and-edit-matter-variables",
           "file": "modules/04-matter-management/features/F04-003-capture-and-edit-matter-variables.md",
-          "hours": 40
+          "hours": 62
         },
         {
           "id": "F04-004",
@@ -212,7 +212,7 @@
           "name": "Matter documents, versions and controlled share",
           "slug": "matter-documents-versions-and-controlled-share",
           "file": "modules/04-matter-management/features/F04-004-matter-documents-versions-and-controlled-share.md",
-          "hours": 63
+          "hours": 83
         },
         {
           "id": "F04-005",
@@ -220,7 +220,7 @@
           "name": "Consult client or expert",
           "slug": "consult-client-or-expert",
           "file": "modules/04-matter-management/features/F04-005-consult-client-or-expert.md",
-          "hours": 30
+          "hours": 54
         },
         {
           "id": "F04-006",
@@ -228,7 +228,7 @@
           "name": "Key dates, deadlines, compliance and next action",
           "slug": "key-dates-deadlines-compliance-and-next-action",
           "file": "modules/04-matter-management/features/F04-006-key-dates-deadlines-compliance-and-next-action.md",
-          "hours": 47
+          "hours": 69
         },
         {
           "id": "F04-007",
@@ -236,7 +236,7 @@
           "name": "Matter reports",
           "slug": "matter-reports",
           "file": "modules/04-matter-management/features/F04-007-matter-reports.md",
-          "hours": 55
+          "hours": 75
         }
       ]
     },
@@ -247,7 +247,7 @@
       "type": "Business",
       "folder": "modules/05-tasks-collaboration-communication",
       "feature_count": 9,
-      "total_hours": 473,
+      "total_hours": 727,
       "features": [
         {
           "id": "F05-001",
@@ -255,7 +255,7 @@
           "name": "Assign task with due date and status",
           "slug": "assign-task-with-due-date-and-status",
           "file": "modules/05-tasks-collaboration-communication/features/F05-001-assign-task-with-due-date-and-status.md",
-          "hours": 42
+          "hours": 122
         },
         {
           "id": "F05-002",
@@ -263,7 +263,7 @@
           "name": "Accept, reject, reassign, reminder, overdue, reprimand",
           "slug": "accept-reject-reassign-reminder-overdue-reprimand",
           "file": "modules/05-tasks-collaboration-communication/features/F05-002-accept-reject-reassign-reminder-overdue-reprimand.md",
-          "hours": 45
+          "hours": 67
         },
         {
           "id": "F05-003",
@@ -271,7 +271,7 @@
           "name": "Task completion report and team schedule",
           "slug": "task-completion-report-and-team-schedule",
           "file": "modules/05-tasks-collaboration-communication/features/F05-003-task-completion-report-and-team-schedule.md",
-          "hours": 42
+          "hours": 64
         },
         {
           "id": "F05-004",
@@ -279,7 +279,7 @@
           "name": "Court proceedings, stay alerts and cause lists",
           "slug": "court-proceedings-stay-alerts-and-cause-lists",
           "file": "modules/05-tasks-collaboration-communication/features/F05-004-court-proceedings-stay-alerts-and-cause-lists.md",
-          "hours": 47
+          "hours": 69
         },
         {
           "id": "F05-005",
@@ -287,7 +287,7 @@
           "name": "Queries, task requests and meetings",
           "slug": "queries-task-requests-and-meetings",
           "file": "modules/05-tasks-collaboration-communication/features/F05-005-queries-task-requests-and-meetings.md",
-          "hours": 42
+          "hours": 64
         },
         {
           "id": "F05-006",
@@ -295,7 +295,7 @@
           "name": "Limited/Community document sharing for legal work",
           "slug": "limited-community-document-sharing-for-legal-work",
           "file": "modules/05-tasks-collaboration-communication/features/F05-006-limited-community-document-sharing-for-legal-work.md",
-          "hours": 42
+          "hours": 64
         },
         {
           "id": "F05-007",
@@ -303,7 +303,7 @@
           "name": "Team messages saved and searchable per matter",
           "slug": "team-messages-saved-and-searchable-per-matter",
           "file": "modules/05-tasks-collaboration-communication/features/F05-007-team-messages-saved-and-searchable-per-matter.md",
-          "hours": 48
+          "hours": 70
         },
         {
           "id": "F05-008",
@@ -311,7 +311,7 @@
           "name": "Email sync, messaging, calendar and file alerts",
           "slug": "email-sync-messaging-calendar-and-file-alerts",
           "file": "modules/05-tasks-collaboration-communication/features/F05-008-email-sync-messaging-calendar-and-file-alerts.md",
-          "hours": 102
+          "hours": 122
         },
         {
           "id": "F05-009",
@@ -319,7 +319,7 @@
           "name": "Operational unit and Legal Cell coordination",
           "slug": "operational-unit-and-legal-cell-coordination",
           "file": "modules/05-tasks-collaboration-communication/features/F05-009-operational-unit-and-legal-cell-coordination.md",
-          "hours": 63
+          "hours": 85
         }
       ]
     },
@@ -330,7 +330,7 @@
       "type": "Business",
       "folder": "modules/06-unified-contact-database",
       "feature_count": 5,
-      "total_hours": 210,
+      "total_hours": 324,
       "features": [
         {
           "id": "F06-001",
@@ -338,7 +338,7 @@
           "name": "Office and agency contacts",
           "slug": "office-and-agency-contacts",
           "file": "modules/06-unified-contact-database/features/F06-001-office-and-agency-contacts.md",
-          "hours": 38
+          "hours": 60
         },
         {
           "id": "F06-002",
@@ -346,7 +346,7 @@
           "name": "Categorised external contacts",
           "slug": "categorised-external-contacts",
           "file": "modules/06-unified-contact-database/features/F06-002-categorised-external-contacts.md",
-          "hours": 36
+          "hours": 58
         },
         {
           "id": "F06-003",
@@ -354,7 +354,7 @@
           "name": "Unify lists and update existing",
           "slug": "unify-lists-and-update-existing",
           "file": "modules/06-unified-contact-database/features/F06-003-unify-lists-and-update-existing.md",
-          "hours": 67
+          "hours": 89
         },
         {
           "id": "F06-004",
@@ -362,7 +362,7 @@
           "name": "Free-text contact search",
           "slug": "free-text-contact-search",
           "file": "modules/06-unified-contact-database/features/F06-004-free-text-contact-search.md",
-          "hours": 29
+          "hours": 53
         },
         {
           "id": "F06-005",
@@ -370,7 +370,7 @@
           "name": "Send to SMS, email or team",
           "slug": "send-to-sms-email-or-team",
           "file": "modules/06-unified-contact-database/features/F06-005-send-to-sms-email-or-team.md",
-          "hours": 40
+          "hours": 64
         }
       ]
     },
@@ -381,7 +381,7 @@
       "type": "Business",
       "folder": "modules/07-court-attendance-expense-management",
       "feature_count": 5,
-      "total_hours": 182,
+      "total_hours": 296,
       "features": [
         {
           "id": "F07-001",
@@ -389,7 +389,7 @@
           "name": "Submit court attendance",
           "slug": "submit-court-attendance",
           "file": "modules/07-court-attendance-expense-management/features/F07-001-submit-court-attendance.md",
-          "hours": 43
+          "hours": 65
         },
         {
           "id": "F07-002",
@@ -397,7 +397,7 @@
           "name": "Capture category-wise expenses",
           "slug": "capture-category-wise-expenses",
           "file": "modules/07-court-attendance-expense-management/features/F07-002-capture-category-wise-expenses.md",
-          "hours": 40
+          "hours": 62
         },
         {
           "id": "F07-003",
@@ -405,7 +405,7 @@
           "name": "Search attendance and expense",
           "slug": "search-attendance-and-expense",
           "file": "modules/07-court-attendance-expense-management/features/F07-003-search-attendance-and-expense.md",
-          "hours": 28
+          "hours": 52
         },
         {
           "id": "F07-004",
@@ -413,7 +413,7 @@
           "name": "Submit expense bill",
           "slug": "submit-expense-bill",
           "file": "modules/07-court-attendance-expense-management/features/F07-004-submit-expense-bill.md",
-          "hours": 43
+          "hours": 65
         },
         {
           "id": "F07-005",
@@ -421,7 +421,7 @@
           "name": "Link attendance and expense to matter",
           "slug": "link-attendance-and-expense-to-matter",
           "file": "modules/07-court-attendance-expense-management/features/F07-005-link-attendance-and-expense-to-matter.md",
-          "hours": 28
+          "hours": 52
         }
       ]
     },
@@ -432,7 +432,7 @@
       "type": "Business",
       "folder": "modules/08-knowledge-sop-training-retention",
       "feature_count": 6,
-      "total_hours": 234,
+      "total_hours": 368,
       "features": [
         {
           "id": "F08-001",
@@ -440,7 +440,7 @@
           "name": "Manuals, guidelines and SOP",
           "slug": "manuals-guidelines-and-sop",
           "file": "modules/08-knowledge-sop-training-retention/features/F08-001-manuals-guidelines-and-sop.md",
-          "hours": 38
+          "hours": 60
         },
         {
           "id": "F08-002",
@@ -448,7 +448,7 @@
           "name": "Forms and format templates",
           "slug": "forms-and-format-templates",
           "file": "modules/08-knowledge-sop-training-retention/features/F08-002-forms-and-format-templates.md",
-          "hours": 28
+          "hours": 52
         },
         {
           "id": "F08-003",
@@ -456,7 +456,7 @@
           "name": "Key judgement database",
           "slug": "key-judgement-database",
           "file": "modules/08-knowledge-sop-training-retention/features/F08-003-key-judgement-database.md",
-          "hours": 38
+          "hours": 60
         },
         {
           "id": "F08-004",
@@ -464,7 +464,7 @@
           "name": "OM, GO and guard-file database",
           "slug": "om-go-and-guard-file-database",
           "file": "modules/08-knowledge-sop-training-retention/features/F08-004-om-go-and-guard-file-database.md",
-          "hours": 32
+          "hours": 54
         },
         {
           "id": "F08-005",
@@ -472,7 +472,7 @@
           "name": "Training modules and FAQ",
           "slug": "training-modules-and-faq",
           "file": "modules/08-knowledge-sop-training-retention/features/F08-005-training-modules-and-faq.md",
-          "hours": 41
+          "hours": 63
         },
         {
           "id": "F08-006",
@@ -480,7 +480,7 @@
           "name": "Outgoing-member knowledge capture and rights",
           "slug": "outgoing-member-knowledge-capture-and-rights",
           "file": "modules/08-knowledge-sop-training-retention/features/F08-006-outgoing-member-knowledge-capture-and-rights.md",
-          "hours": 57
+          "hours": 79
         }
       ]
     },
@@ -491,7 +491,7 @@
       "type": "Business",
       "folder": "modules/09-legal-android-application",
       "feature_count": 8,
-      "total_hours": 469,
+      "total_hours": 709,
       "features": [
         {
           "id": "F09-001",
@@ -499,7 +499,7 @@
           "name": "Add contact and matter on Android",
           "slug": "add-contact-and-matter-on-android",
           "file": "modules/09-legal-android-application/features/F09-001-add-contact-and-matter-on-android.md",
-          "hours": 67
+          "hours": 89
         },
         {
           "id": "F09-002",
@@ -507,7 +507,7 @@
           "name": "Android task inbox and lifecycle",
           "slug": "android-task-inbox-and-lifecycle",
           "file": "modules/09-legal-android-application/features/F09-002-android-task-inbox-and-lifecycle.md",
-          "hours": 72
+          "hours": 152
         },
         {
           "id": "F09-003",
@@ -515,7 +515,7 @@
           "name": "Android communication and messaging",
           "slug": "android-communication-and-messaging",
           "file": "modules/09-legal-android-application/features/F09-003-android-communication-and-messaging.md",
-          "hours": 55
+          "hours": 79
         },
         {
           "id": "F09-004",
@@ -523,7 +523,7 @@
           "name": "Time entry on Android",
           "slug": "time-entry-on-android",
           "file": "modules/09-legal-android-application/features/F09-004-time-entry-on-android.md",
-          "hours": 38
+          "hours": 62
         },
         {
           "id": "F09-005",
@@ -531,7 +531,7 @@
           "name": "Matter dashboard on device",
           "slug": "matter-dashboard-on-device",
           "file": "modules/09-legal-android-application/features/F09-005-matter-dashboard-on-device.md",
-          "hours": 67
+          "hours": 89
         },
         {
           "id": "F09-006",
@@ -539,7 +539,7 @@
           "name": "Attendance and expense on Android",
           "slug": "attendance-and-expense-on-android",
           "file": "modules/09-legal-android-application/features/F09-006-attendance-and-expense-on-android.md",
-          "hours": 63
+          "hours": 85
         },
         {
           "id": "F09-007",
@@ -547,7 +547,7 @@
           "name": "Android documents",
           "slug": "android-documents",
           "file": "modules/09-legal-android-application/features/F09-007-android-documents.md",
-          "hours": 63
+          "hours": 85
         },
         {
           "id": "F09-008",
@@ -555,7 +555,7 @@
           "name": "Android distribution and licensing",
           "slug": "android-distribution-and-licensing",
           "file": "modules/09-legal-android-application/features/F09-008-android-distribution-and-licensing.md",
-          "hours": 44
+          "hours": 68
         }
       ]
     }

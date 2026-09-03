@@ -18,15 +18,39 @@ Close tasks with an attached completion report and give supervisors a team-membe
 Assignee; supervisor; Legal Cell.
 
 ### User Journey
-1. Assignee marks the task complete, attaches the completion report, and publishes.
-2. Supervisor opens Team Member Task Schedule and status view for the period.
-3. Completed tasks show report attached; incomplete remain on the schedule.
+1. Who creates: Assignee
+2. How they create: Assignee marks the task complete, attaches the completion report, and publishes.
+3. How they edit: Supervisor opens Team Member Task Schedule and status view for the period.
+4. How they send for approval: Completed tasks show report attached; incomplete remain on the schedule. Attach report → mark complete → publish → supervisor schedule.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Assignee works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Assignee opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Task Completion Report attach screen
 - Team Member Task Schedule and status view
 - Publish completion with attachment
 - Period filter for supervisor
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Task Completion Report attach screen | Medium |
+| Team Member Task Schedule | Complex |
+| Task completion report and team schedule history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Complete and schedule operations | Complex |
+| Update task completion report and team schedule | Medium |
+| Search task completion report and team schedule | Medium |
+| Read task completion report and team schedule history | Easy |
 
 ### Inputs
 Completion flag; completion report file; period for schedule; team member.
@@ -40,7 +64,7 @@ Completed task; attached report; schedule view.
 - Not payroll timesheets (time entry on Android is F09-004).
 
 ### Validations
-Complete blocked without attachment if configured mandatory; period required for schedule.
+- Complete blocked without attachment if configured mandatory; period required for schedule.
 
 ### Calculations
 None beyond status counts on the schedule.
@@ -70,7 +94,7 @@ Internal matter/task (Simple).
 F05-001; F05-002; F04-002.
 
 ### Assumptions
-Attachment is the completion report, not an expense voucher (Module 07).
+- Attachment is the completion report, not an expense voucher (Module 07).
 
 ### Risks
 Marking complete without a usable report if validation is skipped.
@@ -83,15 +107,22 @@ Schedule view for a typical Legal Cell team size.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
 | Task Completion Report attach screen | UI | Medium | 6 |
 | Team Member Task Schedule | UI | Complex | 12 |
+| Task completion report and team schedule history | UI | Medium | 6 |
 | Complete and schedule operations | API | Complex | 8 |
-| Completion and schedule entities | Database | Medium | 4 |
+| Update task completion report and team schedule | API | Medium | 6 |
+| Search task completion report and team schedule | API | Medium | 6 |
+| Read task completion report and team schedule history | API | Easy | 4 |
+| Task completion report and team schedule persistence | DB | Medium | 4 |
 | Internal task/matter handoff | Integration | Simple | 4 |
-| Completion and schedule tests | Testing | Medium | 6 |
-| Completion report and team schedule guide | Documentation | Easy | 2 |
-| **Total** | | | **42** |
+| Task completion report and team schedule feature tests | Testing | Medium | 6 |
+| Task completion report and team schedule implementation documentation | Documentation | Easy | 2 |
+| **Total** | | | **64** |
 
 ### Estimation Assumptions
-- Android mark-complete is F09-002 consuming this API.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

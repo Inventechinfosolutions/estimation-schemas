@@ -18,15 +18,38 @@ Cover existing limited-access OOK outcomes in this application without building 
 Officer; Administrator (interface configuration as needed).
 
 ### User Journey
-1. Officer identifies an OOK pack already captured in the Authority’s limited online access system.
-2. Officer retrieves or receives that outcome into this application.
-3. The claim is linked to imported FE, scheme, investment, validated fields and uploads.
-4. Officer does not send the claimant to a new mass public portal.
+1. Who creates: Officer
+2. How they create: Officer identifies an OOK pack already captured in the Authority’s limited online access system.
+3. How they edit: Officer retrieves or receives that outcome into this application.
+4. How they send for approval: The claim is linked to imported FE, scheme, investment, validated fields and uploads. Retrieve/receive → map to claim → validate pack → submitted or gap list.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Officer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Officer opens history on the record. Officer does not send the claimant to a new mass public portal.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Retrieve or receive limited-access outcomes.
 - Link FE, scheme, investment, fields and uploads on the claim.
 - Avoid a second unofficial claim ledger or mass portal rebuild.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My existing limited online access outcomes list / queue | Medium |
+| Limited-access outcome retrieve/link screen | Medium |
+| Existing limited online access outcomes history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Outcome ingest operations | Complex |
+| Update existing limited online access outcomes | Medium |
+| Search existing limited online access outcomes | Medium |
+| Read existing limited online access outcomes history | Easy |
 
 ### Inputs
 Existing limited-access outcome payload / reference.
@@ -82,14 +105,21 @@ No duplicate island of claim data; official domain not .org as primary identity.
 
 | Artifact | Category | Complexity | Hours |
 |---|---|---|---|
+| My existing limited online access outcomes list / queue | UI | Medium | 6 |
 | Limited-access outcome retrieve/link screen | UI | Medium | 6 |
+| Existing limited online access outcomes history | UI | Medium | 6 |
 | Outcome ingest operations | API | Complex | 8 |
+| Update existing limited online access outcomes | API | Medium | 6 |
+| Search existing limited online access outcomes | API | Medium | 6 |
+| Read existing limited online access outcomes history | API | Easy | 4 |
 | Ingested-outcome persistence | DB | Medium | 4 |
 | Existing limited online access system | Integration | Medium | 16 |
-| Limited-access outcome tests | Testing | Complex | 8 |
-| Limited-access outcome notes | Documentation | Medium | 3 |
-| **Total** | | | **45** |
+| Existing limited online access outcomes feature tests | Testing | Complex | 8 |
+| Existing limited online access outcomes implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **73** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- Integration Medium is mapping + retry to the existing limited-access system, not a public portal rebuild.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

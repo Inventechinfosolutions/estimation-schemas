@@ -18,15 +18,38 @@ Track auction progress and lock recovered amount as the Module 03 total that set
 Officer; settlement Officer; Competent Authority.
 
 ### User Journey
-1. Officer records auction milestones, including e-Governance consultation points, on the asset.
-2. Officer cannot mark auction complete if title/e-Khata/dues path is required and missing (F03-002).
-3. Officer records the recovered amount.
-4. Settlement Officer later uses that recovered total in F08-001; the figures must match.
+1. Who creates: Officer
+2. How they create: Officer records auction milestones, including e-Governance consultation points, on the asset.
+3. How they edit: Officer cannot mark auction complete if title/e-Khata/dues path is required and missing (F03-002).
+4. How they send for approval: Officer records the recovered amount. Milestones → (optional e-Governance points) → recovered amount → available to F08-001.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Officer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Officer opens history on the record. Settlement Officer later uses that recovered total in F08-001; the figures must match.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Auction milestone tracking including e-Governance consultation points.
 - Record recovered amount on the asset / FE recovery total.
 - Expose recovered total to settlement as the figure that must match available settlement fund.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Auction milestone tracker | Complex |
+| Recovered funds register | Medium |
+| Auction tracking and recovered funds history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Auction and recovered-amount operations | Very High |
+| Update auction tracking and recovered funds | Medium |
+| Search auction tracking and recovered funds | Medium |
+| Read auction tracking and recovered funds history | Easy |
 
 ### Inputs
 Milestones, e-Governance consultation points, recovered amount, dates.
@@ -85,12 +108,18 @@ Recovered figures are structured and reconcilable. Actions attributable to Perso
 |---|---|---|---|
 | Auction milestone tracker | UI | Complex | 12 |
 | Recovered funds register | UI | Medium | 6 |
+| Auction tracking and recovered funds history | UI | Medium | 6 |
 | Auction and recovered-amount operations | API | Very High | 16 |
+| Update auction tracking and recovered funds | API | Medium | 6 |
+| Search auction tracking and recovered funds | API | Medium | 6 |
+| Read auction tracking and recovered funds history | API | Easy | 4 |
 | Auction and recovered-funds persistence | DB | Complex | 6 |
-| Auction and recovered-funds tests | Testing | Very High | 12 |
-| Auction and recovered-funds guide | Documentation | Complex | 4 |
-| **Total** | | | **56** |
+| Auction tracking and recovered funds feature tests | Testing | Very High | 12 |
+| Auction tracking and recovered funds implementation documentation | Documentation | Complex | 4 |
+| **Total** | | | **78** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- API Very High covers recovered-total integrity for settlement, not a payment gateway (out of scope).
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

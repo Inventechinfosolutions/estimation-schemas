@@ -18,15 +18,39 @@ Find a contact by free text (name, office, category or fragment) and open the re
 Legal Cell; Advocate.
 
 ### User Journey
-1. User types a name, office, category or fragment in Contact Search.
-2. System shows matches.
-3. User opens the contact.
+1. Who creates: Legal Cell
+2. How they create: User types a name, office, category or fragment in Contact Search.
+3. How they edit: System shows matches.
+4. How they send for approval: User opens the contact. Type → matches → open.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Legal Cell works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Legal Cell opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Contact Search box and results
 - Contact Card
 - Match on name, office, category, fragment
 - Open contact
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Contact Search box and results | Medium |
+| Contact Card | Easy |
+| Free-text contact search history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Free-text search operations | Medium |
+| Update free-text contact search | Medium |
+| Search free-text contact search | Medium |
+| Read free-text contact search history | Easy |
 
 ### Inputs
 Free-text query.
@@ -40,7 +64,7 @@ Match list; opened contact.
 - Not library Boolean search (F03-006).
 
 ### Validations
-Empty query rejected or shows recents as configured; results respect rights.
+- Empty query rejected or shows recents as configured; results respect rights.
 
 ### Calculations
 None.
@@ -70,7 +94,7 @@ Internal index (Simple).
 F06-001; F06-002; F01-003 where classification applies.
 
 ### Assumptions
-Fragment match is substring/token, not Boolean proximity.
+- Fragment match is substring/token, not Boolean proximity.
 
 ### Risks
 Over-broad fragment returns too many accused names on a shared screen.
@@ -83,15 +107,22 @@ Interactive as the user types or on submit as designed.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
 | Contact Search box and results | UI | Medium | 6 |
 | Contact Card | UI | Easy | 4 |
+| Free-text contact search history | UI | Medium | 6 |
 | Free-text search operations | API | Medium | 6 |
-| Contact search indexes | Database | Easy | 2 |
+| Update free-text contact search | API | Medium | 6 |
+| Search free-text contact search | API | Medium | 6 |
+| Read free-text contact search history | API | Easy | 4 |
+| Free-text contact search persistence | DB | Medium | 4 |
 | Internal directory index | Integration | Simple | 4 |
-| Contact search tests | Testing | Medium | 6 |
-| Free-text contact search guide | Documentation | Simple | 1 |
-| **Total** | | | **29** |
+| Free-text contact search feature tests | Testing | Medium | 6 |
+| Free-text contact search implementation documentation | Documentation | Simple | 1 |
+| **Total** | | | **53** |
 
 ### Estimation Assumptions
-- Boolean library search is F03-006, not this feature.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

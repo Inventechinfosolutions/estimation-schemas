@@ -18,11 +18,14 @@ Provide a tightly scoped OOK login that cannot become a mass public portal or a 
 OOK claimant; Administrator (enable constrained access); Officer (does not use this path for in-KA intake).
 
 ### User Journey
-1. OOK claimant authenticates to the constrained path (not staff 2FA enrolment).
-2. The system checks that a claim window is open (F06-001) for the relevant FE/scheme.
-3. The claimant sees only their own pack and the submit path (F06-003).
-4. Staff menus, other claimants’ packs, and filing after window close are refused.
-5. In-Karnataka claimants are not issued this self-service account; they attend the counter (F06-002).
+1. Who creates: OOK claimant
+2. How they create: OOK claimant authenticates to the constrained path (not staff 2FA enrolment).
+3. How they edit: The system checks that a claim window is open (F06-001) for the relevant FE/scheme.
+4. How they send for approval: The claimant sees only their own pack and the submit path (F06-003). Authenticate → window check → own pack → submit path (F06-003). No staff workflow.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. OOK claimant works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: OOK claimant opens history on the record. Staff menus, other claimants’ packs, and filing after window close are refused. In-Karnataka claimants are not issued this self-service account; they attend the counter (F06-002).
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Constrained OOK authentication distinct from staff Person/Post login.
@@ -30,6 +33,25 @@ OOK claimant; Administrator (enable constrained access); Officer (does not use t
 - Own-pack visibility only.
 - Block staff menus for OOK sessions.
 - Do not issue this account type to in-KA claimants.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| OOK login and constrained shell | Complex |
+| Own-pack list (OOK) | Easy |
+| Constrained ook claimant access history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Window-gated own-pack access operations | Complex |
+| Update constrained ook claimant access | Medium |
+| Search constrained ook claimant access | Medium |
+| Read constrained ook claimant access history | Easy |
 
 ### Inputs
 OOK claimant identity token/credentials as Authority-approved; open window; own pack reference.
@@ -91,13 +113,18 @@ OOK path is limited and simple. Staff web remains the official work channel. Pri
 |---|---|---|---|
 | OOK login and constrained shell | UI | Complex | 12 |
 | Own-pack list (OOK) | UI | Easy | 4 |
+| Constrained ook claimant access history | UI | Medium | 6 |
 | Window-gated own-pack access operations | API | Complex | 8 |
+| Update constrained ook claimant access | API | Medium | 6 |
+| Search constrained ook claimant access | API | Medium | 6 |
+| Read constrained ook claimant access history | API | Easy | 4 |
 | OOK session and pack-scope persistence | DB | Medium | 4 |
-| Constrained OOK access tests | Testing | Complex | 8 |
-| OOK access note | Documentation | Medium | 3 |
-| **Total** | | | **39** |
+| Constrained OOK claimant access feature tests | Testing | Complex | 8 |
+| Constrained OOK claimant access implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **61** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- OOK document submit wizard is estimated in F06-003.
-- No Integration row: window and pack checks are internal.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

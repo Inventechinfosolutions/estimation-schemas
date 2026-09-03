@@ -18,14 +18,38 @@ Store the court order and sale deeds the assigned valuer will open, with auditab
 Office user; Approved Valuer (view later).
 
 ### User Journey
-1. Officer uploads court-order file and sale-deed files with court-order number and details.
-2. Later valuer uses View (F04-003) to open these files.
-3. Replacing a file is an auditable office action.
+1. Who creates: Office user
+2. How they create: Officer uploads court-order file and sale-deed files with court-order number and details.
+3. How they edit: Later valuer uses View (F04-003) to open these files.
+4. How they send for approval: Replacing a file is an auditable office action. Upload → store on asset → valuer View; replace → history.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Office user works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Office user opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Upload court order (number and details with file) and sale deeds (with file)
 - Replace with history
 - Serve the same files to valuer View
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My upload court order and sale deeds list / queue | Medium |
+| Court-order and sale-deed upload pack | Medium |
+| Upload court order and sale deeds history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Deed/order attach and replace | Medium |
+| Update upload court order and sale deeds | Medium |
+| Search upload court order and sale deeds | Medium |
+| Read upload court order and sale deeds history | Easy |
 
 ### Inputs
 Court-order number and details; court-order file; sale-deed files.
@@ -82,14 +106,22 @@ Files remain with the asset; HTTPS; AES-256 as programme NFR.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
+| My upload court order and sale deeds list / queue | UI | Medium | 6 |
 | Court-order and sale-deed upload pack | UI | Medium | 6 |
+| Upload court order and sale deeds history | UI | Medium | 6 |
 | Deed/order attach and replace | API | Medium | 6 |
-| Deed/order file metadata | Database | Medium | 4 |
+| Update upload court order and sale deeds | API | Medium | 6 |
+| Search upload court order and sale deeds | API | Medium | 6 |
+| Read upload court order and sale deeds history | API | Easy | 4 |
+| Upload court order and sale deeds persistence | DB | Medium | 4 |
 | Internal document storage | Integration | Simple | 4 |
-| Upload/replace tests | Testing | Medium | 6 |
-| Deed/order upload note | Documentation | Easy | 2 |
-| **Total** | | | **28** |
+| Upload court order and sale deeds feature tests | Testing | Medium | 6 |
+| Upload court order and sale deeds implementation documentation | Documentation | Easy | 2 |
+| **Total** | | | **56** |
 
 ### Estimation Assumptions
-- Valuer View UX is F04-003; CAD is F03-006.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

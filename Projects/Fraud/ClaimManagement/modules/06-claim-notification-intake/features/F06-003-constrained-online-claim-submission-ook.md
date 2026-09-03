@@ -18,16 +18,39 @@ Let OOK claimants submit only their own pack during an open window, with the sam
 OOK claimant; Officer (does not replace OOK submit).
 
 ### User Journey
-1. OOK claimant logs into the constrained path (F01-008) during an open window.
-2. Claimant selects imported FE, scheme and investment and confirms personal, investment and refund-bank details.
-3. Claimant uploads the same mandatory pack as F06-002: identity proof, investment proof, bank documents, affidavit, statement of investment, and nominee/heir papers if applicable.
-4. Submit is allowed only when that full pack and mandatory fields are present; otherwise gaps are listed and Submit is blocked.
+1. Who creates: OOK claimant
+2. How they create: OOK claimant logs into the constrained path (F01-008) during an open window.
+3. How they edit: Claimant selects imported FE, scheme and investment and confirms personal, investment and refund-bank details.
+4. How they send for approval: Claimant uploads the same mandatory pack as F06-002: identity proof, investment proof, bank documents, affidavit, statement of investment, and nominee/heir papers if applicable. OOK login → capture → shared validate → Submit or block.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. OOK claimant works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: OOK claimant opens history on the record. Submit is allowed only when that full pack and mandatory fields are present; otherwise gaps are listed and Submit is blocked.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Constrained OOK submit wizard.
 - Same mandatory pack and fields as in-KA staff intake.
 - Same block-and-list-gaps behaviour.
 - Own pack only; no staff menus.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| OOK submit wizard | Very High |
+| OOK own-pack status | Medium |
+| Constrained online claim submission history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| OOK submit and gap-list operations | Very High |
+| Update constrained online claim submission | Medium |
+| Search constrained online claim submission | Medium |
+| Read constrained online claim submission history | Easy |
 
 ### Inputs
 OOK session, imported FE/scheme/investment, confirmed fields, document files.
@@ -86,12 +109,18 @@ OOK path is limited and simple. Official domain is not .org as primary hosting i
 |---|---|---|---|
 | OOK submit wizard | UI | Very High | 16 |
 | OOK own-pack status | UI | Medium | 6 |
+| Constrained online claim submission history | UI | Medium | 6 |
 | OOK submit and gap-list operations | API | Very High | 16 |
+| Update constrained online claim submission | API | Medium | 6 |
+| Search constrained online claim submission | API | Medium | 6 |
+| Read constrained online claim submission history | API | Easy | 4 |
 | OOK submit persistence | DB | Complex | 6 |
-| OOK submit tests | Testing | Very High | 12 |
-| OOK submit guide | Documentation | Complex | 4 |
-| **Total** | | | **60** |
+| Constrained online claim submission (OOK) feature tests | Testing | Very High | 12 |
+| Constrained online claim submission (OOK) implementation documentation | Documentation | Complex | 4 |
+| **Total** | | | **82** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- Shared validation engine hours are in F06-004; this feature estimates the OOK wizard and channel constraints.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

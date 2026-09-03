@@ -18,10 +18,14 @@ Let Legal Cell retrieve library material with plain-language queries and then na
 Legal Cell; Advocate.
 
 ### User Journey
-1. User opens Library Search and types a plain-language query (for example an elements-style question).
-2. Reviews the hit list with highlighted terms and a link to each document.
-3. Enters further keywords and chooses Search Within Results.
-4. The hit list narrows to the current set; originals remain unchanged.
+1. Who creates: Legal Cell
+2. How they create: User opens Library Search and types a plain-language query (for example an elements-style question).
+3. How they edit: Reviews the hit list with highlighted terms and a link to each document.
+4. How they send for approval: Enters further keywords and chooses Search Within Results. Enter NL query → hit list → Search Within Results → open document.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Legal Cell works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Legal Cell opens history on the record. The hit list narrows to the current set; originals remain unchanged.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Library Search Box and Hit List
@@ -30,6 +34,25 @@ Legal Cell; Advocate.
 - Hits with highlighted terms and document link
 - Not a public website search; not a standalone search product
 - No generative-AI answer synthesis — hits are documents, not composed advice
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Library Search Box and Hit List | Very High |
+| Search Within Results panel | Complex |
+| Natural-language search and search-within-results history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Natural-language query and refine engine | Very High |
+| Update natural-language search and search-within-results | Medium |
+| Search natural-language search and search-within-results | Medium |
+| Read natural-language search and search-within-results history | Easy |
 
 ### Inputs
 Natural-language query; optional within-results keywords; active hit-set identifier.
@@ -44,7 +67,7 @@ Ranked/listed hits; narrowed hit set; highlight spans; document links.
 - Does not generate legal advice text.
 
 ### Validations
-Empty query rejected; within-results requires an existing hit set; rights filter hits the user cannot open.
+- Empty query rejected; within-results requires an existing hit set; rights filter hits the user cannot open.
 
 ### Calculations
 Hit ranking/order as configured; no financial calculations.
@@ -74,7 +97,7 @@ Library corpus indexing (Medium — mapping + retry of index updates).
 F03-001–F03-004; F03-007; F02-001; F01-003.
 
 ### Assumptions
-NL search is query-against-corpus, not a large-language-model chat. Boolean syntax is a separate feature (F03-006).
+- NL search is query-against-corpus, not a large-language-model chat. Boolean syntax is a separate feature (F03-006).
 
 ### Risks
 Over-broad NL hits slow court-day use; Search Within Results must not silently search the whole corpus again.
@@ -87,16 +110,22 @@ Interactive search suitable for daily Legal Cell work; index refresh after new f
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
 | Library Search Box and Hit List | UI | Very High | 16 |
 | Search Within Results panel | UI | Complex | 12 |
+| Natural-language search and search-within-results history | UI | Medium | 6 |
 | Natural-language query and refine engine | API | Very High | 16 |
-| Search index | Database | Complex | 6 |
+| Update natural-language search and search-within-results | API | Medium | 6 |
+| Search natural-language search and search-within-results | API | Medium | 6 |
+| Read natural-language search and search-within-results history | API | Easy | 4 |
+| Natural-language search and search-within-results persistence | DB | Medium | 4 |
 | Library corpus indexing | Integration | Medium | 16 |
-| NL search and within-results tests | Testing | Very High | 12 |
-| Natural-language library search guide | Documentation | Complex | 4 |
-| **Total** | | | **82** |
+| Natural-language search and search-within-results feature tests | Testing | Very High | 12 |
+| Natural-language search and search-within-results implementation documentation | Documentation | Complex | 4 |
+| **Total** | | | **102** |
 
 ### Estimation Assumptions
-- Not a generative-AI copilot; no answer-composition hours.
-- Boolean AND/OR/NOT and proximity connectors are estimated in F03-006.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

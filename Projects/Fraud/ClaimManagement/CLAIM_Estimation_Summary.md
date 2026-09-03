@@ -12,28 +12,28 @@ Internal roll-up from module feature indexes. Hours from Estimation Master.
 
 - **Modules:** 9
 - **Features:** 60
-- **Grand total:** **2,989 hours**
-- **Recommended go-live:** **2,989 hours**
+- **Grand total:** **4,533 hours**
+- **Recommended go-live:** **4,533 hours**
 - **Optional / conditional:** **0 hours**
 
 ## Per-module totals
 
 | # | Module | Type | Features | Hours |
 |---|--------|------|---------:|------:|
-| 01 | Access Control, Person–Post–Role & Forensic Audit | Shared | 10 | 503 |
-| 02 | FE Master Import (from existing application) | Business | 4 | 267 |
-| 03 | Asset Attachment & Recovered Funds | Business | 6 | 234 |
-| 04 | Depositor Master & Identity Verification | Business | 10 | 495 |
-| 05 | Investment Portfolio Management | Business | 8 | 386 |
-| 06 | Claim Notification & Intake | Business | 5 | 268 |
-| 07 | Claim Verification, Evaluation & Approval | Business | 5 | 233 |
-| 08 | Settlement, Payment & Closure | Business | 5 | 255 |
-| 09 | Operational Reports, Lists & Special Court Outputs | Business | 7 | 348 |
-| | **Total** | | **60** | **2,989** |
+| 01 | Access Control, Person–Post–Role & Forensic Audit | Shared | 10 | 753 |
+| 02 | FE Master Import (from existing application) | Business | 4 | 361 |
+| 03 | Asset Attachment & Recovered Funds | Business | 6 | 372 |
+| 04 | Depositor Master & Identity Verification | Business | 10 | 739 |
+| 05 | Investment Portfolio Management | Business | 8 | 586 |
+| 06 | Claim Notification & Intake | Business | 5 | 384 |
+| 07 | Claim Verification, Evaluation & Approval | Business | 5 | 465 |
+| 08 | Settlement, Payment & Closure | Business | 5 | 371 |
+| 09 | Operational Reports, Lists & Special Court Outputs | Business | 7 | 502 |
+| | **Total** | | **60** | **4,533** |
 
 ## Go-live vs optional
 
-- Go-live (all modules 01–09): **2,989 hours**
+- Go-live (all modules 01–09): **4,533 hours**
 - Optional in this baseline: **0 hours**
 
 ## Assumptions / risks carried forward

@@ -18,17 +18,39 @@ Apply need-to-know view/download rights on claim-pack documents and keep a retri
 Officer; Competent Authority; user without download right; auditor.
 
 ### User Journey
-1. Authorised Officer or Competent Authority opens a claim pack they are allowed to see (F01-003).
-2. They view identity proof, investment proof, bank documents, affidavit or heir papers as permitted.
-3. If their Post has no download right, view is allowed and download is refused.
-4. Each view or download is recorded (Person, Post, document, action, timestamp).
-5. An auditor can retrieve who viewed or downloaded which document and when (F01-010).
+1. Who creates: Officer
+2. How they create: Authorised Officer or Competent Authority opens a claim pack they are allowed to see (F01-003).
+3. How they edit: They view identity proof, investment proof, bank documents, affidavit or heir papers as permitted.
+4. How they send for approval: If their Post has no download right, view is allowed and download is refused. Open pack → view or download → audit event. No approval step for an authorised view.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Officer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Officer opens history on the record. Each view or download is recorded (Person, Post, document, action, timestamp). An auditor can retrieve who viewed or downloaded which document and when (F01-010).
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Open claim-pack documents under Post-based view rights.
 - Allow view without download where download is not granted.
 - Record view and download events per document.
 - Cover identity, investment, bank, affidavit and heir papers in the pack.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My claim-pack document rights list / queue | Medium |
+| Claim pack viewer with view/download controls | Complex |
+| Claim-pack document rights history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Document rights enforcement operations | Complex |
+| Update claim-pack document rights | Medium |
+| Search claim-pack document rights | Medium |
+| Read claim-pack document rights history | Easy |
 
 ### Inputs
 Claim pack, document type, requested action (view / download), acting Person and Post.
@@ -85,14 +107,20 @@ This is the programme-wide identity product consumed by Legal Management and GIS
 
 | Artifact | Category | Complexity | Hours |
 |---|---|---|---|
+| My claim-pack document rights list / queue | UI | Medium | 6 |
 | Claim pack viewer with view/download controls | UI | Complex | 12 |
+| Claim-pack document rights history | UI | Medium | 6 |
 | Document rights enforcement operations | API | Complex | 8 |
+| Update claim-pack document rights | API | Medium | 6 |
+| Search claim-pack document rights | API | Medium | 6 |
+| Read claim-pack document rights history | API | Easy | 4 |
 | View/download audit persistence | DB | Medium | 4 |
-| Document rights tests | Testing | Medium | 6 |
-| Claim-pack document rights note | Documentation | Easy | 2 |
-| **Total** | | | **32** |
+| Claim-pack document rights feature tests | Testing | Medium | 6 |
+| Claim-pack document rights implementation documentation | Documentation | Easy | 2 |
+| **Total** | | | **60** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- Forensic register filters are estimated in F01-010.
-- No OCR effort here (F04-001).
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

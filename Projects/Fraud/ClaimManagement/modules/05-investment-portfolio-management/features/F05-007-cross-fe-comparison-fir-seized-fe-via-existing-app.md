@@ -18,15 +18,38 @@ Compare across FEs for duplication/collusion and look up FIR/seized indicators i
 Officer.
 
 ### User Journey
-1. Officer selects one or more imported FEs.
-2. Officer runs duplication or collusion comparison across local investments, claims and attached assets.
-3. Where FIR or seized-FE data is needed, Officer initiates a lookup to the existing FE application.
-4. Officer reviews returned indicators without storing a local FE dossier.
+1. Who creates: Officer
+2. How they create: Officer selects one or more imported FEs.
+3. How they edit: Officer runs duplication or collusion comparison across local investments, claims and attached assets.
+4. How they send for approval: Where FIR or seized-FE data is needed, Officer initiates a lookup to the existing FE application. Select FEs → compare local data → optional existing-app lookup → review. No dossier workflow.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Officer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Officer opens history on the record. Officer reviews returned indicators without storing a local FE dossier.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Cross-FE comparison of local investments, claims and attached assets.
 - Lookup FIR / seized-FE indicators in the existing FE application.
 - Display returned indicators without creating a local dossier (no FIR/court/seized corpus screens).
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My cross-fe comparison list / queue | Medium |
+| Cross-FE comparison workbench | Very High |
+| Cross-fe comparison history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Comparison and lookup operations | Very High |
+| Update cross-fe comparison | Medium |
+| Search cross-fe comparison | Medium |
+| Read cross-fe comparison history | Easy |
 
 ### Inputs
 Imported FE selection, local portfolio/claim/asset data, lookup request.
@@ -82,14 +105,21 @@ Interoperability with existing FE application; no second FE ledger.
 
 | Artifact | Category | Complexity | Hours |
 |---|---|---|---|
+| My cross-fe comparison list / queue | UI | Medium | 6 |
 | Cross-FE comparison workbench | UI | Very High | 16 |
+| Cross-fe comparison history | UI | Medium | 6 |
 | Comparison and lookup operations | API | Very High | 16 |
+| Update cross-fe comparison | API | Medium | 6 |
+| Search cross-fe comparison | API | Medium | 6 |
+| Read cross-fe comparison history | API | Easy | 4 |
 | Comparison result persistence | DB | Medium | 4 |
 | Existing FE application FIR/seized lookup | Integration | Complex | 24 |
-| Cross-FE comparison tests | Testing | Very High | 12 |
-| Cross-FE comparison guide | Documentation | Complex | 4 |
-| **Total** | | | **76** |
+| Cross-FE comparison (FIR / seized-FE via existing app) feature tests | Testing | Very High | 12 |
+| Cross-FE comparison (FIR / seized-FE via existing app) implementation documentation | Documentation | Complex | 4 |
+| **Total** | | | **104** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- Integration Complex is lookup/sync of indicators, not GIS and not rebuilding FE Management.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

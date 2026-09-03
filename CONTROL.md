@@ -240,8 +240,8 @@ modules/04-revenue-billing/features/F04-002-online-payment-collection.md
 
 **Each feature file must contain** (per `feature_schema.md`)
 
-1. **Feature Specification** — all required sections (Feature ID through Non Functional Requirements)
-2. **Estimation Breakdown** — UI / API / Database / Integration / Testing / Documentation using the Estimation Master only (never invent hour values outside the master)
+1. **Feature Specification** — all required sections in `feature_schema.md` (Feature ID through Non Functional Requirements), including the eight-point User Journey and named UI screens / logical API operations (not REST paths or wireframes)
+2. **Estimation Breakdown** — one Estimation Master row per named UI screen and per logical API operation, plus Database, Integration (when there is a real channel), Testing and Documentation (never invent hour values outside the master)
 
 Also create or update:
 
@@ -264,7 +264,9 @@ With a table:
 **Feature quality (hard rules)**
 
 - Each feature must be **specific** to the SOW capability (no generic template journeys such as “provide a controlled enterprise capability”).  
-- Estimation tables must name concrete UI/API artefacts (screens, registers, ledgers), not vague labels like “User experience and screens”.  
+- User Journey must cover who creates, how they create, how they edit, how they send for approval, how the approver sees pending items, how the approver decides, and how applicant and approver/auditor see history (state explicitly when a step does not apply).  
+- Estimation tables must name concrete UI/API artefacts (screens, registers, ledgers), not vague labels like “User experience and screens”. Bill **each** named screen and **each** logical API as its own row — do not collapse them into “main workspace” / “orchestration API”.  
+- Prefer fewer estimable **features** over one feature per screen; that does **not** mean fewer billed screens inside a feature.  
 - Vary hours using the Estimation Master — do not stamp every feature with the same total.  
 - Model **access / authorisation features** according to the confirmed access model from Step 1 / the SOW — do not impose a project-specific hierarchy unless the source or user requires it.  
 - After any feature hour or name change, regenerate Steps 6–7 (summaries + client docx).

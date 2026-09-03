@@ -18,15 +18,38 @@ Open and close claim windows against imported FE/schemes so intake cannot run ou
 Officer; Administrator.
 
 ### User Journey
-1. Authorised Officer or Administrator creates a notification and selects imported eligible FE and schemes.
-2. User enters submission period, eligibility, required documents and instructions, and publishes.
-3. The claim window becomes Active for that period.
-4. The same user can close the window; staff-mediated and OOK intake are then refused.
+1. Who creates: Officer
+2. How they create: Authorised Officer or Administrator creates a notification and selects imported eligible FE and schemes.
+3. How they edit: User enters submission period, eligibility, required documents and instructions, and publishes.
+4. How they send for approval: The claim window becomes Active for that period. Draft → publish (Active) → close (intake refused). Privileged publish/close audited.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Officer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Officer opens history on the record. The same user can close the window; staff-mediated and OOK intake are then refused.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Create notification against imported FE and schemes only.
 - Enter period, eligibility, required documents and instructions.
 - Publish to make the window Active; close to refuse intake.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Notification create and publish form | Complex |
+| Claim window status register | Medium |
+| Claim notification and window history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Publish and close operations | Complex |
+| Update claim notification and window | Medium |
+| Search claim notification and window | Medium |
+| Read claim notification and window history | Easy |
 
 ### Inputs
 Imported FE/schemes, submission period, eligibility, required documents, instructions.
@@ -85,12 +108,18 @@ Window state must be consistent for counter and OOK at the same moment.
 |---|---|---|---|
 | Notification create and publish form | UI | Complex | 12 |
 | Claim window status register | UI | Medium | 6 |
+| Claim notification and window history | UI | Medium | 6 |
 | Publish and close operations | API | Complex | 8 |
+| Update claim notification and window | API | Medium | 6 |
+| Search claim notification and window | API | Medium | 6 |
+| Read claim notification and window history | API | Easy | 4 |
 | Notification and window persistence | DB | Medium | 4 |
-| Notification and window tests | Testing | Complex | 8 |
-| Claim notification guide | Documentation | Medium | 3 |
-| **Total** | | | **41** |
+| Claim notification and window feature tests | Testing | Complex | 8 |
+| Claim notification and window implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **63** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- Intake wizards are estimated in F06-002 and F06-003.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

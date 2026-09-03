@@ -18,15 +18,39 @@ Issue Form V-1 for immovable property other than agri/plantations/forests/mines,
 Approved Valuer (Registered Valuer); Expert Valuer if appointed.
 
 ### User Journey
-1. Valuer completes Form V-1 sections (general, land, building, rents, sales, cost of construction, Part II approach, Part III declaration, sub-annexure technical details), consuming inspection amenities and method workings.
-2. Registered Valuer (and Expert if appointed) declares true information, no interest, personal inspection date, and digitally signs (F05-010).
-3. Form becomes available to the CA. Form V-5 is not offered.
+1. Who creates: Approved Valuer (Registered Valuer)
+2. How they create: Valuer completes Form V-1 sections (general, land, building, rents, sales, cost of construction, Part II approach, Part III declaration, sub-annexure technical details), consuming inspection amenities and method workings.
+3. How they edit: Registered Valuer (and Expert if appointed) declares true information, no interest, personal inspection date, and digitally signs (F05-010).
+4. How they send for approval: Form becomes available to the CA. Form V-5 is not offered. Complete V-1 → declare/sign (F05-010) → available to CA (Module 07).
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Approved Valuer (Registered Valuer) works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Approved Valuer (Registered Valuer) opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Complete Form V-1 from inspection + method workings
 - Require Registered Valuer digital declaration before CA
 - Include Expert declaration when appointed
 - Do not offer Form V-5
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My form v-1 immovable report and declaration list / queue | Medium |
+| Form V-1 working | Very High |
+| Form v-1 immovable report and declaration history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| V-1 assemble and issue | Very High |
+| Update form v-1 immovable report and declaration | Medium |
+| Search form v-1 immovable report and declaration | Medium |
+| Read form v-1 immovable report and declaration history | Easy |
 
 ### Inputs
 V-1 fields; declaration; digital signature (F05-010); method workings; amenity pack.
@@ -85,14 +109,22 @@ Issued form snapshot; later master edits do not silently rewrite issued V-1.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
+| My form v-1 immovable report and declaration list / queue | UI | Medium | 6 |
 | Form V-1 working | UI | Very High | 16 |
+| Form v-1 immovable report and declaration history | UI | Medium | 6 |
 | V-1 assemble and issue | API | Very High | 16 |
-| V-1 form store | Database | Complex | 6 |
+| Update form v-1 immovable report and declaration | API | Medium | 6 |
+| Search form v-1 immovable report and declaration | API | Medium | 6 |
+| Read form v-1 immovable report and declaration history | API | Easy | 4 |
+| Form v-1 immovable report and declaration persistence | DB | Medium | 4 |
 | Inspection and method-working consume | Integration | Simple | 4 |
-| Form V-1 tests | Testing | Very High | 12 |
-| Form V-1 guide | Documentation | Complex | 4 |
-| **Total** | | | **58** |
+| Form V-1 immovable report and declaration feature tests | Testing | Very High | 12 |
+| Form V-1 immovable report and declaration implementation documentation | Documentation | Complex | 4 |
+| **Total** | | | **84** |
 
 ### Estimation Assumptions
-- Digital signature product hours are F05-010. Form V-5 not estimated.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

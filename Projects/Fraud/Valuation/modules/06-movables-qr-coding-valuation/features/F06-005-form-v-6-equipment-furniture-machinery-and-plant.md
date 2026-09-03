@@ -18,13 +18,38 @@ Issue Form V-6 from tabulated movables with digital declaration.
 Approved Valuer; Expert Valuer if appointed.
 
 ### User Journey
-1. Valuer completes V-6 from tabulated equipment/furniture/machinery/plant rows (codes, make, model/year, original and present market price, depreciation, market value).
-2. Declares personal inspection and no interest with digital signature (F05-010).
+1. Who creates: Approved Valuer
+2. How they create: Valuer completes V-6 from tabulated equipment/furniture/machinery/plant rows (codes, make, model/year, original and present market price, depreciation, market value).
+3. How they edit: Declares personal inspection and no interest with digital signature (F05-010).
+4. How they send for approval: Declares personal inspection and no interest with digital signature (F05-010). Complete V-6 → sign (F05-010) → CA available.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Approved Valuer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Approved Valuer opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Complete Form V-6 from eValueM tabulation
 - Digital declaration via F05-010
 - No generative drafting
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My form v-6 — equipment, furniture, machinery and plant list / queue | Medium |
+| Form V-6 working | Complex |
+| Form v-6 — equipment, furniture, machinery and plant history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| V-6 assemble | Complex |
+| Update form v-6 — equipment, furniture, machinery and plant | Medium |
+| Search form v-6 — equipment, furniture, machinery and plant | Medium |
+| Read form v-6 — equipment, furniture, machinery and plant history | Easy |
 
 ### Inputs
 V-6 fields; tabulated rows; digital signature.
@@ -81,14 +106,22 @@ Issued snapshot.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
+| My form v-6 — equipment, furniture, machinery and plant list / queue | UI | Medium | 6 |
 | Form V-6 working | UI | Complex | 12 |
+| Form v-6 — equipment, furniture, machinery and plant history | UI | Medium | 6 |
 | V-6 assemble | API | Complex | 8 |
-| V-6 store | Database | Medium | 4 |
+| Update form v-6 — equipment, furniture, machinery and plant | API | Medium | 6 |
+| Search form v-6 — equipment, furniture, machinery and plant | API | Medium | 6 |
+| Read form v-6 — equipment, furniture, machinery and plant history | API | Easy | 4 |
+| Form v-6 — equipment, furniture, machinery and plant persistence | DB | Medium | 4 |
 | Digital-declaration consume | Integration | Easy | 8 |
-| Form V-6 tests | Testing | Complex | 8 |
-| Form V-6 guide | Documentation | Medium | 3 |
-| **Total** | | | **43** |
+| Form V-6 — equipment, furniture, machinery and plant feature tests | Testing | Complex | 8 |
+| Form V-6 — equipment, furniture, machinery and plant implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **71** |
 
 ### Estimation Assumptions
-- PKI hours sit in F05-010.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

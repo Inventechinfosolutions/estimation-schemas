@@ -18,11 +18,14 @@ One Person, two official channels (Legal web and Legal Android) with the same 2F
 Advocate; Legal Cell; Administrator (channel enrolment against shared identity).
 
 ### User Journey
-1. User opens Legal web or the Legal Android app and authenticates with the shared Person and 2FA.
-2. Legal Web Shell shows only menus allowed for the active Post.
-3. Android Login/Session screens apply the same Person; no second login directory.
-4. User signs out on one channel; that channel session ends; deactivation on the shared component ends **both** web and Android.
-5. Menus never expose Claim settlement or eValueI functions.
+1. Who creates: Advocate
+2. How they create: User opens Legal web or the Legal Android app and authenticates with the shared Person and 2FA.
+3. How they edit: Legal Web Shell shows only menus allowed for the active Post.
+4. How they send for approval: Android Login/Session screens apply the same Person; no second login directory. Authenticate via shared component → issue Legal channel session → render Post menus → revoke both channels on sign-out or deactivation.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Advocate works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Advocate opens history on the record. User signs out on one channel; that channel session ends; deactivation on the shared component ends **both** web and Android. Menus never expose Claim settlement or eValueI functions.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Legal Web Shell / Post-scoped menu
@@ -30,6 +33,25 @@ Advocate; Legal Cell; Administrator (channel enrolment against shared identity).
 - Same Person credentials for web and Android
 - Sign-out or shared deactivation ends both channels
 - No second credential store on the device or in Legal
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Legal Web Shell / Post-scoped menu | Complex |
+| Android Login and Session screens | Complex |
+| Legal web and android on shared identity history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Dual-channel session and menu-resolution operations | Complex |
+| Update legal web and android on shared identity | Medium |
+| Search legal web and android on shared identity | Medium |
+| Read legal web and android on shared identity history | Easy |
 
 ### Inputs
 Shared Person credentials and 2FA proof; channel (web/Android); device enrolment token where used.
@@ -45,7 +67,7 @@ Web session; Android session; Post-scoped menu set; dual-channel revocation on d
 - iOS is out of scope.
 
 ### Validations
-Shared 2FA required as configured; device enrolment only for Persons with Legal Posts; expired session cannot call Legal APIs.
+- Shared 2FA required as configured; device enrolment only for Persons with Legal Posts; expired session cannot call Legal APIs.
 
 ### Calculations
 None.
@@ -75,7 +97,7 @@ Shared identity and 2FA for web and Android (Medium — auth, mapping, retry).
 F01-001; Module 09 screens consume this session. Play Store distribution is F09-008 only.
 
 ### Assumptions
-Android feature screens (contacts, tasks, etc.) are estimated in Module 09; this feature is identity and shell only.
+- Android feature screens (contacts, tasks, etc.) are estimated in Module 09; this feature is identity and shell only.
 
 ### Risks
 Cached Android session after deactivation if revocation is delayed; dual-channel sign-out must be explicit.
@@ -88,17 +110,22 @@ Court-day availability; session timeout per shared policy; AES-256 in transit.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
 | Legal Web Shell / Post-scoped menu | UI | Complex | 12 |
 | Android Login and Session screens | UI | Complex | 12 |
+| Legal web and android on shared identity history | UI | Medium | 6 |
 | Dual-channel session and menu-resolution operations | API | Complex | 8 |
-| Channel session and device-enrolment tokens | Database | Easy | 2 |
+| Update legal web and android on shared identity | API | Medium | 6 |
+| Search legal web and android on shared identity | API | Medium | 6 |
+| Read legal web and android on shared identity history | API | Easy | 4 |
+| Legal web and android on shared identity persistence | DB | Medium | 4 |
 | Shared identity and 2FA for web and Android | Integration | Medium | 16 |
-| Dual-channel session tests | Testing | Complex | 8 |
-| Legal web and Android login guide | Documentation | Medium | 3 |
-| **Total** | | | **61** |
+| Legal web and Android on shared identity feature tests | Testing | Complex | 8 |
+| Legal web and Android on shared identity implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **85** |
 
 ### Estimation Assumptions
-- Does not estimate Android matter/task/document screens (Module 09).
-- Does not estimate Play Store licensing (F09-008).
-- 2FA implementation remains on Claim Module 01; Legal consumes it.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

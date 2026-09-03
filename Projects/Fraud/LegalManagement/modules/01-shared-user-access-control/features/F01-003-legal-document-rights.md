@@ -18,11 +18,14 @@ Apply classification-aware view/download/share/edit on legal documents so sensit
 Advocate; Legal Cell; Competent Authority; Auditor (access log).
 
 ### User Journey
-1. User opens a petition, order or opinion from the library or matter.
-2. System evaluates Post rights and document classification.
-3. User views; download, share or edit appear only if allowed.
-4. A user without download right sees the viewer but the download control is withheld.
-5. Each view and download is written to the legal document access log.
+1. Who creates: Advocate
+2. How they create: User opens a petition, order or opinion from the library or matter.
+3. How they edit: System evaluates Post rights and document classification.
+4. How they send for approval: User views; download, share or edit appear only if allowed. Open document → evaluate matrix + space → allow or withhold controls → record view/download.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Advocate works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Advocate opens history on the record. A user without download right sees the viewer but the download control is withheld. Each view and download is written to the legal document access log.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Legal Document Rights Matrix screen (Post × classification → view/download/share/edit)
@@ -30,6 +33,25 @@ Advocate; Legal Cell; Competent Authority; Auditor (access log).
 - Access log: who viewed or downloaded which legal document and when
 - Refuse share/edit when classification or Post does not allow
 - Sensitive legal documents are not freely redistributable
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Legal Document Rights Matrix screen | Complex |
+| Document viewer with rights overlay | Medium |
+| Legal document rights history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Rights evaluation and access-log operations | Complex |
+| Update legal document rights | Medium |
+| Search legal document rights | Medium |
+| Read legal document rights history | Easy |
 
 ### Inputs
 Document identity and classification; acting Person/Post; requested action (view/download/share/edit).
@@ -45,7 +67,7 @@ Allowed-action set; viewer/download decision; legal document access log.
 - No generative-AI redaction or auto-classification.
 
 ### Validations
-Document must exist; classification required before first share; Post must be active; download/share/edit rejected when not in the matrix.
+- Document must exist; classification required before first share; Post must be active; download/share/edit rejected when not in the matrix.
 
 ### Calculations
 None.
@@ -75,7 +97,7 @@ Library and matter document identity (Simple); shared Post for the actor (F01-00
 F01-001; F01-002; library/matter document stores (Modules 03–04).
 
 ### Assumptions
-Classifications used by Legal (e.g. sensitive vs ordinary) are maintained as central masters (F02-005) or document metadata.
+- Classifications used by Legal (e.g. sensitive vs ordinary) are maintained as central masters (F02-005) or document metadata.
 
 ### Risks
 Over-permissive matrix allows download of sensitive petitions; missing log undermines forensic review.
@@ -88,16 +110,22 @@ Access log retained with the programme audit policy; HTTPS delivery of viewed fi
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
 | Legal Document Rights Matrix screen | UI | Complex | 12 |
 | Document viewer with rights overlay | UI | Medium | 6 |
+| Legal document rights history | UI | Medium | 6 |
 | Rights evaluation and access-log operations | API | Complex | 8 |
-| Rights matrix and access-log entities | Database | Medium | 4 |
+| Update legal document rights | API | Medium | 6 |
+| Search legal document rights | API | Medium | 6 |
+| Read legal document rights history | API | Easy | 4 |
+| Legal document rights persistence | DB | Medium | 4 |
 | Library/matter document identity handoff | Integration | Simple | 4 |
-| Document rights tests | Testing | Medium | 6 |
-| Legal document rights guide | Documentation | Easy | 2 |
-| **Total** | | | **42** |
+| Legal document rights feature tests | Testing | Medium | 6 |
+| Legal document rights implementation documentation | Documentation | Easy | 2 |
+| **Total** | | | **64** |
 
 ### Estimation Assumptions
-- Does not rebuild DMS; applies rights on library/matter documents.
-- Login audit remains Claim F01-010; this log is legal-document view/download only.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

@@ -18,15 +18,38 @@ Force notification, investment capture and intake to use only imported schemes.
 Officer; Administrator; later OOK claimant (selects imported scheme only).
 
 ### User Journey
-1. Officer or Administrator imports schemes configured on each FE in the existing application.
-2. Imported schemes appear on the scheme reference register against the FE.
-3. When creating a notification (F06-001), capturing an investment (F05-001) or taking a claim (F06-002/003), only imported schemes can be selected.
-4. Free-text scheme names are not accepted.
+1. Who creates: Officer
+2. How they create: Officer or Administrator imports schemes configured on each FE in the existing application.
+3. How they edit: Imported schemes appear on the scheme reference register against the FE.
+4. How they send for approval: When creating a notification (F06-001), capturing an investment (F05-001) or taking a claim (F06-002/003), only imported schemes can be selected. Trigger import → store scheme references → constrain dropdowns in Modules 05–07.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Officer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Officer opens history on the record. Free-text scheme names are not accepted.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Import investment schemes per imported FE.
 - Expose schemes as the only selectable scheme list on claim screens.
 - Refuse free-text scheme entry on notification, investment and intake.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Scheme import review | Medium |
+| Imported scheme reference register | Easy |
+| Import investment schemes history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Scheme import operations | Very High |
+| Update import investment schemes | Medium |
+| Search import investment schemes | Medium |
+| Read import investment schemes history | Easy |
 
 ### Inputs
 Imported FE, source scheme identifiers and names.
@@ -84,13 +107,19 @@ Scheme dropdowns are searchable / type-ahead on staff and OOK screens.
 |---|---|---|---|
 | Scheme import review | UI | Medium | 6 |
 | Imported scheme reference register | UI | Easy | 4 |
+| Import investment schemes history | UI | Medium | 6 |
 | Scheme import operations | API | Very High | 16 |
+| Update import investment schemes | API | Medium | 6 |
+| Search import investment schemes | API | Medium | 6 |
+| Read import investment schemes history | API | Easy | 4 |
 | Scheme reference persistence | DB | Medium | 4 |
 | Existing FE application scheme import | Integration | Medium | 16 |
-| Scheme import tests | Testing | Complex | 8 |
-| Scheme import notes | Documentation | Medium | 3 |
-| **Total** | | | **57** |
+| Import Investment Schemes feature tests | Testing | Complex | 8 |
+| Import Investment Schemes implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **79** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- Notification and intake screens are estimated in Module 06; this feature estimates import and the reference register.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

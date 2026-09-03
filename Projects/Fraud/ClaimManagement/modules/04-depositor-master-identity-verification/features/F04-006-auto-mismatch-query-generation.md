@@ -18,15 +18,38 @@ Force a tracked mismatch query whenever tally disagrees, and block “clean iden
 Officer; assisting staff; OOK claimant (own-pack response where applicable).
 
 ### User Journey
-1. Tally (F04-005) finds a disagreement (for example Aadhaar spelling versus passbook name).
-2. The system creates a mismatch query on the depositor/claim.
-3. Officer opens the query and records resolution or sends it for claimant/staff response.
-4. Officer cannot treat the identity as clean until the query is closed per policy.
+1. Who creates: Officer
+2. How they create: Tally (F04-005) finds a disagreement (for example Aadhaar spelling versus passbook name).
+3. How they edit: The system creates a mismatch query on the depositor/claim.
+4. How they send for approval: Officer opens the query and records resolution or sends it for claimant/staff response. Auto-create → Officer work / claimant-staff response → close or remain blocking. Embedded workflow.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Officer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Officer opens history on the record. Officer cannot treat the identity as clean until the query is closed per policy.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Auto-create mismatch query from tally disagreements.
 - Officer resolution or send for response.
 - Block clean-identity treatment until closed per policy.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Mismatch query register | Complex |
+| Query resolution form | Medium |
+| Auto mismatch query generation history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Query generation and closure workflow operations | Very High |
+| Update auto mismatch query generation | Medium |
+| Search auto mismatch query generation | Medium |
+| Read auto mismatch query generation history | Easy |
 
 ### Inputs
 Differing fields/sources, Officer remarks, response documents/text.
@@ -83,12 +106,18 @@ Workflow is embedded; query list usable during claim windows.
 |---|---|---|---|
 | Mismatch query register | UI | Complex | 12 |
 | Query resolution form | UI | Medium | 6 |
+| Auto mismatch query generation history | UI | Medium | 6 |
 | Query generation and closure workflow operations | API | Very High | 16 |
+| Update auto mismatch query generation | API | Medium | 6 |
+| Search auto mismatch query generation | API | Medium | 6 |
+| Read auto mismatch query generation history | API | Easy | 4 |
 | Mismatch query persistence | DB | Medium | 4 |
-| Mismatch query tests | Testing | Complex | 8 |
-| Mismatch query guide | Documentation | Medium | 3 |
-| **Total** | | | **49** |
+| Auto mismatch query generation feature tests | Testing | Complex | 8 |
+| Auto mismatch query generation implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **71** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- Workflow API is Very High because auto-generate plus blocking closure is not standard CRUD.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

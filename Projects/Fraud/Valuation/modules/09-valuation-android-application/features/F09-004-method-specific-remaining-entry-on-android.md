@@ -18,15 +18,39 @@ Complete method-specific remaining particulars in the field on the same rules as
 Approved Valuer.
 
 ### User Journey
-1. Valuer selects valuation method/format on the device and completes remaining fields, including eValueM tabulation when the assignment is movable.
-2. May query approved secure sources as on web (F04-007).
-3. Generative AI is not offered.
+1. Who creates: Approved Valuer
+2. How they create: Valuer selects valuation method/format on the device and completes remaining fields, including eValueM tabulation when the assignment is movable.
+3. How they edit: May query approved secure sources as on web (F04-007).
+4. How they send for approval: Generative AI is not offered. Select method → enter remaining fields → optional source query → draft ready to submit.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Approved Valuer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Approved Valuer opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Method/format remaining entry on Android
 - eValueM tabulation on device when movable
 - Approved-source query as on web
 - No generative AI
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My method-specific remaining entry on android list / queue | Medium |
+| Android method remaining entry | Very High |
+| Method-specific remaining entry on android history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Device method remaining save | Complex |
+| Update method-specific remaining entry on android | Medium |
+| Search method-specific remaining entry on android | Medium |
+| Read method-specific remaining entry on android history | Easy |
 
 ### Inputs
 Method/format; remaining field values; optional approved source.
@@ -83,14 +107,22 @@ No generative AI; drafts attributable to Person.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
+| My method-specific remaining entry on android list / queue | UI | Medium | 6 |
 | Android method remaining entry | UI | Very High | 16 |
+| Method-specific remaining entry on android history | UI | Medium | 6 |
 | Device method remaining save | API | Complex | 8 |
-| Device method draft | Database | Medium | 4 |
+| Update method-specific remaining entry on android | API | Medium | 6 |
+| Search method-specific remaining entry on android | API | Medium | 6 |
+| Read method-specific remaining entry on android history | API | Easy | 4 |
+| Method-specific remaining entry on android persistence | DB | Medium | 4 |
 | Approved-source and web working sync | Integration | Medium | 16 |
-| Android method-entry tests | Testing | Very High | 12 |
-| Android method-entry guide | Documentation | Complex | 4 |
-| **Total** | | | **60** |
+| Method-specific remaining entry on Android feature tests | Testing | Very High | 12 |
+| Method-specific remaining entry on Android implementation documentation | Documentation | Complex | 4 |
+| **Total** | | | **88** |
 
 ### Estimation Assumptions
-- UI Very High 16 for dynamic method UI on Android. Full statutory assemble remains Module 05/06 on web where needed.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

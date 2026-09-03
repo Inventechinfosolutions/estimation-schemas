@@ -18,14 +18,38 @@ Produce a consistent QR/sticker dataset and require it before inspection-complet
 Office user; Approved Valuer.
 
 ### User Journey
-1. User generates sticker/label dataset: category, name, serial number, condition.
-2. User confirms the printed/attached tag matches the on-screen row.
-3. Item without a tag dataset cannot be marked inspection-complete.
+1. Who creates: Office user
+2. How they create: User generates sticker/label dataset: category, name, serial number, condition.
+3. How they edit: User confirms the printed/attached tag matches the on-screen row.
+4. How they send for approval: Item without a tag dataset cannot be marked inspection-complete. Generate dataset → confirm match → allow inspection-complete.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Office user works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Office user opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Generate sticker/label dataset from the coded row
 - Confirm match to physical tag
 - Block inspection-complete without tag dataset
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My tagging sticker / label list / queue | Medium |
+| Sticker/label preview | Medium |
+| Tagging sticker / label history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Label dataset generate | Easy |
+| Update tagging sticker / label | Medium |
+| Search tagging sticker / label | Medium |
+| Read tagging sticker / label history | Easy |
 
 ### Inputs
 Movable row; confirm-match action.
@@ -81,14 +105,22 @@ Dataset stored with the row.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
+| My tagging sticker / label list / queue | UI | Medium | 6 |
 | Sticker/label preview | UI | Medium | 6 |
+| Tagging sticker / label history | UI | Medium | 6 |
 | Label dataset generate | API | Easy | 4 |
-| Label dataset | Database | Easy | 2 |
+| Update tagging sticker / label | API | Medium | 6 |
+| Search tagging sticker / label | API | Medium | 6 |
+| Read tagging sticker / label history | API | Easy | 4 |
+| Tagging sticker / label persistence | DB | Medium | 4 |
 | Internal print-dataset consume | Integration | Simple | 4 |
-| Sticker tests | Testing | Easy | 4 |
-| Sticker/label note | Documentation | Easy | 2 |
-| **Total** | | | **22** |
+| Tagging sticker / label feature tests | Testing | Easy | 4 |
+| Tagging sticker / label implementation documentation | Documentation | Easy | 2 |
+| **Total** | | | **52** |
 
 ### Estimation Assumptions
-- Not office IT asset tagging.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

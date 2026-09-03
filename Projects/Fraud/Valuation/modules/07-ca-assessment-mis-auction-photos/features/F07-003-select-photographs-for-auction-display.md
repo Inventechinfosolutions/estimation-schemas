@@ -18,14 +18,38 @@ Let the CA choose auction-display photographs without executing auction sale in 
 Competent Authority.
 
 ### User Journey
-1. On the CA report the CA selects which tagged photographs (F05-009) may be shown at auction.
-2. Unselected photos remain in the valuation file but are not marked for auction display.
-3. Claim uses the selection after F07-007 release. This application does not run the auction.
+1. Who creates: Competent Authority
+2. How they create: On the CA report the CA selects which tagged photographs (F05-009) may be shown at auction.
+3. How they edit: Unselected photos remain in the valuation file but are not marked for auction display.
+4. How they send for approval: Claim uses the selection after F07-007 release. This application does not run the auction. Open CA report → pick photos → save selection → release later in F07-007.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Competent Authority works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Competent Authority opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Select tagged photographs for auction display
 - Leave unselected photos in the valuation file
 - Do not execute auction sale or recovered-fund deposit
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My select photographs for auction display list / queue | Medium |
+| Auction-display photo picker | Complex |
+| Select photographs for auction display history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Display-selection persist | Easy |
+| Update select photographs for auction display | Medium |
+| Search select photographs for auction display | Medium |
+| Read select photographs for auction display history | Easy |
 
 ### Inputs
 Tagged photograph set; selection ticks.
@@ -82,14 +106,22 @@ Selection identifiable for Claim after release.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
+| My select photographs for auction display list / queue | UI | Medium | 6 |
 | Auction-display photo picker | UI | Complex | 12 |
+| Select photographs for auction display history | UI | Medium | 6 |
 | Display-selection persist | API | Easy | 4 |
-| Selection flags | Database | Easy | 2 |
+| Update select photographs for auction display | API | Medium | 6 |
+| Search select photographs for auction display | API | Medium | 6 |
+| Read select photographs for auction display history | API | Easy | 4 |
+| Select photographs for auction display persistence | DB | Medium | 4 |
 | Tagged library consume | Integration | Simple | 4 |
-| Photo-picker tests | Testing | Medium | 6 |
-| Auction-display photo note | Documentation | Easy | 2 |
-| **Total** | | | **30** |
+| Select photographs for auction display feature tests | Testing | Medium | 6 |
+| Select photographs for auction display implementation documentation | Documentation | Easy | 2 |
+| **Total** | | | **60** |
 
 ### Estimation Assumptions
-- No auction-sale hours. GIS ingest remains F04-006.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

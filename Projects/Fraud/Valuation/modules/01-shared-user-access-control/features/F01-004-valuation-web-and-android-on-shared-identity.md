@@ -18,15 +18,38 @@ One Person, two channels: staff web and valuer Android, with deactivation ending
 Office user; Approved Valuer; Administrator (shared IAM).
 
 ### User Journey
-1. Office user or Approved Valuer signs in on web or Android with the same Person credentials and 2FA as Claim Module 01.
-2. After login they see only valuation menus allowed for their Post (F01-002).
-3. Sign-out on a channel ends that channel’s session.
-4. Deactivating the Person on the shared component blocks new web and Android sessions.
+1. Who creates: Office user
+2. How they create: Office user or Approved Valuer signs in on web or Android with the same Person credentials and 2FA as Claim Module 01.
+3. How they edit: After login they see only valuation menus allowed for their Post (F01-002).
+4. How they send for approval: Sign-out on a channel ends that channel’s session. Channel sign-in → shared 2FA → Post menus → session; deactivation → refuse new sessions both channels.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Office user works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Office user opens history on the record. Deactivating the Person on the shared component blocks new web and Android sessions.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Accept the same shared credentials and 2FA on valuation web and Android
 - Show only Post-allowed valuation menus on both channels
 - End sessions on sign-out or shared-Person deactivation
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My valuation web and android on shared identity list / queue | Medium |
+| Channel session status (web / Android) | Easy |
+| Valuation web and android on shared identity history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Cross-channel session bind and revoke | Complex |
+| Update valuation web and android on shared identity | Medium |
+| Search valuation web and android on shared identity | Medium |
+| Read valuation web and android on shared identity history | Easy |
 
 ### Inputs
 Shared Person credentials; 2FA challenge; channel (web or Android); sign-out or deactivation event.
@@ -86,15 +109,22 @@ Revoke or refuse new sessions promptly after shared deactivation; HTTPS/TLS on b
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
+| My valuation web and android on shared identity list / queue | UI | Medium | 6 |
 | Channel session status (web / Android) | UI | Easy | 4 |
+| Valuation web and android on shared identity history | UI | Medium | 6 |
 | Cross-channel session bind and revoke | API | Complex | 8 |
-| Web and Android session tokens | Database | Medium | 4 |
+| Update valuation web and android on shared identity | API | Medium | 6 |
+| Search valuation web and android on shared identity | API | Medium | 6 |
+| Read valuation web and android on shared identity history | API | Easy | 4 |
+| Valuation web and android on shared identity persistence | DB | Medium | 4 |
 | Shared 2FA and Android token consume | Integration | Medium | 16 |
-| Cross-channel session tests | Testing | Complex | 8 |
-| Web and Android identity note | Documentation | Medium | 3 |
-| **Total** | | | **43** |
+| Valuation web and Android on shared identity feature tests | Testing | Complex | 8 |
+| Valuation web and Android on shared identity implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **71** |
 
 ### Estimation Assumptions
-- Not full IAM hours; 2FA product remains Claim F01-006
-- Play Store distribution is F09-006
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

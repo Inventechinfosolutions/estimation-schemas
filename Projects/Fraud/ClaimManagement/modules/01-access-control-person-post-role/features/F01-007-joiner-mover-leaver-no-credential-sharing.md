@@ -18,11 +18,14 @@ Stop credential sharing on post handover so joiners never inherit a leaver’s l
 Administrator; joiner; leaver (subject of deactivation); auditor.
 
 ### User Journey
-1. On a leaver, Administrator opens the Person, deactivates the account, and confirms the password cannot be reused.
-2. Historical audit rows for that Person remain retrievable.
-3. On a joiner, Administrator creates a new Person (F01-001), maps the correct Post (F01-002), and issues new credentials.
-4. Administrator has no action to copy or share the previous occupant’s login with the joiner.
-5. On a mover, Administrator ends the old Post mapping and creates a new mapping without transferring credentials.
+1. Who creates: Administrator
+2. How they create: On a leaver, Administrator opens the Person, deactivates the account, and confirms the password cannot be reused.
+3. How they edit: Historical audit rows for that Person remain retrievable.
+4. How they send for approval: On a joiner, Administrator creates a new Person (F01-001), maps the correct Post (F01-002), and issues new credentials. Leaver deactivation; mover remapping; joiner new Person + mapping + credentials. No shared-mailbox handover.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Administrator works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Administrator opens history on the record. Administrator has no action to copy or share the previous occupant’s login with the joiner. On a mover, Administrator ends the old Post mapping and creates a new mapping without transferring credentials.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Deactivate a Person’s account on leave; block reuse of the old password.
@@ -30,6 +33,25 @@ Administrator; joiner; leaver (subject of deactivation); auditor.
 - Remap Posts for movers without credential transfer.
 - Refuse any copy/share-previous-login action.
 - Retain historical audit after deactivation.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My joiner–mover–leaver; no credential sharing list / queue | Medium |
+| Joiner–mover–leaver workbench | Complex |
+| Joiner–mover–leaver; no credential sharing history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| JML lifecycle and credential-block operations | Complex |
+| Update joiner–mover–leaver; no credential sharing | Medium |
+| Search joiner–mover–leaver; no credential sharing | Medium |
+| Read joiner–mover–leaver; no credential sharing history | Easy |
 
 ### Inputs
 Person, JML action (joiner / mover / leaver), Post mapping, new credentials for joiners.
@@ -89,14 +111,21 @@ This is the programme-wide identity product consumed by Legal Management and GIS
 
 | Artifact | Category | Complexity | Hours |
 |---|---|---|---|
+| My joiner–mover–leaver; no credential sharing list / queue | UI | Medium | 6 |
 | Joiner–mover–leaver workbench | UI | Complex | 12 |
+| Joiner–mover–leaver; no credential sharing history | UI | Medium | 6 |
 | JML lifecycle and credential-block operations | API | Complex | 8 |
+| Update joiner–mover–leaver; no credential sharing | API | Medium | 6 |
+| Search joiner–mover–leaver; no credential sharing | API | Medium | 6 |
+| Read joiner–mover–leaver; no credential sharing history | API | Easy | 4 |
 | Credential and mapping-history persistence | DB | Complex | 6 |
 | Internal identity handoff | Integration | Simple | 4 |
-| JML and no-share tests | Testing | Complex | 8 |
-| Joiner–mover–leaver guide | Documentation | Medium | 3 |
-| **Total** | | | **41** |
+| Joiner–mover–leaver; no credential sharing feature tests | Testing | Complex | 8 |
+| Joiner–mover–leaver; no credential sharing implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **69** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- Person create and Post mapping screens are estimated in F01-001/F01-002; this feature estimates the JML workbench and credential-block rules.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

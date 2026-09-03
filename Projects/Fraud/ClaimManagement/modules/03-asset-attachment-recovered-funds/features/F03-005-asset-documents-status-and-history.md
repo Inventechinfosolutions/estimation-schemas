@@ -18,15 +18,38 @@ Keep structured asset documents and an append-only status history instead of a h
 Officer; authorised viewer; auditor.
 
 ### User Journey
-1. Officer opens the asset, uploads supporting documents and changes status, then saves.
-2. The system appends a history row: who, when, previous status, new status.
-3. An authorised user reopens the asset and replays document and status history.
+1. Who creates: Officer
+2. How they create: Officer opens the asset, uploads supporting documents and changes status, then saves.
+3. How they edit: The system appends a history row: who, when, previous status, new status.
+4. How they send for approval: An authorised user reopens the asset and replays document and status history. Upload/status change → history row → replay. Embedded documents, not a DMS module.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Officer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Officer opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Upload supporting asset documents.
 - Change and save asset status.
 - Append-only history (who, when, previous, new).
 - Replay document and status history on the asset.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Asset document pack and status | Complex |
+| Asset history replay | Easy |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Document and status operations | Medium |
+| Update asset documents, status and history | Medium |
+| Search asset documents, status and history | Medium |
+| Read asset documents, status and history history | Easy |
 
 ### Inputs
 Files, status value, remarks.
@@ -85,11 +108,16 @@ Source files immutable where they are originals; history retrievable.
 | Asset document pack and status | UI | Complex | 12 |
 | Asset history replay | UI | Easy | 4 |
 | Document and status operations | API | Medium | 6 |
+| Update asset documents, status and history | API | Medium | 6 |
+| Search asset documents, status and history | API | Medium | 6 |
+| Read asset documents, status and history history | API | Easy | 4 |
 | Asset document and history persistence | DB | Medium | 4 |
-| Asset document/history tests | Testing | Medium | 6 |
-| Asset history note | Documentation | Easy | 2 |
-| **Total** | | | **34** |
+| Asset documents, status and history feature tests | Testing | Medium | 6 |
+| Asset documents, status and history implementation documentation | Documentation | Easy | 2 |
+| **Total** | | | **50** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- Attachment order e-format is F03-003; this feature is supporting docs and status history.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

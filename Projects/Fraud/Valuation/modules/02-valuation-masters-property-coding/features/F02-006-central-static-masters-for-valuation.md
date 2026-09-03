@@ -18,13 +18,37 @@ Centralise static lists so reports and Forms V-1–V-8 do not fragment on spelli
 Administrator; Office user; Approved Valuer.
 
 ### User Journey
-1. Administrator maintains lists such as locality HIG/MIG/LIG, zone types, and condition grades New/Unused/Working/Damaged/Scrap/Obsolete.
-2. Office and valuer screens consume those lists.
-3. Reports use the stored list values, not free spelling.
+1. Who creates: Administrator
+2. How they create: Administrator maintains lists such as locality HIG/MIG/LIG, zone types, and condition grades New/Unused/Working/Damaged/Scrap/Obsolete.
+3. How they edit: Office and valuer screens consume those lists.
+4. How they send for approval: Reports use the stored list values, not free spelling. Maintain list → screens consume → reports print stored values.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Administrator works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Administrator opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Maintain named static lists for valuation modules
 - Force consume on office and valuer screens that use those lists
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My central static masters for valuation list / queue | Medium |
+| Static list maintenance | Medium |
+| Central static masters for valuation history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Static list CRUD and consume | Easy |
+| Update central static masters for valuation | Medium |
+| Search central static masters for valuation | Medium |
+| Read central static masters for valuation history | Easy |
 
 ### Inputs
 List name; list value; sort; active.
@@ -80,14 +104,22 @@ Issued forms keep the value as at submit; lists affect new entry.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
+| My central static masters for valuation list / queue | UI | Medium | 6 |
 | Static list maintenance | UI | Medium | 6 |
+| Central static masters for valuation history | UI | Medium | 6 |
 | Static list CRUD and consume | API | Easy | 4 |
-| Static list values | Database | Easy | 2 |
+| Update central static masters for valuation | API | Medium | 6 |
+| Search central static masters for valuation | API | Medium | 6 |
+| Read central static masters for valuation history | API | Easy | 4 |
+| Central static masters for valuation persistence | DB | Medium | 4 |
 | Internal list consume | Integration | Simple | 4 |
-| Static master tests | Testing | Easy | 4 |
-| Static masters note | Documentation | Easy | 2 |
-| **Total** | | | **22** |
+| Central static masters for valuation feature tests | Testing | Easy | 4 |
+| Central static masters for valuation implementation documentation | Documentation | Easy | 2 |
+| **Total** | | | **52** |
 
 ### Estimation Assumptions
-- Structure classification (life/residual) is F02-007, not a generic list.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

@@ -18,14 +18,38 @@ Make 3(2) prepared the gate to valuer assignment, with code, office photograph a
 Office user.
 
 ### User Journey
-1. Officer marks 3(2) prepared, confirms unique property code (F02-003), links office photograph and address/location, and saves.
-2. Asset becomes eligible for valuer assignment (F04-001).
-3. An asset without 3(2) prepared is not offered in the assignment list unless the Authority defines an exception.
+1. Who creates: Office user
+2. How they create: Officer marks 3(2) prepared, confirms unique property code (F02-003), links office photograph and address/location, and saves.
+3. How they edit: Asset becomes eligible for valuer assignment (F04-001).
+4. How they send for approval: An asset without 3(2) prepared is not offered in the assignment list unless the Authority defines an exception. Complete office pack → mark 3(2) prepared → eligible for F04-001.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Office user works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Office user opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Mark 3(2) prepared
 - Confirm unique property code and link office photograph and location
 - Gate assignment eligibility on 3(2) prepared
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My 3 preparation, photograph and office location link list / queue | Medium |
+| 3(2) preparation and eligibility workspace | Complex |
+| 3 preparation, photograph and office location link history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| 3(2) gate and eligibility flag | Complex |
+| Update 3 preparation, photograph and office location link | Medium |
+| Search 3 preparation, photograph and office location link | Medium |
+| Read 3 preparation, photograph and office location link history | Easy |
 
 ### Inputs
 3(2) prepared flag; property code confirmation; office photograph; address/location already bound.
@@ -84,14 +108,22 @@ Gate is enforced on the assignment list, not only on the UI.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
+| My 3 preparation, photograph and office location link list / queue | UI | Medium | 6 |
 | 3(2) preparation and eligibility workspace | UI | Complex | 12 |
+| 3 preparation, photograph and office location link history | UI | Medium | 6 |
 | 3(2) gate and eligibility flag | API | Complex | 8 |
-| 3(2) and office photo link | Database | Easy | 2 |
+| Update 3 preparation, photograph and office location link | API | Medium | 6 |
+| Search 3 preparation, photograph and office location link | API | Medium | 6 |
+| Read 3 preparation, photograph and office location link history | API | Easy | 4 |
+| 3 preparation, photograph and office location link persistence | DB | Medium | 4 |
 | Code and location bind consume | Integration | Easy | 8 |
-| 3(2) eligibility tests | Testing | Medium | 6 |
-| 3(2) gate note | Documentation | Easy | 2 |
-| **Total** | | | **38** |
+| 3(2) preparation, photograph and office location link feature tests | Testing | Medium | 6 |
+| 3(2) preparation, photograph and office location link implementation documentation | Documentation | Easy | 2 |
+| **Total** | | | **68** |
 
 ### Estimation Assumptions
-- Field GIS four-photo set is F04-006, not the office photograph.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

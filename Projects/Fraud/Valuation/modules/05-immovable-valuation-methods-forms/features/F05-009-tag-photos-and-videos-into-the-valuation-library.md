@@ -18,14 +18,38 @@ Build a report media library from field capture so CA MIS and auction-display pi
 Approved Valuer; Competent Authority (consumes tagged set).
 
 ### User Journey
-1. On the valuation working the Valuer tags Module 04 photographs and videos into the report library.
-2. CA report (F07-001) and auction-display picker (F07-003) use that tagged set.
-3. Untagged media remain on the inspection pack but do not appear in the CA photo-picker until tagged.
+1. Who creates: Approved Valuer
+2. How they create: On the valuation working the Valuer tags Module 04 photographs and videos into the report library.
+3. How they edit: CA report (F07-001) and auction-display picker (F07-003) use that tagged set.
+4. How they send for approval: Untagged media remain on the inspection pack but do not appear in the CA photo-picker until tagged. Open working → tag media → library updated for CA.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Approved Valuer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Approved Valuer opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Tag/untag field photos and videos into the valuation report library
 - Keep untagged media on the inspection pack only
 - Feed F07-001 and F07-003 from the tagged set
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My tag photos and videos into the valuation library list / queue | Medium |
+| Valuation media tagging library | Complex |
+| Tag photos and videos into the valuation library history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Tag/untag library membership | Medium |
+| Update tag photos and videos into the valuation library | Medium |
+| Search tag photos and videos into the valuation library | Medium |
+| Read tag photos and videos into the valuation library history | Easy |
 
 ### Inputs
 Inspection media; tag/untag.
@@ -81,14 +105,22 @@ Same media binary; tag is membership only.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
+| My tag photos and videos into the valuation library list / queue | UI | Medium | 6 |
 | Valuation media tagging library | UI | Complex | 12 |
+| Tag photos and videos into the valuation library history | UI | Medium | 6 |
 | Tag/untag library membership | API | Medium | 6 |
-| Library tag store | Database | Easy | 2 |
+| Update tag photos and videos into the valuation library | API | Medium | 6 |
+| Search tag photos and videos into the valuation library | API | Medium | 6 |
+| Read tag photos and videos into the valuation library history | API | Easy | 4 |
+| Tag photos and videos into the valuation library persistence | DB | Medium | 4 |
 | Inspection media consume | Integration | Simple | 4 |
-| Library tagging tests | Testing | Medium | 6 |
-| Media library note | Documentation | Easy | 2 |
-| **Total** | | | **32** |
+| Tag photos and videos into the valuation library feature tests | Testing | Medium | 6 |
+| Tag photos and videos into the valuation library implementation documentation | Documentation | Easy | 2 |
+| **Total** | | | **62** |
 
 ### Estimation Assumptions
-- GIS ingest hours remain in F04-006 / F09-003.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

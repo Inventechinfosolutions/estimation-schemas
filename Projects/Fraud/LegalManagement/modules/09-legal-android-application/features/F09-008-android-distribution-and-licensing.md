@@ -18,10 +18,14 @@ Document and implement a non-speculative Android distribution path — Play Stor
 Administrator; SPLOCA approver; delivery team.
 
 ### User Journey
-1. SPLOCA records whether Play Store licensing is approved or an alternative official distribution (sideload/MDM/enterprise) is used.
-2. Administrator uses Enrolment/Distribution admin and configuration screens.
-3. Advocates/Legal Cell receive the app only via the approved path; licensing is recorded, not left speculative.
-4. IP and source remain with SPLOCA.
+1. Who creates: Administrator
+2. How they create: SPLOCA records whether Play Store licensing is approved or an alternative official distribution (sideload/MDM/enterprise) is used.
+3. How they edit: Administrator uses Enrolment/Distribution admin and configuration screens.
+4. How they send for approval: Advocates/Legal Cell receive the app only via the approved path; licensing is recorded, not left speculative. Record approval → configure distribution → enrol Persons/devices → ship via approved path.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Administrator works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Administrator opens history on the record. IP and source remain with SPLOCA.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Enrolment / Distribution admin
@@ -30,6 +34,25 @@ Administrator; SPLOCA approver; delivery team.
 - No public consumer Play Store listing unless approved
 - No iOS
 - IP remains with SPLOCA
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Enrolment / Distribution admin | Medium |
+| Play Store / approved-distribution configuration | Easy |
+| Android distribution and licensing history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Distribution metadata operations | Medium |
+| Update android distribution and licensing | Medium |
+| Search android distribution and licensing | Medium |
+| Read android distribution and licensing history | Easy |
 
 ### Inputs
 SPLOCA approval flag for Play Store; package identity; enrolment list of Legal Posts; licence/account artefacts as approved.
@@ -45,7 +68,7 @@ Distribution method on record; enrolled devices/Persons; licence documentation.
 - Second login directory is forbidden (F01-004).
 
 ### Validations
-Approval flag required before Play Store path is enabled; enrolment only for Legal Posts; unsigned/unapproved tracks blocked.
+- Approval flag required before Play Store path is enabled; enrolment only for Legal Posts; unsigned/unapproved tracks blocked.
 
 ### Calculations
 None.
@@ -75,7 +98,7 @@ Play Store licensing / enterprise distribution as approved (Medium — auth, map
 F01-004; all F09 functional screens.
 
 ### Assumptions
-If Play Store is not approved, hours still cover enterprise/sideload enrolment and the licensing record. Store developer-account fees are commercial, not extra IAM.
+- If Play Store is not approved, hours still cover enterprise/sideload enrolment and the licensing record. Store developer-account fees are commercial, not extra IAM.
 
 ### Risks
 Leaving licensing ‘TBD’ — this feature exists to prevent that. Delay in SPLOCA approval blocks store publish.
@@ -88,17 +111,22 @@ Clear distribution runbook; signed artefacts; IP with SPLOCA.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
 | Enrolment / Distribution admin | UI | Medium | 6 |
 | Play Store / approved-distribution configuration | UI | Easy | 4 |
+| Android distribution and licensing history | UI | Medium | 6 |
 | Distribution metadata operations | API | Medium | 6 |
-| Licensing and enrolment records | Database | Easy | 2 |
+| Update android distribution and licensing | API | Medium | 6 |
+| Search android distribution and licensing | API | Medium | 6 |
+| Read android distribution and licensing history | API | Easy | 4 |
+| Android distribution and licensing persistence | DB | Medium | 4 |
 | Play Store or approved enterprise distribution | Integration | Medium | 16 |
-| Distribution and licensing tests | Testing | Medium | 6 |
-| Android distribution and licensing guide (IP with SPLOCA) | Documentation | Complex | 4 |
-| **Total** | | | **44** |
+| Android distribution and licensing feature tests | Testing | Medium | 6 |
+| Android distribution and licensing implementation documentation | Documentation | Complex | 4 |
+| **Total** | | | **68** |
 
 ### Estimation Assumptions
-- Play Store Integration Medium only for the approved licensing/distribution path — not a speculative multi-store consumer rollout.
-- Does not transfer IP away from SPLOCA.
-- iOS not estimated.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

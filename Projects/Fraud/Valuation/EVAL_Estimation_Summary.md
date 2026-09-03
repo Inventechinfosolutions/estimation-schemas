@@ -12,28 +12,28 @@ Internal roll-up from module feature indexes. Hours from Estimation Master.
 
 - **Modules:** 9
 - **Features:** 64
-- **Grand total:** **2,680 hours**
-- **Recommended go-live:** **2,680 hours**
+- **Grand total:** **4,481 hours**
+- **Recommended go-live:** **4,481 hours**
 - **Optional / conditional:** **0 hours**
 
 ## Per-module totals
 
 | # | Module | Type | Features | Hours |
 |---|--------|------|---------:|------:|
-| 01 | Shared User & Access Control (consumed) | Shared | 5 | 171 |
-| 02 | Valuation Masters, Property Coding & References | Shared | 8 | 312 |
-| 03 | Immovable Asset Register (3(2) & Office Capture) | Business | 9 | 304 |
-| 04 | Valuer Assignment & GIS Field Capture (Data Capturing – I) | Business | 8 | 377 |
-| 05 | Immovable Valuation Methods & Statutory Forms (Data Capturing – II) | Business | 10 | 483 |
-| 06 | Movables QR Coding & Valuation (eValueM) | Business | 8 | 338 |
-| 07 | CA Assessment, MIS Reports & Auction-Display Photos | Business | 7 | 253 |
-| 08 | Valuer Billing | Business | 3 | 90 |
-| 09 | Valuation Android Application (Approved Valuers) | Business | 6 | 352 |
-| | **Total** | | **64** | **2,680** |
+| 01 | Shared User & Access Control (consumed) | Shared | 5 | 312 |
+| 02 | Valuation Masters, Property Coding & References | Shared | 8 | 539 |
+| 03 | Immovable Asset Register (3(2) & Office Capture) | Business | 9 | 554 |
+| 04 | Valuer Assignment & GIS Field Capture (Data Capturing – I) | Business | 8 | 607 |
+| 05 | Immovable Valuation Methods & Statutory Forms (Data Capturing – II) | Business | 10 | 745 |
+| 06 | Movables QR Coding & Valuation (eValueM) | Business | 8 | 564 |
+| 07 | CA Assessment, MIS Reports & Auction-Display Photos | Business | 7 | 456 |
+| 08 | Valuer Billing | Business | 3 | 179 |
+| 09 | Valuation Android Application (Approved Valuers) | Business | 6 | 525 |
+| | **Total** | | **64** | **4,481** |
 
 ## Go-live vs optional
 
-- Go-live (all modules 01–09): **2,680 hours**
+- Go-live (all modules 01–09): **4,481 hours**
 - Optional in this baseline: **0 hours**
 
 ## Assumptions / risks carried forward

@@ -1,8 +1,8 @@
 {
   "project_code": "EVAL",
-  "project_name": "GIS Field Valuation — eValueI / eValueM (KPID / SPLOCA)",
+  "project_name": "GIS Field Valuation \u2014 eValueI / eValueM (KPID / SPLOCA)",
   "output_root": "/Users/vadiraj/dev/BDA-repos/estimation-schemas/Projects/Fraud/Valuation",
-  "updated_at": "2026-08-17T10:01:35Z",
+  "updated_at": "2026-08-18T10:29:36Z",
   "modules": [
     {
       "nn": "01",
@@ -11,15 +11,15 @@
       "type": "Shared",
       "folder": "modules/01-shared-user-access-control",
       "feature_count": 5,
-      "total_hours": 171,
+      "total_hours": 312,
       "features": [
         {
           "id": "F01-001",
           "seq": "001",
-          "name": "Consume shared Person–Post–Role identity",
+          "name": "Consume shared Person\u2013Post\u2013Role identity",
           "slug": "consume-shared-person-post-role-identity",
           "file": "modules/01-shared-user-access-control/features/F01-001-consume-shared-person-post-role-identity.md",
-          "hours": 31
+          "hours": 62
         },
         {
           "id": "F01-002",
@@ -27,7 +27,7 @@
           "name": "Valuation Posts on the shared component",
           "slug": "valuation-posts-on-the-shared-component",
           "file": "modules/01-shared-user-access-control/features/F01-002-valuation-posts-on-the-shared-component.md",
-          "hours": 30
+          "hours": 60
         },
         {
           "id": "F01-003",
@@ -35,7 +35,7 @@
           "name": "Assignment and need-to-know on valuation documents",
           "slug": "assignment-and-need-to-know-on-valuation-documents",
           "file": "modules/01-shared-user-access-control/features/F01-003-assignment-and-need-to-know-on-valuation-documents.md",
-          "hours": 39
+          "hours": 67
         },
         {
           "id": "F01-004",
@@ -43,7 +43,7 @@
           "name": "Valuation web and Android on shared identity",
           "slug": "valuation-web-and-android-on-shared-identity",
           "file": "modules/01-shared-user-access-control/features/F01-004-valuation-web-and-android-on-shared-identity.md",
-          "hours": 43
+          "hours": 71
         },
         {
           "id": "F01-005",
@@ -51,7 +51,7 @@
           "name": "In-app training and FAQ for valuation",
           "slug": "in-app-training-and-faq-for-valuation",
           "file": "modules/01-shared-user-access-control/features/F01-005-in-app-training-and-faq-for-valuation.md",
-          "hours": 28
+          "hours": 52
         }
       ]
     },
@@ -62,7 +62,7 @@
       "type": "Shared",
       "folder": "modules/02-valuation-masters-property-coding",
       "feature_count": 8,
-      "total_hours": 312,
+      "total_hours": 539,
       "features": [
         {
           "id": "F02-001",
@@ -70,7 +70,7 @@
           "name": "Approved valuer professional master",
           "slug": "approved-valuer-professional-master",
           "file": "modules/02-valuation-masters-property-coding/features/F02-001-approved-valuer-professional-master.md",
-          "hours": 43
+          "hours": 71
         },
         {
           "id": "F02-002",
@@ -78,7 +78,7 @@
           "name": "Immovable asset category master",
           "slug": "immovable-asset-category-master",
           "file": "modules/02-valuation-masters-property-coding/features/F02-002-immovable-asset-category-master.md",
-          "hours": 18
+          "hours": 49
         },
         {
           "id": "F02-003",
@@ -86,7 +86,7 @@
           "name": "Unique seized-property code with Google location",
           "slug": "unique-seized-property-code-with-google-location",
           "file": "modules/02-valuation-masters-property-coding/features/F02-003-unique-seized-property-code-with-google-location.md",
-          "hours": 32
+          "hours": 56
         },
         {
           "id": "F02-004",
@@ -94,7 +94,7 @@
           "name": "Movable category and sub-code catalogue",
           "slug": "movable-category-and-sub-code-catalogue",
           "file": "modules/02-valuation-masters-property-coding/features/F02-004-movable-category-and-sub-code-catalogue.md",
-          "hours": 34
+          "hours": 62
         },
         {
           "id": "F02-005",
@@ -102,7 +102,7 @@
           "name": "FE and CA identity reference",
           "slug": "fe-and-ca-identity-reference",
           "file": "modules/02-valuation-masters-property-coding/features/F02-005-fe-and-ca-identity-reference.md",
-          "hours": 42
+          "hours": 72
         },
         {
           "id": "F02-006",
@@ -110,7 +110,7 @@
           "name": "Central static masters for valuation",
           "slug": "central-static-masters-for-valuation",
           "file": "modules/02-valuation-masters-property-coding/features/F02-006-central-static-masters-for-valuation.md",
-          "hours": 22
+          "hours": 52
         },
         {
           "id": "F02-007",
@@ -118,7 +118,7 @@
           "name": "Certified structure-classification master",
           "slug": "certified-structure-classification-master",
           "file": "modules/02-valuation-masters-property-coding/features/F02-007-certified-structure-classification-master.md",
-          "hours": 29
+          "hours": 57
         },
         {
           "id": "F02-008",
@@ -126,7 +126,7 @@
           "name": "Geocoding, reverse geocoding and map markers",
           "slug": "geocoding-reverse-geocoding-and-map-markers",
           "file": "modules/02-valuation-masters-property-coding/features/F02-008-geocoding-reverse-geocoding-and-map-markers.md",
-          "hours": 92
+          "hours": 120
         }
       ]
     },
@@ -137,7 +137,7 @@
       "type": "Business",
       "folder": "modules/03-immovable-asset-register",
       "feature_count": 9,
-      "total_hours": 304,
+      "total_hours": 554,
       "features": [
         {
           "id": "F03-001",
@@ -145,7 +145,7 @@
           "name": "Create immovable asset (office web)",
           "slug": "create-immovable-asset-office-web",
           "file": "modules/03-immovable-asset-register/features/F03-001-create-immovable-asset-office-web.md",
-          "hours": 51
+          "hours": 79
         },
         {
           "id": "F03-002",
@@ -153,7 +153,7 @@
           "name": "Asset particulars, boundaries and registration",
           "slug": "asset-particulars-boundaries-and-registration",
           "file": "modules/03-immovable-asset-register/features/F03-002-asset-particulars-boundaries-and-registration.md",
-          "hours": 32
+          "hours": 62
         },
         {
           "id": "F03-003",
@@ -161,7 +161,7 @@
           "name": "Upload court order and sale deeds",
           "slug": "upload-court-order-and-sale-deeds",
           "file": "modules/03-immovable-asset-register/features/F03-003-upload-court-order-and-sale-deeds.md",
-          "hours": 28
+          "hours": 56
         },
         {
           "id": "F03-004",
@@ -169,7 +169,7 @@
           "name": "3(2) preparation, photograph and office location link",
           "slug": "32-preparation-photograph-and-office-location-link",
           "file": "modules/03-immovable-asset-register/features/F03-004-32-preparation-photograph-and-office-location-link.md",
-          "hours": 38
+          "hours": 68
         },
         {
           "id": "F03-005",
@@ -177,7 +177,7 @@
           "name": "Search and update rights / physical status",
           "slug": "search-and-update-rights-physical-status",
           "file": "modules/03-immovable-asset-register/features/F03-005-search-and-update-rights-physical-status.md",
-          "hours": 34
+          "hours": 56
         },
         {
           "id": "F03-006",
@@ -185,7 +185,7 @@
           "name": "CAD / layout upload for maintenance and security",
           "slug": "cad-layout-upload-for-maintenance-and-security",
           "file": "modules/03-immovable-asset-register/features/F03-006-cad-layout-upload-for-maintenance-and-security.md",
-          "hours": 22
+          "hours": 52
         },
         {
           "id": "F03-007",
@@ -193,7 +193,7 @@
           "name": "Link to Claim attached-asset record",
           "slug": "link-to-claim-attached-asset-record",
           "file": "modules/03-immovable-asset-register/features/F03-007-link-to-claim-attached-asset-record.md",
-          "hours": 39
+          "hours": 69
         },
         {
           "id": "F03-008",
@@ -201,7 +201,7 @@
           "name": "Allotted-FE scope for the office user",
           "slug": "allotted-fe-scope-for-the-office-user",
           "file": "modules/03-immovable-asset-register/features/F03-008-allotted-fe-scope-for-the-office-user.md",
-          "hours": 37
+          "hours": 65
         },
         {
           "id": "F03-009",
@@ -209,18 +209,18 @@
           "name": "Deactivate or delete asset",
           "slug": "deactivate-or-delete-asset",
           "file": "modules/03-immovable-asset-register/features/F03-009-deactivate-or-delete-asset.md",
-          "hours": 23
+          "hours": 47
         }
       ]
     },
     {
       "nn": "04",
-      "name": "Valuer Assignment & GIS Field Capture (Data Capturing – I)",
+      "name": "Valuer Assignment & GIS Field Capture (Data Capturing \u2013 I)",
       "slug": "valuer-assignment-gis-field-capture",
       "type": "Business",
       "folder": "modules/04-valuer-assignment-gis-field-capture",
       "feature_count": 8,
-      "total_hours": 377,
+      "total_hours": 607,
       "features": [
         {
           "id": "F04-001",
@@ -228,7 +228,7 @@
           "name": "Assign asset to approved valuer",
           "slug": "assign-asset-to-approved-valuer",
           "file": "modules/04-valuer-assignment-gis-field-capture/features/F04-001-assign-asset-to-approved-valuer.md",
-          "hours": 30
+          "hours": 58
         },
         {
           "id": "F04-002",
@@ -236,7 +236,7 @@
           "name": "Display office-entered basics to the assigned valuer",
           "slug": "display-office-entered-basics-to-the-assigned-valuer",
           "file": "modules/04-valuer-assignment-gis-field-capture/features/F04-002-display-office-entered-basics-to-the-assigned-valuer.md",
-          "hours": 18
+          "hours": 49
         },
         {
           "id": "F04-003",
@@ -244,15 +244,15 @@
           "name": "View sale deeds and court order",
           "slug": "view-sale-deeds-and-court-order",
           "file": "modules/04-valuer-assignment-gis-field-capture/features/F04-003-view-sale-deeds-and-court-order.md",
-          "hours": 22
+          "hours": 53
         },
         {
           "id": "F04-004",
           "seq": "004",
-          "name": "Preliminary site inspection — location and boundaries",
+          "name": "Preliminary site inspection \u2014 location and boundaries",
           "slug": "preliminary-site-inspection-location-and-boundaries",
           "file": "modules/04-valuer-assignment-gis-field-capture/features/F04-004-preliminary-site-inspection-location-and-boundaries.md",
-          "hours": 35
+          "hours": 63
         },
         {
           "id": "F04-005",
@@ -260,7 +260,7 @@
           "name": "Nearby amenities, Map link and QR",
           "slug": "nearby-amenities-map-link-and-qr",
           "file": "modules/04-valuer-assignment-gis-field-capture/features/F04-005-nearby-amenities-map-link-and-qr.md",
-          "hours": 84
+          "hours": 112
         },
         {
           "id": "F04-006",
@@ -268,7 +268,7 @@
           "name": "GIS-tagged photographs and video",
           "slug": "gis-tagged-photographs-and-video",
           "file": "modules/04-valuer-assignment-gis-field-capture/features/F04-006-gis-tagged-photographs-and-video.md",
-          "hours": 92
+          "hours": 120
         },
         {
           "id": "F04-007",
@@ -276,7 +276,7 @@
           "name": "Valuer live location, negative factors, remarks and approved sources",
           "slug": "valuer-live-location-negative-factors-remarks-and-approved-sources",
           "file": "modules/04-valuer-assignment-gis-field-capture/features/F04-007-valuer-live-location-negative-factors-remarks-and-approved-sources.md",
-          "hours": 55
+          "hours": 83
         },
         {
           "id": "F04-008",
@@ -284,18 +284,18 @@
           "name": "Visit date, allotted valuer team and stage of valuation",
           "slug": "visit-date-allotted-valuer-team-and-stage-of-valuation",
           "file": "modules/04-valuer-assignment-gis-field-capture/features/F04-008-visit-date-allotted-valuer-team-and-stage-of-valuation.md",
-          "hours": 41
+          "hours": 69
         }
       ]
     },
     {
       "nn": "05",
-      "name": "Immovable Valuation Methods & Statutory Forms (Data Capturing – II)",
+      "name": "Immovable Valuation Methods & Statutory Forms (Data Capturing \u2013 II)",
       "slug": "immovable-valuation-methods-forms",
       "type": "Business",
       "folder": "modules/05-immovable-valuation-methods-forms",
       "feature_count": 10,
-      "total_hours": 483,
+      "total_hours": 745,
       "features": [
         {
           "id": "F05-001",
@@ -303,15 +303,15 @@
           "name": "Select format and method; populate by asset code",
           "slug": "select-format-and-method-populate-by-asset-code",
           "file": "modules/05-immovable-valuation-methods-forms/features/F05-001-select-format-and-method-populate-by-asset-code.md",
-          "hours": 26
+          "hours": 56
         },
         {
           "id": "F05-002",
           "seq": "002",
-          "name": "Cost of construction — Accounts method",
+          "name": "Cost of construction \u2014 Accounts method",
           "slug": "cost-of-construction-accounts-method",
           "file": "modules/05-immovable-valuation-methods-forms/features/F05-002-cost-of-construction-accounts-method.md",
-          "hours": 54
+          "hours": 80
         },
         {
           "id": "F05-003",
@@ -319,7 +319,7 @@
           "name": "Comparable method for built-up properties",
           "slug": "comparable-method-for-built-up-properties",
           "file": "modules/05-immovable-valuation-methods-forms/features/F05-003-comparable-method-for-built-up-properties.md",
-          "hours": 39
+          "hours": 67
         },
         {
           "id": "F05-004",
@@ -327,7 +327,7 @@
           "name": "Floor-disposition weightage for FMV",
           "slug": "floor-disposition-weightage-for-fmv",
           "file": "modules/05-immovable-valuation-methods-forms/features/F05-004-floor-disposition-weightage-for-fmv.md",
-          "hours": 29
+          "hours": 59
         },
         {
           "id": "F05-005",
@@ -335,7 +335,7 @@
           "name": "Land and Building method with adjustments and depreciation",
           "slug": "land-and-building-method-with-adjustments-and-depreciation",
           "file": "modules/05-immovable-valuation-methods-forms/features/F05-005-land-and-building-method-with-adjustments-and-depreciation.md",
-          "hours": 64
+          "hours": 86
         },
         {
           "id": "F05-006",
@@ -343,7 +343,7 @@
           "name": "Property specification proforma",
           "slug": "property-specification-proforma",
           "file": "modules/05-immovable-valuation-methods-forms/features/F05-006-property-specification-proforma.md",
-          "hours": 35
+          "hours": 63
         },
         {
           "id": "F05-007",
@@ -351,7 +351,7 @@
           "name": "Form V-1 immovable report and declaration",
           "slug": "form-v-1-immovable-report-and-declaration",
           "file": "modules/05-immovable-valuation-methods-forms/features/F05-007-form-v-1-immovable-report-and-declaration.md",
-          "hours": 58
+          "hours": 84
         },
         {
           "id": "F05-008",
@@ -359,7 +359,7 @@
           "name": "Forms V-2, V-3 and V-4",
           "slug": "forms-v-2-v-3-and-v-4",
           "file": "modules/05-immovable-valuation-methods-forms/features/F05-008-forms-v-2-v-3-and-v-4.md",
-          "hours": 66
+          "hours": 86
         },
         {
           "id": "F05-009",
@@ -367,7 +367,7 @@
           "name": "Tag photos and videos into the valuation library",
           "slug": "tag-photos-and-videos-into-the-valuation-library",
           "file": "modules/05-immovable-valuation-methods-forms/features/F05-009-tag-photos-and-videos-into-the-valuation-library.md",
-          "hours": 32
+          "hours": 62
         },
         {
           "id": "F05-010",
@@ -375,7 +375,7 @@
           "name": "Expert Valuer assignment and digital declaration",
           "slug": "expert-valuer-assignment-and-digital-declaration",
           "file": "modules/05-immovable-valuation-methods-forms/features/F05-010-expert-valuer-assignment-and-digital-declaration.md",
-          "hours": 80
+          "hours": 102
         }
       ]
     },
@@ -386,7 +386,7 @@
       "type": "Business",
       "folder": "modules/06-movables-qr-coding-valuation",
       "feature_count": 8,
-      "total_hours": 338,
+      "total_hours": 564,
       "features": [
         {
           "id": "F06-001",
@@ -394,7 +394,7 @@
           "name": "Classify and register a movable",
           "slug": "classify-and-register-a-movable",
           "file": "modules/06-movables-qr-coding-valuation/features/F06-001-classify-and-register-a-movable.md",
-          "hours": 34
+          "hours": 62
         },
         {
           "id": "F06-002",
@@ -402,7 +402,7 @@
           "name": "Tabulate condition and value attributes",
           "slug": "tabulate-condition-and-value-attributes",
           "file": "modules/06-movables-qr-coding-valuation/features/F06-002-tabulate-condition-and-value-attributes.md",
-          "hours": 24
+          "hours": 54
         },
         {
           "id": "F06-003",
@@ -410,7 +410,7 @@
           "name": "Tagging sticker / label",
           "slug": "tagging-sticker-label",
           "file": "modules/06-movables-qr-coding-valuation/features/F06-003-tagging-sticker-label.md",
-          "hours": 22
+          "hours": 52
         },
         {
           "id": "F06-004",
@@ -418,31 +418,31 @@
           "name": "Group and sample photographs",
           "slug": "group-and-sample-photographs",
           "file": "modules/06-movables-qr-coding-valuation/features/F06-004-group-and-sample-photographs.md",
-          "hours": 49
+          "hours": 77
         },
         {
           "id": "F06-005",
           "seq": "005",
-          "name": "Form V-6 — equipment, furniture, machinery and plant",
+          "name": "Form V-6 \u2014 equipment, furniture, machinery and plant",
           "slug": "form-v-6-equipment-furniture-machinery-and-plant",
           "file": "modules/06-movables-qr-coding-valuation/features/F06-005-form-v-6-equipment-furniture-machinery-and-plant.md",
-          "hours": 43
+          "hours": 71
         },
         {
           "id": "F06-006",
           "seq": "006",
-          "name": "Form V-7 — gemstones, precious metals and jewellery",
+          "name": "Form V-7 \u2014 gemstones, precious metals and jewellery",
           "slug": "form-v-7-gemstones-precious-metals-and-jewellery",
           "file": "modules/06-movables-qr-coding-valuation/features/F06-006-form-v-7-gemstones-precious-metals-and-jewellery.md",
-          "hours": 62
+          "hours": 88
         },
         {
           "id": "F06-007",
           "seq": "007",
-          "name": "Form V-8 — art and handicrafts",
+          "name": "Form V-8 \u2014 art and handicrafts",
           "slug": "form-v-8-art-and-handicrafts",
           "file": "modules/06-movables-qr-coding-valuation/features/F06-007-form-v-8-art-and-handicrafts.md",
-          "hours": 44
+          "hours": 72
         },
         {
           "id": "F06-008",
@@ -450,7 +450,7 @@
           "name": "Cash and foreign currency handover; RBI damaged-note application",
           "slug": "cash-and-foreign-currency-handover-rbi-damaged-note-application",
           "file": "modules/06-movables-qr-coding-valuation/features/F06-008-cash-and-foreign-currency-handover-rbi-damaged-note-application.md",
-          "hours": 60
+          "hours": 88
         }
       ]
     },
@@ -461,7 +461,7 @@
       "type": "Business",
       "folder": "modules/07-ca-assessment-mis-auction-photos",
       "feature_count": 7,
-      "total_hours": 253,
+      "total_hours": 456,
       "features": [
         {
           "id": "F07-001",
@@ -469,7 +469,7 @@
           "name": "Valuation MIS report from valuer data",
           "slug": "valuation-mis-report-from-valuer-data",
           "file": "modules/07-ca-assessment-mis-auction-photos/features/F07-001-valuation-mis-report-from-valuer-data.md",
-          "hours": 52
+          "hours": 80
         },
         {
           "id": "F07-002",
@@ -477,7 +477,7 @@
           "name": "CA assessment on key parameters",
           "slug": "ca-assessment-on-key-parameters",
           "file": "modules/07-ca-assessment-mis-auction-photos/features/F07-002-ca-assessment-on-key-parameters.md",
-          "hours": 39
+          "hours": 67
         },
         {
           "id": "F07-003",
@@ -485,7 +485,7 @@
           "name": "Select photographs for auction display",
           "slug": "select-photographs-for-auction-display",
           "file": "modules/07-ca-assessment-mis-auction-photos/features/F07-003-select-photographs-for-auction-display.md",
-          "hours": 30
+          "hours": 60
         },
         {
           "id": "F07-004",
@@ -493,7 +493,7 @@
           "name": "Accept, reject, revaluation or SCN",
           "slug": "accept-reject-revaluation-or-scn",
           "file": "modules/07-ca-assessment-mis-auction-photos/features/F07-004-accept-reject-revaluation-or-scn.md",
-          "hours": 41
+          "hours": 69
         },
         {
           "id": "F07-005",
@@ -501,7 +501,7 @@
           "name": "CAD / layout available during CA review",
           "slug": "cad-layout-available-during-ca-review",
           "file": "modules/07-ca-assessment-mis-auction-photos/features/F07-005-cad-layout-available-during-ca-review.md",
-          "hours": 14
+          "hours": 45
         },
         {
           "id": "F07-006",
@@ -509,7 +509,7 @@
           "name": "Compute Time Taken from assignment, visit and submit",
           "slug": "compute-time-taken-from-assignment-visit-and-submit",
           "file": "modules/07-ca-assessment-mis-auction-photos/features/F07-006-compute-time-taken-from-assignment-visit-and-submit.md",
-          "hours": 26
+          "hours": 56
         },
         {
           "id": "F07-007",
@@ -517,7 +517,7 @@
           "name": "Release accepted valuation pack to Claim for auction",
           "slug": "release-accepted-valuation-pack-to-claim-for-auction",
           "file": "modules/07-ca-assessment-mis-auction-photos/features/F07-007-release-accepted-valuation-pack-to-claim-for-auction.md",
-          "hours": 51
+          "hours": 79
         }
       ]
     },
@@ -528,7 +528,7 @@
       "type": "Business",
       "folder": "modules/08-valuer-billing",
       "feature_count": 3,
-      "total_hours": 90,
+      "total_hours": 179,
       "features": [
         {
           "id": "F08-001",
@@ -536,7 +536,7 @@
           "name": "Open billing only after CA acceptance",
           "slug": "open-billing-only-after-ca-acceptance",
           "file": "modules/08-valuer-billing/features/F08-001-open-billing-only-after-ca-acceptance.md",
-          "hours": 25
+          "hours": 56
         },
         {
           "id": "F08-002",
@@ -544,7 +544,7 @@
           "name": "Prepare bill and voucher from approved particulars",
           "slug": "prepare-bill-and-voucher-from-approved-particulars",
           "file": "modules/08-valuer-billing/features/F08-002-prepare-bill-and-voucher-from-approved-particulars.md",
-          "hours": 39
+          "hours": 67
         },
         {
           "id": "F08-003",
@@ -552,7 +552,7 @@
           "name": "Submit bill online and file signed hard copy",
           "slug": "submit-bill-online-and-file-signed-hard-copy",
           "file": "modules/08-valuer-billing/features/F08-003-submit-bill-online-and-file-signed-hard-copy.md",
-          "hours": 26
+          "hours": 56
         }
       ]
     },
@@ -563,7 +563,7 @@
       "type": "Business",
       "folder": "modules/09-valuation-android-application",
       "feature_count": 6,
-      "total_hours": 352,
+      "total_hours": 525,
       "features": [
         {
           "id": "F09-001",
@@ -571,7 +571,7 @@
           "name": "Android login on shared identity",
           "slug": "android-login-on-shared-identity",
           "file": "modules/09-valuation-android-application/features/F09-001-android-login-on-shared-identity.md",
-          "hours": 41
+          "hours": 71
         },
         {
           "id": "F09-002",
@@ -579,7 +579,7 @@
           "name": "Retrieve assigned assets and office documents",
           "slug": "retrieve-assigned-assets-and-office-documents",
           "file": "modules/09-valuation-android-application/features/F09-002-retrieve-assigned-assets-and-office-documents.md",
-          "hours": 51
+          "hours": 79
         },
         {
           "id": "F09-003",
@@ -587,7 +587,7 @@
           "name": "Device GIS photo, video and live location",
           "slug": "device-gis-photo-video-and-live-location",
           "file": "modules/09-valuation-android-application/features/F09-003-device-gis-photo-video-and-live-location.md",
-          "hours": 92
+          "hours": 120
         },
         {
           "id": "F09-004",
@@ -595,7 +595,7 @@
           "name": "Method-specific remaining entry on Android",
           "slug": "method-specific-remaining-entry-on-android",
           "file": "modules/09-valuation-android-application/features/F09-004-method-specific-remaining-entry-on-android.md",
-          "hours": 60
+          "hours": 88
         },
         {
           "id": "F09-005",
@@ -603,7 +603,7 @@
           "name": "Submit field package to web for CA",
           "slug": "submit-field-package-to-web-for-ca",
           "file": "modules/09-valuation-android-application/features/F09-005-submit-field-package-to-web-for-ca.md",
-          "hours": 65
+          "hours": 93
         },
         {
           "id": "F09-006",
@@ -611,7 +611,7 @@
           "name": "Distribution and Play Store licensing",
           "slug": "distribution-and-play-store-licensing",
           "file": "modules/09-valuation-android-application/features/F09-006-distribution-and-play-store-licensing.md",
-          "hours": 43
+          "hours": 74
         }
       ]
     }

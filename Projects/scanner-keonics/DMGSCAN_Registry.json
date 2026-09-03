@@ -1,0 +1,91 @@
+{
+  "project_code": "DMGSCAN",
+  "project_name": "Scanning and Digitization of Files and Records — DMG Bengaluru Urban",
+  "output_root": "/Users/vadiraj/dev/BDA-repos/estimation-schemas/Projects/scanner-keonics",
+  "updated_at": "2026-09-02T11:45:00+00:00",
+  "modules": [
+    {
+      "nn": "01",
+      "name": "User and Access Management",
+      "slug": "user-and-access-management",
+      "type": "Shared",
+      "folder": "modules/01-user-and-access-management",
+      "feature_count": 3,
+      "total_hours": 128,
+      "features": [
+        {"id": "F01-001", "seq": "001", "name": "Project Staff Accounts", "slug": "project-staff-accounts", "file": "modules/01-user-and-access-management/features/F01-001-project-staff-accounts.md", "hours": 50},
+        {"id": "F01-002", "seq": "002", "name": "Login and Role Session", "slug": "login-and-role-session", "file": "modules/01-user-and-access-management/features/F01-002-login-and-role-session.md", "hours": 48},
+        {"id": "F01-003", "seq": "003", "name": "Authorised Handover List", "slug": "authorised-handover-list", "file": "modules/01-user-and-access-management/features/F01-003-authorised-handover-list.md", "hours": 30}
+      ]
+    },
+    {
+      "nn": "02",
+      "name": "File Inward, Unique ID and Pre-Scan Control",
+      "slug": "file-inward-unique-id-and-pre-scan-control",
+      "type": "Business",
+      "folder": "modules/02-file-inward-unique-id-and-pre-scan-control",
+      "feature_count": 3,
+      "total_hours": 141,
+      "features": [
+        {"id": "F02-001", "seq": "001", "name": "Unique File ID", "slug": "unique-file-id", "file": "modules/02-file-inward-unique-id-and-pre-scan-control/features/F02-001-unique-file-id.md", "hours": 40},
+        {"id": "F02-002", "seq": "002", "name": "Inward Log and Page Census", "slug": "inward-log-and-page-census", "file": "modules/02-file-inward-unique-id-and-pre-scan-control/features/F02-002-inward-log-and-page-census.md", "hours": 61},
+        {"id": "F02-003", "seq": "003", "name": "Pre-Scan Batch and Exceptions", "slug": "pre-scan-batch-and-exceptions", "file": "modules/02-file-inward-unique-id-and-pre-scan-control/features/F02-003-pre-scan-batch-and-exceptions.md", "hours": 40}
+      ]
+    },
+    {
+      "nn": "03",
+      "name": "Scanning and Searchable PDF/A Production",
+      "slug": "scanning-and-searchable-pdfa-production",
+      "type": "Business",
+      "folder": "modules/03-scanning-and-searchable-pdfa-production",
+      "feature_count": 3,
+      "total_hours": 117,
+      "features": [
+        {"id": "F03-001", "seq": "001", "name": "Scan Production Recording", "slug": "scan-production-recording", "file": "modules/03-scanning-and-searchable-pdfa-production/features/F03-001-scan-production-recording.md", "hours": 48},
+        {"id": "F03-002", "seq": "002", "name": "Searchable PDF/A Package", "slug": "searchable-pdfa-package", "file": "modules/03-scanning-and-searchable-pdfa-production/features/F03-002-searchable-pdfa-package.md", "hours": 43},
+        {"id": "F03-003", "seq": "003", "name": "Exception Capture Devices", "slug": "exception-capture-devices", "file": "modules/03-scanning-and-searchable-pdfa-production/features/F03-003-exception-capture-devices.md", "hours": 26}
+      ]
+    },
+    {
+      "nn": "04",
+      "name": "Quality Control and Physical Return",
+      "slug": "quality-control-and-physical-return",
+      "type": "Business",
+      "folder": "modules/04-quality-control-and-physical-return",
+      "feature_count": 3,
+      "total_hours": 137,
+      "features": [
+        {"id": "F04-001", "seq": "001", "name": "Independent QC Checklist", "slug": "independent-qc-checklist", "file": "modules/04-quality-control-and-physical-return/features/F04-001-independent-qc-checklist.md", "hours": 57},
+        {"id": "F04-002", "seq": "002", "name": "Rescan and Defect Closure", "slug": "rescan-and-defect-closure", "file": "modules/04-quality-control-and-physical-return/features/F04-002-rescan-and-defect-closure.md", "hours": 36},
+        {"id": "F04-003", "seq": "003", "name": "Outward Log and Physical Return", "slug": "outward-log-and-physical-return", "file": "modules/04-quality-control-and-physical-return/features/F04-003-outward-log-and-physical-return.md", "hours": 44}
+      ]
+    },
+    {
+      "nn": "05",
+      "name": "Metadata, Cataloguing and Indexing",
+      "slug": "metadata-cataloguing-and-indexing",
+      "type": "Business",
+      "folder": "modules/05-metadata-cataloguing-and-indexing",
+      "feature_count": 2,
+      "total_hours": 93,
+      "features": [
+        {"id": "F05-001", "seq": "001", "name": "Folder Tree and File Naming", "slug": "folder-tree-and-file-naming", "file": "modules/05-metadata-cataloguing-and-indexing/features/F05-001-folder-tree-and-file-naming.md", "hours": 38},
+        {"id": "F05-002", "seq": "002", "name": "File Metadata Capture", "slug": "file-metadata-capture", "file": "modules/05-metadata-cataloguing-and-indexing/features/F05-002-file-metadata-capture.md", "hours": 55}
+      ]
+    },
+    {
+      "nn": "06",
+      "name": "e-Office Upload, Backup and Progress MIS",
+      "slug": "eoffice-upload-backup-and-progress-mis",
+      "type": "Technical",
+      "folder": "modules/06-eoffice-upload-backup-and-progress-mis",
+      "feature_count": 3,
+      "total_hours": 133,
+      "features": [
+        {"id": "F06-001", "seq": "001", "name": "e-Office and Department Upload", "slug": "eoffice-and-department-upload", "file": "modules/06-eoffice-upload-backup-and-progress-mis/features/F06-001-eoffice-and-department-upload.md", "hours": 59},
+        {"id": "F06-002", "seq": "002", "name": "Backup and Restore Verification", "slug": "backup-and-restore-verification", "file": "modules/06-eoffice-upload-backup-and-progress-mis/features/F06-002-backup-and-restore-verification.md", "hours": 34},
+        {"id": "F06-003", "seq": "003", "name": "Progress Reports", "slug": "progress-reports", "file": "modules/06-eoffice-upload-backup-and-progress-mis/features/F06-003-progress-reports.md", "hours": 40}
+      ]
+    }
+  ]
+}

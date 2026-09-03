@@ -18,14 +18,38 @@ Store payment reference, transaction number and status for every payment so clai
 Officer; bank status return (external).
 
 ### User Journey
-1. After transfer, Officer or returning bank status records payment reference, transaction number and status against each claim in the batch.
-2. Status values are pending, success, failed or reversed as applicable.
-3. Officer reopens a claim and sees the latest payment status.
+1. Who creates: Officer
+2. How they create: After transfer, Officer or returning bank status records payment reference, transaction number and status against each claim in the batch.
+3. How they edit: Status values are pending, success, failed or reversed as applicable.
+4. How they send for approval: Officer reopens a claim and sees the latest payment status. Transfer → record/return status → visible on claim. Bank core product not built here.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Officer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Officer opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Record payment reference and transaction number.
 - Record status pending / success / failed / reversed.
 - Show latest status on the claim.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Payment status register | Complex |
+| Per-claim payment status | Medium |
+| Payment reference and status recording history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Payment status recording operations | Complex |
+| Update payment reference and status recording | Medium |
+| Search payment reference and status recording | Medium |
+| Read payment reference and status recording history | Easy |
 
 ### Inputs
 Batch, claim, payment reference, transaction number, status.
@@ -83,13 +107,19 @@ Latest status retrievable on the claim. Audit who recorded bank references.
 |---|---|---|---|
 | Payment status register | UI | Complex | 12 |
 | Per-claim payment status | UI | Medium | 6 |
+| Payment reference and status recording history | UI | Medium | 6 |
 | Payment status recording operations | API | Complex | 8 |
+| Update payment reference and status recording | API | Medium | 6 |
+| Search payment reference and status recording | API | Medium | 6 |
+| Read payment reference and status recording history | API | Easy | 4 |
 | Payment status persistence | DB | Medium | 4 |
 | Bank status return (NEFT/RTGS arrangements) | Integration | Medium | 16 |
-| Payment status tests | Testing | Complex | 8 |
-| Payment status note | Documentation | Medium | 3 |
-| **Total** | | | **57** |
+| Payment reference and status recording feature tests | Testing | Complex | 8 |
+| Payment reference and status recording implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **79** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- Integration Medium is bank status mapping/retry, not Very High 40 payment gateway.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

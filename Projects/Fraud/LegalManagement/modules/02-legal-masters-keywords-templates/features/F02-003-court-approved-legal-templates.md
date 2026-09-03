@@ -18,10 +18,14 @@ Hold stored court-approved templates so drafts are produced from Authority-appro
 Administrator; authorised Legal Cell.
 
 ### User Journey
-1. User opens the Legal Template Register.
-2. Uploads or replaces a template of a listed type with court-approved font and spacing.
-3. Marks it available for drafting (F02-004).
-4. Unavailable templates cannot be selected on Generate Draft.
+1. Who creates: Administrator
+2. How they create: User opens the Legal Template Register.
+3. How they edit: Uploads or replaces a template of a listed type with court-approved font and spacing.
+4. How they send for approval: Marks it available for drafting (F02-004). Upload/maintain → record font/spacing → mark available → consume in F02-004.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Administrator works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Administrator opens history on the record. Unavailable templates cannot be selected on Generate Draft.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Legal Template Register by type (5(2), notice, 7(1), 8(1), SOB, PWR, Caveat, IA, SLP, letter, freezing order, warrant)
@@ -29,6 +33,25 @@ Administrator; authorised Legal Cell.
 - Available / withdrawn lifecycle
 - No generative-AI template authoring
 - Market-intelligence investigation process remains out of scope except these notice/form types
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Legal Template Register | Medium |
+| Template Upload/Maintain screen (type, font, spacing) | Complex |
+| Court-approved legal templates history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Template lifecycle operations | Complex |
+| Update court-approved legal templates | Medium |
+| Search court-approved legal templates | Medium |
+| Read court-approved legal templates history | Easy |
 
 ### Inputs
 Template type, file, court font/spacing notes, version, available flag, optional description.
@@ -44,7 +67,7 @@ Stored template version; availability flag for Generate Draft.
 - IP of stored templates and the application remains with SPLOCA.
 
 ### Validations
-Type required; file required; available flag only if font/spacing recorded; withdrawn templates hidden from Generate Draft.
+- Type required; file required; available flag only if font/spacing recorded; withdrawn templates hidden from Generate Draft.
 
 ### Calculations
 None.
@@ -74,7 +97,7 @@ Document store for template files (Easy).
 F01-001; F02-004 generates drafts; F02-005 may hold type list.
 
 ### Assumptions
-SPLOCA supplies court-approved font and spacing; vendor does not invent court form layout.
+- SPLOCA supplies court-approved font and spacing; vendor does not invent court form layout.
 
 ### Risks
 Wrong font/spacing causes court rejection; unapproved type slips into production.
@@ -87,16 +110,22 @@ Template files stored with backup policy; version retrieve for audit.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
 | Legal Template Register | UI | Medium | 6 |
 | Template Upload/Maintain screen (type, font, spacing) | UI | Complex | 12 |
+| Court-approved legal templates history | UI | Medium | 6 |
 | Template lifecycle operations | API | Complex | 8 |
-| Template store and font/spacing metadata | Database | Medium | 4 |
+| Update court-approved legal templates | API | Medium | 6 |
+| Search court-approved legal templates | API | Medium | 6 |
+| Read court-approved legal templates history | API | Easy | 4 |
+| Court-approved legal templates persistence | DB | Medium | 4 |
 | Document store for template files | Integration | Easy | 8 |
-| Template administration tests | Testing | Complex | 8 |
-| Court-approved template guide | Documentation | Medium | 3 |
-| **Total** | | | **49** |
+| Court-approved legal templates feature tests | Testing | Complex | 8 |
+| Court-approved legal templates implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **71** |
 
 ### Estimation Assumptions
-- Draft merge and human verify are F02-004.
-- No generative AI hours.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

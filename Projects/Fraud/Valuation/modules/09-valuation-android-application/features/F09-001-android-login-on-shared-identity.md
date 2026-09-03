@@ -18,14 +18,38 @@ Authenticate the valuer Android app on the shared Person identity, not a second 
 Approved Valuer.
 
 ### User Journey
-1. Approved Valuer installs the official app and signs in with the same Person credentials and 2FA as Claim Module 01 (F01-001 / F01-004).
-2. After login the valuer sees only assigned valuation work.
-3. A deactivated Person cannot start a new session.
+1. Who creates: Approved Valuer
+2. How they create: Approved Valuer installs the official app and signs in with the same Person credentials and 2FA as Claim Module 01 (F01-001 / F01-004).
+3. How they edit: After login the valuer sees only assigned valuation work.
+4. How they send for approval: A deactivated Person cannot start a new session. Install → sign-in → shared 2FA → assigned work only.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Approved Valuer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Approved Valuer opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Android sign-in with shared Person and 2FA
 - Show only assigned valuation work after login
 - Block new session when Person is deactivated
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My android login on shared identity list / queue | Medium |
+| Android sign-in | Medium |
+| Android login on shared identity history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Device shared-identity token | Medium |
+| Update android login on shared identity | Medium |
+| Search android login on shared identity | Medium |
+| Read android login on shared identity history | Easy |
 
 ### Inputs
 Shared credentials; 2FA; install of official app.
@@ -84,14 +108,22 @@ TLS; no second password store on device.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
+| My android login on shared identity list / queue | UI | Medium | 6 |
 | Android sign-in | UI | Medium | 6 |
+| Android login on shared identity history | UI | Medium | 6 |
 | Device shared-identity token | API | Medium | 6 |
-| Device session | Database | Easy | 2 |
+| Update android login on shared identity | API | Medium | 6 |
+| Search android login on shared identity | API | Medium | 6 |
+| Read android login on shared identity history | API | Easy | 4 |
+| Android login on shared identity persistence | DB | Medium | 4 |
 | Shared IAM and 2FA on Android | Integration | Medium | 16 |
-| Android login tests | Testing | Complex | 8 |
-| Android identity guide | Documentation | Medium | 3 |
-| **Total** | | | **41** |
+| Android login on shared identity feature tests | Testing | Complex | 8 |
+| Android login on shared identity implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **71** |
 
 ### Estimation Assumptions
-- Wiring only; Person/OTP/2FA products remain Claim Module 01. GIS capture is F09-003.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

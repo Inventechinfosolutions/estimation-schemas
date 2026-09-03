@@ -35,8 +35,10 @@ Module (format `{NN} — {Module Name}` — required)
 Description
 Business Objective
 Actors
-User Journey
+User Journey (required shape — see below)
 Functional Capabilities
+UI Screens (named business screens — not wireframes)
+Logical API operations (named business operations — not REST paths)
 Inputs
 Outputs
 Business Rules
@@ -55,6 +57,19 @@ Risks
 Non Functional Requirements
 
 Do not generate implementation details like API endpoints, database tables or service classes.
+
+**User Journey (hard):** every feature must answer these eight points in domain language (not a generic template). If the feature has no approval, say so explicitly in points 4–6 and 8 rather than inventing an inbox.
+
+1. Who creates
+2. How they create
+3. How they edit
+4. How they send for approval (or why submit/approval does not apply)
+5. How the approver sees pending items (or that there is no approver inbox)
+6. How the approver decides (or that there is no decision on this feature)
+7. How the applicant / maker sees history
+8. How the approver / auditor sees history
+
+**Named screens and logical APIs in Section 1 (hard):** after Functional Capabilities, list the **concrete UI screens** and **logical API operations** that belong to this feature (register, form, inbox, history, save draft, submit, decide, and so on). These are an inventory of the journey — not wireframes, REST paths, payloads, or database schema. Hours are **not** placed here.
 
 ***SECTION 2 - ESTIMATION BREAKDOWN (Estimation Master)
 ***
@@ -117,10 +132,11 @@ Complex	4
 Very High	6
 	***ESTIMATION RULES
 ***
-Estimate each UI screen independently.
-Estimate logical API operations instead of REST endpoints.
+Estimate each UI screen independently — one Section 2 UI row per named screen from Section 1. Do not collapse several screens into a single billed row (e.g. do not replace register + form + inbox + history with “main workspace” + “list view”).
+Estimate each logical API operation independently — one Section 2 API row per named operation from Section 1. Do not roll submit, decide, search and history into one “orchestration API”.
+Do not invent REST endpoints, URL paths or payloads.
 Separate Database effort from API effort.
-Estimate Integration independently.
+Estimate Integration independently (omit the Integration row when there is no real channel).
 Testing and Documentation are always estimated separately.
 Use the Estimation Master for every estimate.
 Mention major complexity drivers in the Assumptions section.
@@ -130,9 +146,10 @@ Be conservative and estimate for enterprise-grade implementation with production
 ***FEATURE QUALITY RULES (hard)
 ***
 - Each feature must be **specific** to the SOW capability — no generic template journeys (“provide a controlled enterprise capability”, “standard CRUD for the domain”).
+- User Journey must use the eight who/how points above, filled with this feature’s actors and behaviour.
 - Estimation tables must name **concrete** UI/API artefacts (e.g. “Role permission matrix screen”, “Payment reconciliation register”), not vague labels like “User experience and screens”.
 - Vary hours using the Estimation Master — do not stamp every feature in a module with the same total.
-- Prefer fewer, estimable features over screen-by-screen fragmentation, unless the SOW clearly separates capabilities.
+- Prefer **fewer, estimable features** over splitting one SOW capability into one feature per screen. That rule is about **feature count**, not about billing: **inside** a feature, still estimate each named screen and each logical API as its own Section 2 row. Do not merge those rows to keep a feature’s total near an older “capability grain”.
 - After any feature hour or name change, regenerate CONTROL Steps 6–7 (internal summaries + client Word).
 
 ***ACCESS / AUTHORISATION FEATURES

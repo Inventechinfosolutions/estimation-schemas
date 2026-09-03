@@ -18,13 +18,38 @@ Complete Data Capturing – I location and boundary particulars for the Prelimin
 Approved Valuer.
 
 ### User Journey
-1. Valuer on the assigned asset records or confirms asset no, address, width and type of approach road, landmark, surrounding area, and boundaries N/S/E/W.
-2. Save stores the Preliminary Site Inspection location pack with the valuer’s identity and time.
+1. Who creates: Approved Valuer
+2. How they create: Valuer on the assigned asset records or confirms asset no, address, width and type of approach road, landmark, surrounding area, and boundaries N/S/E/W.
+3. How they edit: Save stores the Preliminary Site Inspection location pack with the valuer’s identity and time.
+4. How they send for approval: Save stores the Preliminary Site Inspection location pack with the valuer’s identity and time. Open inspection → enter location/boundaries → save pack.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Approved Valuer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Approved Valuer opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Capture/confirm location pack (asset no, address, road width/type, landmark, surrounding area)
 - Capture/confirm boundaries N/S/E/W
 - Stamp valuer Person and time on save
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My preliminary site inspection — location and boundaries list / queue | Medium |
+| Preliminary site inspection pack | Complex |
+| Preliminary site inspection — location and boundaries history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Inspection location-pack save | Medium |
+| Update preliminary site inspection — location and boundaries | Medium |
+| Search preliminary site inspection — location and boundaries | Medium |
+| Read preliminary site inspection — location and boundaries history | Easy |
 
 ### Inputs
 Asset no; address; width of approach road; type of road; landmark; surrounding area; boundaries N/S/E/W.
@@ -81,14 +106,22 @@ Save stamps system date/time.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
+| My preliminary site inspection — location and boundaries list / queue | UI | Medium | 6 |
 | Preliminary site inspection pack | UI | Complex | 12 |
+| Preliminary site inspection — location and boundaries history | UI | Medium | 6 |
 | Inspection location-pack save | API | Medium | 6 |
-| Inspection location fields | Database | Medium | 4 |
+| Update preliminary site inspection — location and boundaries | API | Medium | 6 |
+| Search preliminary site inspection — location and boundaries | API | Medium | 6 |
+| Read preliminary site inspection — location and boundaries history | API | Easy | 4 |
+| Preliminary site inspection — location and boundaries persistence | DB | Medium | 4 |
 | Asset-basics consume | Integration | Simple | 4 |
-| Inspection location tests | Testing | Medium | 6 |
-| Preliminary inspection guide | Documentation | Medium | 3 |
-| **Total** | | | **35** |
+| Preliminary site inspection — location and boundaries feature tests | Testing | Medium | 6 |
+| Preliminary site inspection — location and boundaries implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **63** |
 
 ### Estimation Assumptions
-- Named screen is the Preliminary site inspection pack (location/boundaries).
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

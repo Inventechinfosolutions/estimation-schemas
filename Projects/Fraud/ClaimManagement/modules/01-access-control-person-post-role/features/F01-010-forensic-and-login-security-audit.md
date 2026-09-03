@@ -18,17 +18,39 @@ Make privileged and security events retrievable for forensic review without gran
 Administrator; auditor; (events produced by Officers, CA, OOK claimants, and other modules).
 
 ### User Journey
-1. Privileged actions and login/security events are written as they occur across modules.
-2. Administrator or auditor opens the audit register.
-3. They filter by Person, Post, claim, date or action type.
-4. They retrieve who, what, when, record, before/after and channel (staff web or OOK path).
-5. Payment-specific forensic drill-down on a batch also exists in F08-005 and contributes events here.
+1. Who creates: Administrator
+2. How they create: Privileged actions and login/security events are written as they occur across modules.
+3. How they edit: Administrator or auditor opens the audit register.
+4. How they send for approval: They filter by Person, Post, claim, date or action type. Event ingest (background) → authorised query → retrieve/export. No correction workflow that rewrites history.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Administrator works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Administrator opens history on the record. They retrieve who, what, when, record, before/after and channel (staff web or OOK path). Payment-specific forensic drill-down on a batch also exists in F08-005 and contributes events here.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Central forensic audit register with filters.
 - Capture actor Person, Post, timestamp, action, record, before/after, channel.
 - Cover verification, penny-drop, excess-payment, approval, payment, closure, mapping, login and 2FA.
 - Read-only retrieval for authorised auditor Posts.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My forensic and login/security audit list / queue | Medium |
+| Forensic audit register and filters | Very High |
+| Forensic and login/security audit history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Audit query operations | Very High |
+| Update forensic and login/security audit | Medium |
+| Search forensic and login/security audit | Medium |
+| Read forensic and login/security audit history | Easy |
 
 ### Inputs
 Filter criteria (Person, Post, claim, date, action type, channel).
@@ -87,15 +109,21 @@ This is the programme-wide identity product consumed by Legal Management and GIS
 
 | Artifact | Category | Complexity | Hours |
 |---|---|---|---|
+| My forensic and login/security audit list / queue | UI | Medium | 6 |
 | Forensic audit register and filters | UI | Very High | 16 |
+| Forensic and login/security audit history | UI | Medium | 6 |
 | Audit query operations | API | Very High | 16 |
+| Update forensic and login/security audit | API | Medium | 6 |
+| Search forensic and login/security audit | API | Medium | 6 |
+| Read forensic and login/security audit history | API | Easy | 4 |
 | Audit store and indexes | DB | Very High | 10 |
 | Internal event ingest | Integration | Simple | 4 |
-| Forensic audit tests | Testing | Very High | 12 |
-| Audit retrieval guide | Documentation | Complex | 4 |
-| **Total** | | | **62** |
+| Forensic and login/security audit feature tests | Testing | Very High | 12 |
+| Forensic and login/security audit implementation documentation | Documentation | Complex | 4 |
+| **Total** | | | **90** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- UI Very High is the audit register/dashboard, not a simple list.
-- Payment-batch forensic screen is additionally estimated in F08-005.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

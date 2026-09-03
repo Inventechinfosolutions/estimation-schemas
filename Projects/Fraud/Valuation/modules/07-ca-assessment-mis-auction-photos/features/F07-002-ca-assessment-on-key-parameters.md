@@ -18,14 +18,38 @@ Let the CA assess the valuer report on the six key parameters, with Time Taken c
 Competent Authority.
 
 ### User Journey
-1. CA opens the valuer report and confirms asset basics via CA Code.
-2. CA records assessment of Time Taken (shown computed by F07-006, optional comment), Asset Category, Method Adopted, Adjustment Factors used, Section 7(1) Valuation and Guidance Value.
-3. Save stores the CA report against that valuation.
+1. Who creates: Competent Authority
+2. How they create: CA opens the valuer report and confirms asset basics via CA Code.
+3. How they edit: CA records assessment of Time Taken (shown computed by F07-006, optional comment), Asset Category, Method Adopted, Adjustment Factors used, Section 7(1) Valuation and Guidance Value.
+4. How they send for approval: Save stores the CA report against that valuation. Open by CA Code → review valuer report → record six parameters → save CA report.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Competent Authority works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Competent Authority opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Populate asset via CA Code
 - Assess the six key parameters
 - Show computed Time Taken with optional comment (cannot silently overwrite computed figures — F07-006)
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My ca assessment on key parameters list / queue | Medium |
+| CA assessment form | Complex |
+| Ca assessment on key parameters history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| CA assessment save | Complex |
+| Update ca assessment on key parameters | Medium |
+| Search ca assessment on key parameters | Medium |
+| Read ca assessment on key parameters history | Easy |
 
 ### Inputs
 CA Code; assessment of category, method, factors, 7(1), guidance; optional Time Taken comment.
@@ -84,14 +108,22 @@ Assessment attributable to the CA Person.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
+| My ca assessment on key parameters list / queue | UI | Medium | 6 |
 | CA assessment form | UI | Complex | 12 |
+| Ca assessment on key parameters history | UI | Medium | 6 |
 | CA assessment save | API | Complex | 8 |
-| CA assessment store | Database | Medium | 4 |
+| Update ca assessment on key parameters | API | Medium | 6 |
+| Search ca assessment on key parameters | API | Medium | 6 |
+| Read ca assessment on key parameters history | API | Easy | 4 |
+| Ca assessment on key parameters persistence | DB | Medium | 4 |
 | Time Taken and report consume | Integration | Simple | 4 |
-| CA assessment tests | Testing | Complex | 8 |
-| CA assessment guide | Documentation | Medium | 3 |
-| **Total** | | | **39** |
+| CA assessment on key parameters feature tests | Testing | Complex | 8 |
+| CA assessment on key parameters implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **67** |
 
 ### Estimation Assumptions
-- Decision Accept/Reject is F07-004; Time Taken engine is F07-006.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

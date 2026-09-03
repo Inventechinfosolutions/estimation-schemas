@@ -18,16 +18,39 @@ Capture the KYC fields that intake (F06) and verification (F07) will rely on.
 Officer; assisting staff; auditor (read as authorised).
 
 ### User Journey
-1. Officer opens the unique depositor profile.
-2. Officer enters personal information, Aadhaar, PAN, contacts, deposit and refund bank accounts, nominee and legal-heir details.
-3. Officer saves. Unverified Aadhaar capture remains visible as unverified only (F04-009).
-4. Intake and verification later read these same fields.
+1. Who creates: Officer
+2. How they create: Officer opens the unique depositor profile.
+3. How they edit: Officer enters personal information, Aadhaar, PAN, contacts, deposit and refund bank accounts, nominee and legal-heir details.
+4. How they send for approval: Officer saves. Unverified Aadhaar capture remains visible as unverified only (F04-009). Open profile → enter KYC → save. Verification of Aadhaar/PAN is F04-009.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Officer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Officer opens history on the record. Intake and verification later read these same fields.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Capture personal information, Aadhaar, PAN and contacts.
 - Capture deposit and refund bank accounts.
 - Capture nominee and legal-heir details.
 - Persist fields for intake and verification.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My kyc capture list / queue | Medium |
+| KYC capture form (personal, ID, banks, nominee) | Complex |
+| Kyc capture history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| KYC save operations | Complex |
+| Update kyc capture | Medium |
+| Search kyc capture | Medium |
+| Read kyc capture history | Easy |
 
 ### Inputs
 Personal data, Aadhaar, PAN, contacts, bank accounts, nominee/heir details.
@@ -84,14 +107,20 @@ Large KYC form remains usable (tabs/sections). Structured fields, not a PDF form
 
 | Artifact | Category | Complexity | Hours |
 |---|---|---|---|
+| My kyc capture list / queue | UI | Medium | 6 |
 | KYC capture form (personal, ID, banks, nominee) | UI | Complex | 12 |
+| Kyc capture history | UI | Medium | 6 |
 | KYC save operations | API | Complex | 8 |
+| Update kyc capture | API | Medium | 6 |
+| Search kyc capture | API | Medium | 6 |
+| Read kyc capture history | API | Easy | 4 |
 | KYC persistence | DB | Complex | 6 |
-| KYC capture tests | Testing | Complex | 8 |
-| KYC capture guide | Documentation | Medium | 3 |
-| **Total** | | | **37** |
+| KYC capture feature tests | Testing | Complex | 8 |
+| KYC capture implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **65** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- UI Complex 12 for the large KYC form (not 8).
-- Aadhaar service call is F04-009.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

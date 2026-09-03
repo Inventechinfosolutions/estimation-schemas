@@ -18,14 +18,38 @@ Handle special situations on a recorded workflow with papers, instead of informa
 Officer; Competent Authority (as policy requires); assisting staff.
 
 ### User Journey
-1. Officer flags the depositor/claim as ineligible, deceased, legal heir, joint deposit, third-party payment, lost receipt or cash investment.
-2. Officer attaches supporting papers.
-3. The case is routed on that workflow until resolved per Authority policy.
+1. Who creates: Officer
+2. How they create: Officer flags the depositor/claim as ineligible, deceased, legal heir, joint deposit, third-party payment, lost receipt or cash investment.
+3. How they edit: Officer attaches supporting papers.
+4. How they send for approval: The case is routed on that workflow until resolved per Authority policy. Flag → attach papers → route → resolve. Embedded workflow, not a standalone BPM product.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Officer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Officer opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Flag special situations listed in the SOW.
 - Attach supporting papers.
 - Route until resolved per policy.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Special-situation flags and papers | Complex |
+| Special-situation workflow screens | Very High |
+| Special depositor and claim situations history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Situation workflow operations | Very High |
+| Update special depositor and claim situations | Medium |
+| Search special depositor and claim situations | Medium |
+| Read special depositor and claim situations history | Easy |
 
 ### Inputs
 Situation type, papers, remarks, routing target.
@@ -84,12 +108,18 @@ Workflow remains usable for Officers during claim windows.
 |---|---|---|---|
 | Special-situation flags and papers | UI | Complex | 12 |
 | Special-situation workflow screens | UI | Very High | 16 |
+| Special depositor and claim situations history | UI | Medium | 6 |
 | Situation workflow operations | API | Very High | 16 |
+| Update special depositor and claim situations | API | Medium | 6 |
+| Search special depositor and claim situations | API | Medium | 6 |
+| Read special depositor and claim situations history | API | Easy | 4 |
 | Situation and routing persistence | DB | Complex | 6 |
-| Special-situation tests | Testing | Very High | 12 |
-| Special-situation guide | Documentation | Complex | 4 |
-| **Total** | | | **66** |
+| Special depositor and claim situations feature tests | Testing | Very High | 12 |
+| Special depositor and claim situations implementation documentation | Documentation | Complex | 4 |
+| **Total** | | | **88** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- Workflow UI Very High and API Very High reflect routing until resolution, not a single CRUD flag.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

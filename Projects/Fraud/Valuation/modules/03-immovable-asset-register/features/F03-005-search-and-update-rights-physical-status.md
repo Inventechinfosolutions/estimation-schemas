@@ -18,15 +18,38 @@ Find office assets within allotted FEs and keep an auditable rights/physical-sta
 Office user; Competent Authority (reads current status).
 
 ### User Journey
-1. Officer searches by FE name, address or keyword within allotted FEs.
-2. Officer opens the asset and updates rights and physical status.
-3. System appends history (who, when, previous status, new status).
-4. Later CA assessment shows the current physical status.
+1. Who creates: Office user
+2. How they create: Officer searches by FE name, address or keyword within allotted FEs.
+3. How they edit: Officer opens the asset and updates rights and physical status.
+4. How they send for approval: System appends history (who, when, previous status, new status). Search → open → update status → append history → CA sees current.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Office user works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Office user opens history on the record. Later CA assessment shows the current physical status.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Search by FE name, address and keywords within allotted FEs
 - Update rights and physical status with history
 - Show current physical status on CA assessment
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Immovable asset search (allotted FE) | Medium |
+| Rights and physical-status update | Easy |
+| Search and update rights / physical status history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Search and status-history | Medium |
+| Update search and update rights / physical status | Medium |
+| Search search and update rights / physical status | Medium |
+| Read search and update rights / physical status history | Easy |
 
 ### Inputs
 Search terms; new rights text; new physical status.
@@ -83,15 +106,22 @@ History retained; search responsive for office volumes.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
 | Immovable asset search (allotted FE) | UI | Medium | 6 |
 | Rights and physical-status update | UI | Easy | 4 |
+| Search and update rights / physical status history | UI | Medium | 6 |
 | Search and status-history | API | Medium | 6 |
-| Status history | Database | Medium | 4 |
+| Update search and update rights / physical status | API | Medium | 6 |
+| Search search and update rights / physical status | API | Medium | 6 |
+| Read search and update rights / physical status history | API | Easy | 4 |
+| Search and update rights / physical status persistence | DB | Medium | 4 |
 | Internal status consume | Integration | Simple | 4 |
-| Search/status tests | Testing | Complex | 8 |
-| Search and status note | Documentation | Easy | 2 |
-| **Total** | | | **34** |
+| Search and update rights / physical status feature tests | Testing | Complex | 8 |
+| Search and update rights / physical status implementation documentation | Documentation | Easy | 2 |
+| **Total** | | | **56** |
 
 ### Estimation Assumptions
-- Claim title/e-Khata workflow is out of scope.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

@@ -18,16 +18,39 @@ Calculate net payable that reconciles to recovered funds, approved liability, pr
 Officer; Competent Authority (oversee as authorised).
 
 ### User Journey
-1. Officer records total recovered amount from Module 03 assets, total approved liability and available settlement fund.
-2. The system calculates eligible amount, previous returns, previous settlements and net payable.
-3. Officer reviews the figures, saves, and uses net payable for payment batches (F08-002).
-4. Recovered amount used here must match Module 03 recovered totals.
+1. Who creates: Officer
+2. How they create: Officer records total recovered amount from Module 03 assets, total approved liability and available settlement fund.
+3. How they edit: The system calculates eligible amount, previous returns, previous settlements and net payable.
+4. How they send for approval: Officer reviews the figures, saves, and uses net payable for payment batches (F08-002). Load recovered/approved inputs → calculate → Officer review → save. Human confirms figures before batching.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Officer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Officer opens history on the record. Recovered amount used here must match Module 03 recovered totals.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Record total recovered amount, total approved liability, available settlement fund.
 - Calculate eligible amount, previous returns, previous settlements, net payable.
 - Require recovered total to match Module 03.
 - Save figures for payment.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Settlement calculation workbench | Complex |
+| Figures review panel | Medium |
+| Settlement fund and net payable calculation history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Net payable calculation engine | Very High |
+| Update settlement fund and net payable calculation | Medium |
+| Search settlement fund and net payable calculation | Medium |
+| Read settlement fund and net payable calculation history | Easy |
 
 ### Inputs
 Module 03 recovered total, approved claims, previous returns, previous settlements, available fund.
@@ -86,12 +109,18 @@ Figures used in court outputs must reconcile to recovered funds and approved cla
 |---|---|---|---|
 | Settlement calculation workbench | UI | Complex | 12 |
 | Figures review panel | UI | Medium | 6 |
+| Settlement fund and net payable calculation history | UI | Medium | 6 |
 | Net payable calculation engine | API | Very High | 16 |
+| Update settlement fund and net payable calculation | API | Medium | 6 |
+| Search settlement fund and net payable calculation | API | Medium | 6 |
+| Read settlement fund and net payable calculation history | API | Easy | 4 |
 | Settlement figure persistence | DB | Complex | 6 |
-| Settlement calculation tests | Testing | Very High | 12 |
-| Settlement calculation guide | Documentation | Complex | 4 |
-| **Total** | | | **56** |
+| Settlement fund and net payable calculation feature tests | Testing | Very High | 12 |
+| Settlement fund and net payable calculation implementation documentation | Documentation | Complex | 4 |
+| **Total** | | | **78** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- API Very High is the financial settlement engine. Payment gateway product is out of scope.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

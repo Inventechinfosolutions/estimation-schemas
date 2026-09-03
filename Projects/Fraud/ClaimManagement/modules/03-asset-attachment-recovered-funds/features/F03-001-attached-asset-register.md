@@ -18,16 +18,39 @@ Hold a searchable register of attached assets per imported FE for recovery and s
 Officer; Competent Authority (view as authorised).
 
 ### User Journey
-1. Officer selects an imported FE (F02-001) and opens Asset registration.
-2. Officer records identification and location of the attached asset and saves it in the recovery lifecycle.
-3. Another Officer searches by FE or identification and opens the same asset’s current status.
-4. Officer does not capture 3(2) GIS field measurements or valuer Android work here.
+1. Who creates: Officer
+2. How they create: Officer selects an imported FE (F02-001) and opens Asset registration.
+3. How they edit: Officer records identification and location of the attached asset and saves it in the recovery lifecycle.
+4. How they send for approval: Another Officer searches by FE or identification and opens the same asset’s current status. Register → subsequent title/e-Khata (F03-002), e-format (F03-003), auction (F03-004). Direct save with audit.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Officer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Officer opens history on the record. Officer does not capture 3(2) GIS field measurements or valuer Android work here.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Register attached assets against an imported FE.
 - Capture identification and location.
 - Search the register by FE or identification and open current status.
 - Keep the asset in a recovery lifecycle without executing GIS valuation.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Asset registration form | Complex |
+| Attached asset search register | Medium |
+| Attached asset register history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Asset register and lifecycle operations | Complex |
+| Update attached asset register | Medium |
+| Search attached asset register | Medium |
+| Read attached asset register history | Easy |
 
 ### Inputs
 Imported FE, asset identification, location, initial recovery status.
@@ -85,12 +108,18 @@ Staff asset screens use practical filters. Structured asset data supports later 
 |---|---|---|---|
 | Asset registration form | UI | Complex | 12 |
 | Attached asset search register | UI | Medium | 6 |
+| Attached asset register history | UI | Medium | 6 |
 | Asset register and lifecycle operations | API | Complex | 8 |
+| Update attached asset register | API | Medium | 6 |
+| Search attached asset register | API | Medium | 6 |
+| Read attached asset register history | API | Easy | 4 |
 | Asset register persistence | DB | Medium | 4 |
-| Attached asset register tests | Testing | Complex | 8 |
-| Asset register guide | Documentation | Medium | 3 |
-| **Total** | | | **41** |
+| Attached asset register feature tests | Testing | Complex | 8 |
+| Attached asset register implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **63** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- No GIS / Very High map UI. Field valuation is Valuation SOW.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

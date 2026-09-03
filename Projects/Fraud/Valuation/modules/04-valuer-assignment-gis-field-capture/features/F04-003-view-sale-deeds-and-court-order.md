@@ -18,14 +18,38 @@ Let the assigned valuer open the same court order and sale deeds the office stor
 Approved Valuer.
 
 ### User Journey
-1. On the selected asset the Valuer clicks View on sale deeds or court order.
-2. The files the office uploaded (F03-003) open.
-3. If no file was uploaded, View states that; the valuer records the gap in remarks (F04-007) rather than inventing a document.
+1. Who creates: Approved Valuer
+2. How they create: On the selected asset the Valuer clicks View on sale deeds or court order.
+3. How they edit: The files the office uploaded (F03-003) open.
+4. How they send for approval: If no file was uploaded, View states that; the valuer records the gap in remarks (F04-007) rather than inventing a document. Click View → ACL → open file or missing state.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Approved Valuer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Approved Valuer opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - View office-uploaded sale deeds and court order
 - State clearly when no file was uploaded
 - Respect need-to-know (F01-003)
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My view sale deeds and court order list / queue | Medium |
+| Deed and court-order viewer | Medium |
+| View sale deeds and court order history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| View/download with ACL | Medium |
+| Update view sale deeds and court order | Medium |
+| Search view sale deeds and court order | Medium |
+| Read view sale deeds and court order history | Easy |
 
 ### Inputs
 View action on deed or court order.
@@ -82,14 +106,22 @@ View does not grant office replace rights.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
+| My view sale deeds and court order list / queue | UI | Medium | 6 |
 | Deed and court-order viewer | UI | Medium | 6 |
+| View sale deeds and court order history | UI | Medium | 6 |
 | View/download with ACL | API | Medium | 6 |
-| View pointer to office files | Database | Simple | 1 |
+| Update view sale deeds and court order | API | Medium | 6 |
+| Search view sale deeds and court order | API | Medium | 6 |
+| Read view sale deeds and court order history | API | Easy | 4 |
+| View sale deeds and court order persistence | DB | Medium | 4 |
 | Internal file open | Integration | Simple | 4 |
-| View tests | Testing | Easy | 4 |
-| Valuer View note | Documentation | Simple | 1 |
-| **Total** | | | **22** |
+| View sale deeds and court order feature tests | Testing | Easy | 4 |
+| View sale deeds and court order implementation documentation | Documentation | Simple | 1 |
+| **Total** | | | **53** |
 
 ### Estimation Assumptions
-- Upload/replace remains F03-003.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

@@ -18,10 +18,14 @@ Run the land-and-building method with FRS default calculation rules, recorded ov
 Approved Valuer.
 
 ### User Journey
-1. Where FRS applicability tests hold, the Valuer derives land value from comparables (order of preference; minimum three, or recorded basis where instances are absent — Form V-1 item 34).
-2. Valuer applies tabulated adjustment/influence factors as in the FRS.
-3. Building is PWD-PAR reproduction minus depreciation from F02-007 plus builder’s efforts at 3% of B, using Le = L − Lf and Q = 0.9 × R × Le / I when p = 10%.
-4. Each override is reasoned. Property value is A + E. No generative AI.
+1. Who creates: Approved Valuer
+2. How they create: Where FRS applicability tests hold, the Valuer derives land value from comparables (order of preference; minimum three, or recorded basis where instances are absent — Form V-1 item 34).
+3. How they edit: Valuer applies tabulated adjustment/influence factors as in the FRS.
+4. How they send for approval: Building is PWD-PAR reproduction minus depreciation from F02-007 plus builder’s efforts at 3% of B, using Le = L − Lf and Q = 0.9 × R × Le / I when p = 10%. Tests → comparables → factors → building depreciation → A + E → save working.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Approved Valuer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Approved Valuer opens history on the record. Each override is reasoned. Property value is A + E. No generative AI.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Applicability tests then land value from comparables (min. 3 or recorded basis)
@@ -29,6 +33,25 @@ Approved Valuer.
 - Building reproduction minus depreciation plus builder’s efforts @ 3% of B
 - Compute Le, straight-line depreciation and Q as in the FRS; property value A + E
 - Record reason on every override
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My land and building method with adjustments and depreciation list / queue | Medium |
+| Land-and-building method working | Very High |
+| Land and building method with adjustments and depreciation history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Land-and-building valuation engine | Very High |
+| Update land and building method with adjustments and depreciation | Medium |
+| Search land and building method with adjustments and depreciation | Medium |
+| Read land and building method with adjustments and depreciation history | Easy |
 
 ### Inputs
 Comparables; factor selections/overrides; PWD-PAR reproduction; structure class; p/residual as applicable.
@@ -88,14 +111,22 @@ Every override stored; calculation snapshot on the working.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
+| My land and building method with adjustments and depreciation list / queue | UI | Medium | 6 |
 | Land-and-building method working | UI | Very High | 16 |
+| Land and building method with adjustments and depreciation history | UI | Medium | 6 |
 | Land-and-building valuation engine | API | Very High | 16 |
-| L&B factors and depreciation store | Database | Very High | 10 |
+| Update land and building method with adjustments and depreciation | API | Medium | 6 |
+| Search land and building method with adjustments and depreciation | API | Medium | 6 |
+| Read land and building method with adjustments and depreciation history | API | Easy | 4 |
+| Land and building method with adjustments and depreciation persistence | DB | Medium | 4 |
 | Structure-class consume | Integration | Simple | 4 |
-| Land-and-building tests | Testing | Very High | 12 |
-| Land-and-building method guide | Documentation | Very High | 6 |
-| **Total** | | | **64** |
+| Land and Building method with adjustments and depreciation feature tests | Testing | Very High | 12 |
+| Land and Building method with adjustments and depreciation implementation documentation | Documentation | Very High | 6 |
+| **Total** | | | **86** |
 
 ### Estimation Assumptions
-- Method engine API Very High 16 as directed. UI Very High 16 for the factor/depreciation workspace.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

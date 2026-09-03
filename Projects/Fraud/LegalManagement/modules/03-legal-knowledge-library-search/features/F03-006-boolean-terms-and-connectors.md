@@ -18,10 +18,14 @@ Provide Annexure-I Boolean and proximity search so Legal Cell can run precise li
 Legal Cell; Advocate.
 
 ### User Journey
-1. User opens Advanced / Boolean Library Search.
-2. Enters a query using AND, OR, NOT, /p, /s, /pg, /d, a quoted phrase, /# , ! root expander and/or parentheses.
-3. Runs search; the engine applies those connectors as specified in Annexure-I.
-4. User opens a hit; highlights follow F03-007.
+1. Who creates: Legal Cell
+2. How they create: User opens Advanced / Boolean Library Search.
+3. How they edit: Enters a query using AND, OR, NOT, /p, /s, /pg, /d, a quoted phrase, /# , ! root expander and/or parentheses.
+4. How they send for approval: Runs search; the engine applies those connectors as specified in Annexure-I. Enter Boolean query → parse → search corpus → hit list → open document.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Legal Cell works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Legal Cell opens history on the record. User opens a hit; highlights follow F03-007.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Boolean Query Builder / Advanced Search screen
@@ -31,6 +35,25 @@ Legal Cell; Advocate.
 - Quoted phrase; /# ; ! root expander; parentheses for grouping
 - Open hit from Boolean result list
 - No generative-AI query rewrite that changes the user’s connectors
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Boolean Query Builder / Advanced Search screen | Very High |
+| Connector help / query syntax panel | Medium |
+| Boolean terms and connectors history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Boolean parser (AND OR NOT /p /s /pg /d quoted /# ! parentheses) | Very High |
+| Update boolean terms and connectors | Medium |
+| Search boolean terms and connectors | Medium |
+| Read boolean terms and connectors history | Easy |
 
 ### Inputs
 Boolean/proximity query string; optional document-type scope; current corpus.
@@ -47,7 +70,7 @@ Hit list honouring connectors; parse errors with syntax guidance; document links
 - Public website search is out of scope.
 
 ### Validations
-Unbalanced parentheses rejected with a clear message; unknown operators rejected; empty query rejected; rights-filter applied to hits.
+- Unbalanced parentheses rejected with a clear message; unknown operators rejected; empty query rejected; rights-filter applied to hits.
 
 ### Calculations
 Proximity windows for /p /s /pg /d as specified; no other business calculations.
@@ -77,7 +100,7 @@ Search index / corpus (Complex — specialised Boolean/proximity against the leg
 F03-001–F03-005; F03-007; F02-001.
 
 ### Assumptions
-Annexure-I connector semantics are implemented as specified; SPLOCA confirms /# and /d window if the annexure is terse. This is not a market search product.
+- Annexure-I connector semantics are implemented as specified; SPLOCA confirms /# and /d window if the annexure is terse. This is not a market search product.
 
 ### Risks
 Incorrect proximity semantics produce false comfort in research; syntax errors must not run a degraded NL search silently.
@@ -90,17 +113,22 @@ Parse and search suitable for daily Legal Cell work; explicit syntax errors; ind
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
 | Boolean Query Builder / Advanced Search screen | UI | Very High | 16 |
 | Connector help / query syntax panel | UI | Medium | 6 |
+| Boolean terms and connectors history | UI | Medium | 6 |
 | Boolean parser (AND OR NOT /p /s /pg /d quoted /# ! parentheses) | API | Very High | 16 |
-| Proximity and Boolean index support | Database | Very High | 10 |
+| Update boolean terms and connectors | API | Medium | 6 |
+| Search boolean terms and connectors | API | Medium | 6 |
+| Read boolean terms and connectors history | API | Easy | 4 |
+| Boolean terms and connectors persistence | DB | Medium | 4 |
 | Legal library corpus / search index | Integration | Complex | 24 |
-| Boolean connector tests | Testing | Very High | 12 |
-| Boolean terms and connectors guide | Documentation | Complex | 4 |
-| **Total** | | | **88** |
+| Boolean terms and connectors feature tests | Testing | Very High | 12 |
+| Boolean terms and connectors implementation documentation | Documentation | Complex | 4 |
+| **Total** | | | **104** |
 
 ### Estimation Assumptions
-- Hours cover Annexure-I connectors only — not a general web search engine.
-- NL search is F03-005; highlight/hyperlink is F03-007.
-- No generative-AI query expansion hours.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

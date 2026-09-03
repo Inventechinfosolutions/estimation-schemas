@@ -18,17 +18,39 @@ Ensure every official action in the claim programme (and consuming Legal / Valua
 Administrator (Person/Post administration); auditor (read-only Person register).
 
 ### User Journey
-1. Administrator opens the Person register and searches by legal name, unique ID, official email or credential status.
-2. If no Person exists, Administrator enters legal name, unique ID, official contacts and saves a new Person.
-3. If a Person already exists for that official, the system blocks a duplicate create and shows the existing record.
-4. Administrator updates particulars on the existing Person; the change is stored against that Person.
-5. Later Officers and Competent Authority actions (verify, approve, pay) resolve to this Person, not a shared account.
+1. Who creates: Administrator (Person
+2. How they create: Administrator opens the Person register and searches by legal name, unique ID, official email or credential status.
+3. How they edit: If no Person exists, Administrator enters legal name, unique ID, official contacts and saves a new Person.
+4. How they send for approval: If a Person already exists for that official, the system blocks a duplicate create and shows the existing record.
+5. How the approver sees pending items: Checker opens the pending change inbox.
+6. How the approver decides: Checker approves or rejects with remarks.
+7. How the maker sees history: Administrator (Person opens change history on the record (who changed what, when).
+8. How the checker / auditor sees history: Auditor (and checker if used) open the same history.
 
 ### Functional Capabilities
 - Person register with search, create, view and update.
 - Enforce one Person per official; refuse a second Person for the same official.
 - Retain Person identity after deactivation so historical claim, legal and valuation actions remain attributable.
 - Expose Person as the identity consumed by Post mapping (F01-002) and by Legal / Valuation without a second user directory.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Person register + search | Complex |
+| Person create/edit form | Medium |
+| Person master change history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Person uniqueness and lifecycle operations | Complex |
+| Update person master | Medium |
+| Search person master register | Medium |
+| Read person master change history | Easy |
 
 ### Inputs
 Legal name, Person unique ID, official email and mobile, credential status, Administrator remarks.
@@ -92,14 +114,19 @@ This is the programme-wide identity product consumed by Legal Management and GIS
 |---|---|---|---|
 | Person register + search | UI | Complex | 12 |
 | Person create/edit form | UI | Medium | 6 |
+| Person master change history | UI | Medium | 6 |
 | Person uniqueness and lifecycle operations | API | Complex | 8 |
+| Update person master | API | Medium | 6 |
+| Search person master register | API | Medium | 6 |
+| Read person master change history | API | Easy | 4 |
 | Person identity persistence | DB | Medium | 4 |
 | Internal identity handoff to Legal and Valuation | Integration | Simple | 4 |
-| Person master tests | Testing | Complex | 8 |
-| Person administration guide | Documentation | Medium | 3 |
-| **Total** | | | **45** |
+| Person master feature tests | Testing | Complex | 8 |
+| Person master implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **67** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- Post, Role and mapping effort is estimated in F01-002, not here.
-- Full programme IAM (Claim + Legal + Valuation consumers) is estimated in this module, not duplicated later.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

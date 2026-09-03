@@ -18,14 +18,38 @@ Close settled claims only on successful payment, and keep failed/reversed paymen
 Officer.
 
 ### User Journey
-1. When payment status is success as policy requires, Officer (or the system on that status) updates claim status to closed.
-2. Investment balance is updated and payment history is appended.
-3. If payment is failed or reversed, the claim stays open; Officer cannot close it as settled.
+1. Who creates: Officer
+2. How they create: When payment status is success as policy requires, Officer (or the system on that status) updates claim status to closed.
+3. How they edit: Investment balance is updated and payment history is appended.
+4. How they send for approval: If payment is failed or reversed, the claim stays open; Officer cannot close it as settled. Success → close + balance + history. Fail/reverse → remain open. No silent close.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Officer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Officer opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Close claim on success per policy.
 - Update investment balance and append payment history.
 - Block settled-closure on failed or reversed payment.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Closure confirmation | Medium |
+| Block settled-close on fail/reverse | Easy |
+| Claim closure and balance update history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Closure and balance operations | Very High |
+| Update claim closure and balance update | Medium |
+| Search claim closure and balance update | Medium |
+| Read claim closure and balance update history | Easy |
 
 ### Inputs
 Payment status, claim, investment balances, policy success rule.
@@ -82,12 +106,18 @@ Balance and history updates are auditable and consistent with payment status.
 |---|---|---|---|
 | Closure confirmation | UI | Medium | 6 |
 | Block settled-close on fail/reverse | UI | Easy | 4 |
+| Claim closure and balance update history | UI | Medium | 6 |
 | Closure and balance operations | API | Very High | 16 |
+| Update claim closure and balance update | API | Medium | 6 |
+| Search claim closure and balance update | API | Medium | 6 |
+| Read claim closure and balance update history | API | Easy | 4 |
 | Closure and balance persistence | DB | Complex | 6 |
-| Closure tests | Testing | Complex | 8 |
-| Closure guide | Documentation | Medium | 3 |
-| **Total** | | | **43** |
+| Claim closure and balance update feature tests | Testing | Complex | 8 |
+| Claim closure and balance update implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **65** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- API Very High covers financial balance update and the hard block on fail/reverse close.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

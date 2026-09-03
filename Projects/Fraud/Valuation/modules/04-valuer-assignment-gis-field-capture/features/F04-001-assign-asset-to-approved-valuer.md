@@ -18,16 +18,39 @@ Bind an eligible 3(2) asset to an approved valuer Person so field work can start
 Office user; Approved Valuer.
 
 ### User Journey
-1. Office user opens an eligible 3(2) asset (F03-004) that is not deactivated (F03-009).
-2. User selects an Approved Valuer from the professional master (F02-001) and records Assignment Number, Assignment Date and assigned property details.
-3. Linked valuer Person sees the asset in the assigned list (F04-002 / F09-002).
-4. On reassign, the previous valuer loses the asset on next open unless the Authority keeps a read-only history copy.
+1. Who creates: Office user
+2. How they create: Office user opens an eligible 3(2) asset (F03-004) that is not deactivated (F03-009).
+3. How they edit: User selects an Approved Valuer from the professional master (F02-001) and records Assignment Number, Assignment Date and assigned property details.
+4. How they send for approval: Linked valuer Person sees the asset in the assigned list (F04-002 / F09-002). Select eligible asset → select valuer → save assignment → valuer list updates; reassign → rights move.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Office user works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Office user opens history on the record. On reassign, the previous valuer loses the asset on next open unless the Authority keeps a read-only history copy.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Assign eligible 3(2) asset to a valuer master/Person
 - Record Assignment Number, Assignment Date and assigned property details
 - Reassign with previous valuer loss of open rights (history copy if Authority requires)
 - Exclude deactivated assets and assets not 3(2) prepared
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My assign asset to approved valuer list / queue | Medium |
+| Valuer assignment form | Medium |
+| Assign asset to approved valuer history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Assignment transaction and reassign | Complex |
+| Update assign asset to approved valuer | Medium |
+| Search assign asset to approved valuer | Medium |
+| Read assign asset to approved valuer history | Easy |
 
 ### Inputs
 Eligible asset; Valuer Code / master; Assignment Number; Assignment Date; assigned property details.
@@ -86,14 +109,22 @@ Assignment is attributable to the Office Person; CA Time Taken uses Assignment D
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
+| My assign asset to approved valuer list / queue | UI | Medium | 6 |
 | Valuer assignment form | UI | Medium | 6 |
+| Assign asset to approved valuer history | UI | Medium | 6 |
 | Assignment transaction and reassign | API | Complex | 8 |
-| Assignment record | Database | Medium | 4 |
+| Update assign asset to approved valuer | API | Medium | 6 |
+| Search assign asset to approved valuer | API | Medium | 6 |
+| Read assign asset to approved valuer history | API | Easy | 4 |
+| Assign asset to approved valuer persistence | DB | Medium | 4 |
 | Valuer-master eligibility consume | Integration | Simple | 4 |
-| Assignment tests | Testing | Medium | 6 |
-| Assignment note | Documentation | Easy | 2 |
-| **Total** | | | **30** |
+| Assign asset to approved valuer feature tests | Testing | Medium | 6 |
+| Assign asset to approved valuer implementation documentation | Documentation | Easy | 2 |
+| **Total** | | | **58** |
 
 ### Estimation Assumptions
-- Visit/stage/team are F04-008; GIS capture is F04-006.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

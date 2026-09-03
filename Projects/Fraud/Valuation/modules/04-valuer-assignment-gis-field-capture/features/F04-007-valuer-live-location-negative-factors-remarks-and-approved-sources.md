@@ -18,16 +18,39 @@ Bind the inspection to the valuer’s live location and human-entered remarks, w
 Approved Valuer.
 
 ### User Journey
-1. While inspecting, the application captures the valuer’s real-time GIS with system date and time and reverse-geocodes it to a readable address (F02-008).
-2. Valuer enters negative factors affecting the property and overall observation.
-3. Valuer may retrieve remaining particulars from approved secure sources named by the Authority; the system records which source was used.
-4. Generative AI is not offered to invent site remarks.
+1. Who creates: Approved Valuer
+2. How they create: While inspecting, the application captures the valuer’s real-time GIS with system date and time and reverse-geocodes it to a readable address (F02-008).
+3. How they edit: Valuer enters negative factors affecting the property and overall observation.
+4. How they send for approval: Valuer may retrieve remaining particulars from approved secure sources named by the Authority; the system records which source was used. Capture live GIS → reverse geocode → enter remarks → optional approved-source retrieve with log.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Approved Valuer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Approved Valuer opens history on the record. Generative AI is not offered to invent site remarks.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Capture valuer real-time GIS with system date/time and reverse-geocoded address
 - Capture negative factors and overall observation
 - Record approved secure source used for remaining particulars
 - Prohibit generative AI for remarks
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My valuer live location, negative factors, remarks and approved sources list / queue | Medium |
+| Live GIS and remarks pack | Very High |
+| Valuer live location, negative factors, remarks and approved sources history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Live location and approved-source log | Complex |
+| Update valuer live location, negative factors, remarks and approved sources | Medium |
+| Search valuer live location, negative factors, remarks and approved sources | Medium |
+| Read valuer live location, negative factors, remarks and approved sources history | Easy |
 
 ### Inputs
 Device/web live coordinates; negative factors; overall observation; selected approved source.
@@ -85,14 +108,22 @@ No generative AI; live GIS stored with system date/time.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
+| My valuer live location, negative factors, remarks and approved sources list / queue | UI | Medium | 6 |
 | Live GIS and remarks pack | UI | Very High | 16 |
+| Valuer live location, negative factors, remarks and approved sources history | UI | Medium | 6 |
 | Live location and approved-source log | API | Complex | 8 |
-| Live location and remarks store | Database | Medium | 4 |
+| Update valuer live location, negative factors, remarks and approved sources | API | Medium | 6 |
+| Search valuer live location, negative factors, remarks and approved sources | API | Medium | 6 |
+| Read valuer live location, negative factors, remarks and approved sources history | API | Easy | 4 |
+| Valuer live location, negative factors, remarks and approved sources persistence | DB | Medium | 4 |
 | Reverse-geocode consume and source retrieve | Integration | Medium | 16 |
-| Live location and remarks tests | Testing | Complex | 8 |
-| Live location and sources guide | Documentation | Medium | 3 |
-| **Total** | | | **55** |
+| Valuer live location, negative factors, remarks and approved sources feature tests | Testing | Complex | 8 |
+| Valuer live location, negative factors, remarks and approved sources implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **83** |
 
 ### Estimation Assumptions
-- Geocoding service hours remain in F02-008; this feature consumes reverse geocode (Integration Medium 16) with GIS UI Very High 16.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

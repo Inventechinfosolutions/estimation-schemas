@@ -18,14 +18,38 @@ Request additional documents after first Submit without losing prior checklist w
 Officer; OOK claimant (own pack); assisting staff (in-KA).
 
 ### User Journey
-1. If a document is missing or unclear after the complete first Submit, Officer raises an additional-document request on the claim.
-2. OOK claimant or in-KA assisting staff uploads the papers.
-3. Officer reopens the claim, continues the checklist from where it stopped, and saves; prior ticks are not lost.
+1. Who creates: Officer
+2. How they create: If a document is missing or unclear after the complete first Submit, Officer raises an additional-document request on the claim.
+3. How they edit: OOK claimant or in-KA assisting staff uploads the papers.
+4. How they send for approval: Officer reopens the claim, continues the checklist from where it stopped, and saves; prior ticks are not lost. Request → upload → reopen checklist (ticks retained) → continue evaluation. Embedded workflow.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Officer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Officer opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Raise additional-document request on a submitted claim.
 - Accept upload from OOK or in-KA assisting staff.
 - Resume checklist without losing prior ticks.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Additional-document request screen | Complex |
+| Claimant/staff additional upload return | Medium |
+| Additional document request loop history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Additional-document loop workflow operations | Very High |
+| Update additional document request loop | Medium |
+| Search additional document request loop | Medium |
+| Read additional document request loop history | Easy |
 
 ### Inputs
 Request text/types, uploaded additional papers.
@@ -84,12 +108,18 @@ Resume must not lose prior checks. Usable for both channels.
 |---|---|---|---|
 | Additional-document request screen | UI | Complex | 12 |
 | Claimant/staff additional upload return | UI | Medium | 6 |
+| Additional document request loop history | UI | Medium | 6 |
 | Additional-document loop workflow operations | API | Very High | 16 |
+| Update additional document request loop | API | Medium | 6 |
+| Search additional document request loop | API | Medium | 6 |
+| Read additional document request loop history | API | Easy | 4 |
 | Request and resume persistence | DB | Medium | 4 |
-| Additional-document loop tests | Testing | Complex | 8 |
-| Additional-document loop guide | Documentation | Medium | 3 |
-| **Total** | | | **49** |
+| Additional document request loop feature tests | Testing | Complex | 8 |
+| Additional document request loop implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **71** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- Workflow API Very High because resume-without-loss is not standard CRUD.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

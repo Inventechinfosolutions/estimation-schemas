@@ -18,15 +18,37 @@ Capture complete investment history against imported FE/scheme so verification a
 Officer.
 
 ### User Journey
-1. Officer opens a unique depositor profile.
-2. Officer selects imported FE and imported scheme (not free-text).
-3. Officer enters customer ID, bond/MOU, deposit receipt, dates, deposit amount, promised interest and amount already received, then saves.
-4. Officer reopens the record and sees the full investment history for that depositor, FE and scheme.
+1. Who creates: Officer
+2. How they create: Officer opens a unique depositor profile.
+3. How they edit: Officer selects imported FE and imported scheme (not free-text).
+4. How they send for approval: Officer enters customer ID, bond/MOU, deposit receipt, dates, deposit amount, promised interest and amount already received, then saves. Select depositor/FE/scheme → enter fields → save → history available. Direct save with audit.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Officer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Officer opens history on the record. Officer reopens the record and sees the full investment history for that depositor, FE and scheme.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Capture investment against imported FE and scheme only.
 - Record customer ID, bond/MOU, deposit receipt, dates, amounts, promised interest, amount received.
 - Show full investment history on reopen.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Investment capture form | Complex |
+| Investment history register | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Investment capture operations | Complex |
+| Update investment record capture | Medium |
+| Search investment record capture | Medium |
+| Read investment record capture history | Easy |
 
 ### Inputs
 Depositor, imported FE, imported scheme, customer ID, bond/MOU, receipt, dates, deposit amount, promised interest, amount received.
@@ -86,11 +108,16 @@ Searchable FE/scheme dropdowns. Complete history supports verification and settl
 | Investment capture form | UI | Complex | 12 |
 | Investment history register | UI | Medium | 6 |
 | Investment capture operations | API | Complex | 8 |
+| Update investment record capture | API | Medium | 6 |
+| Search investment record capture | API | Medium | 6 |
+| Read investment record capture history | API | Easy | 4 |
 | Investment persistence | DB | Complex | 6 |
-| Investment capture tests | Testing | Complex | 8 |
-| Investment capture guide | Documentation | Medium | 3 |
-| **Total** | | | **43** |
+| Investment record capture feature tests | Testing | Complex | 8 |
+| Investment record capture implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **59** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- Auto-calculation of interest/outstanding is F05-002.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

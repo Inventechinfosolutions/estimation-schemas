@@ -18,14 +18,38 @@ Record contracted-bank penny-drop against the refund account so payment audit ca
 Officer; auditor; contracted bank (external result).
 
 ### User Journey
-1. Officer records a penny-drop request against the depositor’s refund account.
-2. Result from the contracted bank is recorded: success/fail, match indicators, timestamp.
-3. Auditor later opens the same depositor or payment trail and sees that penny-drop event.
+1. Who creates: Officer
+2. How they create: Officer records a penny-drop request against the depositor’s refund account.
+3. How they edit: Result from the contracted bank is recorded: success/fail, match indicators, timestamp.
+4. How they send for approval: Auditor later opens the same depositor or payment trail and sees that penny-drop event. Request → bank result → record. Not a bank-core product.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Officer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Officer opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Record penny-drop request and result against the refund account.
 - Store success/fail, match indicators and timestamp.
 - Surface the event on depositor and payment forensic trails (F01-010 / F08-005).
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My penny-drop verification recording list / queue | Medium |
+| Penny-drop recording screen | Medium |
+| Penny-drop verification recording history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Penny-drop event operations | Complex |
+| Update penny-drop verification recording | Medium |
+| Search penny-drop verification recording | Medium |
+| Read penny-drop verification recording history | Easy |
 
 ### Inputs
 Refund account, request reference, bank result, match indicators, timestamp.
@@ -81,14 +105,21 @@ Penny-drop events are retrievable in forensic audit.
 
 | Artifact | Category | Complexity | Hours |
 |---|---|---|---|
+| My penny-drop verification recording list / queue | UI | Medium | 6 |
 | Penny-drop recording screen | UI | Medium | 6 |
+| Penny-drop verification recording history | UI | Medium | 6 |
 | Penny-drop event operations | API | Complex | 8 |
+| Update penny-drop verification recording | API | Medium | 6 |
+| Search penny-drop verification recording | API | Medium | 6 |
+| Read penny-drop verification recording history | API | Easy | 4 |
 | Penny-drop event persistence | DB | Easy | 2 |
 | Contracted-bank penny-drop process | Integration | Complex | 24 |
-| Penny-drop recording tests | Testing | Complex | 8 |
-| Penny-drop recording guide | Documentation | Medium | 3 |
-| **Total** | | | **51** |
+| Penny-drop verification recording feature tests | Testing | Complex | 8 |
+| Penny-drop verification recording implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **79** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- Integration Complex is the contracted bank penny-drop process, not a Very High payment gateway product (out of scope).
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

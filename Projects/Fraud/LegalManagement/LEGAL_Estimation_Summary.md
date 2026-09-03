@@ -12,28 +12,28 @@ Internal roll-up from module feature indexes. Hours from Estimation Master.
 
 - **Modules:** 9
 - **Features:** 57
-- **Grand total:** **2,769 hours**
-- **Recommended go-live:** **2,769 hours**
+- **Grand total:** **4,149 hours**
+- **Recommended go-live:** **4,149 hours**
 - **Optional / conditional:** **0 hours**
 
 ## Per-module totals
 
 | # | Module | Type | Features | Hours |
 |---|--------|------|---------:|------:|
-| 01 | Shared User & Access Control (consumed) | Shared | 4 | 200 |
-| 02 | Legal Masters, Keywords & Templates | Shared | 6 | 269 |
-| 03 | Legal Knowledge Library & Search | Business | 7 | 375 |
-| 04 | Matter Management | Business | 7 | 357 |
-| 05 | Tasks, Collaboration & Communication | Business | 9 | 473 |
-| 06 | Unified Contact Database | Business | 5 | 210 |
-| 07 | Court Attendance & Expense Management | Business | 5 | 182 |
-| 08 | Knowledge, SOP, Training & Retention | Business | 6 | 234 |
-| 09 | Legal Android Application (Advocates & Legal Cell) | Business | 8 | 469 |
-| | **Total** | | **57** | **2,769** |
+| 01 | Shared User & Access Control (consumed) | Shared | 4 | 292 |
+| 02 | Legal Masters, Keywords & Templates | Shared | 6 | 403 |
+| 03 | Legal Knowledge Library & Search | Business | 7 | 523 |
+| 04 | Matter Management | Business | 7 | 507 |
+| 05 | Tasks, Collaboration & Communication | Business | 9 | 727 |
+| 06 | Unified Contact Database | Business | 5 | 324 |
+| 07 | Court Attendance & Expense Management | Business | 5 | 296 |
+| 08 | Knowledge, SOP, Training & Retention | Business | 6 | 368 |
+| 09 | Legal Android Application (Advocates & Legal Cell) | Business | 8 | 709 |
+| | **Total** | | **57** | **4,149** |
 
 ## Go-live vs optional
 
-- Go-live (all modules 01–09): **2,769 hours**
+- Go-live (all modules 01–09): **4,149 hours**
 - Optional in this baseline: **0 hours**
 
 ## Assumptions / risks carried forward

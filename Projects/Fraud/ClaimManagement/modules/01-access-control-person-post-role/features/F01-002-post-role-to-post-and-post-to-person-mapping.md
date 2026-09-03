@@ -18,11 +18,14 @@ Attach permissions to Posts, occupy Posts with named Persons for dated periods, 
 Administrator; staff member (sees own current Posts); auditor (mapping history).
 
 ### User Journey
-1. Administrator opens the Post catalogue and creates a Post (for example Officer, Competent Authority desk, Administrator).
-2. Administrator opens the Role-to-Post assignment and attaches one or more Roles (permission sets) to that Post.
-3. Administrator searches a Person and maps the Person to the Post with an effective-from date.
-4. When the occupant changes, Administrator sets effective-to on the old mapping and creates a new Post-to-Person row.
-5. Staff logging in see only Posts currently mapped to their Person; expired mappings remain in history.
+1. Who creates: Administrator
+2. How they create: Administrator opens the Post catalogue and creates a Post (for example Officer, Competent Authority desk, Administrator).
+3. How they edit: Administrator opens the Role-to-Post assignment and attaches one or more Roles (permission sets) to that Post.
+4. How they send for approval: Administrator searches a Person and maps the Person to the Post with an effective-from date. Administrator maintains catalogue and mappings. History is append-only. No claimant participation.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Administrator works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Administrator opens history on the record. When the occupant changes, Administrator sets effective-to on the old mapping and creates a new Post-to-Person row. Staff logging in see only Posts currently mapped to their Person; expired mappings remain in history.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Post catalogue create, update, view and search.
@@ -30,6 +33,26 @@ Administrator; staff member (sees own current Posts); auditor (mapping history).
 - Post-to-Person mapping with effective-from and effective-to.
 - Complete mapping history: who changed, when, before/after.
 - Staff session resolves only currently effective Posts.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Post catalogue screen | Complex |
+| Role-to-Post assignment matrix | Very High |
+| Post-to-Person mapping with effective dates | Complex |
+| Post, role-to-post and post-to-person mapping history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Mapping and history operations | Very High |
+| Update post, role-to-post and post-to-person mapping | Medium |
+| Search post, role-to-post and post-to-person mapping | Medium |
+| Read post, role-to-post and post-to-person mapping history | Easy |
 
 ### Inputs
 Post name, Role set, Person, effective-from, effective-to, change remarks.
@@ -94,13 +117,18 @@ This is the programme-wide identity product consumed by Legal Management and GIS
 | Post catalogue screen | UI | Complex | 12 |
 | Role-to-Post assignment matrix | UI | Very High | 16 |
 | Post-to-Person mapping with effective dates | UI | Complex | 12 |
+| Post, role-to-post and post-to-person mapping history | UI | Medium | 6 |
 | Mapping and history operations | API | Very High | 16 |
+| Update post, role-to-post and post-to-person mapping | API | Medium | 6 |
+| Search post, role-to-post and post-to-person mapping | API | Medium | 6 |
+| Read post, role-to-post and post-to-person mapping history | API | Easy | 4 |
 | Mapping history persistence | DB | Complex | 6 |
-| Mapping and occupancy tests | Testing | Very High | 12 |
-| Post and mapping administration guide | Documentation | Complex | 4 |
-| **Total** | | | **78** |
+| Post, Role-to-Post and Post-to-Person mapping feature tests | Testing | Very High | 12 |
+| Post, Role-to-Post and Post-to-Person mapping implementation documentation | Documentation | Complex | 4 |
+| **Total** | | | **100** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- Menu composition and need-to-know enforcement are estimated in F01-003.
-- Dynamic Role-to-Post matrix is estimated as UI Very High (not UI Complex 8).
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

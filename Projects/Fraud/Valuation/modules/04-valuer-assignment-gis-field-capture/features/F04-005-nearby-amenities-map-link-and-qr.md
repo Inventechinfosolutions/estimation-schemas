@@ -18,15 +18,38 @@ Auto-populate nearby amenity distances and provide Map link, QR and marker for t
 Approved Valuer.
 
 ### User Journey
-1. Valuer is on the inspection page for the geocoded location.
-2. Application fetches distances to school/college, hospital, malls, places of worship, police station, bus stand, railway station, airport, offices, markets, cinemas, auto/taxi and metro.
-3. Page shows Map link, QR of that link, and map marker (F02-008).
-4. Valuer proceeds only when auto-fetched fields are populated or an authorised fetch-failed exception is recorded.
+1. Who creates: Approved Valuer
+2. How they create: Valuer is on the inspection page for the geocoded location.
+3. How they edit: Application fetches distances to school/college, hospital, malls, places of worship, police station, bus stand, railway station, airport, offices, markets, cinemas, auto/taxi and metro.
+4. How they send for approval: Page shows Map link, QR of that link, and map marker (F02-008). Open inspection → fetch amenities → show map/QR/marker → proceed or record exception.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Approved Valuer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Approved Valuer opens history on the record. Valuer proceeds only when auto-fetched fields are populated or an authorised fetch-failed exception is recorded.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Auto-fetch amenity distances including Form V-1 civic/transport rows
 - Show Google Map link, QR of the link, and map marker
 - Block proceed unless populated or authorised exception
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My nearby amenities, map link and qr list / queue | Medium |
+| Amenities map and QR pack | Very High |
+| Nearby amenities, map link and qr history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Amenity fetch and QR issue | Complex |
+| Update nearby amenities, map link and qr | Medium |
+| Search nearby amenities, map link and qr | Medium |
+| Read nearby amenities, map link and qr history | Easy |
 
 ### Inputs
 Asset/inspection location (F02-008); optional fetch-failed exception with reason.
@@ -84,14 +107,22 @@ Fetch on web; Android inspection uses the same rules (Module 09).
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
+| My nearby amenities, map link and qr list / queue | UI | Medium | 6 |
 | Amenities map and QR pack | UI | Very High | 16 |
+| Nearby amenities, map link and qr history | UI | Medium | 6 |
 | Amenity fetch and QR issue | API | Complex | 8 |
-| Amenity distances and Map/QR store | Database | Medium | 4 |
+| Update nearby amenities, map link and qr | API | Medium | 6 |
+| Search nearby amenities, map link and qr | API | Medium | 6 |
+| Read nearby amenities, map link and qr history | API | Easy | 4 |
+| Nearby amenities, map link and qr persistence | DB | Medium | 4 |
 | Map/places and geocoding amenity fetch | Integration | Very High | 40 |
-| Amenity and QR tests | Testing | Very High | 12 |
-| Amenities and Map/QR guide | Documentation | Complex | 4 |
-| **Total** | | | **84** |
+| Nearby amenities, Map link and QR feature tests | Testing | Very High | 12 |
+| Nearby amenities, Map link and QR implementation documentation | Documentation | Complex | 4 |
+| **Total** | | | **112** |
 
 ### Estimation Assumptions
-- UI Very High 16 and Integration Very High 40 justified for GIS/map/places.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

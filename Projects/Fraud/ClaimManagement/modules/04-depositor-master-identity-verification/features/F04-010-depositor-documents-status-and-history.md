@@ -18,15 +18,38 @@ Keep depositor documents and status history as structured records on the profile
 Officer; authorised viewer.
 
 ### User Journey
-1. Officer uploads depositor documents, sets verification/tracking status, and saves.
-2. The system stores structured fields and a history of status changes (who, when).
-3. Officer reopens the profile and sees documents and history without relying on a PDF published on a home page.
+1. Who creates: Officer
+2. How they create: Officer uploads depositor documents, sets verification/tracking status, and saves.
+3. How they edit: The system stores structured fields and a history of status changes (who, when).
+4. How they send for approval: Officer reopens the profile and sees documents and history without relying on a PDF published on a home page. Upload/status → history row → reopen. Embedded documents.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Officer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Officer opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Upload depositor documents.
 - Set verification/tracking status.
 - Append status history (who, when).
 - Reopen profile to see documents and history.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Depositor document pack and status | Complex |
+| Depositor status history | Easy |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Depositor document/status operations | Medium |
+| Update depositor documents, status and history | Medium |
+| Search depositor documents, status and history | Medium |
+| Read depositor documents, status and history history | Easy |
 
 ### Inputs
 Files, status, remarks.
@@ -85,11 +108,16 @@ Structured depositor data supports automated reports.
 | Depositor document pack and status | UI | Complex | 12 |
 | Depositor status history | UI | Easy | 4 |
 | Depositor document/status operations | API | Medium | 6 |
+| Update depositor documents, status and history | API | Medium | 6 |
+| Search depositor documents, status and history | API | Medium | 6 |
+| Read depositor documents, status and history history | API | Easy | 4 |
 | Depositor document and history persistence | DB | Medium | 4 |
-| Depositor document/history tests | Testing | Medium | 6 |
-| Depositor document history note | Documentation | Easy | 2 |
-| **Total** | | | **34** |
+| Depositor documents, status and history feature tests | Testing | Medium | 6 |
+| Depositor documents, status and history implementation documentation | Documentation | Easy | 2 |
+| **Total** | | | **50** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- OCR engine hours are in F04-001, not repeated here.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

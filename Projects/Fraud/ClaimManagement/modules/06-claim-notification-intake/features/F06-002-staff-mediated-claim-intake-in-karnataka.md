@@ -18,11 +18,14 @@ Take in-KA claims only from originals at the counter, and refuse Submit until th
 Officer; in-KA claimant (presents originals; no self-service account).
 
 ### User Journey
-1. In-Karnataka claimant presents original documents at the counter (BSA 2023).
-2. Officer confirms an Active claim window (F06-001) and selects imported FE, scheme and investment record.
-3. Officer confirms personal, investment and refund-bank details and uploads the pack from the originals.
-4. At Submit, the system requires identity proof, investment proof, bank documents, affidavit, statement of investment, and nominee/heir papers if applicable, plus mandatory fields.
-5. If anything is missing, Submit is blocked and gaps are listed; the claimant does not self-file online.
+1. Who creates: Officer
+2. How they create: In-Karnataka claimant presents original documents at the counter (BSA 2023).
+3. How they edit: Officer confirms an Active claim window (F06-001) and selects imported FE, scheme and investment record.
+4. How they send for approval: Officer confirms personal, investment and refund-bank details and uploads the pack from the originals. Counter capture → validate pack (F06-004 shared rule) → Submit or block. Embedded workflow.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Officer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Officer opens history on the record. At Submit, the system requires identity proof, investment proof, bank documents, affidavit, statement of investment, and nominee/heir papers if applicable, plus mandatory fields. If anything is missing, Submit is blocked and gaps are listed; the claimant does not self-file online.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Staff-mediated counter intake from originals.
@@ -30,6 +33,25 @@ Officer; in-KA claimant (presents originals; no self-service account).
 - Confirm personal, investment and refund-bank details.
 - Block Submit and list gaps when the mandatory pack or fields are incomplete.
 - No in-KA self-service filing account.
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Counter intake wizard | Very High |
+| Mandatory pack checklist (in-KA) | Complex |
+| Staff-mediated claim intake history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Intake submit and gap-list operations | Very High |
+| Update staff-mediated claim intake | Medium |
+| Search staff-mediated claim intake | Medium |
+| Read staff-mediated claim intake history | Easy |
 
 ### Inputs
 Originals at counter, imported FE/scheme/investment, personal/investment/refund-bank fields, document files.
@@ -90,12 +112,18 @@ Staff-mediated intake must be usable with original physical documents. Searchabl
 |---|---|---|---|
 | Counter intake wizard | UI | Very High | 16 |
 | Mandatory pack checklist (in-KA) | UI | Complex | 12 |
+| Staff-mediated claim intake history | UI | Medium | 6 |
 | Intake submit and gap-list operations | API | Very High | 16 |
+| Update staff-mediated claim intake | API | Medium | 6 |
+| Search staff-mediated claim intake | API | Medium | 6 |
+| Read staff-mediated claim intake history | API | Easy | 4 |
 | Staff-intake persistence | DB | Complex | 6 |
-| In-KA intake tests | Testing | Very High | 12 |
-| Staff-mediated intake guide | Documentation | Complex | 4 |
-| **Total** | | | **66** |
+| Staff-mediated claim intake (in-Karnataka) feature tests | Testing | Very High | 12 |
+| Staff-mediated claim intake (in-Karnataka) implementation documentation | Documentation | Complex | 4 |
+| **Total** | | | **88** |
 
 ### Estimation Assumptions
-- Uses Estimation Master values only.
-- Shared pack-validation engine is also estimated in F06-004; this feature estimates the counter wizard and in-KA channel rules.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

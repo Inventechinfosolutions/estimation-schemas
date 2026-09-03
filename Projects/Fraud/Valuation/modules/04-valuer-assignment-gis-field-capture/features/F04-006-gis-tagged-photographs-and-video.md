@@ -18,15 +18,39 @@ Store field-truth photographs and optional video that meet SPLOCA GIS, size and 
 Approved Valuer.
 
 ### User Journey
-1. Valuer captures at least four photographs, each at least 5 MB, with GIS tag and the date printed on the photograph, and may upload video.
-2. Each item stores captured date and time.
-3. A submission with fewer than four qualifying photographs is rejected until the valuer adds them.
+1. Who creates: Approved Valuer
+2. How they create: Valuer captures at least four photographs, each at least 5 MB, with GIS tag and the date printed on the photograph, and may upload video.
+3. How they edit: Each item stores captured date and time.
+4. How they send for approval: A submission with fewer than four qualifying photographs is rejected until the valuer adds them. Capture/upload → validate GIS/size/date → store; submit blocked if < 4 qualifying.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Approved Valuer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Approved Valuer opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Ingest minimum four photographs, each at least 5 MB
 - Require GIS tag and date on the photograph
 - Allow video upload with captured date/time
 - Reject inspection submit until four qualifying photographs exist
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My gis-tagged photographs and video list / queue | Medium |
+| GIS photo/video capture pack | Very High |
+| Gis-tagged photographs and video history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Media ingest with GIS/size/date rules | Very High |
+| Update gis-tagged photographs and video | Medium |
+| Search gis-tagged photographs and video | Medium |
+| Read gis-tagged photographs and video history | Easy |
 
 ### Inputs
 Photographs; optional video; device/web capture metadata.
@@ -87,14 +111,22 @@ Retain GIS photographs with the pack; HTTPS; AES-256 as programme NFR.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
+| My gis-tagged photographs and video list / queue | UI | Medium | 6 |
 | GIS photo/video capture pack | UI | Very High | 16 |
+| Gis-tagged photographs and video history | UI | Medium | 6 |
 | Media ingest with GIS/size/date rules | API | Very High | 16 |
-| Media metadata store | Database | Medium | 4 |
+| Update gis-tagged photographs and video | API | Medium | 6 |
+| Search gis-tagged photographs and video | API | Medium | 6 |
+| Read gis-tagged photographs and video history | API | Easy | 4 |
+| Gis-tagged photographs and video persistence | DB | Medium | 4 |
 | GIS photograph pipeline | Integration | Very High | 40 |
-| GIS media tests | Testing | Very High | 12 |
-| GIS photo/video field guide | Documentation | Complex | 4 |
-| **Total** | | | **92** |
+| GIS-tagged photographs and video feature tests | Testing | Very High | 12 |
+| GIS-tagged photographs and video implementation documentation | Documentation | Complex | 4 |
+| **Total** | | | **120** |
 
 ### Estimation Assumptions
-- UI Very High 16 and Integration Very High 40 justified for GIS/photos. Device UX also in F09-003.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

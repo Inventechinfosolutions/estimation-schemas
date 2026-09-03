@@ -18,15 +18,39 @@ Issue Form V-7 with recorded purity-testing methods and sub-annexures, digitally
 Approved Valuer; Expert Valuer if appointed.
 
 ### User Journey
-1. Valuer completes V-7 including weights, stone and metal values, special enhancement, explanation of rates, and purity-testing methods actually adopted (digital weighing, XRF/touchstone, diamond loupe/CVD, gemstone loupe).
-2. Completes Sub-Annexures I and II.
-3. Declares personal inspection and no interest with digital signature (F05-010).
+1. Who creates: Approved Valuer
+2. How they create: Valuer completes V-7 including weights, stone and metal values, special enhancement, explanation of rates, and purity-testing methods actually adopted (digital weighing, XRF/touchstone, diamond loupe/CVD, gemstone loupe).
+3. How they edit: Completes Sub-Annexures I and II.
+4. How they send for approval: Declares personal inspection and no interest with digital signature (F05-010). Complete V-7 + sub-annexures → sign → CA available.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Approved Valuer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Approved Valuer opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Form V-7 with stone/metal values and rate explanation
 - Record purity-testing methods actually adopted from the FRS list
 - Sub-Annexures I and II
 - Digital declaration F05-010
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| My form v-7 — gemstones, precious metals and jewellery list / queue | Medium |
+| Form V-7 working | Very High |
+| Form v-7 — gemstones, precious metals and jewellery history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| V-7 and sub-annexure assemble | Very High |
+| Update form v-7 — gemstones, precious metals and jewellery | Medium |
+| Search form v-7 — gemstones, precious metals and jewellery | Medium |
+| Read form v-7 — gemstones, precious metals and jewellery history | Easy |
 
 ### Inputs
 V-7 fields; methods adopted; sub-annexures; digital signature.
@@ -84,14 +108,22 @@ Methods stored on the issued form.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
+| My form v-7 — gemstones, precious metals and jewellery list / queue | UI | Medium | 6 |
 | Form V-7 working | UI | Very High | 16 |
+| Form v-7 — gemstones, precious metals and jewellery history | UI | Medium | 6 |
 | V-7 and sub-annexure assemble | API | Very High | 16 |
-| V-7 and sub-annexure store | Database | Complex | 6 |
+| Update form v-7 — gemstones, precious metals and jewellery | API | Medium | 6 |
+| Search form v-7 — gemstones, precious metals and jewellery | API | Medium | 6 |
+| Read form v-7 — gemstones, precious metals and jewellery history | API | Easy | 4 |
+| Form v-7 — gemstones, precious metals and jewellery persistence | DB | Medium | 4 |
 | Digital-declaration consume | Integration | Easy | 8 |
-| Form V-7 tests | Testing | Very High | 12 |
-| Form V-7 guide | Documentation | Complex | 4 |
-| **Total** | | | **62** |
+| Form V-7 — gemstones, precious metals and jewellery feature tests | Testing | Very High | 12 |
+| Form V-7 — gemstones, precious metals and jewellery implementation documentation | Documentation | Complex | 4 |
+| **Total** | | | **88** |
 
 ### Estimation Assumptions
-- UI/API Very High justified by purity methods and sub-annexures.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

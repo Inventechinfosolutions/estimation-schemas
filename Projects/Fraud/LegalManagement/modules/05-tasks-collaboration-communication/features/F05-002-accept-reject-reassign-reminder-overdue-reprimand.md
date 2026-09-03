@@ -18,15 +18,39 @@ Complete the task action set required by Annexure-I: accept/reject, reassign, re
 Assignee; assigner; supervisor.
 
 ### User Journey
-1. Assignee opens the task and accepts or rejects.
-2. Assigner may reassign, send a reminder, open the Overdue register, or record a reprimand/warning.
-3. Each action is stored on the task with Person and timestamp.
+1. Who creates: Assignee
+2. How they create: Assignee opens the task and accepts or rejects.
+3. How they edit: Assigner may reassign, send a reminder, open the Overdue register, or record a reprimand/warning.
+4. How they send for approval: Each action is stored on the task with Person and timestamp. Accept/reject → optional reassign/remind/reprimand → history.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Assignee works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Assignee opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Task Action panel (accept, reject, reassign, reminder)
 - Overdue and Reprimand register
 - Action history with Person and timestamp
 - Embedded workflow — not a separate BPM product
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Task Action panel (accept, reject, reassign, reminder) | Complex |
+| Overdue and Reprimand register | Medium |
+| Accept, reject, reassign, reminder, overdue, reprimand history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| Lifecycle action operations | Complex |
+| Update accept, reject, reassign, reminder, overdue, reprimand | Medium |
+| Search accept, reject, reassign, reminder, overdue, reprimand | Medium |
+| Read accept, reject, reassign, reminder, overdue, reprimand history | Easy |
 
 ### Inputs
 Action type; optional new assignee; reminder text; reprimand/warning text.
@@ -40,7 +64,7 @@ Updated task status; action history; overdue list.
 - Reprimand/warning is recorded, not a payroll action.
 
 ### Validations
-Only assignee accepts/rejects; reassign target must be active; overdue is derived from due date and incomplete status.
+- Only assignee accepts/rejects; reassign target must be active; overdue is derived from due date and incomplete status.
 
 ### Calculations
 Overdue flag when due date passed and not complete.
@@ -70,7 +94,7 @@ Alert to assignee/assigner (Simple).
 F05-001; F01-001.
 
 ### Assumptions
-Completion with report is F05-003.
+- Completion with report is F05-003.
 
 ### Risks
 Reprimand content is sensitive; must not leak via Community spaces.
@@ -83,15 +107,22 @@ Action history immutable once saved.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
 | Task Action panel (accept, reject, reassign, reminder) | UI | Complex | 12 |
 | Overdue and Reprimand register | UI | Medium | 6 |
+| Accept, reject, reassign, reminder, overdue, reprimand history | UI | Medium | 6 |
 | Lifecycle action operations | API | Complex | 8 |
-| Action history entities | Database | Medium | 4 |
+| Update accept, reject, reassign, reminder, overdue, reprimand | API | Medium | 6 |
+| Search accept, reject, reassign, reminder, overdue, reprimand | API | Medium | 6 |
+| Read accept, reject, reassign, reminder, overdue, reprimand history | API | Easy | 4 |
+| Accept, reject, reassign, reminder, overdue, reprimand persistence | DB | Medium | 4 |
 | Alert to assignee/assigner | Integration | Simple | 4 |
-| Task lifecycle tests | Testing | Complex | 8 |
-| Task accept/reject/reassign/reprimand guide | Documentation | Medium | 3 |
-| **Total** | | | **45** |
+| Accept, reject, reassign, reminder, overdue, reprimand feature tests | Testing | Complex | 8 |
+| Accept, reject, reassign, reminder, overdue, reprimand implementation documentation | Documentation | Medium | 3 |
+| **Total** | | | **67** |
 
 ### Estimation Assumptions
-- Completion report and team schedule are F05-003.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.

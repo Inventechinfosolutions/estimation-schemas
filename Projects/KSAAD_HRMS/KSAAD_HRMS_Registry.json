@@ -1,0 +1,920 @@
+{
+  "project_code": "KSAAD_HRMS",
+  "project_name": "KSAAD Digital Platform",
+  "output_root": "/Users/vadiraj/dev/BDA-repos/estimation-schemas/Projects/KSAAD_HRMS",
+  "updated_at": "2026-08-18T10:26:19.825532+00:00",
+  "modules": [
+    {
+      "nn": "01",
+      "name": "Person, Post, Role & Access Governance",
+      "slug": "person-post-role-and-access-governance",
+      "type": "Shared",
+      "folder": "modules/01-person-post-role-and-access-governance",
+      "feature_count": 8,
+      "total_hours": 938,
+      "features": [
+        {
+          "id": "F01-001",
+          "seq": "001",
+          "name": "Person Master",
+          "slug": "person-master",
+          "file": "modules/01-person-post-role-and-access-governance/features/F01-001-person-master.md",
+          "hours": 97
+        },
+        {
+          "id": "F01-002",
+          "seq": "002",
+          "name": "Post Master and Organisational Placement",
+          "slug": "post-master-and-organisational-placement",
+          "file": "modules/01-person-post-role-and-access-governance/features/F01-002-post-master-and-organisational-placement.md",
+          "hours": 95
+        },
+        {
+          "id": "F01-003",
+          "seq": "003",
+          "name": "Post-to-Person Mapping with Effective Dates",
+          "slug": "post-to-person-mapping-with-effective-dates",
+          "file": "modules/01-person-post-role-and-access-governance/features/F01-003-post-to-person-mapping-with-effective-dates.md",
+          "hours": 129
+        },
+        {
+          "id": "F01-004",
+          "seq": "004",
+          "name": "Role-to-Post Mapping and Permission Matrix",
+          "slug": "role-to-post-mapping-and-permission-matrix",
+          "file": "modules/01-person-post-role-and-access-governance/features/F01-004-role-to-post-mapping-and-permission-matrix.md",
+          "hours": 119
+        },
+        {
+          "id": "F01-005",
+          "seq": "005",
+          "name": "Authentication, Session and MFA Controls",
+          "slug": "authentication-session-and-mfa-controls",
+          "file": "modules/01-person-post-role-and-access-governance/features/F01-005-authentication-session-and-mfa-controls.md",
+          "hours": 123
+        },
+        {
+          "id": "F01-006",
+          "seq": "006",
+          "name": "Institution and External Identity with Scoped Access",
+          "slug": "institution-and-external-identity-with-scoped-access",
+          "file": "modules/01-person-post-role-and-access-governance/features/F01-006-institution-and-external-identity-with-scoped-access.md",
+          "hours": 119
+        },
+        {
+          "id": "F01-007",
+          "seq": "007",
+          "name": "Joiner-Mover-Leaver and Post Reassignment Governance",
+          "slug": "joiner-mover-leaver-and-post-reassignment-governance",
+          "file": "modules/01-person-post-role-and-access-governance/features/F01-007-joiner-mover-leaver-and-post-reassignment-governance.md",
+          "hours": 127
+        },
+        {
+          "id": "F01-008",
+          "seq": "008",
+          "name": "Access Audit, Logging and Periodic Recertification",
+          "slug": "access-audit-logging-and-periodic-recertification",
+          "file": "modules/01-person-post-role-and-access-governance/features/F01-008-access-audit-logging-and-periodic-recertification.md",
+          "hours": 129
+        }
+      ]
+    },
+    {
+      "nn": "02",
+      "name": "Master Data & System Configuration",
+      "slug": "master-data-and-system-configuration",
+      "type": "Business",
+      "folder": "modules/02-master-data-and-system-configuration",
+      "feature_count": 5,
+      "total_hours": 465,
+      "features": [
+        {
+          "id": "F02-001",
+          "seq": "001",
+          "name": "Organisation Hierarchy and Office Master",
+          "slug": "organisation-hierarchy-and-office-master",
+          "file": "modules/02-master-data-and-system-configuration/features/F02-001-organisation-hierarchy-and-office-master.md",
+          "hours": 91
+        },
+        {
+          "id": "F02-002",
+          "seq": "002",
+          "name": "Department, Post and Designation Masters",
+          "slug": "department-post-and-designation-masters",
+          "file": "modules/02-master-data-and-system-configuration/features/F02-002-department-post-and-designation-masters.md",
+          "hours": 91
+        },
+        {
+          "id": "F02-003",
+          "seq": "003",
+          "name": "Reference Data Catalogues",
+          "slug": "reference-data-catalogues",
+          "file": "modules/02-master-data-and-system-configuration/features/F02-003-reference-data-catalogues.md",
+          "hours": 91
+        },
+        {
+          "id": "F02-004",
+          "seq": "004",
+          "name": "Workflow Templates and Rule Configuration",
+          "slug": "workflow-templates-and-rule-configuration",
+          "file": "modules/02-master-data-and-system-configuration/features/F02-004-workflow-templates-and-rule-configuration.md",
+          "hours": 101
+        },
+        {
+          "id": "F02-005",
+          "seq": "005",
+          "name": "Reporting and MIS Parameters",
+          "slug": "reporting-and-mis-parameters",
+          "file": "modules/02-master-data-and-system-configuration/features/F02-005-reporting-and-mis-parameters.md",
+          "hours": 91
+        }
+      ]
+    },
+    {
+      "nn": "03",
+      "name": "HRMS Core Personnel Management",
+      "slug": "hrms-core-personnel-management",
+      "type": "Business",
+      "folder": "modules/03-hrms-core-personnel-management",
+      "feature_count": 9,
+      "total_hours": 1146,
+      "features": [
+        {
+          "id": "F03-001",
+          "seq": "001",
+          "name": "Employee Master and Service Details",
+          "slug": "employee-master-and-service-details",
+          "file": "modules/03-hrms-core-personnel-management/features/F03-001-employee-master-and-service-details.md",
+          "hours": 91
+        },
+        {
+          "id": "F03-002",
+          "seq": "002",
+          "name": "Post and Vacancy Management",
+          "slug": "post-and-vacancy-management",
+          "file": "modules/03-hrms-core-personnel-management/features/F03-002-post-and-vacancy-management.md",
+          "hours": 137
+        },
+        {
+          "id": "F03-003",
+          "seq": "003",
+          "name": "Leave Management System",
+          "slug": "leave-management-system",
+          "file": "modules/03-hrms-core-personnel-management/features/F03-003-leave-management-system.md",
+          "hours": 154
+        },
+        {
+          "id": "F03-004",
+          "seq": "004",
+          "name": "Work Diary Submission",
+          "slug": "work-diary-submission",
+          "file": "modules/03-hrms-core-personnel-management/features/F03-004-work-diary-submission.md",
+          "hours": 119
+        },
+        {
+          "id": "F03-005",
+          "seq": "005",
+          "name": "Attendance Management",
+          "slug": "attendance-management",
+          "file": "modules/03-hrms-core-personnel-management/features/F03-005-attendance-management.md",
+          "hours": 137
+        },
+        {
+          "id": "F03-006",
+          "seq": "006",
+          "name": "Training and Capacity Building Management",
+          "slug": "training-and-capacity-building-management",
+          "file": "modules/03-hrms-core-personnel-management/features/F03-006-training-and-capacity-building-management.md",
+          "hours": 133
+        },
+        {
+          "id": "F03-007",
+          "seq": "007",
+          "name": "Retirement and Pension Tracking",
+          "slug": "retirement-and-pension-tracking",
+          "file": "modules/03-hrms-core-personnel-management/features/F03-007-retirement-and-pension-tracking.md",
+          "hours": 137
+        },
+        {
+          "id": "F03-008",
+          "seq": "008",
+          "name": "Rewards and Recognition Register",
+          "slug": "rewards-and-recognition-register",
+          "file": "modules/03-hrms-core-personnel-management/features/F03-008-rewards-and-recognition-register.md",
+          "hours": 119
+        },
+        {
+          "id": "F03-009",
+          "seq": "009",
+          "name": "Circulars, Notifications and Internal Communication",
+          "slug": "circulars-notifications-and-internal-communication",
+          "file": "modules/03-hrms-core-personnel-management/features/F03-009-circulars-notifications-and-internal-communication.md",
+          "hours": 119
+        }
+      ]
+    },
+    {
+      "nn": "04",
+      "name": "Deputation & Posting Management",
+      "slug": "deputation-and-posting-management",
+      "type": "Business",
+      "folder": "modules/04-deputation-and-posting-management",
+      "feature_count": 5,
+      "total_hours": 561,
+      "features": [
+        {
+          "id": "F04-001",
+          "seq": "001",
+          "name": "Deputation Proposal Initiation",
+          "slug": "deputation-proposal-initiation",
+          "file": "modules/04-deputation-and-posting-management/features/F04-001-deputation-proposal-initiation.md",
+          "hours": 119
+        },
+        {
+          "id": "F04-002",
+          "seq": "002",
+          "name": "Deputation Approval and Tenure Tracking",
+          "slug": "deputation-approval-and-tenure-tracking",
+          "file": "modules/04-deputation-and-posting-management/features/F04-002-deputation-approval-and-tenure-tracking.md",
+          "hours": 125
+        },
+        {
+          "id": "F04-003",
+          "seq": "003",
+          "name": "Extension and Early Repatriation",
+          "slug": "extension-and-early-repatriation",
+          "file": "modules/04-deputation-and-posting-management/features/F04-003-extension-and-early-repatriation.md",
+          "hours": 119
+        },
+        {
+          "id": "F04-004",
+          "seq": "004",
+          "name": "Post and Vacancy Updates due to Deputation",
+          "slug": "post-and-vacancy-updates-due-to-deputation",
+          "file": "modules/04-deputation-and-posting-management/features/F04-004-post-and-vacancy-updates-due-to-deputation.md",
+          "hours": 79
+        },
+        {
+          "id": "F04-005",
+          "seq": "005",
+          "name": "Deputation History and Hierarchy Adjustments",
+          "slug": "deputation-history-and-hierarchy-adjustments",
+          "file": "modules/04-deputation-and-posting-management/features/F04-005-deputation-history-and-hierarchy-adjustments.md",
+          "hours": 119
+        }
+      ]
+    },
+    {
+      "nn": "05",
+      "name": "HRMS Tour, Travel & TA/DA Claims",
+      "slug": "hrms-tour-travel-and-tada-claims",
+      "type": "Business",
+      "folder": "modules/05-hrms-tour-travel-and-tada-claims",
+      "feature_count": 4,
+      "total_hours": 538,
+      "features": [
+        {
+          "id": "F05-001",
+          "seq": "001",
+          "name": "Tour Programme Planning",
+          "slug": "tour-programme-planning",
+          "file": "modules/05-hrms-tour-travel-and-tada-claims/features/F05-001-tour-programme-planning.md",
+          "hours": 131
+        },
+        {
+          "id": "F05-002",
+          "seq": "002",
+          "name": "TA/DA Claim Capture",
+          "slug": "tada-claim-capture",
+          "file": "modules/05-hrms-tour-travel-and-tada-claims/features/F05-002-tada-claim-capture.md",
+          "hours": 141
+        },
+        {
+          "id": "F05-003",
+          "seq": "003",
+          "name": "Evidence Upload and Claim Validation",
+          "slug": "evidence-upload-and-claim-validation",
+          "file": "modules/05-hrms-tour-travel-and-tada-claims/features/F05-003-evidence-upload-and-claim-validation.md",
+          "hours": 139
+        },
+        {
+          "id": "F05-004",
+          "seq": "004",
+          "name": "Supervisor Review, Approval and Reconciliation",
+          "slug": "supervisor-review-approval-and-reconciliation",
+          "file": "modules/05-hrms-tour-travel-and-tada-claims/features/F05-004-supervisor-review-approval-and-reconciliation.md",
+          "hours": 127
+        }
+      ]
+    },
+    {
+      "nn": "06",
+      "name": "Office & Administration (Visitor, Reception and Meetings)",
+      "slug": "office-and-administration-visitor-reception-and-meetings",
+      "type": "Business",
+      "folder": "modules/06-office-and-administration-visitor-reception-and-meetings",
+      "feature_count": 7,
+      "total_hours": 737,
+      "features": [
+        {
+          "id": "F06-001",
+          "seq": "001",
+          "name": "Employee Movement Register",
+          "slug": "employee-movement-register",
+          "file": "modules/06-office-and-administration-visitor-reception-and-meetings/features/F06-001-employee-movement-register.md",
+          "hours": 75
+        },
+        {
+          "id": "F06-002",
+          "seq": "002",
+          "name": "Visitor Registration and Access",
+          "slug": "visitor-registration-and-access",
+          "file": "modules/06-office-and-administration-visitor-reception-and-meetings/features/F06-002-visitor-registration-and-access.md",
+          "hours": 93
+        },
+        {
+          "id": "F06-003",
+          "seq": "003",
+          "name": "Meeting Scheduling and Participant Management",
+          "slug": "meeting-scheduling-and-participant-management",
+          "file": "modules/06-office-and-administration-visitor-reception-and-meetings/features/F06-003-meeting-scheduling-and-participant-management.md",
+          "hours": 125
+        },
+        {
+          "id": "F06-004",
+          "seq": "004",
+          "name": "Minutes of Meeting Recording",
+          "slug": "minutes-of-meeting-recording",
+          "file": "modules/06-office-and-administration-visitor-reception-and-meetings/features/F06-004-minutes-of-meeting-recording.md",
+          "hours": 119
+        },
+        {
+          "id": "F06-005",
+          "seq": "005",
+          "name": "Meeting Action Item Tracking",
+          "slug": "meeting-action-item-tracking",
+          "file": "modules/06-office-and-administration-visitor-reception-and-meetings/features/F06-005-meeting-action-item-tracking.md",
+          "hours": 119
+        },
+        {
+          "id": "F06-006",
+          "seq": "006",
+          "name": "Grants and Financial Allocation Management",
+          "slug": "grants-and-financial-allocation-management",
+          "file": "modules/06-office-and-administration-visitor-reception-and-meetings/features/F06-006-grants-and-financial-allocation-management.md",
+          "hours": 125
+        },
+        {
+          "id": "F06-007",
+          "seq": "007",
+          "name": "Digitised Office Registers and Administrative Logs",
+          "slug": "digitised-office-registers-and-administrative-logs",
+          "file": "modules/06-office-and-administration-visitor-reception-and-meetings/features/F06-007-digitised-office-registers-and-administrative-logs.md",
+          "hours": 81
+        }
+      ]
+    },
+    {
+      "nn": "07",
+      "name": "Audit Planning & Resource Allocation",
+      "slug": "audit-planning-and-resource-allocation",
+      "type": "Business",
+      "folder": "modules/07-audit-planning-and-resource-allocation",
+      "feature_count": 4,
+      "total_hours": 514,
+      "features": [
+        {
+          "id": "F07-001",
+          "seq": "001",
+          "name": "Auditee Institution and Financial Data Setup",
+          "slug": "auditee-institution-and-financial-data-setup",
+          "file": "modules/07-audit-planning-and-resource-allocation/features/F07-001-auditee-institution-and-financial-data-setup.md",
+          "hours": 109
+        },
+        {
+          "id": "F07-002",
+          "seq": "002",
+          "name": "Annual Audit Plan Management",
+          "slug": "annual-audit-plan-management",
+          "file": "modules/07-audit-planning-and-resource-allocation/features/F07-002-annual-audit-plan-management.md",
+          "hours": 143
+        },
+        {
+          "id": "F07-003",
+          "seq": "003",
+          "name": "Auditor Resource Allocation",
+          "slug": "auditor-resource-allocation",
+          "file": "modules/07-audit-planning-and-resource-allocation/features/F07-003-auditor-resource-allocation.md",
+          "hours": 125
+        },
+        {
+          "id": "F07-004",
+          "seq": "004",
+          "name": "Gram Panchayat Adhoc and Non-Adhoc Committee Tracking",
+          "slug": "gram-panchayat-adhoc-and-non-adhoc-committee-tracking",
+          "file": "modules/07-audit-planning-and-resource-allocation/features/F07-004-gram-panchayat-adhoc-and-non-adhoc-committee-tracking.md",
+          "hours": 137
+        }
+      ]
+    },
+    {
+      "nn": "08",
+      "name": "Field Audit Execution & Reporting",
+      "slug": "field-audit-execution-and-reporting",
+      "type": "Business",
+      "folder": "modules/08-field-audit-execution-and-reporting",
+      "feature_count": 6,
+      "total_hours": 792,
+      "features": [
+        {
+          "id": "F08-001",
+          "seq": "001",
+          "name": "Field Audit Execution Workflow",
+          "slug": "field-audit-execution-workflow",
+          "file": "modules/08-field-audit-execution-and-reporting/features/F08-001-field-audit-execution-workflow.md",
+          "hours": 123
+        },
+        {
+          "id": "F08-002",
+          "seq": "002",
+          "name": "Observation Recording and Evidence Capture",
+          "slug": "observation-recording-and-evidence-capture",
+          "file": "modules/08-field-audit-execution-and-reporting/features/F08-002-observation-recording-and-evidence-capture.md",
+          "hours": 125
+        },
+        {
+          "id": "F08-003",
+          "seq": "003",
+          "name": "Audit Report Drafting",
+          "slug": "audit-report-drafting",
+          "file": "modules/08-field-audit-execution-and-reporting/features/F08-003-audit-report-drafting.md",
+          "hours": 155
+        },
+        {
+          "id": "F08-004",
+          "seq": "004",
+          "name": "Audit Report Review and Approval",
+          "slug": "audit-report-review-and-approval",
+          "file": "modules/08-field-audit-execution-and-reporting/features/F08-004-audit-report-review-and-approval.md",
+          "hours": 145
+        },
+        {
+          "id": "F08-005",
+          "seq": "005",
+          "name": "Audit Report Issuance",
+          "slug": "audit-report-issuance",
+          "file": "modules/08-field-audit-execution-and-reporting/features/F08-005-audit-report-issuance.md",
+          "hours": 123
+        },
+        {
+          "id": "F08-006",
+          "seq": "006",
+          "name": "Timeline, Reminder and Escalation Monitoring",
+          "slug": "timeline-reminder-and-escalation-monitoring",
+          "file": "modules/08-field-audit-execution-and-reporting/features/F08-006-timeline-reminder-and-escalation-monitoring.md",
+          "hours": 121
+        }
+      ]
+    },
+    {
+      "nn": "09",
+      "name": "Objection, Para & Recovery Management",
+      "slug": "objection-para-and-recovery-management",
+      "type": "Business",
+      "folder": "modules/09-objection-para-and-recovery-management",
+      "feature_count": 4,
+      "total_hours": 486,
+      "features": [
+        {
+          "id": "F09-001",
+          "seq": "001",
+          "name": "Para Intake and Tracking",
+          "slug": "para-intake-and-tracking",
+          "file": "modules/09-objection-para-and-recovery-management/features/F09-001-para-intake-and-tracking.md",
+          "hours": 119
+        },
+        {
+          "id": "F09-002",
+          "seq": "002",
+          "name": "Objection and Representation Reply Workflow",
+          "slug": "objection-and-representation-reply-workflow",
+          "file": "modules/09-objection-para-and-recovery-management/features/F09-002-objection-and-representation-reply-workflow.md",
+          "hours": 119
+        },
+        {
+          "id": "F09-003",
+          "seq": "003",
+          "name": "Recovery Action Tracking",
+          "slug": "recovery-action-tracking",
+          "file": "modules/09-objection-para-and-recovery-management/features/F09-003-recovery-action-tracking.md",
+          "hours": 129
+        },
+        {
+          "id": "F09-004",
+          "seq": "004",
+          "name": "Recovery Closure and Evidence Finalisation",
+          "slug": "recovery-closure-and-evidence-finalisation",
+          "file": "modules/09-objection-para-and-recovery-management/features/F09-004-recovery-closure-and-evidence-finalisation.md",
+          "hours": 119
+        }
+      ]
+    },
+    {
+      "nn": "10",
+      "name": "Audit Fee, Billing and Collections",
+      "slug": "audit-fee-billing-and-collections",
+      "type": "Business",
+      "folder": "modules/10-audit-fee-billing-and-collections",
+      "feature_count": 4,
+      "total_hours": 516,
+      "features": [
+        {
+          "id": "F10-001",
+          "seq": "001",
+          "name": "Audit Fee Assessment",
+          "slug": "audit-fee-assessment",
+          "file": "modules/10-audit-fee-billing-and-collections/features/F10-001-audit-fee-assessment.md",
+          "hours": 135
+        },
+        {
+          "id": "F10-002",
+          "seq": "002",
+          "name": "Billing Generation",
+          "slug": "billing-generation",
+          "file": "modules/10-audit-fee-billing-and-collections/features/F10-002-billing-generation.md",
+          "hours": 123
+        },
+        {
+          "id": "F10-003",
+          "seq": "003",
+          "name": "Invoice Dispatch and Status Tracking",
+          "slug": "invoice-dispatch-and-status-tracking",
+          "file": "modules/10-audit-fee-billing-and-collections/features/F10-003-invoice-dispatch-and-status-tracking.md",
+          "hours": 119
+        },
+        {
+          "id": "F10-004",
+          "seq": "004",
+          "name": "Collections Reconciliation",
+          "slug": "collections-reconciliation",
+          "file": "modules/10-audit-fee-billing-and-collections/features/F10-004-collections-reconciliation.md",
+          "hours": 139
+        }
+      ]
+    },
+    {
+      "nn": "11",
+      "name": "Finance, Procurement & Inventory Management",
+      "slug": "finance-procurement-and-inventory-management",
+      "type": "Business",
+      "folder": "modules/11-finance-procurement-and-inventory-management",
+      "feature_count": 7,
+      "total_hours": 955,
+      "features": [
+        {
+          "id": "F11-001",
+          "seq": "001",
+          "name": "Office Expense Management",
+          "slug": "office-expense-management",
+          "file": "modules/11-finance-procurement-and-inventory-management/features/F11-001-office-expense-management.md",
+          "hours": 119
+        },
+        {
+          "id": "F11-002",
+          "seq": "002",
+          "name": "Budget Allocation and Utilisation Tracking",
+          "slug": "budget-allocation-and-utilisation-tracking",
+          "file": "modules/11-finance-procurement-and-inventory-management/features/F11-002-budget-allocation-and-utilisation-tracking.md",
+          "hours": 133
+        },
+        {
+          "id": "F11-003",
+          "seq": "003",
+          "name": "Indent Management",
+          "slug": "indent-management",
+          "file": "modules/11-finance-procurement-and-inventory-management/features/F11-003-indent-management.md",
+          "hours": 131
+        },
+        {
+          "id": "F11-004",
+          "seq": "004",
+          "name": "Purchase Order and Vendor Management",
+          "slug": "purchase-order-and-vendor-management",
+          "file": "modules/11-finance-procurement-and-inventory-management/features/F11-004-purchase-order-and-vendor-management.md",
+          "hours": 149
+        },
+        {
+          "id": "F11-005",
+          "seq": "005",
+          "name": "Inventory Management",
+          "slug": "inventory-management",
+          "file": "modules/11-finance-procurement-and-inventory-management/features/F11-005-inventory-management.md",
+          "hours": 151
+        },
+        {
+          "id": "F11-006",
+          "seq": "006",
+          "name": "Asset Register Management",
+          "slug": "asset-register-management",
+          "file": "modules/11-finance-procurement-and-inventory-management/features/F11-006-asset-register-management.md",
+          "hours": 137
+        },
+        {
+          "id": "F11-007",
+          "seq": "007",
+          "name": "Payment Tracking",
+          "slug": "payment-tracking",
+          "file": "modules/11-finance-procurement-and-inventory-management/features/F11-007-payment-tracking.md",
+          "hours": 135
+        }
+      ]
+    },
+    {
+      "nn": "12",
+      "name": "API Integration Hub",
+      "slug": "api-integration-hub",
+      "type": "Technical",
+      "folder": "modules/12-api-integration-hub",
+      "feature_count": 4,
+      "total_hours": 650,
+      "features": [
+        {
+          "id": "F12-001",
+          "seq": "001",
+          "name": "Integration Framework and Authentication Mapping",
+          "slug": "integration-framework-and-authentication-mapping",
+          "file": "modules/12-api-integration-hub/features/F12-001-integration-framework-and-authentication-mapping.md",
+          "hours": 175
+        },
+        {
+          "id": "F12-002",
+          "seq": "002",
+          "name": "Data Exchange Orchestration",
+          "slug": "data-exchange-orchestration",
+          "file": "modules/12-api-integration-hub/features/F12-002-data-exchange-orchestration.md",
+          "hours": 201
+        },
+        {
+          "id": "F12-003",
+          "seq": "003",
+          "name": "Integration Target Adapters",
+          "slug": "integration-target-adapters",
+          "file": "modules/12-api-integration-hub/features/F12-003-integration-target-adapters.md",
+          "hours": 153
+        },
+        {
+          "id": "F12-004",
+          "seq": "004",
+          "name": "Monitoring, Logs and Retry Controls",
+          "slug": "monitoring-logs-and-retry-controls",
+          "file": "modules/12-api-integration-hub/features/F12-004-monitoring-logs-and-retry-controls.md",
+          "hours": 121
+        }
+      ]
+    },
+    {
+      "nn": "13",
+      "name": "Document Management System (DMS)",
+      "slug": "document-management-system-dms",
+      "type": "Shared",
+      "folder": "modules/13-document-management-system-dms",
+      "feature_count": 6,
+      "total_hours": 660,
+      "features": [
+        {
+          "id": "F13-001",
+          "seq": "001",
+          "name": "Document Upload and Classification",
+          "slug": "document-upload-and-classification",
+          "file": "modules/13-document-management-system-dms/features/F13-001-document-upload-and-classification.md",
+          "hours": 89
+        },
+        {
+          "id": "F13-002",
+          "seq": "002",
+          "name": "Document Version Control",
+          "slug": "document-version-control",
+          "file": "modules/13-document-management-system-dms/features/F13-002-document-version-control.md",
+          "hours": 81
+        },
+        {
+          "id": "F13-003",
+          "seq": "003",
+          "name": "Role-Scoped Access and Sharing",
+          "slug": "role-scoped-access-and-sharing",
+          "file": "modules/13-document-management-system-dms/features/F13-003-role-scoped-access-and-sharing.md",
+          "hours": 149
+        },
+        {
+          "id": "F13-004",
+          "seq": "004",
+          "name": "Document Search and Retrieval",
+          "slug": "document-search-and-retrieval",
+          "file": "modules/13-document-management-system-dms/features/F13-004-document-search-and-retrieval.md",
+          "hours": 93
+        },
+        {
+          "id": "F13-005",
+          "seq": "005",
+          "name": "Retention and Document Audit Logging",
+          "slug": "retention-and-document-audit-logging",
+          "file": "modules/13-document-management-system-dms/features/F13-005-retention-and-document-audit-logging.md",
+          "hours": 163
+        },
+        {
+          "id": "F13-006",
+          "seq": "006",
+          "name": "Evidence Pack Compilation",
+          "slug": "evidence-pack-compilation",
+          "file": "modules/13-document-management-system-dms/features/F13-006-evidence-pack-compilation.md",
+          "hours": 85
+        }
+      ]
+    },
+    {
+      "nn": "14",
+      "name": "Reporting, Dashboards & Analytics",
+      "slug": "reporting-dashboards-and-analytics",
+      "type": "Business",
+      "folder": "modules/14-reporting-dashboards-and-analytics",
+      "feature_count": 9,
+      "total_hours": 1075,
+      "features": [
+        {
+          "id": "F14-001",
+          "seq": "001",
+          "name": "Audit Reports and Outputs",
+          "slug": "audit-reports-and-outputs",
+          "file": "modules/14-reporting-dashboards-and-analytics/features/F14-001-audit-reports-and-outputs.md",
+          "hours": 97
+        },
+        {
+          "id": "F14-002",
+          "seq": "002",
+          "name": "Objection, Para and Recovery Reports",
+          "slug": "objection-para-and-recovery-reports",
+          "file": "modules/14-reporting-dashboards-and-analytics/features/F14-002-objection-para-and-recovery-reports.md",
+          "hours": 97
+        },
+        {
+          "id": "F14-003",
+          "seq": "003",
+          "name": "Fee Collection Reports",
+          "slug": "fee-collection-reports",
+          "file": "modules/14-reporting-dashboards-and-analytics/features/F14-003-fee-collection-reports.md",
+          "hours": 97
+        },
+        {
+          "id": "F14-004",
+          "seq": "004",
+          "name": "HRMS Reports",
+          "slug": "hrms-reports",
+          "file": "modules/14-reporting-dashboards-and-analytics/features/F14-004-hrms-reports.md",
+          "hours": 97
+        },
+        {
+          "id": "F14-005",
+          "seq": "005",
+          "name": "Administrative Reports",
+          "slug": "administrative-reports",
+          "file": "modules/14-reporting-dashboards-and-analytics/features/F14-005-administrative-reports.md",
+          "hours": 97
+        },
+        {
+          "id": "F14-006",
+          "seq": "006",
+          "name": "Procurement and Financial Reports",
+          "slug": "procurement-and-financial-reports",
+          "file": "modules/14-reporting-dashboards-and-analytics/features/F14-006-procurement-and-financial-reports.md",
+          "hours": 97
+        },
+        {
+          "id": "F14-007",
+          "seq": "007",
+          "name": "Dashboards and Drilldown Views",
+          "slug": "dashboards-and-drilldown-views",
+          "file": "modules/14-reporting-dashboards-and-analytics/features/F14-007-dashboards-and-drilldown-views.md",
+          "hours": 191
+        },
+        {
+          "id": "F14-008",
+          "seq": "008",
+          "name": "Advanced Analytics, MIS and Compliance Reporting",
+          "slug": "advanced-analytics-mis-and-compliance-reporting",
+          "file": "modules/14-reporting-dashboards-and-analytics/features/F14-008-advanced-analytics-mis-and-compliance-reporting.md",
+          "hours": 151
+        },
+        {
+          "id": "F14-009",
+          "seq": "009",
+          "name": "Custom Exports, Scheduling, Secure Sharing and Alerts",
+          "slug": "custom-exports-scheduling-secure-sharing-and-alerts",
+          "file": "modules/14-reporting-dashboards-and-analytics/features/F14-009-custom-exports-scheduling-secure-sharing-and-alerts.md",
+          "hours": 151
+        }
+      ]
+    },
+    {
+      "nn": "15",
+      "name": "Knowledge Center & Learning",
+      "slug": "knowledge-center-and-learning",
+      "type": "Business",
+      "folder": "modules/15-knowledge-center-and-learning",
+      "feature_count": 4,
+      "total_hours": 518,
+      "features": [
+        {
+          "id": "F15-001",
+          "seq": "001",
+          "name": "Knowledge Repository and Articles",
+          "slug": "knowledge-repository-and-articles",
+          "file": "modules/15-knowledge-center-and-learning/features/F15-001-knowledge-repository-and-articles.md",
+          "hours": 131
+        },
+        {
+          "id": "F15-002",
+          "seq": "002",
+          "name": "SOP, Policy and Circular Library",
+          "slug": "sop-policy-and-circular-library",
+          "file": "modules/15-knowledge-center-and-learning/features/F15-002-sop-policy-and-circular-library.md",
+          "hours": 143
+        },
+        {
+          "id": "F15-003",
+          "seq": "003",
+          "name": "Learning Content and Catalogue",
+          "slug": "learning-content-and-catalogue",
+          "file": "modules/15-knowledge-center-and-learning/features/F15-003-learning-content-and-catalogue.md",
+          "hours": 119
+        },
+        {
+          "id": "F15-004",
+          "seq": "004",
+          "name": "Training Completion and Acknowledgement Tracking",
+          "slug": "training-completion-and-acknowledgement-tracking",
+          "file": "modules/15-knowledge-center-and-learning/features/F15-004-training-completion-and-acknowledgement-tracking.md",
+          "hours": 125
+        }
+      ]
+    },
+    {
+      "nn": "16",
+      "name": "External / Institution Interaction",
+      "slug": "external-institution-interaction",
+      "type": "Business",
+      "folder": "modules/16-external-institution-interaction",
+      "feature_count": 6,
+      "total_hours": 692,
+      "features": [
+        {
+          "id": "F16-001",
+          "seq": "001",
+          "name": "Institution Portal Workspace",
+          "slug": "institution-portal-workspace",
+          "file": "modules/16-external-institution-interaction/features/F16-001-institution-portal-workspace.md",
+          "hours": 101
+        },
+        {
+          "id": "F16-002",
+          "seq": "002",
+          "name": "AFS and Supporting Document Upload",
+          "slug": "afs-and-supporting-document-upload",
+          "file": "modules/16-external-institution-interaction/features/F16-002-afs-and-supporting-document-upload.md",
+          "hours": 137
+        },
+        {
+          "id": "F16-003",
+          "seq": "003",
+          "name": "Submission of Replies to Audit Paras and Objections",
+          "slug": "submission-of-replies-to-audit-paras-and-objections",
+          "file": "modules/16-external-institution-interaction/features/F16-003-submission-of-replies-to-audit-paras-and-objections.md",
+          "hours": 137
+        },
+        {
+          "id": "F16-004",
+          "seq": "004",
+          "name": "View and Download Issued Audit Reports",
+          "slug": "view-and-download-issued-audit-reports",
+          "file": "modules/16-external-institution-interaction/features/F16-004-view-and-download-issued-audit-reports.md",
+          "hours": 87
+        },
+        {
+          "id": "F16-005",
+          "seq": "005",
+          "name": "Audit Fee Assessment and Status Visibility",
+          "slug": "audit-fee-assessment-and-status-visibility",
+          "file": "modules/16-external-institution-interaction/features/F16-005-audit-fee-assessment-and-status-visibility.md",
+          "hours": 77
+        },
+        {
+          "id": "F16-006",
+          "seq": "006",
+          "name": "Controlled External Integration Touchpoints",
+          "slug": "controlled-external-integration-touchpoints",
+          "file": "modules/16-external-institution-interaction/features/F16-006-controlled-external-integration-touchpoints.md",
+          "hours": 153
+        }
+      ]
+    }
+  ]
+}

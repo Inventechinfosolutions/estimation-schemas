@@ -18,15 +18,39 @@ Issue the applicable agricultural, forest/plantation or mine/quarry statutory fo
 Approved Valuer; Expert Valuer if appointed.
 
 ### User Journey
-1. For agricultural land the Valuer completes V-2; for forests/plantations V-3; for mines/quarries V-4, with fields as in the FRS.
-2. Each requires personal inspection and no-interest declaration and digital signature (F05-010).
-3. Form V-5 is not offered.
+1. Who creates: Approved Valuer
+2. How they create: For agricultural land the Valuer completes V-2; for forests/plantations V-3; for mines/quarries V-4, with fields as in the FRS.
+3. How they edit: Each requires personal inspection and no-interest declaration and digital signature (F05-010).
+4. How they send for approval: Form V-5 is not offered. Select applicable form → complete → declare/sign → available to CA.
+5. How the approver sees pending items: There is no separate approver inbox on this feature unless a later feature owns the decision. Approved Valuer works from the register or workbench.
+6. How the approver decides: No approval decision is recorded on this feature. The user saves; a later feature may consume the result.
+7. How the user sees history: Approved Valuer opens history on the record.
+8. How the supervisor / auditor sees history: Authorised supervisor or auditor opens the same history within need-to-know.
 
 ### Functional Capabilities
 - Form V-2 agricultural land
 - Form V-3 forests and plantations
 - Form V-4 mines and quarries (excluding plant/buildings as in FRS)
 - Digital declaration via F05-010; Form V-5 not offered
+
+### UI Screens
+Named screens estimated independently in Section 2. These are business screens, not wireframes.
+
+| Screen | Complexity |
+|---|---|
+| Form V-2 agricultural working | Complex |
+| Form V-3 and V-4 working | Complex |
+| Forms v-2, v-3 and v-4 history | Medium |
+
+### Logical API operations
+Named business operations estimated independently in Section 2. These are not REST paths, payloads or technical design.
+
+| Operation | Complexity |
+|---|---|
+| V-2/V-3/V-4 assemble and issue | Very High |
+| Update forms v-2, v-3 and v-4 | Medium |
+| Search forms v-2, v-3 and v-4 | Medium |
+| Read forms v-2, v-3 and v-4 history | Easy |
 
 ### Inputs
 Applicable form fields; declaration; digital signature.
@@ -85,15 +109,22 @@ Templates versioned; V-5 hidden.
 ## Section 2 — Estimation Breakdown (Estimation Master)
 
 | Artifact | Category | Complexity | Hours |
-|---|---|---|---:|
+|---|---|---|---|
 | Form V-2 agricultural working | UI | Complex | 12 |
 | Form V-3 and V-4 working | UI | Complex | 12 |
+| Forms v-2, v-3 and v-4 history | UI | Medium | 6 |
 | V-2/V-3/V-4 assemble and issue | API | Very High | 16 |
-| V-2/V-3/V-4 form store | Database | Complex | 6 |
+| Update forms v-2, v-3 and v-4 | API | Medium | 6 |
+| Search forms v-2, v-3 and v-4 | API | Medium | 6 |
+| Read forms v-2, v-3 and v-4 history | API | Easy | 4 |
+| Forms v-2, v-3 and v-4 persistence | DB | Medium | 4 |
 | Digital-declaration consume | Integration | Simple | 4 |
-| V-2/V-3/V-4 tests | Testing | Very High | 12 |
-| Forms V-2–V-4 guide | Documentation | Complex | 4 |
-| **Total** | | | **66** |
+| Forms V-2, V-3 and V-4 feature tests | Testing | Very High | 12 |
+| Forms V-2, V-3 and V-4 implementation documentation | Documentation | Complex | 4 |
+| **Total** | | | **86** |
 
 ### Estimation Assumptions
-- Two Complex UI artefacts (V-2 vs V-3/V-4). Digital sign hours in F05-010. V-5 excluded.
+- Hours use the Estimation Master mapping only.
+- Each named UI screen and each logical API operation is estimated separately.
+- Logical APIs are business operations, not REST endpoints or database schema.
+- Screens and integrations assume a production-quality enterprise build with validation, logging and security.
