@@ -1,0 +1,677 @@
+{
+  "project_code": "GWA",
+  "project_name": "Garrison Website Design, Product Catalogue Migration & AI Product Imagery (Option 2)",
+  "client": "Garrison Industries",
+  "output_root": "Projects/garison/Option-2-Website-AI-Imagery",
+  "related_estimates": [
+    "GWM (Option 1)",
+    "GWA (Option 2)",
+    "GMC (Option 3 — Premium)"
+  ],
+  "sow": "SoW_GWA_Detailed.md",
+  "updated_at": "2026-10-07T06:18:42Z",
+  "volume": [
+    {
+      "item": "Per-product data verification",
+      "quantity": 350,
+      "rate_hours": 0.25,
+      "hours": 88
+    },
+    {
+      "item": "Existing page content migration",
+      "quantity": 15,
+      "rate_hours": 1.5,
+      "hours": 23
+    },
+    {
+      "item": "Profile silhouette preparation (operator time)",
+      "quantity": 350,
+      "rate_hours": 0.3,
+      "hours": 105
+    },
+    {
+      "item": "AI image review and selection",
+      "quantity": 350,
+      "rate_hours": 0.2,
+      "hours": 70
+    }
+  ],
+  "totals": {
+    "software_go_live_hours": 1078,
+    "software_optional_hours": 91,
+    "software_all_hours": 1169,
+    "volume_hours": 286,
+    "go_live_total_hours": 1364,
+    "feature_count": 32,
+    "module_count": 6
+  },
+  "modules": [
+    {
+      "nn": "01",
+      "name": "Discovery & Website Design",
+      "slug": "discovery-and-website-design",
+      "type": "Business",
+      "folder": "modules/01-discovery-and-website-design",
+      "feature_count": 3,
+      "total_hours": 149,
+      "features": [
+        {
+          "id": "F01-001",
+          "seq": "001",
+          "name": "Existing Website Discovery & Content Capture",
+          "slug": "existing-website-discovery-and-content-capture",
+          "file": "modules/01-discovery-and-website-design/features/F01-001-existing-website-discovery-and-content-capture.md",
+          "hours": 34,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 16,
+            "Database": 1,
+            "Integration": 8,
+            "Testing": 4,
+            "Documentation": 5
+          }
+        },
+        {
+          "id": "F01-002",
+          "seq": "002",
+          "name": "Information Architecture & Wireframes",
+          "slug": "information-architecture-and-wireframes",
+          "file": "modules/01-discovery-and-website-design/features/F01-002-information-architecture-and-wireframes.md",
+          "hours": 36,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 30,
+            "API": 0,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F01-003",
+          "seq": "003",
+          "name": "Visual Design System & Page Designs",
+          "slug": "visual-design-system-and-page-designs",
+          "file": "modules/01-discovery-and-website-design/features/F01-003-visual-design-system-and-page-designs.md",
+          "hours": 79,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 70,
+            "API": 0,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 3
+          }
+        }
+      ]
+    },
+    {
+      "nn": "02",
+      "name": "Website Build",
+      "slug": "website-build",
+      "type": "Business",
+      "folder": "modules/02-website-build",
+      "feature_count": 5,
+      "total_hours": 183,
+      "features": [
+        {
+          "id": "F02-001",
+          "seq": "001",
+          "name": "Site Foundation, Layout & Navigation",
+          "slug": "site-foundation-layout-and-navigation",
+          "file": "modules/02-website-build/features/F02-001-site-foundation-layout-and-navigation.md",
+          "hours": 57,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 36,
+            "API": 10,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F02-002",
+          "seq": "002",
+          "name": "Home Page",
+          "slug": "home-page",
+          "file": "modules/02-website-build/features/F02-002-home-page.md",
+          "hours": 31,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 22,
+            "API": 4,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F02-003",
+          "seq": "003",
+          "name": "Company & Service Content Pages",
+          "slug": "company-and-service-content-pages",
+          "file": "modules/02-website-build/features/F02-003-company-and-service-content-pages.md",
+          "hours": 35,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 26,
+            "API": 4,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F02-004",
+          "seq": "004",
+          "name": "Contact & Enquiry Form",
+          "slug": "contact-and-enquiry-form",
+          "file": "modules/02-website-build/features/F02-004-contact-and-enquiry-form.md",
+          "hours": 45,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 10,
+            "API": 16,
+            "Database": 0,
+            "Integration": 12,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F02-005",
+          "seq": "005",
+          "name": "Existing Content Migration",
+          "slug": "existing-content-migration",
+          "file": "modules/02-website-build/features/F02-005-existing-content-migration.md",
+          "hours": 15,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 10,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        }
+      ]
+    },
+    {
+      "nn": "03",
+      "name": "Product Catalogue Pages",
+      "slug": "product-catalogue-pages",
+      "type": "Business",
+      "folder": "modules/03-product-catalogue-pages",
+      "feature_count": 6,
+      "total_hours": 206,
+      "features": [
+        {
+          "id": "F03-001",
+          "seq": "001",
+          "name": "Mouldings Landing Page",
+          "slug": "mouldings-landing-page",
+          "file": "modules/03-product-catalogue-pages/features/F03-001-mouldings-landing-page.md",
+          "hours": 21,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 12,
+            "API": 4,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F03-002",
+          "seq": "002",
+          "name": "Category Listing Page with Filters",
+          "slug": "category-listing-page-with-filters",
+          "file": "modules/03-product-catalogue-pages/features/F03-002-category-listing-page-with-filters.md",
+          "hours": 59,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 36,
+            "API": 12,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 10,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F03-003",
+          "seq": "003",
+          "name": "Product Detail Page",
+          "slug": "product-detail-page",
+          "file": "modules/03-product-catalogue-pages/features/F03-003-product-detail-page.md",
+          "hours": 49,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 28,
+            "API": 10,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 10,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F03-004",
+          "seq": "004",
+          "name": "Catalogue Search",
+          "slug": "catalogue-search",
+          "file": "modules/03-product-catalogue-pages/features/F03-004-catalogue-search.md",
+          "hours": 31,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 14,
+            "API": 8,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F03-005",
+          "seq": "005",
+          "name": "Product Enquiry",
+          "slug": "product-enquiry",
+          "file": "modules/03-product-catalogue-pages/features/F03-005-product-enquiry.md",
+          "hours": 17,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 8,
+            "API": 4,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F03-006",
+          "seq": "006",
+          "name": "Combinations Pages",
+          "slug": "combinations-pages",
+          "file": "modules/03-product-catalogue-pages/features/F03-006-combinations-pages.md",
+          "hours": 29,
+          "notes": "Optional",
+          "areas": {
+            "UI": 12,
+            "API": 10,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        }
+      ]
+    },
+    {
+      "nn": "04",
+      "name": "One-time Product Data Migration",
+      "slug": "one-time-product-data-migration",
+      "type": "Technical",
+      "folder": "modules/04-one-time-product-data-migration",
+      "feature_count": 6,
+      "total_hours": 231,
+      "features": [
+        {
+          "id": "F04-001",
+          "seq": "001",
+          "name": "Source Catalogue Extraction Utility",
+          "slug": "source-catalogue-extraction-utility",
+          "file": "modules/04-one-time-product-data-migration/features/F04-001-source-catalogue-extraction-utility.md",
+          "hours": 65,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 36,
+            "Database": 1,
+            "Integration": 16,
+            "Testing": 10,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F04-002",
+          "seq": "002",
+          "name": "Reference Image Capture (Internal Use Only)",
+          "slug": "reference-image-capture-internal-use-only",
+          "file": "modules/04-one-time-product-data-migration/features/F04-002-reference-image-capture-internal-use-only.md",
+          "hours": 14,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 10,
+            "Database": 1,
+            "Integration": 0,
+            "Testing": 2,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F04-003",
+          "seq": "003",
+          "name": "Data Normalisation & Validation",
+          "slug": "data-normalisation-and-validation",
+          "file": "modules/04-one-time-product-data-migration/features/F04-003-data-normalisation-and-validation.md",
+          "hours": 53,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 36,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 10,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F04-004",
+          "seq": "004",
+          "name": "Garrison Review Workbook & Sign-off",
+          "slug": "garrison-review-workbook-and-sign-off",
+          "file": "modules/04-one-time-product-data-migration/features/F04-004-garrison-review-workbook-and-sign-off.md",
+          "hours": 27,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 20,
+            "Database": 1,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F04-005",
+          "seq": "005",
+          "name": "Catalogue Data Build & Publishing",
+          "slug": "catalogue-data-build-and-publishing",
+          "file": "modules/04-one-time-product-data-migration/features/F04-005-catalogue-data-build-and-publishing.md",
+          "hours": 31,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 20,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F04-006",
+          "seq": "006",
+          "name": "Interior Doors & In-Stock Product Extension",
+          "slug": "interior-doors-and-in-stock-product-extension",
+          "file": "modules/04-one-time-product-data-migration/features/F04-006-interior-doors-and-in-stock-product-extension.md",
+          "hours": 41,
+          "notes": "Optional",
+          "areas": {
+            "UI": 18,
+            "API": 14,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        }
+      ]
+    },
+    {
+      "nn": "05",
+      "name": "Hosting, SEO & Launch",
+      "slug": "hosting-seo-and-launch",
+      "type": "Shared",
+      "folder": "modules/05-hosting-seo-and-launch",
+      "feature_count": 5,
+      "total_hours": 149,
+      "features": [
+        {
+          "id": "F05-001",
+          "seq": "001",
+          "name": "SEO Foundation & Redirects",
+          "slug": "seo-foundation-and-redirects",
+          "file": "modules/05-hosting-seo-and-launch/features/F05-001-seo-foundation-and-redirects.md",
+          "hours": 29,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 24,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F05-002",
+          "seq": "002",
+          "name": "Hosting, Domain, SSL & DNS Cutover",
+          "slug": "hosting-domain-ssl-and-dns-cutover",
+          "file": "modules/05-hosting-seo-and-launch/features/F05-002-hosting-domain-ssl-and-dns-cutover.md",
+          "hours": 41,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 6,
+            "Database": 0,
+            "Integration": 28,
+            "Testing": 4,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F05-003",
+          "seq": "003",
+          "name": "Analytics & Cookie Consent",
+          "slug": "analytics-and-cookie-consent",
+          "file": "modules/05-hosting-seo-and-launch/features/F05-003-analytics-and-cookie-consent.md",
+          "hours": 17,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 4,
+            "API": 4,
+            "Database": 0,
+            "Integration": 4,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F05-004",
+          "seq": "004",
+          "name": "Quality Assurance, Accessibility & Performance",
+          "slug": "quality-assurance-accessibility-and-performance",
+          "file": "modules/05-hosting-seo-and-launch/features/F05-004-quality-assurance-accessibility-and-performance.md",
+          "hours": 34,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 6,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 26,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F05-005",
+          "seq": "005",
+          "name": "UAT, Launch & Handover",
+          "slug": "uat-launch-and-handover",
+          "file": "modules/05-hosting-seo-and-launch/features/F05-005-uat-launch-and-handover.md",
+          "hours": 28,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 12,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 12,
+            "Documentation": 4
+          }
+        }
+      ]
+    },
+    {
+      "nn": "06",
+      "name": "AI Product Imagery",
+      "slug": "ai-product-imagery",
+      "type": "Technical",
+      "folder": "modules/06-ai-product-imagery",
+      "feature_count": 7,
+      "total_hours": 251,
+      "features": [
+        {
+          "id": "F06-001",
+          "seq": "001",
+          "name": "AI Imagery Style Guide, Model Setup & Pilot",
+          "slug": "ai-imagery-style-guide-model-setup-and-pilot",
+          "file": "modules/06-ai-product-imagery/features/F06-001-ai-imagery-style-guide-model-setup-and-pilot.md",
+          "hours": 47,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 6,
+            "API": 16,
+            "Database": 0,
+            "Integration": 16,
+            "Testing": 6,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F06-002",
+          "seq": "002",
+          "name": "Profile Silhouette Preparation",
+          "slug": "profile-silhouette-preparation",
+          "file": "modules/06-ai-product-imagery/features/F06-002-profile-silhouette-preparation.md",
+          "hours": 35,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 6,
+            "API": 20,
+            "Database": 1,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F06-003",
+          "seq": "003",
+          "name": "Base Render & AI Image Generation",
+          "slug": "base-render-and-ai-image-generation",
+          "file": "modules/06-ai-product-imagery/features/F06-003-base-render-and-ai-image-generation.md",
+          "hours": 60,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 34,
+            "Database": 2,
+            "Integration": 16,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F06-004",
+          "seq": "004",
+          "name": "Image Review, Selection & Touch-up",
+          "slug": "image-review-selection-and-touch-up",
+          "file": "modules/06-ai-product-imagery/features/F06-004-image-review-selection-and-touch-up.md",
+          "hours": 42,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 22,
+            "API": 14,
+            "Database": 1,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F06-005",
+          "seq": "005",
+          "name": "Lifestyle & Category Hero Images",
+          "slug": "lifestyle-and-category-hero-images",
+          "file": "modules/06-ai-product-imagery/features/F06-005-lifestyle-and-category-hero-images.md",
+          "hours": 31,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 16,
+            "API": 10,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F06-006",
+          "seq": "006",
+          "name": "AI Image Disclosure & Provenance Record",
+          "slug": "ai-image-disclosure-and-provenance-record",
+          "file": "modules/06-ai-product-imagery/features/F06-006-ai-image-disclosure-and-provenance-record.md",
+          "hours": 15,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 2,
+            "API": 8,
+            "Database": 1,
+            "Integration": 0,
+            "Testing": 2,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F06-007",
+          "seq": "007",
+          "name": "Finish / Species Variant Images",
+          "slug": "finish-species-variant-images",
+          "file": "modules/06-ai-product-imagery/features/F06-007-finish-species-variant-images.md",
+          "hours": 21,
+          "notes": "Optional",
+          "areas": {
+            "UI": 6,
+            "API": 10,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        }
+      ]
+    }
+  ],
+  "ai_service_cost_usd": {
+    "generations": 1850,
+    "price_per_generation": {
+      "Standard quality": 0.07,
+      "High quality": 0.23
+    },
+    "fees": {
+      "Standard quality": 129.5,
+      "High quality": 425.5
+    },
+    "with_contingency": {
+      "Standard quality": 162,
+      "High quality": 532
+    },
+    "budget_cap": 600,
+    "optional_variant_generations": 2100
+  }
+}

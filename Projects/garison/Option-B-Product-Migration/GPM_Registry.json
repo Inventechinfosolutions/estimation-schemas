@@ -1,0 +1,359 @@
+{
+  "project_code": "GPM",
+  "project_name": "Garrison Catalogue Product Migration to Existing Website (Option B)",
+  "client": "Garrison Industries",
+  "output_root": "Projects/garison/Option-B-Product-Migration",
+  "related_estimate": "GMC (Option A — full catalogue platform)",
+  "sow": "SoW_GPM_Detailed.md",
+  "updated_at": "2026-10-06T10:47:00Z",
+  "volume": {
+    "planned_products": 350,
+    "confirmed_products": 201,
+    "verification_rate_hours": 0.25,
+    "manual_capture_rate_hours": 0.75,
+    "verification_hours": 88
+  },
+  "totals": {
+    "software_go_live_hours": 536,
+    "software_optional_hours": 70,
+    "software_all_hours": 606,
+    "go_live_including_verification": 624,
+    "feature_count": 17,
+    "module_count": 4
+  },
+  "modules": [
+    {
+      "nn": "01",
+      "name": "Catalogue Data Extraction & Preparation",
+      "slug": "catalogue-data-extraction-and-preparation",
+      "type": "Technical",
+      "folder": "modules/01-catalogue-data-extraction-and-preparation",
+      "feature_count": 5,
+      "total_hours": 214,
+      "features": [
+        {
+          "id": "F01-001",
+          "seq": "001",
+          "name": "Source Catalogue Extraction Utility",
+          "slug": "source-catalogue-extraction-utility",
+          "file": "modules/01-catalogue-data-extraction-and-preparation/features/F01-001-source-catalogue-extraction-utility.md",
+          "hours": 65,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 36,
+            "Database": 1,
+            "Integration": 16,
+            "Testing": 10,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F01-002",
+          "seq": "002",
+          "name": "Product Image Acquisition & Optimisation",
+          "slug": "product-image-acquisition-and-optimisation",
+          "file": "modules/01-catalogue-data-extraction-and-preparation/features/F01-002-product-image-acquisition-and-optimisation.md",
+          "hours": 28,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 22,
+            "Database": 1,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F01-003",
+          "seq": "003",
+          "name": "Data Normalisation & Validation",
+          "slug": "data-normalisation-and-validation",
+          "file": "modules/01-catalogue-data-extraction-and-preparation/features/F01-003-data-normalisation-and-validation.md",
+          "hours": 53,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 36,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 10,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F01-004",
+          "seq": "004",
+          "name": "Garrison Review Workbook & Sign-off",
+          "slug": "garrison-review-workbook-and-sign-off",
+          "file": "modules/01-catalogue-data-extraction-and-preparation/features/F01-004-garrison-review-workbook-and-sign-off.md",
+          "hours": 27,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 20,
+            "Database": 1,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F01-005",
+          "seq": "005",
+          "name": "Interior Doors & In-Stock Product Extension",
+          "slug": "interior-doors-and-in-stock-product-extension",
+          "file": "modules/01-catalogue-data-extraction-and-preparation/features/F01-005-interior-doors-and-in-stock-product-extension.md",
+          "hours": 41,
+          "notes": "Optional",
+          "areas": {
+            "UI": 18,
+            "API": 14,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        }
+      ]
+    },
+    {
+      "nn": "02",
+      "name": "Product Data Store on Existing Website",
+      "slug": "product-data-store-on-existing-website",
+      "type": "Technical",
+      "folder": "modules/02-product-data-store-on-existing-website",
+      "feature_count": 2,
+      "total_hours": 62,
+      "features": [
+        {
+          "id": "F02-001",
+          "seq": "001",
+          "name": "Product Data Store & Loader",
+          "slug": "product-data-store-and-loader",
+          "file": "modules/02-product-data-store-on-existing-website/features/F02-001-product-data-store-and-loader.md",
+          "hours": 45,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 26,
+            "Database": 6,
+            "Integration": 0,
+            "Testing": 10,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F02-002",
+          "seq": "002",
+          "name": "Media Hosting & Delivery Setup",
+          "slug": "media-hosting-and-delivery-setup",
+          "file": "modules/02-product-data-store-on-existing-website/features/F02-002-media-hosting-and-delivery-setup.md",
+          "hours": 17,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 8,
+            "Database": 0,
+            "Integration": 4,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        }
+      ]
+    },
+    {
+      "nn": "03",
+      "name": "Catalogue Pages on Existing Website",
+      "slug": "catalogue-pages-on-existing-website",
+      "type": "Business",
+      "folder": "modules/03-catalogue-pages-on-existing-website",
+      "feature_count": 6,
+      "total_hours": 208,
+      "features": [
+        {
+          "id": "F03-001",
+          "seq": "001",
+          "name": "Mouldings Landing Page",
+          "slug": "mouldings-landing-page",
+          "file": "modules/03-catalogue-pages-on-existing-website/features/F03-001-mouldings-landing-page.md",
+          "hours": 19,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 10,
+            "API": 4,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F03-002",
+          "seq": "002",
+          "name": "Category Listing Page with Filters",
+          "slug": "category-listing-page-with-filters",
+          "file": "modules/03-catalogue-pages-on-existing-website/features/F03-002-category-listing-page-with-filters.md",
+          "hours": 59,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 36,
+            "API": 12,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 10,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F03-003",
+          "seq": "003",
+          "name": "Product Detail Page",
+          "slug": "product-detail-page",
+          "file": "modules/03-catalogue-pages-on-existing-website/features/F03-003-product-detail-page.md",
+          "hours": 47,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 26,
+            "API": 10,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 10,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F03-004",
+          "seq": "004",
+          "name": "Catalogue Search",
+          "slug": "catalogue-search",
+          "file": "modules/03-catalogue-pages-on-existing-website/features/F03-004-catalogue-search.md",
+          "hours": 31,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 14,
+            "API": 8,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F03-005",
+          "seq": "005",
+          "name": "Product Enquiry Handoff",
+          "slug": "product-enquiry-handoff",
+          "file": "modules/03-catalogue-pages-on-existing-website/features/F03-005-product-enquiry-handoff.md",
+          "hours": 23,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 8,
+            "API": 6,
+            "Database": 0,
+            "Integration": 4,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F03-006",
+          "seq": "006",
+          "name": "Combinations Pages",
+          "slug": "combinations-pages",
+          "file": "modules/03-catalogue-pages-on-existing-website/features/F03-006-combinations-pages.md",
+          "hours": 29,
+          "notes": "Optional",
+          "areas": {
+            "UI": 12,
+            "API": 10,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        }
+      ]
+    },
+    {
+      "nn": "04",
+      "name": "Website Integration, SEO & Go-live",
+      "slug": "website-integration-seo-and-go-live",
+      "type": "Shared",
+      "folder": "modules/04-website-integration-seo-and-go-live",
+      "feature_count": 4,
+      "total_hours": 122,
+      "features": [
+        {
+          "id": "F04-001",
+          "seq": "001",
+          "name": "Source Code Onboarding & Environment Setup",
+          "slug": "source-code-onboarding-and-environment-setup",
+          "file": "modules/04-website-integration-seo-and-go-live/features/F04-001-source-code-onboarding-and-environment-setup.md",
+          "hours": 41,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 0,
+            "Database": 2,
+            "Integration": 32,
+            "Testing": 4,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F04-002",
+          "seq": "002",
+          "name": "Navigation & Theme Integration",
+          "slug": "navigation-and-theme-integration",
+          "file": "modules/04-website-integration-seo-and-go-live/features/F04-002-navigation-and-theme-integration.md",
+          "hours": 27,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 20,
+            "API": 0,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F04-003",
+          "seq": "003",
+          "name": "SEO, Sitemap & Redirects",
+          "slug": "seo-sitemap-and-redirects",
+          "file": "modules/04-website-integration-seo-and-go-live/features/F04-003-seo-sitemap-and-redirects.md",
+          "hours": 25,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 20,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F04-004",
+          "seq": "004",
+          "name": "Migration Reconciliation & Go-live",
+          "slug": "migration-reconciliation-and-go-live",
+          "file": "modules/04-website-integration-seo-and-go-live/features/F04-004-migration-reconciliation-and-go-live.md",
+          "hours": 29,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 14,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 12,
+            "Documentation": 3
+          }
+        }
+      ]
+    }
+  ]
+}

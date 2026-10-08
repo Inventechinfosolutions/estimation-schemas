@@ -1,0 +1,115 @@
+# Statement of Work (SOW)
+
+## Guest House Booking and Access Management Platform
+
+### 1. Background and Objective
+
+The organization intends to implement a centralized digital platform to manage guest house accommodations across multiple locations. The system is intended to streamline room booking, ensure controlled access, and improve operational oversight. The platform will be used exclusively by government employees and will enforce identity validation as part of the booking process.
+
+### 2. Scope of Work
+
+#### 2.1 Site and Location Management
+
+1. The system shall support creation and management of multiple sites or locations.
+2. Each site shall store address, location details, and administrative information.
+3. Each site may contain one or more buildings.
+
+#### 2.2 Building and Room Structuring
+
+1. The system shall support multiple buildings under each site.
+2. Each building shall support floor-wise configuration.
+3. Rooms shall be defined under each floor with attributes such as type, capacity, amenities, pricing, and availability status.
+4. The system shall handle scenarios where buildings differ in structure, number of floors, or room types.
+
+#### 2.3 User Registration and Validation
+
+1. Access shall be restricted to government employees only.
+2. Users shall register using mobile number with OTP-based verification.
+3. Submission of valid government identification shall be mandatory.
+4. The system shall maintain secure user authentication and session management.
+
+#### 2.4 Booking Management
+
+1. Users shall be able to browse sites, buildings, and available rooms.
+2. Booking shall be based on selected dates and availability.
+3. The system shall validate conflicts and prevent double booking.
+4. Booking summary including pricing shall be presented prior to confirmation.
+
+#### 2.5 Payment Processing
+
+1. The system shall integrate with an online payment gateway.
+2. Supported payment methods shall include UPI, net banking, and cards.
+3. Booking confirmation shall occur only upon successful payment.
+4. The system shall handle payment failures and retries.
+
+#### 2.6 Room Allocation and Confirmation
+
+1. Upon successful payment, rooms shall be automatically allocated.
+2. A booking confirmation shall be generated for the user.
+3. Confirmation details shall include booking period, location, and access credentials.
+
+#### 2.7 Access Control Mechanism
+
+1. The system shall generate a QR code or unique booking identifier for each confirmed booking.
+2. These credentials shall be shared with the user through SMS or other communication channels.
+3. Where supported, integration with access control hardware may enable automated door access.
+4. Manual override using physical keys shall remain available with on-site authorities.
+
+#### 2.8 Check-in and Occupancy Management
+
+1. Users shall be able to check in directly using provided credentials.
+2. The system may support self check-in mechanisms such as QR scanning.
+3. The platform shall track occupancy status including active stays and no-shows.
+
+#### 2.9 Administration and Monitoring
+
+1. Administrative users shall have access to dashboards showing bookings, occupancy, and payments.
+2. Administrative controls shall include managing sites, buildings, rooms, and users.
+3. The system shall support booking overrides for exceptional scenarios.
+4. Reports shall be available for booking activity, revenue, and utilization.
+
+### 3. Non-Functional Requirements
+
+1. The system shall ensure secure handling of user data and identity documents.
+2. The platform shall be scalable to support multiple locations and concurrent users.
+3. Performance shall ensure minimal latency during search and booking operations.
+4. The system shall be highly available with minimal downtime.
+5. The system shall comply with applicable data protection and government regulations.
+
+### 4. Assumptions
+
+1. All users are authorized government employees.
+2. Payment gateway and communication services will be provisioned separately.
+3. Availability of access control hardware may vary by location.
+4. Network connectivity will be available at all guest house locations.
+
+### 5. Deliverables
+
+1. A web-based guest house booking platform.
+2. Administrative interface for management and monitoring.
+3. Integrated payment processing capability.
+4. Booking confirmation and access credential generation.
+5. Basic system documentation.
+
+### 6. Future Considerations
+
+1. Mobile application for end users and administrators.
+2. Integration with centralized government employee databases.
+3. Advanced analytics and reporting capabilities.
+4. Enhanced automation through smart hardware integration.
+
+### 7. Acceptance Criteria
+
+1. Users are able to register with validated identity.
+2. Rooms can be configured and managed across multiple sites and buildings.
+3. Booking and payment processes function reliably.
+4. Room allocation and confirmation are accurate.
+5. Access credentials are generated and usable as intended.
+6. Administrative controls and reporting functions are operational.
+
+### 8. Risks and Considerations
+
+1. Variability in infrastructure across locations may affect access control implementation.
+2. Dependence on network availability for real-time operations.
+3. Validation of user identity documents may require additional verification mechanisms.
+4. Payment reconciliation and failure scenarios require careful handling.

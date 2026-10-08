@@ -1,0 +1,1062 @@
+{
+  "project_code": "GMC",
+  "project_name": "Garrison Online Moulding Catalogue Platform",
+  "client": "Garrison Industries",
+  "output_root": "Projects/garison",
+  "source": "Garrison_Technical_Proposal.md",
+  "sow": "SoW_GMC_Detailed.md",
+  "updated_at": "2026-10-05T13:47:14Z",
+  "totals": {
+    "all_hours": 4125,
+    "go_live_hours": 4057,
+    "optional_hours": 68,
+    "feature_count": 53,
+    "module_count": 13
+  },
+  "modules": [
+    {
+      "nn": "01",
+      "name": "Administrator Access & Role Management",
+      "slug": "administrator-access-and-role-management",
+      "type": "Shared",
+      "folder": "modules/01-administrator-access-and-role-management",
+      "feature_count": 4,
+      "total_hours": 397,
+      "features": [
+        {
+          "id": "F01-001",
+          "seq": "001",
+          "name": "Administrator Authentication & Session Security",
+          "slug": "administrator-authentication-and-session-security",
+          "file": "modules/01-administrator-access-and-role-management/features/F01-001-administrator-authentication-and-session-security.md",
+          "hours": 104,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 26,
+            "API": 44,
+            "Database": 7,
+            "Integration": 4,
+            "Testing": 20,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F01-002",
+          "seq": "002",
+          "name": "Administrator User Management",
+          "slug": "administrator-user-management",
+          "file": "modules/01-administrator-access-and-role-management/features/F01-002-administrator-user-management.md",
+          "hours": 103,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 30,
+            "API": 46,
+            "Database": 5,
+            "Integration": 4,
+            "Testing": 16,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F01-003",
+          "seq": "003",
+          "name": "Role & Permission Configuration",
+          "slug": "role-and-permission-configuration",
+          "file": "modules/01-administrator-access-and-role-management/features/F01-003-role-and-permission-configuration.md",
+          "hours": 98,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 28,
+            "API": 40,
+            "Database": 7,
+            "Integration": 0,
+            "Testing": 20,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F01-004",
+          "seq": "004",
+          "name": "Administrative Audit Log",
+          "slug": "administrative-audit-log",
+          "file": "modules/01-administrator-access-and-role-management/features/F01-004-administrative-audit-log.md",
+          "hours": 92,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 26,
+            "API": 38,
+            "Database": 8,
+            "Integration": 0,
+            "Testing": 18,
+            "Documentation": 2
+          }
+        }
+      ]
+    },
+    {
+      "nn": "02",
+      "name": "Catalogue Taxonomy & Master Data",
+      "slug": "catalogue-taxonomy-and-master-data",
+      "type": "Business",
+      "folder": "modules/02-catalogue-taxonomy-and-master-data",
+      "feature_count": 3,
+      "total_hours": 215,
+      "features": [
+        {
+          "id": "F02-001",
+          "seq": "001",
+          "name": "Category & Sub-category Management",
+          "slug": "category-and-sub-category-management",
+          "file": "modules/02-catalogue-taxonomy-and-master-data/features/F02-001-category-and-sub-category-management.md",
+          "hours": 98,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 32,
+            "API": 46,
+            "Database": 6,
+            "Integration": 0,
+            "Testing": 12,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F02-002",
+          "seq": "002",
+          "name": "Style & Collection Management",
+          "slug": "style-and-collection-management",
+          "file": "modules/02-catalogue-taxonomy-and-master-data/features/F02-002-style-and-collection-management.md",
+          "hours": 58,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 20,
+            "API": 26,
+            "Database": 3,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F02-003",
+          "seq": "003",
+          "name": "Material, Species & Finish Masters",
+          "slug": "material-species-and-finish-masters",
+          "file": "modules/02-catalogue-taxonomy-and-master-data/features/F02-003-material-species-and-finish-masters.md",
+          "hours": 59,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 22,
+            "API": 26,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        }
+      ]
+    },
+    {
+      "nn": "03",
+      "name": "Dynamic Attribute & Dimension Framework",
+      "slug": "dynamic-attribute-and-dimension-framework",
+      "type": "Business",
+      "folder": "modules/03-dynamic-attribute-and-dimension-framework",
+      "feature_count": 4,
+      "total_hours": 350,
+      "features": [
+        {
+          "id": "F03-001",
+          "seq": "001",
+          "name": "Attribute Library & Units of Measure",
+          "slug": "attribute-library-and-units-of-measure",
+          "file": "modules/03-dynamic-attribute-and-dimension-framework/features/F03-001-attribute-library-and-units-of-measure.md",
+          "hours": 96,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 32,
+            "API": 40,
+            "Database": 9,
+            "Integration": 0,
+            "Testing": 12,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F03-002",
+          "seq": "002",
+          "name": "Category Attribute Templates",
+          "slug": "category-attribute-templates",
+          "file": "modules/03-dynamic-attribute-and-dimension-framework/features/F03-002-category-attribute-templates.md",
+          "hours": 115,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 42,
+            "API": 40,
+            "Database": 10,
+            "Integration": 0,
+            "Testing": 20,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F03-003",
+          "seq": "003",
+          "name": "Template Change Impact Management",
+          "slug": "template-change-impact-management",
+          "file": "modules/03-dynamic-attribute-and-dimension-framework/features/F03-003-template-change-impact-management.md",
+          "hours": 72,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 24,
+            "API": 30,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 12,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F03-004",
+          "seq": "004",
+          "name": "Dimension Normalisation & Display Formatting",
+          "slug": "dimension-normalisation-and-display-formatting",
+          "file": "modules/03-dynamic-attribute-and-dimension-framework/features/F03-004-dimension-normalisation-and-display-formatting.md",
+          "hours": 67,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 22,
+            "API": 26,
+            "Database": 3,
+            "Integration": 0,
+            "Testing": 14,
+            "Documentation": 2
+          }
+        }
+      ]
+    },
+    {
+      "nn": "04",
+      "name": "Product Profile Management",
+      "slug": "product-profile-management",
+      "type": "Business",
+      "folder": "modules/04-product-profile-management",
+      "feature_count": 7,
+      "total_hours": 550,
+      "features": [
+        {
+          "id": "F04-001",
+          "seq": "001",
+          "name": "Product Register & Core Profile",
+          "slug": "product-register-and-core-profile",
+          "file": "modules/04-product-profile-management/features/F04-001-product-register-and-core-profile.md",
+          "hours": 141,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 56,
+            "API": 50,
+            "Database": 8,
+            "Integration": 0,
+            "Testing": 24,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F04-002",
+          "seq": "002",
+          "name": "Category-driven Dimension & Attribute Entry",
+          "slug": "category-driven-dimension-and-attribute-entry",
+          "file": "modules/04-product-profile-management/features/F04-002-category-driven-dimension-and-attribute-entry.md",
+          "hours": 84,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 32,
+            "API": 28,
+            "Database": 8,
+            "Integration": 0,
+            "Testing": 14,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F04-003",
+          "seq": "003",
+          "name": "Materials, Finishes, Lengths & Applications",
+          "slug": "materials-finishes-lengths-and-applications",
+          "file": "modules/04-product-profile-management/features/F04-003-materials-finishes-lengths-and-applications.md",
+          "hours": 57,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 20,
+            "API": 20,
+            "Database": 6,
+            "Integration": 0,
+            "Testing": 10,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F04-004",
+          "seq": "004",
+          "name": "Product Media & Drawing Management",
+          "slug": "product-media-and-drawing-management",
+          "file": "modules/04-product-profile-management/features/F04-004-product-media-and-drawing-management.md",
+          "hours": 98,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 44,
+            "API": 28,
+            "Database": 4,
+            "Integration": 4,
+            "Testing": 16,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F04-005",
+          "seq": "005",
+          "name": "Technical Document Management",
+          "slug": "technical-document-management",
+          "file": "modules/04-product-profile-management/features/F04-005-technical-document-management.md",
+          "hours": 53,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 12,
+            "API": 30,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F04-006",
+          "seq": "006",
+          "name": "Product Duplicate, Archive & Restore",
+          "slug": "product-duplicate-archive-and-restore",
+          "file": "modules/04-product-profile-management/features/F04-006-product-duplicate-archive-and-restore.md",
+          "hours": 67,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 18,
+            "API": 34,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 12,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F04-007",
+          "seq": "007",
+          "name": "Product Preview",
+          "slug": "product-preview",
+          "file": "modules/04-product-profile-management/features/F04-007-product-preview.md",
+          "hours": 50,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 20,
+            "API": 18,
+            "Database": 1,
+            "Integration": 0,
+            "Testing": 10,
+            "Documentation": 1
+          }
+        }
+      ]
+    },
+    {
+      "nn": "05",
+      "name": "Combinations & Product Relationships",
+      "slug": "combinations-and-product-relationships",
+      "type": "Business",
+      "folder": "modules/05-combinations-and-product-relationships",
+      "feature_count": 3,
+      "total_hours": 228,
+      "features": [
+        {
+          "id": "F05-001",
+          "seq": "001",
+          "name": "Typed Product Relationships",
+          "slug": "typed-product-relationships",
+          "file": "modules/05-combinations-and-product-relationships/features/F05-001-typed-product-relationships.md",
+          "hours": 74,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 24,
+            "API": 34,
+            "Database": 5,
+            "Integration": 0,
+            "Testing": 10,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F05-002",
+          "seq": "002",
+          "name": "Combination Record Management",
+          "slug": "combination-record-management",
+          "file": "modules/05-combinations-and-product-relationships/features/F05-002-combination-record-management.md",
+          "hours": 90,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 30,
+            "API": 40,
+            "Database": 6,
+            "Integration": 0,
+            "Testing": 12,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F05-003",
+          "seq": "003",
+          "name": "Combination Component Assembly",
+          "slug": "combination-component-assembly",
+          "file": "modules/05-combinations-and-product-relationships/features/F05-003-combination-component-assembly.md",
+          "hours": 64,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 22,
+            "API": 28,
+            "Database": 3,
+            "Integration": 0,
+            "Testing": 10,
+            "Documentation": 1
+          }
+        }
+      ]
+    },
+    {
+      "nn": "06",
+      "name": "Content Governance & Publishing Workflow",
+      "slug": "content-governance-and-publishing-workflow",
+      "type": "Business",
+      "folder": "modules/06-content-governance-and-publishing-workflow",
+      "feature_count": 5,
+      "total_hours": 483,
+      "features": [
+        {
+          "id": "F06-001",
+          "seq": "001",
+          "name": "Data Completeness & Duplicate Validation",
+          "slug": "data-completeness-and-duplicate-validation",
+          "file": "modules/06-content-governance-and-publishing-workflow/features/F06-001-data-completeness-and-duplicate-validation.md",
+          "hours": 107,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 46,
+            "API": 36,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 18,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F06-002",
+          "seq": "002",
+          "name": "Submit for Review & Review Queue",
+          "slug": "submit-for-review-and-review-queue",
+          "file": "modules/06-content-governance-and-publishing-workflow/features/F06-002-submit-for-review-and-review-queue.md",
+          "hours": 93,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 30,
+            "API": 38,
+            "Database": 5,
+            "Integration": 0,
+            "Testing": 18,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F06-003",
+          "seq": "003",
+          "name": "Review Decision & Approval History",
+          "slug": "review-decision-and-approval-history",
+          "file": "modules/06-content-governance-and-publishing-workflow/features/F06-003-review-decision-and-approval-history.md",
+          "hours": 100,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 34,
+            "API": 42,
+            "Database": 6,
+            "Integration": 0,
+            "Testing": 16,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F06-004",
+          "seq": "004",
+          "name": "Publish, Unpublish & Bulk Publishing",
+          "slug": "publish-unpublish-and-bulk-publishing",
+          "file": "modules/06-content-governance-and-publishing-workflow/features/F06-004-publish-unpublish-and-bulk-publishing.md",
+          "hours": 102,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 28,
+            "API": 46,
+            "Database": 4,
+            "Integration": 4,
+            "Testing": 18,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F06-005",
+          "seq": "005",
+          "name": "Workflow Email Notifications",
+          "slug": "workflow-email-notifications",
+          "file": "modules/06-content-governance-and-publishing-workflow/features/F06-005-workflow-email-notifications.md",
+          "hours": 81,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 22,
+            "API": 28,
+            "Database": 4,
+            "Integration": 16,
+            "Testing": 10,
+            "Documentation": 1
+          }
+        }
+      ]
+    },
+    {
+      "nn": "07",
+      "name": "External Source, Provenance & Content Rights",
+      "slug": "external-source-provenance-and-content-rights",
+      "type": "Business",
+      "folder": "modules/07-external-source-provenance-and-content-rights",
+      "feature_count": 3,
+      "total_hours": 215,
+      "features": [
+        {
+          "id": "F07-001",
+          "seq": "001",
+          "name": "External Source Register",
+          "slug": "external-source-register",
+          "file": "modules/07-external-source-provenance-and-content-rights/features/F07-001-external-source-register.md",
+          "hours": 45,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 16,
+            "API": 22,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F07-002",
+          "seq": "002",
+          "name": "Product Provenance Capture",
+          "slug": "product-provenance-capture",
+          "file": "modules/07-external-source-provenance-and-content-rights/features/F07-002-product-provenance-capture.md",
+          "hours": 82,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 28,
+            "API": 32,
+            "Database": 6,
+            "Integration": 0,
+            "Testing": 14,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F07-003",
+          "seq": "003",
+          "name": "Content Rights Publication Gate & Rights Dashboard",
+          "slug": "content-rights-publication-gate-and-rights-dashboard",
+          "file": "modules/07-external-source-provenance-and-content-rights/features/F07-003-content-rights-publication-gate-and-rights-dashboard.md",
+          "hours": 88,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 32,
+            "API": 36,
+            "Database": 3,
+            "Integration": 0,
+            "Testing": 14,
+            "Documentation": 3
+          }
+        }
+      ]
+    },
+    {
+      "nn": "08",
+      "name": "Public Catalogue Experience",
+      "slug": "public-catalogue-experience",
+      "type": "Business",
+      "folder": "modules/08-public-catalogue-experience",
+      "feature_count": 5,
+      "total_hours": 389,
+      "features": [
+        {
+          "id": "F08-001",
+          "seq": "001",
+          "name": "Catalogue Home Page",
+          "slug": "catalogue-home-page",
+          "file": "modules/08-public-catalogue-experience/features/F08-001-catalogue-home-page.md",
+          "hours": 56,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 30,
+            "API": 14,
+            "Database": 1,
+            "Integration": 0,
+            "Testing": 10,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F08-002",
+          "seq": "002",
+          "name": "Category, Style & Collection Listing Pages",
+          "slug": "category-style-and-collection-listing-pages",
+          "file": "modules/08-public-catalogue-experience/features/F08-002-category-style-and-collection-listing-pages.md",
+          "hours": 99,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 56,
+            "API": 22,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 18,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F08-003",
+          "seq": "003",
+          "name": "Product Detail Page",
+          "slug": "product-detail-page",
+          "file": "modules/08-public-catalogue-experience/features/F08-003-product-detail-page.md",
+          "hours": 110,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 66,
+            "API": 18,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 20,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F08-004",
+          "seq": "004",
+          "name": "Combination Detail Page",
+          "slug": "combination-detail-page",
+          "file": "modules/08-public-catalogue-experience/features/F08-004-combination-detail-page.md",
+          "hours": 55,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 30,
+            "API": 12,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 10,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F08-005",
+          "seq": "005",
+          "name": "Responsive Catalogue Design System & Accessibility",
+          "slug": "responsive-catalogue-design-system-and-accessibility",
+          "file": "modules/08-public-catalogue-experience/features/F08-005-responsive-catalogue-design-system-and-accessibility.md",
+          "hours": 69,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 46,
+            "API": 4,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 16,
+            "Documentation": 3
+          }
+        }
+      ]
+    },
+    {
+      "nn": "09",
+      "name": "Search & Filtering",
+      "slug": "search-and-filtering",
+      "type": "Business",
+      "folder": "modules/09-search-and-filtering",
+      "feature_count": 4,
+      "total_hours": 317,
+      "features": [
+        {
+          "id": "F09-001",
+          "seq": "001",
+          "name": "Search Index & Publication Synchronisation",
+          "slug": "search-index-and-publication-synchronisation",
+          "file": "modules/09-search-and-filtering/features/F09-001-search-index-and-publication-synchronisation.md",
+          "hours": 86,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 8,
+            "API": 44,
+            "Database": 2,
+            "Integration": 16,
+            "Testing": 14,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F09-002",
+          "seq": "002",
+          "name": "Global Keyword, Code & Dimension Search",
+          "slug": "global-keyword-code-and-dimension-search",
+          "file": "modules/09-search-and-filtering/features/F09-002-global-keyword-code-and-dimension-search.md",
+          "hours": 79,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 22,
+            "API": 32,
+            "Database": 3,
+            "Integration": 0,
+            "Testing": 20,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F09-003",
+          "seq": "003",
+          "name": "Configurable Faceted Filters",
+          "slug": "configurable-faceted-filters",
+          "file": "modules/09-search-and-filtering/features/F09-003-configurable-faceted-filters.md",
+          "hours": 96,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 32,
+            "API": 40,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 20,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F09-004",
+          "seq": "004",
+          "name": "Search Suggestions & Results Experience",
+          "slug": "search-suggestions-and-results-experience",
+          "file": "modules/09-search-and-filtering/features/F09-004-search-suggestions-and-results-experience.md",
+          "hours": 56,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 26,
+            "API": 18,
+            "Database": 1,
+            "Integration": 0,
+            "Testing": 10,
+            "Documentation": 1
+          }
+        }
+      ]
+    },
+    {
+      "nn": "10",
+      "name": "Product Enquiry",
+      "slug": "product-enquiry",
+      "type": "Business",
+      "folder": "modules/10-product-enquiry",
+      "feature_count": 3,
+      "total_hours": 150,
+      "features": [
+        {
+          "id": "F10-001",
+          "seq": "001",
+          "name": "Product Enquiry Form",
+          "slug": "product-enquiry-form",
+          "file": "modules/10-product-enquiry/features/F10-001-product-enquiry-form.md",
+          "hours": 51,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 16,
+            "API": 12,
+            "Database": 2,
+            "Integration": 8,
+            "Testing": 12,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F10-002",
+          "seq": "002",
+          "name": "Enquiry Routing & Acknowledgement",
+          "slug": "enquiry-routing-and-acknowledgement",
+          "file": "modules/10-product-enquiry/features/F10-002-enquiry-routing-and-acknowledgement.md",
+          "hours": 46,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 10,
+            "API": 20,
+            "Database": 1,
+            "Integration": 4,
+            "Testing": 10,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F10-003",
+          "seq": "003",
+          "name": "Enquiry Register",
+          "slug": "enquiry-register",
+          "file": "modules/10-product-enquiry/features/F10-003-enquiry-register.md",
+          "hours": 53,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 14,
+            "API": 28,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 1
+          }
+        }
+      ]
+    },
+    {
+      "nn": "11",
+      "name": "SEO, Analytics & Website Integration",
+      "slug": "seo-analytics-and-website-integration",
+      "type": "Shared",
+      "folder": "modules/11-seo-analytics-and-website-integration",
+      "feature_count": 4,
+      "total_hours": 254,
+      "features": [
+        {
+          "id": "F11-001",
+          "seq": "001",
+          "name": "SEO URLs, Metadata & Redirects",
+          "slug": "seo-urls-metadata-and-redirects",
+          "file": "modules/11-seo-analytics-and-website-integration/features/F11-001-seo-urls-metadata-and-redirects.md",
+          "hours": 80,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 24,
+            "API": 38,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 12,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F11-002",
+          "seq": "002",
+          "name": "Sitemap, Structured Data & Social Metadata",
+          "slug": "sitemap-structured-data-and-social-metadata",
+          "file": "modules/11-seo-analytics-and-website-integration/features/F11-002-sitemap-structured-data-and-social-metadata.md",
+          "hours": 43,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 2,
+            "API": 28,
+            "Database": 1,
+            "Integration": 0,
+            "Testing": 10,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F11-003",
+          "seq": "003",
+          "name": "Garrison Website Integration",
+          "slug": "garrison-website-integration",
+          "file": "modules/11-seo-analytics-and-website-integration/features/F11-003-garrison-website-integration.md",
+          "hours": 69,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 22,
+            "API": 8,
+            "Database": 0,
+            "Integration": 24,
+            "Testing": 12,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F11-004",
+          "seq": "004",
+          "name": "Catalogue Usage Analytics",
+          "slug": "catalogue-usage-analytics",
+          "file": "modules/11-seo-analytics-and-website-integration/features/F11-004-catalogue-usage-analytics.md",
+          "hours": 62,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 20,
+            "API": 20,
+            "Database": 2,
+            "Integration": 8,
+            "Testing": 10,
+            "Documentation": 2
+          }
+        }
+      ]
+    },
+    {
+      "nn": "12",
+      "name": "Catalogue Data Import & Bulk Operations",
+      "slug": "catalogue-data-import-and-bulk-operations",
+      "type": "Technical",
+      "folder": "modules/12-catalogue-data-import-and-bulk-operations",
+      "feature_count": 4,
+      "total_hours": 342,
+      "features": [
+        {
+          "id": "F12-001",
+          "seq": "001",
+          "name": "Import Templates & Bulk Product Import",
+          "slug": "import-templates-and-bulk-product-import",
+          "file": "modules/12-catalogue-data-import-and-bulk-operations/features/F12-001-import-templates-and-bulk-product-import.md",
+          "hours": 115,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 40,
+            "API": 50,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 18,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F12-002",
+          "seq": "002",
+          "name": "Bulk Media Upload & Auto-matching",
+          "slug": "bulk-media-upload-and-auto-matching",
+          "file": "modules/12-catalogue-data-import-and-bulk-operations/features/F12-002-bulk-media-upload-and-auto-matching.md",
+          "hours": 68,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 24,
+            "API": 28,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 12,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F12-003",
+          "seq": "003",
+          "name": "Import Staging Review & Commit",
+          "slug": "import-staging-review-and-commit",
+          "file": "modules/12-catalogue-data-import-and-bulk-operations/features/F12-003-import-staging-review-and-commit.md",
+          "hours": 91,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 34,
+            "API": 38,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 14,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F12-004",
+          "seq": "004",
+          "name": "Catalogue Export & Bulk Update",
+          "slug": "catalogue-export-and-bulk-update",
+          "file": "modules/12-catalogue-data-import-and-bulk-operations/features/F12-004-catalogue-export-and-bulk-update.md",
+          "hours": 68,
+          "notes": "Optional",
+          "areas": {
+            "UI": 22,
+            "API": 32,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 10,
+            "Documentation": 2
+          }
+        }
+      ]
+    },
+    {
+      "nn": "13",
+      "name": "Platform Security, Performance & Operations",
+      "slug": "platform-security-performance-and-operations",
+      "type": "Technical",
+      "folder": "modules/13-platform-security-performance-and-operations",
+      "feature_count": 4,
+      "total_hours": 235,
+      "features": [
+        {
+          "id": "F13-001",
+          "seq": "001",
+          "name": "Media Processing & Content Delivery",
+          "slug": "media-processing-and-content-delivery",
+          "file": "modules/13-platform-security-performance-and-operations/features/F13-001-media-processing-and-content-delivery.md",
+          "hours": 72,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 10,
+            "API": 30,
+            "Database": 2,
+            "Integration": 16,
+            "Testing": 12,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F13-002",
+          "seq": "002",
+          "name": "Security Hardening & Upload Protection",
+          "slug": "security-hardening-and-upload-protection",
+          "file": "modules/13-platform-security-performance-and-operations/features/F13-002-security-hardening-and-upload-protection.md",
+          "hours": 60,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 4,
+            "API": 26,
+            "Database": 1,
+            "Integration": 8,
+            "Testing": 18,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F13-003",
+          "seq": "003",
+          "name": "Backup, Monitoring & Error Logging",
+          "slug": "backup-monitoring-and-error-logging",
+          "file": "modules/13-platform-security-performance-and-operations/features/F13-003-backup-monitoring-and-error-logging.md",
+          "hours": 52,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 6,
+            "API": 22,
+            "Database": 2,
+            "Integration": 8,
+            "Testing": 10,
+            "Documentation": 4
+          }
+        },
+        {
+          "id": "F13-004",
+          "seq": "004",
+          "name": "Environments & Deployment Pipeline",
+          "slug": "environments-and-deployment-pipeline",
+          "file": "modules/13-platform-security-performance-and-operations/features/F13-004-environments-and-deployment-pipeline.md",
+          "hours": 51,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 0,
+            "Database": 4,
+            "Integration": 32,
+            "Testing": 8,
+            "Documentation": 7
+          }
+        }
+      ]
+    }
+  ]
+}

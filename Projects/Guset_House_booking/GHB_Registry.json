@@ -1,0 +1,372 @@
+{
+  "project_code": "GHB",
+  "project_name": "Guest House Booking and Access Management Platform",
+  "output_root": "Projects/Guset_House_booking",
+  "updated_at": "2026-09-22T09:39:05Z",
+  "totals": {
+    "all_hours": 1759,
+    "go_live_hours": 1601,
+    "optional_hours": 158,
+    "feature_count": 30
+  },
+  "modules": [
+    {
+      "nn": "01",
+      "name": "User Registration & Authentication",
+      "slug": "user-registration-and-authentication",
+      "type": "Shared",
+      "folder": "modules/01-user-registration-and-authentication",
+      "feature_count": 4,
+      "total_hours": 226,
+      "features": [
+        {
+          "id": "F01-001",
+          "seq": "001",
+          "name": "Mobile OTP Registration",
+          "slug": "mobile-otp-registration",
+          "file": "modules/01-user-registration-and-authentication/features/F01-001-mobile-otp-registration.md",
+          "hours": 40,
+          "notes": "Go-live"
+        },
+        {
+          "id": "F01-002",
+          "seq": "002",
+          "name": "Government Identity Submission",
+          "slug": "government-identity-submission",
+          "file": "modules/01-user-registration-and-authentication/features/F01-002-government-identity-submission.md",
+          "hours": 77,
+          "notes": "Go-live"
+        },
+        {
+          "id": "F01-003",
+          "seq": "003",
+          "name": "Secure Login and Session Management",
+          "slug": "secure-login-and-session-management",
+          "file": "modules/01-user-registration-and-authentication/features/F01-003-secure-login-and-session-management.md",
+          "hours": 46,
+          "notes": "Go-live"
+        },
+        {
+          "id": "F01-004",
+          "seq": "004",
+          "name": "Role and Permission Assignment",
+          "slug": "role-and-permission-assignment",
+          "file": "modules/01-user-registration-and-authentication/features/F01-004-role-and-permission-assignment.md",
+          "hours": 63,
+          "notes": "Go-live"
+        }
+      ]
+    },
+    {
+      "nn": "02",
+      "name": "Site, Building & Room Configuration",
+      "slug": "site-building-and-room-configuration",
+      "type": "Business",
+      "folder": "modules/02-site-building-and-room-configuration",
+      "feature_count": 4,
+      "total_hours": 240,
+      "features": [
+        {
+          "id": "F02-001",
+          "seq": "001",
+          "name": "Site and Location Master",
+          "slug": "site-and-location-master",
+          "file": "modules/02-site-building-and-room-configuration/features/F02-001-site-and-location-master.md",
+          "hours": 54,
+          "notes": "Go-live"
+        },
+        {
+          "id": "F02-002",
+          "seq": "002",
+          "name": "Building and Floor Setup",
+          "slug": "building-and-floor-setup",
+          "file": "modules/02-site-building-and-room-configuration/features/F02-002-building-and-floor-setup.md",
+          "hours": 60,
+          "notes": "Go-live"
+        },
+        {
+          "id": "F02-003",
+          "seq": "003",
+          "name": "Room Catalogue and Pricing",
+          "slug": "room-catalogue-and-pricing",
+          "file": "modules/02-site-building-and-room-configuration/features/F02-003-room-catalogue-and-pricing.md",
+          "hours": 75,
+          "notes": "Go-live"
+        },
+        {
+          "id": "F02-004",
+          "seq": "004",
+          "name": "Heterogeneous Property Structures",
+          "slug": "heterogeneous-property-structures",
+          "file": "modules/02-site-building-and-room-configuration/features/F02-004-heterogeneous-property-structures.md",
+          "hours": 51,
+          "notes": "Go-live"
+        }
+      ]
+    },
+    {
+      "nn": "03",
+      "name": "Booking & Room Allocation",
+      "slug": "booking-and-room-allocation",
+      "type": "Business",
+      "folder": "modules/03-booking-and-room-allocation",
+      "feature_count": 5,
+      "total_hours": 256,
+      "features": [
+        {
+          "id": "F03-001",
+          "seq": "001",
+          "name": "Inventory Browse and Availability Search",
+          "slug": "inventory-browse-and-availability-search",
+          "file": "modules/03-booking-and-room-allocation/features/F03-001-inventory-browse-and-availability-search.md",
+          "hours": 62,
+          "notes": "Go-live"
+        },
+        {
+          "id": "F03-002",
+          "seq": "002",
+          "name": "Booking Request with Conflict Prevention",
+          "slug": "booking-request-with-conflict-prevention",
+          "file": "modules/03-booking-and-room-allocation/features/F03-002-booking-request-with-conflict-prevention.md",
+          "hours": 75,
+          "notes": "Go-live"
+        },
+        {
+          "id": "F03-003",
+          "seq": "003",
+          "name": "Booking Summary and Pricing Preview",
+          "slug": "booking-summary-and-pricing-preview",
+          "file": "modules/03-booking-and-room-allocation/features/F03-003-booking-summary-and-pricing-preview.md",
+          "hours": 34,
+          "notes": "Go-live"
+        },
+        {
+          "id": "F03-004",
+          "seq": "004",
+          "name": "Automatic Room Allocation",
+          "slug": "automatic-room-allocation",
+          "file": "modules/03-booking-and-room-allocation/features/F03-004-automatic-room-allocation.md",
+          "hours": 45,
+          "notes": "Go-live"
+        },
+        {
+          "id": "F03-005",
+          "seq": "005",
+          "name": "Booking Confirmation Record",
+          "slug": "booking-confirmation-record",
+          "file": "modules/03-booking-and-room-allocation/features/F03-005-booking-confirmation-record.md",
+          "hours": 40,
+          "notes": "Go-live"
+        }
+      ]
+    },
+    {
+      "nn": "04",
+      "name": "Online Payment Processing",
+      "slug": "online-payment-processing",
+      "type": "Business",
+      "folder": "modules/04-online-payment-processing",
+      "feature_count": 3,
+      "total_hours": 152,
+      "features": [
+        {
+          "id": "F04-001",
+          "seq": "001",
+          "name": "Payment Checkout Initiation",
+          "slug": "payment-checkout-initiation",
+          "file": "modules/04-online-payment-processing/features/F04-001-payment-checkout-initiation.md",
+          "hours": 41,
+          "notes": "Go-live"
+        },
+        {
+          "id": "F04-002",
+          "seq": "002",
+          "name": "Payment Success Handling",
+          "slug": "payment-success-handling",
+          "file": "modules/04-online-payment-processing/features/F04-002-payment-success-handling.md",
+          "hours": 55,
+          "notes": "Go-live"
+        },
+        {
+          "id": "F04-003",
+          "seq": "003",
+          "name": "Payment Failure Retry and Status",
+          "slug": "payment-failure-retry-and-status",
+          "file": "modules/04-online-payment-processing/features/F04-003-payment-failure-retry-and-status.md",
+          "hours": 56,
+          "notes": "Go-live"
+        }
+      ]
+    },
+    {
+      "nn": "05",
+      "name": "Access Credentials & Guest Check-in",
+      "slug": "access-credentials-and-guest-check-in",
+      "type": "Business",
+      "folder": "modules/05-access-credentials-and-guest-check-in",
+      "feature_count": 5,
+      "total_hours": 254,
+      "features": [
+        {
+          "id": "F05-001",
+          "seq": "001",
+          "name": "Access Credential Generation",
+          "slug": "access-credential-generation",
+          "file": "modules/05-access-credentials-and-guest-check-in/features/F05-001-access-credential-generation.md",
+          "hours": 44,
+          "notes": "Go-live"
+        },
+        {
+          "id": "F05-002",
+          "seq": "002",
+          "name": "Credential Delivery",
+          "slug": "credential-delivery",
+          "file": "modules/05-access-credentials-and-guest-check-in/features/F05-002-credential-delivery.md",
+          "hours": 38,
+          "notes": "Go-live"
+        },
+        {
+          "id": "F05-003",
+          "seq": "003",
+          "name": "Self Check-in and Occupancy Tracking",
+          "slug": "self-check-in-and-occupancy-tracking",
+          "file": "modules/05-access-credentials-and-guest-check-in/features/F05-003-self-check-in-and-occupancy-tracking.md",
+          "hours": 79,
+          "notes": "Go-live"
+        },
+        {
+          "id": "F05-004",
+          "seq": "004",
+          "name": "Optional Hardware Access Handoff",
+          "slug": "optional-hardware-access-handoff",
+          "file": "modules/05-access-credentials-and-guest-check-in/features/F05-004-optional-hardware-access-handoff.md",
+          "hours": 62,
+          "notes": "OPTIONAL / conditional"
+        },
+        {
+          "id": "F05-005",
+          "seq": "005",
+          "name": "Manual Key Override Recording",
+          "slug": "manual-key-override-recording",
+          "file": "modules/05-access-credentials-and-guest-check-in/features/F05-005-manual-key-override-recording.md",
+          "hours": 31,
+          "notes": "Go-live"
+        }
+      ]
+    },
+    {
+      "nn": "06",
+      "name": "Administration, Monitoring & Reports",
+      "slug": "administration-monitoring-and-reports",
+      "type": "Business",
+      "folder": "modules/06-administration-monitoring-and-reports",
+      "feature_count": 4,
+      "total_hours": 217,
+      "features": [
+        {
+          "id": "F06-001",
+          "seq": "001",
+          "name": "Operations Dashboard",
+          "slug": "operations-dashboard",
+          "file": "modules/06-administration-monitoring-and-reports/features/F06-001-operations-dashboard.md",
+          "hours": 54,
+          "notes": "Go-live"
+        },
+        {
+          "id": "F06-002",
+          "seq": "002",
+          "name": "Administrative Master and User Controls",
+          "slug": "administrative-master-and-user-controls",
+          "file": "modules/06-administration-monitoring-and-reports/features/F06-002-administrative-master-and-user-controls.md",
+          "hours": 31,
+          "notes": "Go-live"
+        },
+        {
+          "id": "F06-003",
+          "seq": "003",
+          "name": "Exceptional Booking Override",
+          "slug": "exceptional-booking-override",
+          "file": "modules/06-administration-monitoring-and-reports/features/F06-003-exceptional-booking-override.md",
+          "hours": 67,
+          "notes": "Go-live"
+        },
+        {
+          "id": "F06-004",
+          "seq": "004",
+          "name": "Activity Revenue and Utilization Reports",
+          "slug": "activity-revenue-and-utilization-reports",
+          "file": "modules/06-administration-monitoring-and-reports/features/F06-004-activity-revenue-and-utilization-reports.md",
+          "hours": 65,
+          "notes": "Go-live"
+        }
+      ]
+    },
+    {
+      "nn": "07",
+      "name": "Notification Service",
+      "slug": "notification-service",
+      "type": "Technical",
+      "folder": "modules/07-notification-service",
+      "feature_count": 2,
+      "total_hours": 111,
+      "features": [
+        {
+          "id": "F07-001",
+          "seq": "001",
+          "name": "Notification Template Catalogue",
+          "slug": "notification-template-catalogue",
+          "file": "modules/07-notification-service/features/F07-001-notification-template-catalogue.md",
+          "hours": 56,
+          "notes": "Go-live"
+        },
+        {
+          "id": "F07-002",
+          "seq": "002",
+          "name": "Notification Dispatch and Status",
+          "slug": "notification-dispatch-and-status",
+          "file": "modules/07-notification-service/features/F07-002-notification-dispatch-and-status.md",
+          "hours": 55,
+          "notes": "Go-live"
+        }
+      ]
+    },
+    {
+      "nn": "08",
+      "name": "Integration Hub",
+      "slug": "integration-hub",
+      "type": "Technical",
+      "folder": "modules/08-integration-hub",
+      "feature_count": 3,
+      "total_hours": 303,
+      "features": [
+        {
+          "id": "F08-001",
+          "seq": "001",
+          "name": "Payment Gateway Adapter",
+          "slug": "payment-gateway-adapter",
+          "file": "modules/08-integration-hub/features/F08-001-payment-gateway-adapter.md",
+          "hours": 130,
+          "notes": "Go-live"
+        },
+        {
+          "id": "F08-002",
+          "seq": "002",
+          "name": "Communication Service Adapter",
+          "slug": "communication-service-adapter",
+          "file": "modules/08-integration-hub/features/F08-002-communication-service-adapter.md",
+          "hours": 77,
+          "notes": "Go-live"
+        },
+        {
+          "id": "F08-003",
+          "seq": "003",
+          "name": "Access-Control Hardware Adapter",
+          "slug": "access-control-hardware-adapter",
+          "file": "modules/08-integration-hub/features/F08-003-access-control-hardware-adapter.md",
+          "hours": 96,
+          "notes": "OPTIONAL / conditional"
+        }
+      ]
+    }
+  ]
+}
