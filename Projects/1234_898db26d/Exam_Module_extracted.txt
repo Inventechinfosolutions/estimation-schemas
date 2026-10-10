@@ -1,0 +1,809 @@
+Examination Module
+STATEMENT OF WORK
+Table of Contents
+1. Introduction3
+2. Objectives3
+3. User Categories4
+3.1 Candidate4
+3.2 Examination Administrator4
+3.3 Examination Centre/Invigilator User5
+3.4 Verifier/Public User5
+4. Candidate Login5
+4.1 OTP-Based Login5
+5. Examination Registration6
+6. Government Department Employee Registration6
+6.1 KGID Number6
+6.2 Candidate Confirmation6
+7. Examination Selection7
+8. Examination Centre Preference7
+9. Examination Fee Management8
+9.1 Government Department Employees8
+10. PSU / Board / Corporation / Society / Other Organisation Registration8
+11. Candidate Details for Other Organisations9
+12. Competent Authority Document9
+13. Fee Payment10
+14. Registration Confirmation10
+15. Examination Scheduling11
+16. Hall Ticket Generation11
+17. Examination Centre Management12
+18. Authorised Examination Centre Restriction12
+18.1 Centre-Based Examination Access12
+18.2 Candidate-Centre Mapping13
+19. Technical Enforcement of Authorised Centre13
+20. Centre-Level Examination Activation14
+21. Examination Credentials15
+22. Examination Login15
+23. Question Bank Management16
+24. Random Question Selection16
+25. Multiple Question Paper Versions17
+26. Examination Configuration18
+27. Examination Interface19
+28. Examination Timer19
+29. Examination Activity Recording19
+30. Examination Security20
+31. Examination Submission21
+32. Evaluation21
+33. Result Publication22
+34. Certificate Generation22
+35. QR Code on Certificate22
+36. Online Certificate Verification23
+37. Certificate Security23
+38. Examination Centre Dashboard24
+39. Administrator Dashboard24
+40. Reports25
+41. Audit Trail26
+42. Notifications27
+43. End-to-End Examination Flow27
+44. Key Business Rules31
+45. Authorised Examination Centre Access Requirement32
+1. Introduction
+The proposed Examination Module will provide an end-to-end digital platform for candidate registration, examination scheduling, hall ticket generation, secure examination conduct, evaluation, result publication, certificate generation, and certificate verification.
+The system will support two categories of candidates:
+Government Department Employees 
+Employees of PSUs, Boards, Corporations, Societies and other eligible organisations 
+The system will provide controlled access to examinations and ensure that candidates can take the examination only from authorised examination centres configured and approved by the department.
+2. Objectives
+The key objectives of the Examination Module are:
+Provide secure candidate login using OTP. 
+Enable online examination registration. 
+Integrate with KGID for Government Department Employees. 
+Automate candidate information retrieval through KGID integration. 
+Support examination fee management. 
+Allow candidates to select preferred examination centres. 
+Facilitate examination scheduling and centre allocation. 
+Generate and provide hall tickets digitally. 
+Conduct secure computer-based examinations. 
+Generate multiple question paper versions through randomisation. 
+Ensure examination access only from authorised examination centres. 
+Record examination activity for audit and monitoring. 
+Generate results immediately after submission, wherever applicable. 
+Generate digitally verifiable certificates with QR codes. 
+Allow third parties to verify certificates through QR code. 
+3. User Categories
+The system shall support the following users/roles.
+3.1 Candidate
+Candidates will:
+Register/login using mobile OTP. 
+Submit examination registration. 
+Provide required personal and employment details. 
+Upload required documents. 
+Select preferred examination centres. 
+Pay applicable examination fees. 
+Download hall ticket. 
+Attend the examination from the allotted authorised centre. 
+Login using system-generated examination credentials. 
+Take the examination. 
+View examination result. 
+Download examination certificate. 
+Allow certificate verification through QR code. 
+3.2 Examination Administrator
+The Examination Administrator will be responsible for:
+Managing examinations. 
+Managing examination schedules. 
+Managing examination centres. 
+Managing candidate registrations. 
+Managing question banks. 
+Configuring examination parameters. 
+Managing question paper versions. 
+Monitoring examination sessions. 
+Managing results and certificates. 
+Generating reports. 
+3.3 Examination Centre/Invigilator User
+The authorised examination centre user will be responsible for:
+Accessing the centre-specific examination interface. 
+Verifying candidates. 
+Starting/activating candidate examination sessions. 
+Monitoring examination attendance. 
+Monitoring examination status. 
+Handling centre-level examination activities. 
+3.4 Verifier/Public User
+A public/verification user may scan the QR code available on the certificate and verify whether the certificate was issued by the department and is genuine.
+4. Candidate Login
+4.1 OTP-Based Login
+Candidates will access the examination portal through their registered mobile number.
+The login process shall be:
+Candidate enters mobile number. 
+System validates the mobile number. 
+OTP is generated and sent to the registered mobile number. 
+Candidate enters OTP. 
+System validates OTP. 
+Upon successful verification, candidate will be logged into the portal. 
+The system shall maintain OTP-related security controls such as:
+OTP expiry. 
+OTP retry limits. 
+Resend OTP control. 
+Failed attempt tracking. 
+Session timeout. 
+5. Examination Registration
+The registration process will differ based on the candidate category.
+The system shall provide two registration types:
+Type 1 – Government Department Employees
+Type 2 – PSU/Board/Corporation/Society/Other Eligible Organisation Employees
+6. Government Department Employee Registration
+6.1 KGID Number
+For Government Department Employees, KGID Number will be mandatory.
+The candidate will enter their KGID number during registration.
+The system will integrate with the relevant KGID system/API to retrieve the candidate's available employee information.
+Information Retrieved Through KGID Integration
+Subject to availability through the integration, details may include:
+Employee Name 
+KGID Number 
+Department 
+Designation 
+Employee Details 
+Date of Birth 
+Other available employment-related information 
+The retrieved information will be displayed to the candidate.
+6.2 Candidate Confirmation
+After KGID details are retrieved:
+Candidate reviews the information. 
+Candidate confirms that the displayed details are correct. 
+Candidate provides additional information required for examination registration. 
+Additional candidate-entered details will include, as applicable:
+Father’s Name 
+Mobile Number 
+Email ID 
+Other required registration information 
+The system shall save the candidate information after successful validation.
+7. Examination Selection
+After completing candidate information, the candidate shall be able to select the examination for which they wish to register.
+The system shall display the examinations that are currently open for registration.
+The candidate shall:
+Select the examination. 
+View applicable examination details. 
+Select examination centre preferences. 
+8. Examination Centre Preference
+Candidates will be provided with the option to select their preferred examination centres.
+For example:
+Centre Preference 1 
+Centre Preference 2 
+The candidate shall select the preferred centres from the list of examination centres configured by the administrator.
+The system shall capture the candidate's preferences and use them during centre allocation.
+Centre Allocation
+The administrator/system shall allocate the candidate to an examination centre based on:
+Candidate's selected preferences. 
+Centre availability. 
+Centre capacity. 
+Examination schedule. 
+Candidate category. 
+Other business rules defined by the department. 
+The final allotted examination centre shall be displayed to the candidate and reflected in the hall ticket.
+9. Examination Fee Management
+The system shall support different fee rules based on candidate category and number of examination attempts.
+9.1 Government Department Employees
+For Government Department Employees:
+First-time examination registration – Free 
+Second-time/subsequent examination registration – Applicable registration fee 
+The system shall maintain the candidate's previous examination/attempt history to determine whether the candidate is appearing for the first time or a subsequent time.
+The applicable fee shall be configurable by the administrator.
+10. PSU / Board / Corporation / Society / Other Organisation Registration
+Candidates who are not Government Department Employees will register under the applicable category, such as:
+PSU 
+Board 
+Corporation 
+Society 
+Other eligible organisation 
+For these candidates, examination registration fee shall be mandatory, as per the fee configured by the administrator.
+11. Candidate Details for Other Organisations
+Candidates under this category shall enter their required details manually.
+The details may include:
+Candidate Name 
+Father’s Name 
+Mobile Number 
+Email ID 
+Employee ID 
+Organisation/Department 
+Date of Joining 
+Designation 
+Other required details 
+The exact fields shall be configurable based on the final approved requirements.
+12. Competent Authority Document
+Candidates from PSU/Boards/Corporations/Societies/other eligible organisations shall be required to upload a digitally signed document from their competent authority confirming their department/organisation and employment status.
+Document Template
+The system shall provide a facility to:
+Download the prescribed competent authority document format. 
+Fill the required information. 
+Obtain the competent authority's digital signature. 
+Upload the digitally signed document during registration. 
+The system shall allow only the configured file formats and file sizes.
+The uploaded document shall be associated with the candidate's registration and made available to authorised administrators for verification.
+13. Fee Payment
+Where a registration fee is applicable, the candidate shall be redirected to the payment process.
+The system shall support:
+Fee calculation. 
+Payment initiation. 
+Payment status. 
+Successful payment confirmation. 
+Failed payment handling. 
+Transaction/reference number. 
+Payment receipt. 
+Registration confirmation after successful payment. 
+The candidate's registration shall be considered complete only after successful payment, wherever payment is mandatory.
+14. Registration Confirmation
+After successful registration, the system shall:
+Generate a unique registration/application number. 
+Store the complete candidate application. 
+Store examination details. 
+Store centre preferences. 
+Store uploaded documents. 
+Store payment details where applicable. 
+Display registration confirmation. 
+Allow the candidate to view registration status from their login. 
+15. Examination Scheduling
+The administrator shall be able to create and manage examination schedules.
+The examination schedule may contain:
+Examination Name 
+Examination Date 
+Examination Time 
+Duration 
+Reporting Time 
+Examination Centre 
+Number of seats 
+Candidate capacity 
+Other examination instructions 
+The administrator shall be able to assign candidates to available examination sessions and centres.
+16. Hall Ticket Generation
+Once the examination is scheduled and the candidate is allotted an examination centre, the system shall make the Hall Ticket available in the candidate's login.
+The Hall Ticket shall contain, as applicable:
+Candidate Name 
+Registration Number 
+Examination Name 
+Examination Date 
+Examination Time 
+Reporting Time 
+Examination Centre 
+Examination Centre Address 
+Candidate photograph/details, if applicable 
+Instructions 
+Candidate examination credentials/information, if applicable 
+Other examination-related information 
+The candidate shall be able to download and print the Hall Ticket.
+17. Examination Centre Management
+The system shall maintain a master list of authorised examination centres.
+The administrator shall be able to:
+Add examination centres. 
+Edit centre details. 
+Activate/deactivate centres. 
+Configure centre capacity. 
+Configure centre infrastructure details. 
+Map examination sessions to centres. 
+Configure centre-specific users/invigilators. 
+View candidate allocation for each centre. 
+Only active and authorised centres shall be available for examination scheduling.
+18. Authorised Examination Centre Restriction
+Critical Requirement
+The examination shall NOT be accessible from arbitrary locations or from the candidate's personal computer/home system.
+The examination can be conducted only from an authorised examination centre configured and approved in the system.
+This requirement shall be implemented as a core security and examination-control feature.
+18.1 Centre-Based Examination Access
+Each authorised examination centre shall be configured in the system.
+The centre shall have:
+Unique Centre ID 
+Centre Name 
+Address 
+Approved capacity 
+Centre administrator/invigilator user 
+Approved examination sessions 
+Authorised systems/devices/network configuration, as applicable 
+18.2 Candidate-Centre Mapping
+A candidate shall be mapped to a specific examination centre and examination session.
+For example:
+Candidate: ABCExamination: Departmental ExaminationDate: 15 October 2026Time: 10:00 AM – 12:00 PMCentre: Centre 01Seat/Computer: System 25
+The candidate shall be allowed to take the examination only against this authorised examination session.
+19. Technical Enforcement of Authorised Centre
+To prevent candidates from accessing the examination remotely, the system shall implement one or more centre-level access controls based on the final technical infrastructure approved by the client.
+Recommended approach
+The examination environment should use:
+Authorised Centre + Authorised Network + Authorised Device + Candidate Allocation + Examination Session
+The examination system shall validate:
+Whether the candidate is scheduled for the examination. 
+Whether the examination session is currently active. 
+Whether the candidate is mapped to the centre. 
+Whether the request originates from the authorised centre network/device environment. 
+Whether the candidate is permitted to start the examination. 
+Whether the candidate has already attempted/completed the examination. 
+If any validation fails, the system shall prevent examination access.
+Example
+If a candidate tries to access the examination from:
+Home laptop – Access Denied 
+Mobile phone – Access Denied 
+Another city/network – Access Denied 
+Unauthorised computer at the centre – Access Denied 
+Authorised computer at the allotted centre during the scheduled session – Access Allowed 
+20. Centre-Level Examination Activation
+Before the examination starts, the authorised centre/invigilator shall access the centre examination dashboard.
+The centre user shall be able to:
+View scheduled examination. 
+View candidate list. 
+Verify candidate attendance. 
+Activate eligible candidate examination sessions. 
+Monitor examination status. 
+The examination shall be activated only for candidates who are:
+Registered. 
+Fee-compliant, where applicable. 
+Scheduled. 
+Allocated to that centre. 
+Present at the authorised centre. 
+Successfully verified by the centre/invigilator. 
+This provides an additional control against unauthorised access.
+21. Examination Credentials
+After the examination schedule is finalised, the system shall generate the required examination login credentials.
+The system shall generate:
+Examination Login ID 
+Password 
+The credentials shall be securely shared with the candidate as per the approved communication mechanism.
+The candidate shall use these credentials to access the examination system at the authorised examination centre.
+22. Examination Login
+At the examination centre:
+Candidate arrives at the allotted centre. 
+Candidate's identity/registration is verified by the authorised centre staff. 
+Candidate is assigned/allowed to use the authorised examination computer. 
+Candidate enters the system-generated Login ID and Password. 
+System validates the candidate. 
+System validates centre and examination session. 
+System validates examination timing. 
+Examination is made available to the candidate. 
+Candidate starts the examination. 
+23. Question Bank Management
+The administrator shall have a question bank management facility.
+The system shall allow authorised users to:
+Create questions. 
+Edit questions. 
+Delete/deactivate questions. 
+Categorise questions. 
+Configure question type. 
+Configure marks. 
+Configure correct answers. 
+Configure difficulty level, if required. 
+Configure subject/topic. 
+Upload/import questions, if required. 
+Activate/deactivate questions. 
+The question bank shall contain sufficient questions to support randomisation and multiple examination versions.
+24. Random Question Selection
+The system shall dynamically generate the question paper from the question bank.
+Questions shall be selected randomly based on the examination configuration.
+For example, if an examination requires 100 questions, the system shall randomly select the required number of questions from the eligible question pool.
+The administrator shall be able to configure:
+Number of questions. 
+Marks per question. 
+Total marks. 
+Duration. 
+Question categories. 
+Number of questions from each category, if required. 
+25. Multiple Question Paper Versions
+The system shall support multiple question paper versions such as:
+Version A 
+Version B 
+Version C 
+Version D 
+The versions shall contain the same set/eligible pool of questions, but the ordering shall differ.
+The system shall randomise:
+Question Order
+Example:
+Version A
+Question 1 
+Question 2 
+Question 3 
+Question 4 
+Version B
+Question 3 
+Question 1 
+Question 4 
+Question 2 
+Answer Option Order
+The answer options shall also be randomised.
+For example:
+Version A
+A. Option 1B. Option 2C. Option 3D. Option 4
+Version B
+A. Option 3B. Option 1C. Option 4D. Option 2
+The system shall ensure that randomisation does not change the underlying correct answer mapping.
+26. Examination Configuration
+The administrator shall be able to configure:
+Examination name. 
+Examination duration. 
+Number of questions. 
+Total marks. 
+Marks per question. 
+Passing marks/percentage. 
+Negative marking, if applicable. 
+Question randomisation. 
+Answer option randomisation. 
+Number of question versions. 
+Examination instructions. 
+Examination start/end time. 
+Result display rules. 
+Certificate eligibility rules. 
+These parameters shall be configurable based on the approved examination requirements.
+27. Examination Interface
+The candidate shall see a secure examination interface containing:
+Question number. 
+Question text. 
+Answer options. 
+Next button. 
+Previous button. 
+Question navigation. 
+Answered/unanswered status. 
+Remaining time. 
+Submit examination option. 
+The system shall automatically save candidate responses during the examination.
+28. Examination Timer
+The examination shall have a centrally controlled timer.
+The candidate shall be able to see the remaining examination time.
+Once the examination duration expires:
+The system shall automatically stop the examination. 
+Candidate responses saved up to that point shall be submitted. 
+The candidate shall not be allowed to continue after expiry. 
+29. Examination Activity Recording
+The system shall record examination-related activities for audit and security purposes.
+The system shall capture, as applicable:
+Candidate login time. 
+Examination start time. 
+Examination submission time. 
+Examination completion status. 
+Candidate responses. 
+Question sequence/version. 
+Centre details. 
+Device/system details. 
+IP/network details, where available. 
+Session information. 
+Login/logout activity. 
+Abnormal session events. 
+Auto-submission events. 
+The objective is to maintain a complete examination audit trail.
+30. Examination Security
+The examination environment shall implement appropriate controls to prevent unauthorised access and malpractice.
+The final security implementation may include:
+Centre-based access restriction. 
+Authorised network restriction. 
+Authorised device restriction. 
+Candidate-session validation. 
+Browser/session controls. 
+Examination timer. 
+Random question ordering. 
+Random answer option ordering. 
+Multiple paper versions. 
+Session monitoring. 
+Activity logging. 
+Automatic submission. 
+Prevention of multiple simultaneous sessions. 
+The exact controls shall depend on the infrastructure available at the authorised examination centres.
+31. Examination Submission
+The candidate shall be able to submit the examination after completing the required questions.
+Before submission, the system may display:
+Number of answered questions. 
+Number of unanswered questions. 
+Confirmation message. 
+Upon confirmation:
+Examination shall be submitted. 
+Candidate responses shall be locked. 
+Evaluation shall be initiated. 
+Candidate shall not be able to modify responses. 
+If the examination timer expires, the system shall automatically submit the examination.
+32. Evaluation
+For objective-type examinations, the system shall automatically evaluate candidate responses against the configured answer key.
+The system shall calculate:
+Number of correct answers. 
+Number of incorrect answers. 
+Number of unanswered questions. 
+Marks obtained. 
+Negative marks, if applicable. 
+Total score. 
+Percentage. 
+Pass/Fail status. 
+The evaluation rules shall be configurable.
+33. Result Publication
+After successful evaluation, the candidate shall be able to view the examination result from their login, subject to the configured result publication rules.
+The result may contain:
+Candidate Name 
+Registration Number 
+Examination Name 
+Examination Date 
+Total Marks 
+Marks Obtained 
+Percentage 
+Pass/Fail Status 
+Other approved result details 
+34. Certificate Generation
+For candidates who meet the applicable eligibility/pass criteria, the system shall generate an examination certificate.
+The certificate shall be digitally generated by the system.
+The candidate shall be able to download the certificate from their portal login.
+35. QR Code on Certificate
+Every certificate shall contain a unique QR Code.
+The QR code shall be linked to the certificate verification mechanism.
+The QR code may contain/reference a unique certificate verification number or secure verification URL.
+36. Online Certificate Verification
+A public certificate verification page shall be provided.
+When the QR code on the certificate is scanned:
+The QR code directs the user to the certificate verification page. 
+The system validates the certificate number/token. 
+The system retrieves the certificate record. 
+The system displays the verification result. 
+The verification page shall indicate whether the certificate is:
+Valid/Genuine 
+Invalid/Not Found 
+Cancelled/Revoked, if certificate cancellation functionality is required. 
+The verification page shall display only the information approved for public disclosure.
+37. Certificate Security
+The system shall ensure that each certificate has a unique identifier.
+The system shall maintain:
+Certificate Number 
+Candidate Reference 
+Examination Reference 
+Examination Date 
+Result Status 
+Certificate Issue Date 
+Certificate Status 
+Verification Token/QR Reference 
+Any certificate that has been cancelled/revoked shall return the appropriate status during QR verification.
+38. Examination Centre Dashboard
+An authorised examination centre shall have a dedicated dashboard.
+The dashboard may provide:
+Today's examinations. 
+Upcoming examinations. 
+Candidate count. 
+Present candidates. 
+Absent candidates. 
+Examination started/completed count. 
+Active candidates. 
+Submitted candidates. 
+Examination status. 
+Centre-specific reports. 
+Centre users shall only have access to examinations and candidates mapped to their centre.
+39. Administrator Dashboard
+The administrator dashboard shall provide an overall view of the examination process.
+The dashboard may include:
+Total registrations. 
+Government employee registrations. 
+Other organisation registrations. 
+Pending registrations. 
+Fee-paid candidates. 
+Examination-wise registrations. 
+Centre-wise candidate count. 
+Scheduled examinations. 
+Completed examinations. 
+Pass/fail statistics. 
+Certificate generation status. 
+40. Reports
+The system shall provide reports such as:
+Candidate Reports
+Candidate registration report. 
+Category-wise candidate report. 
+Department-wise candidate report. 
+Examination-wise candidate report. 
+Centre-wise candidate report. 
+Fee Reports
+Fee-paid candidates. 
+Free registrations. 
+Second/subsequent attempt registrations. 
+Payment transactions. 
+Failed transactions. 
+Collection summary. 
+Examination Reports
+Examination schedule report. 
+Centre allocation report. 
+Attendance report. 
+Candidate examination status. 
+Examination completion report. 
+Result report. 
+Pass/fail report. 
+Certificate Reports
+Certificate generated report. 
+Certificate issued report. 
+Certificate verification report. 
+Cancelled/revoked certificate report, if applicable. 
+Reports shall be exportable in approved formats such as Excel/PDF, subject to final requirements.
+41. Audit Trail
+The system shall maintain audit logs for critical activities, including:
+Candidate registration. 
+Candidate data modification. 
+KGID verification. 
+Document upload. 
+Fee transactions. 
+Centre allocation. 
+Examination scheduling. 
+Question creation/modification. 
+Question paper generation. 
+Candidate examination login. 
+Examination start. 
+Examination submission. 
+Result generation. 
+Certificate generation. 
+Certificate cancellation, if applicable. 
+Administrative actions. 
+The audit trail shall capture relevant user, date/time and activity information.
+42. Notifications
+The system may provide notifications to candidates at different stages.
+Notifications may include:
+Registration confirmation. 
+Payment confirmation. 
+Registration status. 
+Examination schedule. 
+Centre allocation. 
+Hall ticket availability. 
+Examination reminders. 
+Examination credentials. 
+Result publication. 
+Certificate availability. 
+Notifications may be provided through configured channels such as:
+SMS 
+Email 
+Portal notification 
+The exact notification channels shall be finalised during requirement confirmation.
+43. End-to-End Examination Flow
+The proposed end-to-end flow is:
+Candidate Login
+↓
+OTP Verification
+↓
+Select Registration Type
+↓
+Government Employee
+Enter KGID Number
+↓
+KGID Integration
+↓
+Retrieve Employee Details
+↓
+Candidate Confirmation
+↓
+Enter Additional Details
+↓
+Select Examination
+↓
+Select Centre Preference 1 & 2
+↓
+Check Attempt/Eligibility
+↓
+Fee Applicable?
+First Government Employee Attempt → Free 
+Subsequent Attempt → Fee Applicable 
+↓
+Payment, if Applicable
+↓
+Registration Confirmation
+PSU / Board / Corporation / Society / Other Organisation
+Enter Candidate Details
+↓
+Enter Organisation/Employment Details
+↓
+Download Competent Authority Format
+↓
+Obtain Digital Signature
+↓
+Upload Digitally Signed Document
+↓
+Select Examination
+↓
+Select Centre Preference 1 & 2
+↓
+Fee Payment
+↓
+Registration Confirmation
+Common Flow After Registration
+Candidate Registration
+↓
+Application Verification/Approval, if applicable
+↓
+Examination Scheduling
+↓
+Centre Allocation
+↓
+Hall Ticket Generation
+↓
+Candidate Reports to Allotted Authorised Centre
+↓
+Candidate Verification by Centre/Invigilator
+↓
+Authorised Centre & Device/Network Validation
+↓
+Examination Session Activation
+↓
+Candidate Login using System-Generated Credentials
+↓
+Question Paper Generated Randomly
+↓
+Version A/B/C/D
+↓
+Question Order Randomisation
+↓
+Answer Option Randomisation
+↓
+Examination
+↓
+Responses Recorded
+↓
+Submit / Auto Submit
+↓
+Automatic Evaluation
+↓
+Result
+↓
+Certificate Generation
+↓
+Certificate Download
+↓
+QR Code Verification
+44. Key Business Rules
+#
+Business Rule
+1
+Candidate login shall be through OTP.
+2
+KGID Number shall be mandatory for Government Department Employees.
+3
+KGID details shall be retrieved through integration, subject to API/data availability.
+4
+Candidate shall confirm retrieved KGID information before proceeding.
+5
+Government employees shall receive free registration for the first attempt.
+6
+Fee shall be applicable for subsequent attempts by Government employees.
+7
+Fee shall be mandatory for eligible non-government organisation candidates.
+8
+Non-government organisation candidates shall upload digitally signed competent authority confirmation.
+9
+Candidates shall select two preferred examination centres.
+10
+Final centre allocation shall be controlled by the examination administrator/system.
+11
+Hall ticket shall be available only after examination scheduling/allocation.
+12
+Examination shall be accessible only from authorised examination centres.
+13
+Candidate shall be allowed to take the examination only in the assigned examination session/centre.
+14
+Question selection shall be randomised from the question bank.
+15
+Multiple question paper versions shall be supported.
+16
+Question order shall be randomised.
+17
+Answer option order shall also be randomised.
+18
+Candidate responses shall be recorded and securely stored.
+19
+Examination shall automatically submit after the configured duration.
+20
+Results shall be generated based on configured evaluation rules.
+21
+Eligible candidates shall receive certificates through their login.
+22
+Certificates shall contain a unique QR code.
+23
+QR code shall enable online certificate authenticity verification.
+24
+All critical examination activities shall be audit logged.
+45. Authorised Examination Centre Access Requirement
+The examination shall be conducted only at examination centres that are authorised and configured in the system by the Department. Candidates shall not be permitted to access or attempt the examination from their home, personal device, unauthorised location, unauthorised network, or any centre other than the centre allotted to them.
+The system shall ensure that a candidate can start the examination only when all the following conditions are satisfied:
+The candidate is registered and eligible for the examination. 
+The candidate is allotted to the particular examination centre. 
+The candidate is scheduled for the specific examination date and time. 
+The candidate is accessing the examination through an authorised system/device available at the allotted examination centre. 
+The examination centre and examination session are active and authorised in the system. 
+The candidate's examination session has been validated/activated by the authorised centre or invigilator. 
+The system shall validate the examination centre and session before granting access to the examination. If the candidate attempts to access the examination from an unauthorised location, device, network, centre, or outside the scheduled examination session, the system shall deny access.
+The examination centre shall be managed through the administration module, where authorised centre details, centre capacity, examination schedules, candidate allocation, and centre users can be configured.
+The final technical mechanism for enforcing centre-only access, such as authorised network/IP validation, device whitelisting, secure examination environment, centre-level authentication, or a combination of these controls, shall be finalised based on the Department's infrastructure and security requirements.

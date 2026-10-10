@@ -1,0 +1,409 @@
+{
+  "project_code": "1234",
+  "project_name": "test1",
+  "output_root": "/workspace/Projects/1234_898db26d",
+  "updated_at": "2026-10-10T13:58:57.444966+00:00",
+  "modules": [
+    {
+      "nn": "01",
+      "name": "User and Role Management",
+      "slug": "user-and-role-management",
+      "type": "Shared",
+      "folder": "modules/01-user-and-role-management",
+      "feature_count": 3,
+      "total_hours": 137,
+      "features": [
+        {
+          "id": "F01-001",
+          "seq": "001",
+          "name": "Internal User Lifecycle",
+          "slug": "internal-user-lifecycle",
+          "file": "modules/01-user-and-role-management/features/F01-001-internal-user-lifecycle.md",
+          "hours": 51
+        },
+        {
+          "id": "F01-002",
+          "seq": "002",
+          "name": "Role and Permission Matrix",
+          "slug": "role-and-permission-matrix",
+          "file": "modules/01-user-and-role-management/features/F01-002-role-and-permission-matrix.md",
+          "hours": 51
+        },
+        {
+          "id": "F01-003",
+          "seq": "003",
+          "name": "Staff Session and Access Control",
+          "slug": "staff-session-and-access-control",
+          "file": "modules/01-user-and-role-management/features/F01-003-staff-session-and-access-control.md",
+          "hours": 35
+        }
+      ]
+    },
+    {
+      "nn": "02",
+      "name": "Examination Configuration",
+      "slug": "examination-configuration",
+      "type": "Business",
+      "folder": "modules/02-examination-configuration",
+      "feature_count": 3,
+      "total_hours": 163,
+      "features": [
+        {
+          "id": "F02-001",
+          "seq": "001",
+          "name": "Examination Catalogue and Registration Windows",
+          "slug": "examination-catalogue-and-registration-windows",
+          "file": "modules/02-examination-configuration/features/F02-001-examination-catalogue-and-registration-windows.md",
+          "hours": 59
+        },
+        {
+          "id": "F02-002",
+          "seq": "002",
+          "name": "Fee Rules and Attempt Eligibility",
+          "slug": "fee-rules-and-attempt-eligibility",
+          "file": "modules/02-examination-configuration/features/F02-002-fee-rules-and-attempt-eligibility.md",
+          "hours": 49
+        },
+        {
+          "id": "F02-003",
+          "seq": "003",
+          "name": "Evaluation Rules and Examination Parameters",
+          "slug": "evaluation-rules-and-examination-parameters",
+          "file": "modules/02-examination-configuration/features/F02-003-evaluation-rules-and-examination-parameters.md",
+          "hours": 55
+        }
+      ]
+    },
+    {
+      "nn": "03",
+      "name": "Candidate Access and Registration",
+      "slug": "candidate-access-and-registration",
+      "type": "Business",
+      "folder": "modules/03-candidate-access-and-registration",
+      "feature_count": 5,
+      "total_hours": 233,
+      "features": [
+        {
+          "id": "F03-001",
+          "seq": "001",
+          "name": "OTP-Based Candidate Login",
+          "slug": "otp-based-candidate-login",
+          "file": "modules/03-candidate-access-and-registration/features/F03-001-otp-based-candidate-login.md",
+          "hours": 47
+        },
+        {
+          "id": "F03-002",
+          "seq": "002",
+          "name": "Government Employee Registration with KGID",
+          "slug": "government-employee-registration-with-kgid",
+          "file": "modules/03-candidate-access-and-registration/features/F03-002-government-employee-registration-with-kgid.md",
+          "hours": 69
+        },
+        {
+          "id": "F03-003",
+          "seq": "003",
+          "name": "Other Organisation Candidate Registration",
+          "slug": "other-organisation-candidate-registration",
+          "file": "modules/03-candidate-access-and-registration/features/F03-003-other-organisation-candidate-registration.md",
+          "hours": 47
+        },
+        {
+          "id": "F03-004",
+          "seq": "004",
+          "name": "Competent Authority Document Handling",
+          "slug": "competent-authority-document-handling",
+          "file": "modules/03-candidate-access-and-registration/features/F03-004-competent-authority-document-handling.md",
+          "hours": 33
+        },
+        {
+          "id": "F03-005",
+          "seq": "005",
+          "name": "Examination and Centre Preference Selection",
+          "slug": "examination-and-centre-preference-selection",
+          "file": "modules/03-candidate-access-and-registration/features/F03-005-examination-and-centre-preference-selection.md",
+          "hours": 37
+        }
+      ]
+    },
+    {
+      "nn": "04",
+      "name": "Fee and Payment",
+      "slug": "fee-and-payment",
+      "type": "Business",
+      "folder": "modules/04-fee-and-payment",
+      "feature_count": 2,
+      "total_hours": 120,
+      "features": [
+        {
+          "id": "F04-001",
+          "seq": "001",
+          "name": "Registration Fee Determination and Payment",
+          "slug": "registration-fee-determination-and-payment",
+          "file": "modules/04-fee-and-payment/features/F04-001-registration-fee-determination-and-payment.md",
+          "hours": 83
+        },
+        {
+          "id": "F04-002",
+          "seq": "002",
+          "name": "Payment Reconciliation Views",
+          "slug": "payment-reconciliation-views",
+          "file": "modules/04-fee-and-payment/features/F04-002-payment-reconciliation-views.md",
+          "hours": 37
+        }
+      ]
+    },
+    {
+      "nn": "05",
+      "name": "Scheduling Allocation and Hall Ticket",
+      "slug": "scheduling-allocation-and-hall-ticket",
+      "type": "Business",
+      "folder": "modules/05-scheduling-allocation-and-hall-ticket",
+      "feature_count": 3,
+      "total_hours": 159,
+      "features": [
+        {
+          "id": "F05-001",
+          "seq": "001",
+          "name": "Examination Scheduling",
+          "slug": "examination-scheduling",
+          "file": "modules/05-scheduling-allocation-and-hall-ticket/features/F05-001-examination-scheduling.md",
+          "hours": 53
+        },
+        {
+          "id": "F05-002",
+          "seq": "002",
+          "name": "Centre Allocation",
+          "slug": "centre-allocation",
+          "file": "modules/05-scheduling-allocation-and-hall-ticket/features/F05-002-centre-allocation.md",
+          "hours": 67
+        },
+        {
+          "id": "F05-003",
+          "seq": "003",
+          "name": "Hall Ticket Generation",
+          "slug": "hall-ticket-generation",
+          "file": "modules/05-scheduling-allocation-and-hall-ticket/features/F05-003-hall-ticket-generation.md",
+          "hours": 39
+        }
+      ]
+    },
+    {
+      "nn": "06",
+      "name": "Examination Centre Management and Enforcement",
+      "slug": "examination-centre-management-and-enforcement",
+      "type": "Business",
+      "folder": "modules/06-examination-centre-management-and-enforcement",
+      "feature_count": 3,
+      "total_hours": 163,
+      "features": [
+        {
+          "id": "F06-001",
+          "seq": "001",
+          "name": "Examination Centre Master",
+          "slug": "examination-centre-master",
+          "file": "modules/06-examination-centre-management-and-enforcement/features/F06-001-examination-centre-master.md",
+          "hours": 47
+        },
+        {
+          "id": "F06-002",
+          "seq": "002",
+          "name": "Authorised Centre Access Enforcement",
+          "slug": "authorised-centre-access-enforcement",
+          "file": "modules/06-examination-centre-management-and-enforcement/features/F06-002-authorised-centre-access-enforcement.md",
+          "hours": 49
+        },
+        {
+          "id": "F06-003",
+          "seq": "003",
+          "name": "Centre Session Activation and Invigilator Controls",
+          "slug": "centre-session-activation-and-invigilator-controls",
+          "file": "modules/06-examination-centre-management-and-enforcement/features/F06-003-centre-session-activation-and-invigilator-controls.md",
+          "hours": 67
+        }
+      ]
+    },
+    {
+      "nn": "07",
+      "name": "Question Bank and Paper Generation",
+      "slug": "question-bank-and-paper-generation",
+      "type": "Business",
+      "folder": "modules/07-question-bank-and-paper-generation",
+      "feature_count": 3,
+      "total_hours": 145,
+      "features": [
+        {
+          "id": "F07-001",
+          "seq": "001",
+          "name": "Question Bank Maintenance",
+          "slug": "question-bank-maintenance",
+          "file": "modules/07-question-bank-and-paper-generation/features/F07-001-question-bank-maintenance.md",
+          "hours": 53
+        },
+        {
+          "id": "F07-002",
+          "seq": "002",
+          "name": "Random Paper Generation and Versions",
+          "slug": "random-paper-generation-and-versions",
+          "file": "modules/07-question-bank-and-paper-generation/features/F07-002-random-paper-generation-and-versions.md",
+          "hours": 57
+        },
+        {
+          "id": "F07-003",
+          "seq": "003",
+          "name": "Question and Option Order Randomisation",
+          "slug": "question-and-option-order-randomisation",
+          "file": "modules/07-question-bank-and-paper-generation/features/F07-003-question-and-option-order-randomisation.md",
+          "hours": 35
+        }
+      ]
+    },
+    {
+      "nn": "08",
+      "name": "Computer-Based Examination Conduct",
+      "slug": "computer-based-examination-conduct",
+      "type": "Business",
+      "folder": "modules/08-computer-based-examination-conduct",
+      "feature_count": 3,
+      "total_hours": 151,
+      "features": [
+        {
+          "id": "F08-001",
+          "seq": "001",
+          "name": "Examination Credential Issuance and Exam Login",
+          "slug": "examination-credential-issuance-and-exam-login",
+          "file": "modules/08-computer-based-examination-conduct/features/F08-001-examination-credential-issuance-and-exam-login.md",
+          "hours": 41
+        },
+        {
+          "id": "F08-002",
+          "seq": "002",
+          "name": "Examination Interface and Timer",
+          "slug": "examination-interface-and-timer",
+          "file": "modules/08-computer-based-examination-conduct/features/F08-002-examination-interface-and-timer.md",
+          "hours": 67
+        },
+        {
+          "id": "F08-003",
+          "seq": "003",
+          "name": "Examination Security Activity and Submission",
+          "slug": "examination-security-activity-and-submission",
+          "file": "modules/08-computer-based-examination-conduct/features/F08-003-examination-security-activity-and-submission.md",
+          "hours": 43
+        }
+      ]
+    },
+    {
+      "nn": "09",
+      "name": "Results Certificates and Verification",
+      "slug": "results-certificates-and-verification",
+      "type": "Business",
+      "folder": "modules/09-results-certificates-and-verification",
+      "feature_count": 3,
+      "total_hours": 123,
+      "features": [
+        {
+          "id": "F09-001",
+          "seq": "001",
+          "name": "Automatic Evaluation and Result Publication",
+          "slug": "automatic-evaluation-and-result-publication",
+          "file": "modules/09-results-certificates-and-verification/features/F09-001-automatic-evaluation-and-result-publication.md",
+          "hours": 49
+        },
+        {
+          "id": "F09-002",
+          "seq": "002",
+          "name": "Certificate Generation with QR Code",
+          "slug": "certificate-generation-with-qr-code",
+          "file": "modules/09-results-certificates-and-verification/features/F09-002-certificate-generation-with-qr-code.md",
+          "hours": 47
+        },
+        {
+          "id": "F09-003",
+          "seq": "003",
+          "name": "Public Online Certificate Verification",
+          "slug": "public-online-certificate-verification",
+          "file": "modules/09-results-certificates-and-verification/features/F09-003-public-online-certificate-verification.md",
+          "hours": 27
+        }
+      ]
+    },
+    {
+      "nn": "10",
+      "name": "Dashboards Reports and Audit",
+      "slug": "dashboards-reports-and-audit",
+      "type": "Business",
+      "folder": "modules/10-dashboards-reports-and-audit",
+      "feature_count": 4,
+      "total_hours": 168,
+      "features": [
+        {
+          "id": "F10-001",
+          "seq": "001",
+          "name": "Administrator Dashboard",
+          "slug": "administrator-dashboard",
+          "file": "modules/10-dashboards-reports-and-audit/features/F10-001-administrator-dashboard.md",
+          "hours": 39
+        },
+        {
+          "id": "F10-002",
+          "seq": "002",
+          "name": "Examination Centre Dashboard",
+          "slug": "examination-centre-dashboard",
+          "file": "modules/10-dashboards-reports-and-audit/features/F10-002-examination-centre-dashboard.md",
+          "hours": 39
+        },
+        {
+          "id": "F10-003",
+          "seq": "003",
+          "name": "Operational Reports and Export",
+          "slug": "operational-reports-and-export",
+          "file": "modules/10-dashboards-reports-and-audit/features/F10-003-operational-reports-and-export.md",
+          "hours": 47
+        },
+        {
+          "id": "F10-004",
+          "seq": "004",
+          "name": "Audit Trail Inquiry",
+          "slug": "audit-trail-inquiry",
+          "file": "modules/10-dashboards-reports-and-audit/features/F10-004-audit-trail-inquiry.md",
+          "hours": 43
+        }
+      ]
+    },
+    {
+      "nn": "11",
+      "name": "Integrations and Notifications",
+      "slug": "integrations-and-notifications",
+      "type": "Technical",
+      "folder": "modules/11-integrations-and-notifications",
+      "feature_count": 3,
+      "total_hours": 193,
+      "features": [
+        {
+          "id": "F11-001",
+          "seq": "001",
+          "name": "KGID Integration Service",
+          "slug": "kgid-integration-service",
+          "file": "modules/11-integrations-and-notifications/features/F11-001-kgid-integration-service.md",
+          "hours": 51
+        },
+        {
+          "id": "F11-002",
+          "seq": "002",
+          "name": "Payment Gateway Integration",
+          "slug": "payment-gateway-integration",
+          "file": "modules/11-integrations-and-notifications/features/F11-002-payment-gateway-integration.md",
+          "hours": 85
+        },
+        {
+          "id": "F11-003",
+          "seq": "003",
+          "name": "Notification Delivery Service",
+          "slug": "notification-delivery-service",
+          "file": "modules/11-integrations-and-notifications/features/F11-003-notification-delivery-service.md",
+          "hours": 57
+        }
+      ]
+    }
+  ]
+}
