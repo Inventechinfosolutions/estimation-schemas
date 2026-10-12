@@ -1,0 +1,541 @@
+{
+  "project_code": "AUCTION",
+  "project_name": "Auction Management System",
+  "output_root": "Projects/Auction",
+  "updated_at": "2026-10-12T01:59:30+00:00",
+  "modules": [
+    {
+      "nn": "01",
+      "name": "Staff Access and Role Management",
+      "slug": "staff-access-and-role-management",
+      "type": "Shared",
+      "folder": "modules/01-staff-access-and-role-management",
+      "feature_count": 4,
+      "total_hours": 165,
+      "features": [
+        {
+          "id": "F01-001",
+          "seq": "001",
+          "name": "Staff User Accounts",
+          "slug": "staff-user-accounts",
+          "file": "modules/01-staff-access-and-role-management/features/F01-001-staff-user-accounts.md",
+          "hours": 50
+        },
+        {
+          "id": "F01-002",
+          "seq": "002",
+          "name": "Role Assignment and Permissions",
+          "slug": "role-assignment-and-permissions",
+          "file": "modules/01-staff-access-and-role-management/features/F01-002-role-assignment-and-permissions.md",
+          "hours": 57
+        },
+        {
+          "id": "F01-003",
+          "seq": "003",
+          "name": "Department Master and Staff Department",
+          "slug": "department-master-and-staff-department",
+          "file": "modules/01-staff-access-and-role-management/features/F01-003-department-master-and-staff-department.md",
+          "hours": 24
+        },
+        {
+          "id": "F01-004",
+          "seq": "004",
+          "name": "Staff Login and Session",
+          "slug": "staff-login-and-session",
+          "file": "modules/01-staff-access-and-role-management/features/F01-004-staff-login-and-session.md",
+          "hours": 34
+        }
+      ]
+    },
+    {
+      "nn": "02",
+      "name": "Category and Catalogue Management",
+      "slug": "category-and-catalogue-management",
+      "type": "Business",
+      "folder": "modules/02-category-and-catalogue-management",
+      "feature_count": 5,
+      "total_hours": 246,
+      "features": [
+        {
+          "id": "F02-001",
+          "seq": "001",
+          "name": "Category and Sub-category Management",
+          "slug": "category-and-sub-category-management",
+          "file": "modules/02-category-and-catalogue-management/features/F02-001-category-and-sub-category-management.md",
+          "hours": 57
+        },
+        {
+          "id": "F02-002",
+          "seq": "002",
+          "name": "Reusable Field Master",
+          "slug": "reusable-field-master",
+          "file": "modules/02-category-and-catalogue-management/features/F02-002-reusable-field-master.md",
+          "hours": 34
+        },
+        {
+          "id": "F02-003",
+          "seq": "003",
+          "name": "Field Options for Select Fields",
+          "slug": "field-options-for-select-fields",
+          "file": "modules/02-category-and-catalogue-management/features/F02-003-field-options-for-select-fields.md",
+          "hours": 28
+        },
+        {
+          "id": "F02-004",
+          "seq": "004",
+          "name": "Category\u2013Field Mapping",
+          "slug": "category-field-mapping",
+          "file": "modules/02-category-and-catalogue-management/features/F02-004-category-field-mapping.md",
+          "hours": 39
+        },
+        {
+          "id": "F02-005",
+          "seq": "005",
+          "name": "Catalogue Item Maintenance",
+          "slug": "catalogue-item-maintenance",
+          "file": "modules/02-category-and-catalogue-management/features/F02-005-catalogue-item-maintenance.md",
+          "hours": 88
+        }
+      ]
+    },
+    {
+      "nn": "03",
+      "name": "Bidder Registration and Profile",
+      "slug": "bidder-registration-and-profile",
+      "type": "Business",
+      "folder": "modules/03-bidder-registration-and-profile",
+      "feature_count": 4,
+      "total_hours": 183,
+      "features": [
+        {
+          "id": "F03-001",
+          "seq": "001",
+          "name": "Bidder Self-Registration",
+          "slug": "bidder-self-registration",
+          "file": "modules/03-bidder-registration-and-profile/features/F03-001-bidder-self-registration.md",
+          "hours": 43
+        },
+        {
+          "id": "F03-002",
+          "seq": "002",
+          "name": "Bidder Account Verification",
+          "slug": "bidder-account-verification",
+          "file": "modules/03-bidder-registration-and-profile/features/F03-002-bidder-account-verification.md",
+          "hours": 57
+        },
+        {
+          "id": "F03-003",
+          "seq": "003",
+          "name": "Bidder Login and Session",
+          "slug": "bidder-login-and-session",
+          "file": "modules/03-bidder-registration-and-profile/features/F03-003-bidder-login-and-session.md",
+          "hours": 26
+        },
+        {
+          "id": "F03-004",
+          "seq": "004",
+          "name": "Bidder Profile, Organisation and Documents",
+          "slug": "bidder-profile-organisation-and-documents",
+          "file": "modules/03-bidder-registration-and-profile/features/F03-004-bidder-profile-organisation-and-documents.md",
+          "hours": 57
+        }
+      ]
+    },
+    {
+      "nn": "04",
+      "name": "Auction Creation",
+      "slug": "auction-creation",
+      "type": "Business",
+      "folder": "modules/04-auction-creation",
+      "feature_count": 6,
+      "total_hours": 275,
+      "features": [
+        {
+          "id": "F04-001",
+          "seq": "001",
+          "name": "Auction Basic Information and Participation Rules",
+          "slug": "auction-basic-information-and-participation-rules",
+          "file": "modules/04-auction-creation/features/F04-001-auction-basic-information-and-participation-rules.md",
+          "hours": 53
+        },
+        {
+          "id": "F04-002",
+          "seq": "002",
+          "name": "Pricing, EMD and Bid Parameters",
+          "slug": "pricing-emd-and-bid-parameters",
+          "file": "modules/04-auction-creation/features/F04-002-pricing-emd-and-bid-parameters.md",
+          "hours": 41
+        },
+        {
+          "id": "F04-003",
+          "seq": "003",
+          "name": "Catalogue Item Selection and Lot Organisation",
+          "slug": "catalogue-item-selection-and-lot-organisation",
+          "file": "modules/04-auction-creation/features/F04-003-catalogue-item-selection-and-lot-organisation.md",
+          "hours": 61
+        },
+        {
+          "id": "F04-004",
+          "seq": "004",
+          "name": "Auction Supporting Documents",
+          "slug": "auction-supporting-documents",
+          "file": "modules/04-auction-creation/features/F04-004-auction-supporting-documents.md",
+          "hours": 30
+        },
+        {
+          "id": "F04-005",
+          "seq": "005",
+          "name": "Participation and Live Auction Schedule",
+          "slug": "participation-and-live-auction-schedule",
+          "file": "modules/04-auction-creation/features/F04-005-participation-and-live-auction-schedule.md",
+          "hours": 39
+        },
+        {
+          "id": "F04-006",
+          "seq": "006",
+          "name": "Draft Review and Submit for Approval",
+          "slug": "draft-review-and-submit-for-approval",
+          "file": "modules/04-auction-creation/features/F04-006-draft-review-and-submit-for-approval.md",
+          "hours": 51
+        }
+      ]
+    },
+    {
+      "nn": "05",
+      "name": "Auction Review, Approval and Publication",
+      "slug": "auction-review-approval-and-publication",
+      "type": "Business",
+      "folder": "modules/05-auction-review-approval-and-publication",
+      "feature_count": 2,
+      "total_hours": 104,
+      "features": [
+        {
+          "id": "F05-001",
+          "seq": "001",
+          "name": "Auction Review and Decision",
+          "slug": "auction-review-and-decision",
+          "file": "modules/05-auction-review-approval-and-publication/features/F05-001-auction-review-and-decision.md",
+          "hours": 63
+        },
+        {
+          "id": "F05-002",
+          "seq": "002",
+          "name": "Auction Notice and Publication",
+          "slug": "auction-notice-and-publication",
+          "file": "modules/05-auction-review-approval-and-publication/features/F05-002-auction-notice-and-publication.md",
+          "hours": 41
+        }
+      ]
+    },
+    {
+      "nn": "06",
+      "name": "Corrigendum Management",
+      "slug": "corrigendum-management",
+      "type": "Business",
+      "folder": "modules/06-corrigendum-management",
+      "feature_count": 2,
+      "total_hours": 95,
+      "features": [
+        {
+          "id": "F06-001",
+          "seq": "001",
+          "name": "Corrigendum Draft and Approval",
+          "slug": "corrigendum-draft-and-approval",
+          "file": "modules/06-corrigendum-management/features/F06-001-corrigendum-draft-and-approval.md",
+          "hours": 61
+        },
+        {
+          "id": "F06-002",
+          "seq": "002",
+          "name": "Corrigendum Publication and Bidder Access",
+          "slug": "corrigendum-publication-and-bidder-access",
+          "file": "modules/06-corrigendum-management/features/F06-002-corrigendum-publication-and-bidder-access.md",
+          "hours": 34
+        }
+      ]
+    },
+    {
+      "nn": "07",
+      "name": "Auction Discovery and Participation",
+      "slug": "auction-discovery-and-participation",
+      "type": "Business",
+      "folder": "modules/07-auction-discovery-and-participation",
+      "feature_count": 4,
+      "total_hours": 187,
+      "features": [
+        {
+          "id": "F07-001",
+          "seq": "001",
+          "name": "Published Auction Search and Detail",
+          "slug": "published-auction-search-and-detail",
+          "file": "modules/07-auction-discovery-and-participation/features/F07-001-published-auction-search-and-detail.md",
+          "hours": 53
+        },
+        {
+          "id": "F07-002",
+          "seq": "002",
+          "name": "Expression of Interest and Participation",
+          "slug": "expression-of-interest-and-participation",
+          "file": "modules/07-auction-discovery-and-participation/features/F07-002-expression-of-interest-and-participation.md",
+          "hours": 43
+        },
+        {
+          "id": "F07-003",
+          "seq": "003",
+          "name": "EMD Fulfilment",
+          "slug": "emd-fulfilment",
+          "file": "modules/07-auction-discovery-and-participation/features/F07-003-emd-fulfilment.md",
+          "hours": 47
+        },
+        {
+          "id": "F07-004",
+          "seq": "004",
+          "name": "Participation Document Upload",
+          "slug": "participation-document-upload",
+          "file": "modules/07-auction-discovery-and-participation/features/F07-004-participation-document-upload.md",
+          "hours": 44
+        }
+      ]
+    },
+    {
+      "nn": "08",
+      "name": "Pre-Auction Query and Clarification",
+      "slug": "pre-auction-query-and-clarification",
+      "type": "Business",
+      "folder": "modules/08-pre-auction-query-and-clarification",
+      "feature_count": 1,
+      "total_hours": 59,
+      "features": [
+        {
+          "id": "F08-001",
+          "seq": "001",
+          "name": "Pre-auction Query and Clarification",
+          "slug": "pre-auction-query-and-clarification",
+          "file": "modules/08-pre-auction-query-and-clarification/features/F08-001-pre-auction-query-and-clarification.md",
+          "hours": 59
+        }
+      ]
+    },
+    {
+      "nn": "09",
+      "name": "Pre-Live Participation Evaluation",
+      "slug": "pre-live-participation-evaluation",
+      "type": "Business",
+      "folder": "modules/09-pre-live-participation-evaluation",
+      "feature_count": 2,
+      "total_hours": 111,
+      "features": [
+        {
+          "id": "F09-001",
+          "seq": "001",
+          "name": "Participation Evaluation and Eligibility Decision",
+          "slug": "participation-evaluation-and-eligibility-decision",
+          "file": "modules/09-pre-live-participation-evaluation/features/F09-001-participation-evaluation-and-eligibility-decision.md",
+          "hours": 74
+        },
+        {
+          "id": "F09-002",
+          "seq": "002",
+          "name": "Accepted Bidder List Approval",
+          "slug": "accepted-bidder-list-approval",
+          "file": "modules/09-pre-live-participation-evaluation/features/F09-002-accepted-bidder-list-approval.md",
+          "hours": 37
+        }
+      ]
+    },
+    {
+      "nn": "10",
+      "name": "Live Auction Bidding and Extension",
+      "slug": "live-auction-bidding-and-extension",
+      "type": "Business",
+      "folder": "modules/10-live-auction-bidding-and-extension",
+      "feature_count": 3,
+      "total_hours": 175,
+      "features": [
+        {
+          "id": "F10-001",
+          "seq": "001",
+          "name": "Live Bid Submission",
+          "slug": "live-bid-submission",
+          "file": "modules/10-live-auction-bidding-and-extension/features/F10-001-live-bid-submission.md",
+          "hours": 84
+        },
+        {
+          "id": "F10-002",
+          "seq": "002",
+          "name": "Live Bid Validation and Visibility",
+          "slug": "live-bid-validation-and-visibility",
+          "file": "modules/10-live-auction-bidding-and-extension/features/F10-002-live-bid-validation-and-visibility.md",
+          "hours": 56
+        },
+        {
+          "id": "F10-003",
+          "seq": "003",
+          "name": "Delta Time Extension and Next-day Cutoff",
+          "slug": "delta-time-extension-and-next-day-cutoff",
+          "file": "modules/10-live-auction-bidding-and-extension/features/F10-003-delta-time-extension-and-next-day-cutoff.md",
+          "hours": 35
+        }
+      ]
+    },
+    {
+      "nn": "11",
+      "name": "Live Auction Monitoring and Closure",
+      "slug": "live-auction-monitoring-and-closure",
+      "type": "Business",
+      "folder": "modules/11-live-auction-monitoring-and-closure",
+      "feature_count": 3,
+      "total_hours": 107,
+      "features": [
+        {
+          "id": "F11-001",
+          "seq": "001",
+          "name": "Live Auction Monitoring Console",
+          "slug": "live-auction-monitoring-console",
+          "file": "modules/11-live-auction-monitoring-and-closure/features/F11-001-live-auction-monitoring-console.md",
+          "hours": 52
+        },
+        {
+          "id": "F11-002",
+          "seq": "002",
+          "name": "Authorised Force Close",
+          "slug": "authorised-force-close",
+          "file": "modules/11-live-auction-monitoring-and-closure/features/F11-002-authorised-force-close.md",
+          "hours": 24
+        },
+        {
+          "id": "F11-003",
+          "seq": "003",
+          "name": "Scheduled Closure and Bid Freeze",
+          "slug": "scheduled-closure-and-bid-freeze",
+          "file": "modules/11-live-auction-monitoring-and-closure/features/F11-003-scheduled-closure-and-bid-freeze.md",
+          "hours": 31
+        }
+      ]
+    },
+    {
+      "nn": "12",
+      "name": "Results, Finalisation and Approval",
+      "slug": "results-finalisation-and-approval",
+      "type": "Business",
+      "folder": "modules/12-results-finalisation-and-approval",
+      "feature_count": 3,
+      "total_hours": 164,
+      "features": [
+        {
+          "id": "F12-001",
+          "seq": "001",
+          "name": "Item and Lot Bid Ranking",
+          "slug": "item-and-lot-bid-ranking",
+          "file": "modules/12-results-finalisation-and-approval/features/F12-001-item-and-lot-bid-ranking.md",
+          "hours": 60
+        },
+        {
+          "id": "F12-002",
+          "seq": "002",
+          "name": "Successful Bidder Finalisation",
+          "slug": "successful-bidder-finalisation",
+          "file": "modules/12-results-finalisation-and-approval/features/F12-002-successful-bidder-finalisation.md",
+          "hours": 59
+        },
+        {
+          "id": "F12-003",
+          "seq": "003",
+          "name": "Finalisation Approval",
+          "slug": "finalisation-approval",
+          "file": "modules/12-results-finalisation-and-approval/features/F12-003-finalisation-approval.md",
+          "hours": 45
+        }
+      ]
+    },
+    {
+      "nn": "13",
+      "name": "Award and Letter of Intent",
+      "slug": "award-and-letter-of-intent",
+      "type": "Business",
+      "folder": "modules/13-award-and-letter-of-intent",
+      "feature_count": 3,
+      "total_hours": 129,
+      "features": [
+        {
+          "id": "F13-001",
+          "seq": "001",
+          "name": "Award Review and Approval",
+          "slug": "award-review-and-approval",
+          "file": "modules/13-award-and-letter-of-intent/features/F13-001-award-review-and-approval.md",
+          "hours": 47
+        },
+        {
+          "id": "F13-002",
+          "seq": "002",
+          "name": "Letter of Intent Generation",
+          "slug": "letter-of-intent-generation",
+          "file": "modules/13-award-and-letter-of-intent/features/F13-002-letter-of-intent-generation.md",
+          "hours": 54
+        },
+        {
+          "id": "F13-003",
+          "seq": "003",
+          "name": "Auction Completion and Successful-bidder Advice",
+          "slug": "auction-completion-and-successful-bidder-advice",
+          "file": "modules/13-award-and-letter-of-intent/features/F13-003-auction-completion-and-successful-bidder-advice.md",
+          "hours": 28
+        }
+      ]
+    },
+    {
+      "nn": "14",
+      "name": "Notifications",
+      "slug": "notifications",
+      "type": "Technical",
+      "folder": "modules/14-notifications",
+      "feature_count": 2,
+      "total_hours": 90,
+      "features": [
+        {
+          "id": "F14-001",
+          "seq": "001",
+          "name": "Lifecycle Notification Events and In-portal Alerts",
+          "slug": "lifecycle-notification-events-and-in-portal-alerts",
+          "file": "modules/14-notifications/features/F14-001-lifecycle-notification-events-and-in-portal-alerts.md",
+          "hours": 45
+        },
+        {
+          "id": "F14-002",
+          "seq": "002",
+          "name": "Email Delivery of Auction Notifications",
+          "slug": "email-delivery-of-auction-notifications",
+          "file": "modules/14-notifications/features/F14-002-email-delivery-of-auction-notifications.md",
+          "hours": 45
+        }
+      ]
+    },
+    {
+      "nn": "15",
+      "name": "Auction Status and History",
+      "slug": "auction-status-and-history",
+      "type": "Business",
+      "folder": "modules/15-auction-status-and-history",
+      "feature_count": 2,
+      "total_hours": 81,
+      "features": [
+        {
+          "id": "F15-001",
+          "seq": "001",
+          "name": "Auction Lifecycle Status",
+          "slug": "auction-lifecycle-status",
+          "file": "modules/15-auction-status-and-history/features/F15-001-auction-lifecycle-status.md",
+          "hours": 36
+        },
+        {
+          "id": "F15-002",
+          "seq": "002",
+          "name": "Auction History for Authorised Users",
+          "slug": "auction-history-for-authorised-users",
+          "file": "modules/15-auction-status-and-history/features/F15-002-auction-history-for-authorised-users.md",
+          "hours": 45
+        }
+      ]
+    }
+  ]
+}
