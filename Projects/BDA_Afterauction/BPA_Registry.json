@@ -1,0 +1,1469 @@
+{
+  "project_code": "BPA",
+  "project_name": "BDA Post-Auction Award, Payment and Completion Management Module",
+  "client": "Bangalore Development Authority (BDA)",
+  "output_root": "Projects/BDA_Afterauction",
+  "source": "BDA PostAuction SoW.docx",
+  "sow": "SoW_BPA_Detailed.md",
+  "updated_at": "2026-10-14T06:58:27Z",
+  "totals": {
+    "all_hours": 4815,
+    "go_live_hours": 4766,
+    "conditional_hours": 49,
+    "feature_count": 75,
+    "module_count": 16
+  },
+  "modules": [
+    {
+      "nn": "01",
+      "name": "User, Role & Access Management",
+      "slug": "user-role-and-access-management",
+      "type": "Shared",
+      "folder": "modules/01-user-role-and-access-management",
+      "feature_count": 4,
+      "total_hours": 515,
+      "features": [
+        {
+          "id": "F01-001",
+          "seq": "001",
+          "name": "Staff Authentication & Session Security",
+          "slug": "staff-authentication-and-session-security",
+          "file": "modules/01-user-role-and-access-management/features/F01-001-staff-authentication-and-session-security.md",
+          "hours": 136,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 36,
+            "API": 62,
+            "Database": 11,
+            "Integration": 0,
+            "Testing": 24,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F01-002",
+          "seq": "002",
+          "name": "Staff User Management & Role Assignment",
+          "slug": "staff-user-management-and-role-assignment",
+          "file": "modules/01-user-role-and-access-management/features/F01-002-staff-user-management-and-role-assignment.md",
+          "hours": 142,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 42,
+            "API": 68,
+            "Database": 9,
+            "Integration": 0,
+            "Testing": 18,
+            "Documentation": 5
+          }
+        },
+        {
+          "id": "F01-003",
+          "seq": "003",
+          "name": "Permission Matrix & DS-wise Data Isolation",
+          "slug": "permission-matrix-and-ds-wise-data-isolation",
+          "file": "modules/01-user-role-and-access-management/features/F01-003-permission-matrix-and-ds-wise-data-isolation.md",
+          "hours": 147,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 38,
+            "API": 74,
+            "Database": 6,
+            "Integration": 0,
+            "Testing": 24,
+            "Documentation": 5
+          }
+        },
+        {
+          "id": "F01-004",
+          "seq": "004",
+          "name": "Officer DSC Registration & Signing Authority",
+          "slug": "officer-dsc-registration-and-signing-authority",
+          "file": "modules/01-user-role-and-access-management/features/F01-004-officer-dsc-registration-and-signing-authority.md",
+          "hours": 90,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 22,
+            "API": 40,
+            "Database": 4,
+            "Integration": 8,
+            "Testing": 12,
+            "Documentation": 4
+          }
+        }
+      ]
+    },
+    {
+      "nn": "02",
+      "name": "Auction Rules & Configuration",
+      "slug": "auction-rules-and-configuration",
+      "type": "Business",
+      "folder": "modules/02-auction-rules-and-configuration",
+      "feature_count": 6,
+      "total_hours": 499,
+      "features": [
+        {
+          "id": "F02-001",
+          "seq": "001",
+          "name": "Instalment & Payment Rule Configuration",
+          "slug": "instalment-and-payment-rule-configuration",
+          "file": "modules/02-auction-rules-and-configuration/features/F02-001-instalment-and-payment-rule-configuration.md",
+          "hours": 105,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 38,
+            "API": 40,
+            "Database": 6,
+            "Integration": 0,
+            "Testing": 18,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F02-002",
+          "seq": "002",
+          "name": "Deputy Secretary Area Allocation Rules",
+          "slug": "deputy-secretary-area-allocation-rules",
+          "file": "modules/02-auction-rules-and-configuration/features/F02-002-deputy-secretary-area-allocation-rules.md",
+          "hours": 88,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 28,
+            "API": 42,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 12,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F02-003",
+          "seq": "003",
+          "name": "Approval Hierarchy & Bid Threshold Configuration",
+          "slug": "approval-hierarchy-and-bid-threshold-configuration",
+          "file": "modules/02-auction-rules-and-configuration/features/F02-003-approval-hierarchy-and-bid-threshold-configuration.md",
+          "hours": 90,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 32,
+            "API": 38,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 14,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F02-004",
+          "seq": "004",
+          "name": "Stage Timeline & Escalation Configuration",
+          "slug": "stage-timeline-and-escalation-configuration",
+          "file": "modules/02-auction-rules-and-configuration/features/F02-004-stage-timeline-and-escalation-configuration.md",
+          "hours": 62,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 18,
+            "API": 28,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 12,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F02-005",
+          "seq": "005",
+          "name": "Document Template Management",
+          "slug": "document-template-management",
+          "file": "modules/02-auction-rules-and-configuration/features/F02-005-document-template-management.md",
+          "hours": 89,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 32,
+            "API": 38,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 12,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F02-006",
+          "seq": "006",
+          "name": "Reference Masters",
+          "slug": "reference-masters",
+          "file": "modules/02-auction-rules-and-configuration/features/F02-006-reference-masters.md",
+          "hours": 65,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 26,
+            "API": 26,
+            "Database": 5,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        }
+      ]
+    },
+    {
+      "nn": "03",
+      "name": "KPPP Result Intake & Site Package",
+      "slug": "kppp-result-intake-and-site-package",
+      "type": "Business",
+      "folder": "modules/03-kppp-result-intake-and-site-package",
+      "feature_count": 5,
+      "total_hours": 502,
+      "features": [
+        {
+          "id": "F03-001",
+          "seq": "001",
+          "name": "KPPP Result Receipt through API",
+          "slug": "kppp-result-receipt-through-api",
+          "file": "modules/03-kppp-result-intake-and-site-package/features/F03-001-kppp-result-receipt-through-api.md",
+          "hours": 135,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 20,
+            "API": 52,
+            "Database": 14,
+            "Integration": 24,
+            "Testing": 20,
+            "Documentation": 5
+          }
+        },
+        {
+          "id": "F03-002",
+          "seq": "002",
+          "name": "Controlled KPPP Result Report Upload",
+          "slug": "controlled-kppp-result-report-upload",
+          "file": "modules/03-kppp-result-intake-and-site-package/features/F03-002-controlled-kppp-result-report-upload.md",
+          "hours": 96,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 34,
+            "API": 42,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 14,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F03-003",
+          "seq": "003",
+          "name": "Result-to-Site Matching & Exception Resolution",
+          "slug": "result-to-site-matching-and-exception-resolution",
+          "file": "modules/03-kppp-result-intake-and-site-package/features/F03-003-result-to-site-matching-and-exception-resolution.md",
+          "hours": 84,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 26,
+            "API": 38,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 14,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F03-004",
+          "seq": "004",
+          "name": "CDRMS Site Package Retrieval & Case File Creation",
+          "slug": "cdrms-site-package-retrieval-and-case-file-creation",
+          "file": "modules/03-kppp-result-intake-and-site-package/features/F03-004-cdrms-site-package-retrieval-and-case-file-creation.md",
+          "hours": 111,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 20,
+            "API": 40,
+            "Database": 10,
+            "Integration": 24,
+            "Testing": 14,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F03-005",
+          "seq": "005",
+          "name": "Result Locking & Versioned Re-import",
+          "slug": "result-locking-and-versioned-re-import",
+          "file": "modules/03-kppp-result-intake-and-site-package/features/F03-005-result-locking-and-versioned-re-import.md",
+          "hours": 76,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 26,
+            "API": 36,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 2
+          }
+        }
+      ]
+    },
+    {
+      "nn": "04",
+      "name": "Result Verification & Approval",
+      "slug": "result-verification-and-approval",
+      "type": "Business",
+      "folder": "modules/04-result-verification-and-approval",
+      "feature_count": 5,
+      "total_hours": 400,
+      "features": [
+        {
+          "id": "F04-001",
+          "seq": "001",
+          "name": "Site-wise Result Review Workbench",
+          "slug": "site-wise-result-review-workbench",
+          "file": "modules/04-result-verification-and-approval/features/F04-001-site-wise-result-review-workbench.md",
+          "hours": 109,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 42,
+            "API": 44,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 16,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F04-002",
+          "seq": "002",
+          "name": "Single-Bidder & Abnormal Bid Flagging",
+          "slug": "single-bidder-and-abnormal-bid-flagging",
+          "file": "modules/04-result-verification-and-approval/features/F04-002-single-bidder-and-abnormal-bid-flagging.md",
+          "hours": 60,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 12,
+            "API": 32,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 12,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F04-003",
+          "seq": "003",
+          "name": "Multi-Level Result Approval Workflow",
+          "slug": "multi-level-result-approval-workflow",
+          "file": "modules/04-result-verification-and-approval/features/F04-003-multi-level-result-approval-workflow.md",
+          "hours": 129,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 46,
+            "API": 54,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 22,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F04-004",
+          "seq": "004",
+          "name": "Draft Proceedings Generation",
+          "slug": "draft-proceedings-generation",
+          "file": "modules/04-result-verification-and-approval/features/F04-004-draft-proceedings-generation.md",
+          "hours": 55,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 18,
+            "API": 28,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F04-005",
+          "seq": "005",
+          "name": "Rejected & Unsold Site Intimation",
+          "slug": "rejected-and-unsold-site-intimation",
+          "file": "modules/04-result-verification-and-approval/features/F04-005-rejected-and-unsold-site-intimation.md",
+          "hours": 47,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 14,
+            "API": 24,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        }
+      ]
+    },
+    {
+      "nn": "05",
+      "name": "Successful Bidder Notification & Account",
+      "slug": "successful-bidder-notification-and-account",
+      "type": "Business",
+      "folder": "modules/05-successful-bidder-notification-and-account",
+      "feature_count": 4,
+      "total_hours": 233,
+      "features": [
+        {
+          "id": "F05-001",
+          "seq": "001",
+          "name": "Bidder Account Creation",
+          "slug": "bidder-account-creation",
+          "file": "modules/05-successful-bidder-notification-and-account/features/F05-001-bidder-account-creation.md",
+          "hours": 68,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 20,
+            "API": 32,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 10,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F05-002",
+          "seq": "002",
+          "name": "Bidder OTP Login & Profile",
+          "slug": "bidder-otp-login-and-profile",
+          "file": "modules/05-successful-bidder-notification-and-account/features/F05-002-bidder-otp-login-and-profile.md",
+          "hours": 57,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 18,
+            "API": 24,
+            "Database": 3,
+            "Integration": 0,
+            "Testing": 10,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F05-003",
+          "seq": "003",
+          "name": "Bilingual Signed Intimation Letter",
+          "slug": "bilingual-signed-intimation-letter",
+          "file": "modules/05-successful-bidder-notification-and-account/features/F05-003-bilingual-signed-intimation-letter.md",
+          "hours": 61,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 20,
+            "API": 26,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 12,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F05-004",
+          "seq": "004",
+          "name": "Result Intimation Dispatch & Delivery Status",
+          "slug": "result-intimation-dispatch-and-delivery-status",
+          "file": "modules/05-successful-bidder-notification-and-account/features/F05-004-result-intimation-dispatch-and-delivery-status.md",
+          "hours": 47,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 14,
+            "API": 24,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        }
+      ]
+    },
+    {
+      "nn": "06",
+      "name": "Payment & Instalment Management",
+      "slug": "payment-and-instalment-management",
+      "type": "Business",
+      "folder": "modules/06-payment-and-instalment-management",
+      "feature_count": 9,
+      "total_hours": 766,
+      "features": [
+        {
+          "id": "F06-001",
+          "seq": "001",
+          "name": "Instalment Schedule & Demand Generation",
+          "slug": "instalment-schedule-and-demand-generation",
+          "file": "modules/06-payment-and-instalment-management/features/F06-001-instalment-schedule-and-demand-generation.md",
+          "hours": 70,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 16,
+            "API": 34,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 14,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F06-002",
+          "seq": "002",
+          "name": "Online Instalment Payment & Receipt",
+          "slug": "online-instalment-payment-and-receipt",
+          "file": "modules/06-payment-and-instalment-management/features/F06-002-online-instalment-payment-and-receipt.md",
+          "hours": 145,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 32,
+            "API": 58,
+            "Database": 6,
+            "Integration": 24,
+            "Testing": 20,
+            "Documentation": 5
+          }
+        },
+        {
+          "id": "F06-003",
+          "seq": "003",
+          "name": "Offline Payment Recording & Verification",
+          "slug": "offline-payment-recording-and-verification",
+          "file": "modules/06-payment-and-instalment-management/features/F06-003-offline-payment-recording-and-verification.md",
+          "hours": 76,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 26,
+            "API": 36,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 10,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F06-004",
+          "seq": "004",
+          "name": "Daily Bank Reconciliation",
+          "slug": "daily-bank-reconciliation",
+          "file": "modules/06-payment-and-instalment-management/features/F06-004-daily-bank-reconciliation.md",
+          "hours": 112,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 32,
+            "API": 40,
+            "Database": 4,
+            "Integration": 16,
+            "Testing": 18,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F06-005",
+          "seq": "005",
+          "name": "Payment Status & Ledger Tracking",
+          "slug": "payment-status-and-ledger-tracking",
+          "file": "modules/06-payment-and-instalment-management/features/F06-005-payment-status-and-ledger-tracking.md",
+          "hours": 74,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 18,
+            "API": 36,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 14,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F06-006",
+          "seq": "006",
+          "name": "Payment Reminders & Overdue Monitoring",
+          "slug": "payment-reminders-and-overdue-monitoring",
+          "file": "modules/06-payment-and-instalment-management/features/F06-006-payment-reminders-and-overdue-monitoring.md",
+          "hours": 51,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 14,
+            "API": 24,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 10,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F06-007",
+          "seq": "007",
+          "name": "Payment Extension Requests",
+          "slug": "payment-extension-requests",
+          "file": "modules/06-payment-and-instalment-management/features/F06-007-payment-extension-requests.md",
+          "hours": 78,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 24,
+            "API": 38,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 12,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F06-008",
+          "seq": "008",
+          "name": "Default, Cancellation & Forfeiture Proceedings",
+          "slug": "default-cancellation-and-forfeiture-proceedings",
+          "file": "modules/06-payment-and-instalment-management/features/F06-008-default-cancellation-and-forfeiture-proceedings.md",
+          "hours": 102,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 36,
+            "API": 46,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 14,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F06-009",
+          "seq": "009",
+          "name": "Payment Dispute Handling",
+          "slug": "payment-dispute-handling",
+          "file": "modules/06-payment-and-instalment-management/features/F06-009-payment-dispute-handling.md",
+          "hours": 58,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 20,
+            "API": 28,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        }
+      ]
+    },
+    {
+      "nn": "07",
+      "name": "Case Forwarding & Deputy Secretary Processing",
+      "slug": "case-forwarding-and-deputy-secretary-processing",
+      "type": "Business",
+      "folder": "modules/07-case-forwarding-and-deputy-secretary-processing",
+      "feature_count": 5,
+      "total_hours": 293,
+      "features": [
+        {
+          "id": "F07-001",
+          "seq": "001",
+          "name": "Automatic Case Forwarding by Area",
+          "slug": "automatic-case-forwarding-by-area",
+          "file": "modules/07-case-forwarding-and-deputy-secretary-processing/features/F07-001-automatic-case-forwarding-by-area.md",
+          "hours": 38,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 8,
+            "API": 22,
+            "Database": 1,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F07-002",
+          "seq": "002",
+          "name": "Case Re-assignment",
+          "slug": "case-re-assignment",
+          "file": "modules/07-case-forwarding-and-deputy-secretary-processing/features/F07-002-case-re-assignment.md",
+          "hours": 43,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 12,
+            "API": 22,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F07-003",
+          "seq": "003",
+          "name": "Deputy Secretary Case File Workspace",
+          "slug": "deputy-secretary-case-file-workspace",
+          "file": "modules/07-case-forwarding-and-deputy-secretary-processing/features/F07-003-deputy-secretary-case-file-workspace.md",
+          "hours": 95,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 40,
+            "API": 40,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 10,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F07-004",
+          "seq": "004",
+          "name": "Case Processing, Document Requests & Bidder Uploads",
+          "slug": "case-processing-document-requests-and-bidder-uploads",
+          "file": "modules/07-case-forwarding-and-deputy-secretary-processing/features/F07-004-case-processing-document-requests-and-bidder-uploads.md",
+          "hours": 76,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 26,
+            "API": 34,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 10,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F07-005",
+          "seq": "005",
+          "name": "Processing Timelines & Pending Case Alerts",
+          "slug": "processing-timelines-and-pending-case-alerts",
+          "file": "modules/07-case-forwarding-and-deputy-secretary-processing/features/F07-005-processing-timelines-and-pending-case-alerts.md",
+          "hours": 41,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 10,
+            "API": 22,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        }
+      ]
+    },
+    {
+      "nn": "08",
+      "name": "Draft Sale Deed",
+      "slug": "draft-sale-deed",
+      "type": "Business",
+      "folder": "modules/08-draft-sale-deed",
+      "feature_count": 4,
+      "total_hours": 182,
+      "features": [
+        {
+          "id": "F08-001",
+          "seq": "001",
+          "name": "Draft Sale Deed Generation",
+          "slug": "draft-sale-deed-generation",
+          "file": "modules/08-draft-sale-deed/features/F08-001-draft-sale-deed-generation.md",
+          "hours": 64,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 22,
+            "API": 26,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 10,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F08-002",
+          "seq": "002",
+          "name": "Sale Deed Review, Approval & Version History",
+          "slug": "sale-deed-review-approval-and-version-history",
+          "file": "modules/08-draft-sale-deed/features/F08-002-sale-deed-review-approval-and-version-history.md",
+          "hours": 63,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 26,
+            "API": 28,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F08-003",
+          "seq": "003",
+          "name": "Bidder Access to Draft Sale Deed",
+          "slug": "bidder-access-to-draft-sale-deed",
+          "file": "modules/08-draft-sale-deed/features/F08-003-bidder-access-to-draft-sale-deed.md",
+          "hours": 32,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 12,
+            "API": 14,
+            "Database": 1,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F08-004",
+          "seq": "004",
+          "name": "Final Instalment Demand Trigger",
+          "slug": "final-instalment-demand-trigger",
+          "file": "modules/08-draft-sale-deed/features/F08-004-final-instalment-demand-trigger.md",
+          "hours": 23,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 4,
+            "API": 14,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        }
+      ]
+    },
+    {
+      "nn": "09",
+      "name": "Registration Recording & Completion",
+      "slug": "registration-recording-and-completion",
+      "type": "Business",
+      "folder": "modules/09-registration-recording-and-completion",
+      "feature_count": 4,
+      "total_hours": 175,
+      "features": [
+        {
+          "id": "F09-001",
+          "seq": "001",
+          "name": "Registration Details Recording",
+          "slug": "registration-details-recording",
+          "file": "modules/09-registration-recording-and-completion/features/F09-001-registration-details-recording.md",
+          "hours": 33,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 12,
+            "API": 14,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F09-002",
+          "seq": "002",
+          "name": "Kaveri Registration Data Exchange (Conditional)",
+          "slug": "kaveri-registration-data-exchange-conditional",
+          "file": "modules/09-registration-recording-and-completion/features/F09-002-kaveri-registration-data-exchange-conditional.md",
+          "hours": 49,
+          "notes": "Conditional",
+          "areas": {
+            "UI": 4,
+            "API": 12,
+            "Database": 1,
+            "Integration": 24,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F09-003",
+          "seq": "003",
+          "name": "Auction Process Completion",
+          "slug": "auction-process-completion",
+          "file": "modules/09-registration-recording-and-completion/features/F09-003-auction-process-completion.md",
+          "hours": 40,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 12,
+            "API": 20,
+            "Database": 1,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F09-004",
+          "seq": "004",
+          "name": "Completion Status Sharing with Allotment Section & CDRMS",
+          "slug": "completion-status-sharing-with-allotment-section-and-cdrms",
+          "file": "modules/09-registration-recording-and-completion/features/F09-004-completion-status-sharing-with-allotment-section-and-cdrms.md",
+          "hours": 53,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 8,
+            "API": 20,
+            "Database": 1,
+            "Integration": 16,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        }
+      ]
+    },
+    {
+      "nn": "10",
+      "name": "Bidder Tracking Portal",
+      "slug": "bidder-tracking-portal",
+      "type": "Business",
+      "folder": "modules/10-bidder-tracking-portal",
+      "feature_count": 5,
+      "total_hours": 169,
+      "features": [
+        {
+          "id": "F10-001",
+          "seq": "001",
+          "name": "My Awarded Sites",
+          "slug": "my-awarded-sites",
+          "file": "modules/10-bidder-tracking-portal/features/F10-001-my-awarded-sites.md",
+          "hours": 27,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 10,
+            "API": 12,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F10-002",
+          "seq": "002",
+          "name": "Awarded Site Details & Stage Tracker",
+          "slug": "awarded-site-details-and-stage-tracker",
+          "file": "modules/10-bidder-tracking-portal/features/F10-002-awarded-site-details-and-stage-tracker.md",
+          "hours": 39,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 16,
+            "API": 14,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F10-003",
+          "seq": "003",
+          "name": "Bidder Payment History & Receipts",
+          "slug": "bidder-payment-history-and-receipts",
+          "file": "modules/10-bidder-tracking-portal/features/F10-003-bidder-payment-history-and-receipts.md",
+          "hours": 29,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 12,
+            "API": 12,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F10-004",
+          "seq": "004",
+          "name": "Bidder Documents, Notifications & Profile",
+          "slug": "bidder-documents-notifications-and-profile",
+          "file": "modules/10-bidder-tracking-portal/features/F10-004-bidder-documents-notifications-and-profile.md",
+          "hours": 32,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 14,
+            "API": 12,
+            "Database": 1,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F10-005",
+          "seq": "005",
+          "name": "Bilingual, Responsive & GIGW-Compliant Portal",
+          "slug": "bilingual-responsive-and-gigw-compliant-portal",
+          "file": "modules/10-bidder-tracking-portal/features/F10-005-bilingual-responsive-and-gigw-compliant-portal.md",
+          "hours": 42,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 12,
+            "API": 8,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 18,
+            "Documentation": 2
+          }
+        }
+      ]
+    },
+    {
+      "nn": "11",
+      "name": "Dashboards, MIS & Reports",
+      "slug": "dashboards-mis-and-reports",
+      "type": "Business",
+      "folder": "modules/11-dashboards-mis-and-reports",
+      "feature_count": 5,
+      "total_hours": 235,
+      "features": [
+        {
+          "id": "F11-001",
+          "seq": "001",
+          "name": "Commissioner & Management Dashboard",
+          "slug": "commissioner-and-management-dashboard",
+          "file": "modules/11-dashboards-mis-and-reports/features/F11-001-commissioner-and-management-dashboard.md",
+          "hours": 54,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 18,
+            "API": 24,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F11-002",
+          "seq": "002",
+          "name": "Deputy Secretary Dashboard",
+          "slug": "deputy-secretary-dashboard",
+          "file": "modules/11-dashboards-mis-and-reports/features/F11-002-deputy-secretary-dashboard.md",
+          "hours": 31,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 10,
+            "API": 14,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F11-003",
+          "seq": "003",
+          "name": "Finance Dashboard",
+          "slug": "finance-dashboard",
+          "file": "modules/11-dashboards-mis-and-reports/features/F11-003-finance-dashboard.md",
+          "hours": 31,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 10,
+            "API": 14,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F11-004",
+          "seq": "004",
+          "name": "Standard MIS Reports",
+          "slug": "standard-mis-reports",
+          "file": "modules/11-dashboards-mis-and-reports/features/F11-004-standard-mis-reports.md",
+          "hours": 53,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 14,
+            "API": 24,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F11-005",
+          "seq": "005",
+          "name": "Configurable Report Builder",
+          "slug": "configurable-report-builder",
+          "file": "modules/11-dashboards-mis-and-reports/features/F11-005-configurable-report-builder.md",
+          "hours": 66,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 20,
+            "API": 34,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 2
+          }
+        }
+      ]
+    },
+    {
+      "nn": "12",
+      "name": "Notification Service",
+      "slug": "notification-service",
+      "type": "Shared",
+      "folder": "modules/12-notification-service",
+      "feature_count": 4,
+      "total_hours": 199,
+      "features": [
+        {
+          "id": "F12-001",
+          "seq": "001",
+          "name": "Bilingual Notification Template Management",
+          "slug": "bilingual-notification-template-management",
+          "file": "modules/12-notification-service/features/F12-001-bilingual-notification-template-management.md",
+          "hours": 42,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 14,
+            "API": 18,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F12-002",
+          "seq": "002",
+          "name": "Stage Event Notification Engine",
+          "slug": "stage-event-notification-engine",
+          "file": "modules/12-notification-service/features/F12-002-stage-event-notification-engine.md",
+          "hours": 48,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 6,
+            "API": 28,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F12-003",
+          "seq": "003",
+          "name": "Email, SMS & WhatsApp Gateway Connectors",
+          "slug": "email-sms-and-whatsapp-gateway-connectors",
+          "file": "modules/12-notification-service/features/F12-003-email-sms-and-whatsapp-gateway-connectors.md",
+          "hours": 76,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 4,
+            "API": 28,
+            "Database": 0,
+            "Integration": 36,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F12-004",
+          "seq": "004",
+          "name": "Notification Delivery Log",
+          "slug": "notification-delivery-log",
+          "file": "modules/12-notification-service/features/F12-004-notification-delivery-log.md",
+          "hours": 33,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 10,
+            "API": 14,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        }
+      ]
+    },
+    {
+      "nn": "13",
+      "name": "Integration Hub",
+      "slug": "integration-hub",
+      "type": "Technical",
+      "folder": "modules/13-integration-hub",
+      "feature_count": 4,
+      "total_hours": 223,
+      "features": [
+        {
+          "id": "F13-001",
+          "seq": "001",
+          "name": "Integration Framework & Credential Management",
+          "slug": "integration-framework-and-credential-management",
+          "file": "modules/13-integration-hub/features/F13-001-integration-framework-and-credential-management.md",
+          "hours": 57,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 10,
+            "API": 30,
+            "Database": 6,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F13-002",
+          "seq": "002",
+          "name": "Integration Monitoring & Error Queue",
+          "slug": "integration-monitoring-and-error-queue",
+          "file": "modules/13-integration-hub/features/F13-002-integration-monitoring-and-error-queue.md",
+          "hours": 46,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 12,
+            "API": 24,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F13-003",
+          "seq": "003",
+          "name": "DSC & e-Sign Signing Service",
+          "slug": "dsc-and-e-sign-signing-service",
+          "file": "modules/13-integration-hub/features/F13-003-dsc-and-e-sign-signing-service.md",
+          "hours": 82,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 14,
+            "API": 32,
+            "Database": 2,
+            "Integration": 24,
+            "Testing": 8,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F13-004",
+          "seq": "004",
+          "name": "BDA Web GIS Map Integration",
+          "slug": "bda-web-gis-map-integration",
+          "file": "modules/13-integration-hub/features/F13-004-bda-web-gis-map-integration.md",
+          "hours": 38,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 6,
+            "API": 10,
+            "Database": 1,
+            "Integration": 16,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        }
+      ]
+    },
+    {
+      "nn": "14",
+      "name": "Audit, Security & Compliance",
+      "slug": "audit-security-and-compliance",
+      "type": "Technical",
+      "folder": "modules/14-audit-security-and-compliance",
+      "feature_count": 4,
+      "total_hours": 192,
+      "features": [
+        {
+          "id": "F14-001",
+          "seq": "001",
+          "name": "Tamper-Evident Audit Trail",
+          "slug": "tamper-evident-audit-trail",
+          "file": "modules/14-audit-security-and-compliance/features/F14-001-tamper-evident-audit-trail.md",
+          "hours": 41,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 24,
+            "Database": 6,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F14-002",
+          "seq": "002",
+          "name": "Audit Viewer & Evidence Certificate Support",
+          "slug": "audit-viewer-and-evidence-certificate-support",
+          "file": "modules/14-audit-security-and-compliance/features/F14-002-audit-viewer-and-evidence-certificate-support.md",
+          "hours": 54,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 20,
+            "API": 26,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F14-003",
+          "seq": "003",
+          "name": "Application Security Controls",
+          "slug": "application-security-controls",
+          "file": "modules/14-audit-security-and-compliance/features/F14-003-application-security-controls.md",
+          "hours": 51,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 4,
+            "API": 22,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 20,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F14-004",
+          "seq": "004",
+          "name": "Personal Data Protection Compliance",
+          "slug": "personal-data-protection-compliance",
+          "file": "modules/14-audit-security-and-compliance/features/F14-004-personal-data-protection-compliance.md",
+          "hours": 46,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 16,
+            "API": 20,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        }
+      ]
+    },
+    {
+      "nn": "15",
+      "name": "Platform Operations & Support",
+      "slug": "platform-operations-and-support",
+      "type": "Technical",
+      "folder": "modules/15-platform-operations-and-support",
+      "feature_count": 4,
+      "total_hours": 121,
+      "features": [
+        {
+          "id": "F15-001",
+          "seq": "001",
+          "name": "Environments, CI/CD & Release Management",
+          "slug": "environments-ci-cd-and-release-management",
+          "file": "modules/15-platform-operations-and-support/features/F15-001-environments-ci-cd-and-release-management.md",
+          "hours": 27,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 18,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F15-002",
+          "seq": "002",
+          "name": "Backup, Recovery & Disaster Recovery",
+          "slug": "backup-recovery-and-disaster-recovery",
+          "file": "modules/15-platform-operations-and-support/features/F15-002-backup-recovery-and-disaster-recovery.md",
+          "hours": 23,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 12,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F15-003",
+          "seq": "003",
+          "name": "Monitoring, Availability & SLA Reporting",
+          "slug": "monitoring-availability-and-sla-reporting",
+          "file": "modules/15-platform-operations-and-support/features/F15-003-monitoring-availability-and-sla-reporting.md",
+          "hours": 34,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 10,
+            "API": 16,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F15-004",
+          "seq": "004",
+          "name": "Support Helpdesk & Ticket Tracking",
+          "slug": "support-helpdesk-and-ticket-tracking",
+          "file": "modules/15-platform-operations-and-support/features/F15-004-support-helpdesk-and-ticket-tracking.md",
+          "hours": 37,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 14,
+            "API": 16,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        }
+      ]
+    },
+    {
+      "nn": "16",
+      "name": "Legacy Case Migration",
+      "slug": "legacy-case-migration",
+      "type": "Technical",
+      "folder": "modules/16-legacy-case-migration",
+      "feature_count": 3,
+      "total_hours": 111,
+      "features": [
+        {
+          "id": "F16-001",
+          "seq": "001",
+          "name": "Migration Templates & Staging Load",
+          "slug": "migration-templates-and-staging-load",
+          "file": "modules/16-legacy-case-migration/features/F16-001-migration-templates-and-staging-load.md",
+          "hours": 39,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 8,
+            "API": 18,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F16-002",
+          "seq": "002",
+          "name": "Migration Validation & Reconciliation",
+          "slug": "migration-validation-and-reconciliation",
+          "file": "modules/16-legacy-case-migration/features/F16-002-migration-validation-and-reconciliation.md",
+          "hours": 42,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 16,
+            "API": 18,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F16-003",
+          "seq": "003",
+          "name": "Migrated Case Activation",
+          "slug": "migrated-case-activation",
+          "file": "modules/16-legacy-case-migration/features/F16-003-migrated-case-activation.md",
+          "hours": 30,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 4,
+            "API": 18,
+            "Database": 0,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        }
+      ]
+    }
+  ]
+}

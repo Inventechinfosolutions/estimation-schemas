@@ -1,0 +1,1746 @@
+{
+  "project_code": "CLT",
+  "project_name": "Online Computer Literacy Test (CLT) and Digital Certification System",
+  "client": "Karnataka State Electronics Development Corporation Limited (KEONICS)",
+  "output_root": "Projects/Keonics-Exam-Module/CLT_DC_System",
+  "source": "261013-Call 3-RFP-CLT DC System-v1-0.pdf",
+  "sow": "SoW_CLT_Detailed.md",
+  "updated_at": "2026-10-14T09:49:08Z",
+  "totals": {
+    "all_hours": 5186,
+    "go_live_hours": 5136,
+    "conditional_hours": 50,
+    "feature_count": 90,
+    "module_count": 18
+  },
+  "modules": [
+    {
+      "nn": "01",
+      "name": "Access Control & Staff User Management",
+      "slug": "access-control-and-staff-user-management",
+      "type": "Shared",
+      "folder": "modules/01-access-control-and-staff-user-management",
+      "feature_count": 3,
+      "total_hours": 316,
+      "features": [
+        {
+          "id": "F01-001",
+          "seq": "001",
+          "name": "Staff Authentication & Session Security",
+          "slug": "staff-authentication-and-session-security",
+          "file": "modules/01-access-control-and-staff-user-management/features/F01-001-staff-authentication-and-session-security.md",
+          "hours": 107,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 32,
+            "API": 52,
+            "Database": 6,
+            "Integration": 0,
+            "Testing": 14,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F01-002",
+          "seq": "002",
+          "name": "Staff User, Role & Centre Mapping",
+          "slug": "staff-user-role-and-centre-mapping",
+          "file": "modules/01-access-control-and-staff-user-management/features/F01-002-staff-user-role-and-centre-mapping.md",
+          "hours": 106,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 38,
+            "API": 48,
+            "Database": 6,
+            "Integration": 0,
+            "Testing": 12,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F01-003",
+          "seq": "003",
+          "name": "Permission Matrix & Data Scope",
+          "slug": "permission-matrix-and-data-scope",
+          "file": "modules/01-access-control-and-staff-user-management/features/F01-003-permission-matrix-and-data-scope.md",
+          "hours": 103,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 32,
+            "API": 52,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 12,
+            "Documentation": 3
+          }
+        }
+      ]
+    },
+    {
+      "nn": "02",
+      "name": "Examination Configuration & Masters",
+      "slug": "examination-configuration-and-masters",
+      "type": "Business",
+      "folder": "modules/02-examination-configuration-and-masters",
+      "feature_count": 6,
+      "total_hours": 360,
+      "features": [
+        {
+          "id": "F02-001",
+          "seq": "001",
+          "name": "Syllabus, Marks & Weightage Configuration",
+          "slug": "syllabus-marks-and-weightage-configuration",
+          "file": "modules/02-examination-configuration-and-masters/features/F02-001-syllabus-marks-and-weightage-configuration.md",
+          "hours": 88,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 34,
+            "API": 34,
+            "Database": 6,
+            "Integration": 0,
+            "Testing": 12,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F02-002",
+          "seq": "002",
+          "name": "Test Centre, Seat & Terminal Master",
+          "slug": "test-centre-seat-and-terminal-master",
+          "file": "modules/02-examination-configuration-and-masters/features/F02-002-test-centre-seat-and-terminal-master.md",
+          "hours": 70,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 26,
+            "API": 32,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F02-003",
+          "seq": "003",
+          "name": "Session Calendar & Batch Rules",
+          "slug": "session-calendar-and-batch-rules",
+          "file": "modules/02-examination-configuration-and-masters/features/F02-003-session-calendar-and-batch-rules.md",
+          "hours": 62,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 20,
+            "API": 30,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F02-004",
+          "seq": "004",
+          "name": "Fee Rule Configuration",
+          "slug": "fee-rule-configuration",
+          "file": "modules/02-examination-configuration-and-masters/features/F02-004-fee-rule-configuration.md",
+          "hours": 45,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 18,
+            "API": 18,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F02-005",
+          "seq": "005",
+          "name": "Document & Certificate Template Management",
+          "slug": "document-and-certificate-template-management",
+          "file": "modules/02-examination-configuration-and-masters/features/F02-005-document-and-certificate-template-management.md",
+          "hours": 60,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 26,
+            "API": 22,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F02-006",
+          "seq": "006",
+          "name": "Reference Masters",
+          "slug": "reference-masters",
+          "file": "modules/02-examination-configuration-and-masters/features/F02-006-reference-masters.md",
+          "hours": 35,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 12,
+            "API": 16,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        }
+      ]
+    },
+    {
+      "nn": "03",
+      "name": "CLT Web Portal & Mobile Application",
+      "slug": "clt-web-portal-and-mobile-application",
+      "type": "Business",
+      "folder": "modules/03-clt-web-portal-and-mobile-application",
+      "feature_count": 4,
+      "total_hours": 230,
+      "features": [
+        {
+          "id": "F03-001",
+          "seq": "001",
+          "name": "Public Information Portal",
+          "slug": "public-information-portal",
+          "file": "modules/03-clt-web-portal-and-mobile-application/features/F03-001-public-information-portal.md",
+          "hours": 56,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 30,
+            "API": 18,
+            "Database": 1,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F03-002",
+          "seq": "002",
+          "name": "Portal Content & Study Material Management",
+          "slug": "portal-content-and-study-material-management",
+          "file": "modules/03-clt-web-portal-and-mobile-application/features/F03-002-portal-content-and-study-material-management.md",
+          "hours": 42,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 18,
+            "API": 16,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F03-003",
+          "seq": "003",
+          "name": "Bilingual, Responsive & Device-Agnostic Design",
+          "slug": "bilingual-responsive-and-device-agnostic-design",
+          "file": "modules/03-clt-web-portal-and-mobile-application/features/F03-003-bilingual-responsive-and-device-agnostic-design.md",
+          "hours": 34,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 10,
+            "API": 4,
+            "Database": 1,
+            "Integration": 0,
+            "Testing": 14,
+            "Documentation": 5
+          }
+        },
+        {
+          "id": "F03-004",
+          "seq": "004",
+          "name": "Candidate Mobile Application",
+          "slug": "candidate-mobile-application",
+          "file": "modules/03-clt-web-portal-and-mobile-application/features/F03-004-candidate-mobile-application.md",
+          "hours": 98,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 46,
+            "API": 16,
+            "Database": 2,
+            "Integration": 16,
+            "Testing": 14,
+            "Documentation": 4
+          }
+        }
+      ]
+    },
+    {
+      "nn": "04",
+      "name": "Candidate Registration & eKYC",
+      "slug": "candidate-registration-and-ekyc",
+      "type": "Business",
+      "folder": "modules/04-candidate-registration-and-ekyc",
+      "feature_count": 6,
+      "total_hours": 423,
+      "features": [
+        {
+          "id": "F04-001",
+          "seq": "001",
+          "name": "Candidate OTP Login & Account",
+          "slug": "candidate-otp-login-and-account",
+          "file": "modules/04-candidate-registration-and-ekyc/features/F04-001-candidate-otp-login-and-account.md",
+          "hours": 90,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 34,
+            "API": 38,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 12,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F04-002",
+          "seq": "002",
+          "name": "Government Employee Registration with KGID & HRMS Validation",
+          "slug": "government-employee-registration-with-kgid-and-hrms-validation",
+          "file": "modules/04-candidate-registration-and-ekyc/features/F04-002-government-employee-registration-with-kgid-and-hrms-validation.md",
+          "hours": 90,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 32,
+            "API": 36,
+            "Database": 6,
+            "Integration": 0,
+            "Testing": 14,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F04-003",
+          "seq": "003",
+          "name": "Prospective Candidate & Non-KGID Registration with eKYC",
+          "slug": "prospective-candidate-and-non-kgid-registration-with-ekyc",
+          "file": "modules/04-candidate-registration-and-ekyc/features/F04-003-prospective-candidate-and-non-kgid-registration-with-ekyc.md",
+          "hours": 92,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 40,
+            "API": 32,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 14,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F04-004",
+          "seq": "004",
+          "name": "Centre-Assisted Registration & Photo Capture",
+          "slug": "centre-assisted-registration-and-photo-capture",
+          "file": "modules/04-candidate-registration-and-ekyc/features/F04-004-centre-assisted-registration-and-photo-capture.md",
+          "hours": 52,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 24,
+            "API": 18,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F04-005",
+          "seq": "005",
+          "name": "Registration Scrutiny & Metadata Validation",
+          "slug": "registration-scrutiny-and-metadata-validation",
+          "file": "modules/04-candidate-registration-and-ekyc/features/F04-005-registration-scrutiny-and-metadata-validation.md",
+          "hours": 66,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 26,
+            "API": 30,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F04-006",
+          "seq": "006",
+          "name": "Differently-Abled Candidate Support Requests",
+          "slug": "differently-abled-candidate-support-requests",
+          "file": "modules/04-candidate-registration-and-ekyc/features/F04-006-differently-abled-candidate-support-requests.md",
+          "hours": 33,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 12,
+            "API": 14,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        }
+      ]
+    },
+    {
+      "nn": "05",
+      "name": "Online Test Booking, Fees & Hall Ticket",
+      "slug": "online-test-booking-fees-and-hall-ticket",
+      "type": "Business",
+      "folder": "modules/05-online-test-booking-fees-and-hall-ticket",
+      "feature_count": 6,
+      "total_hours": 361,
+      "features": [
+        {
+          "id": "F05-001",
+          "seq": "001",
+          "name": "Online Test Booking & Slot Availability",
+          "slug": "online-test-booking-and-slot-availability",
+          "file": "modules/05-online-test-booking-fees-and-hall-ticket/features/F05-001-online-test-booking-and-slot-availability.md",
+          "hours": 88,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 28,
+            "API": 38,
+            "Database": 6,
+            "Integration": 0,
+            "Testing": 14,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F05-002",
+          "seq": "002",
+          "name": "Attempt-Based Fee Calculation & Online Payment",
+          "slug": "attempt-based-fee-calculation-and-online-payment",
+          "file": "modules/05-online-test-booking-fees-and-hall-ticket/features/F05-002-attempt-based-fee-calculation-and-online-payment.md",
+          "hours": 68,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 16,
+            "API": 38,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F05-003",
+          "seq": "003",
+          "name": "Payment Receipt, Reconciliation & Exceptions",
+          "slug": "payment-receipt-reconciliation-and-exceptions",
+          "file": "modules/05-online-test-booking-fees-and-hall-ticket/features/F05-003-payment-receipt-reconciliation-and-exceptions.md",
+          "hours": 64,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 20,
+            "API": 30,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F05-004",
+          "seq": "004",
+          "name": "Hall Ticket with Barcode & Receipt",
+          "slug": "hall-ticket-with-barcode-and-receipt",
+          "file": "modules/05-online-test-booking-fees-and-hall-ticket/features/F05-004-hall-ticket-with-barcode-and-receipt.md",
+          "hours": 43,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 8,
+            "API": 26,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F05-005",
+          "seq": "005",
+          "name": "Candidate Self-Service Rescheduling",
+          "slug": "candidate-self-service-rescheduling",
+          "file": "modules/05-online-test-booking-fees-and-hall-ticket/features/F05-005-candidate-self-service-rescheduling.md",
+          "hours": 34,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 10,
+            "API": 16,
+            "Database": 1,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F05-006",
+          "seq": "006",
+          "name": "Minimum Batch Check & Forced Rescheduling",
+          "slug": "minimum-batch-check-and-forced-rescheduling",
+          "file": "modules/05-online-test-booking-fees-and-hall-ticket/features/F05-006-minimum-batch-check-and-forced-rescheduling.md",
+          "hours": 64,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 26,
+            "API": 26,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 2
+          }
+        }
+      ]
+    },
+    {
+      "nn": "06",
+      "name": "Question Bank & Content Authoring Tool",
+      "slug": "question-bank-and-content-authoring-tool",
+      "type": "Business",
+      "folder": "modules/06-question-bank-and-content-authoring-tool",
+      "feature_count": 8,
+      "total_hours": 470,
+      "features": [
+        {
+          "id": "F06-001",
+          "seq": "001",
+          "name": "Question Paper Guidelines & Blueprint",
+          "slug": "question-paper-guidelines-and-blueprint",
+          "file": "modules/06-question-bank-and-content-authoring-tool/features/F06-001-question-paper-guidelines-and-blueprint.md",
+          "hours": 58,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 28,
+            "API": 20,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F06-002",
+          "seq": "002",
+          "name": "Bilingual Rich-Content Question Authoring",
+          "slug": "bilingual-rich-content-question-authoring",
+          "file": "modules/06-question-bank-and-content-authoring-tool/features/F06-002-bilingual-rich-content-question-authoring.md",
+          "hours": 119,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 60,
+            "API": 36,
+            "Database": 6,
+            "Integration": 0,
+            "Testing": 14,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F06-003",
+          "seq": "003",
+          "name": "Maker-Checker & Technical Committee Approval",
+          "slug": "maker-checker-and-technical-committee-approval",
+          "file": "modules/06-question-bank-and-content-authoring-tool/features/F06-003-maker-checker-and-technical-committee-approval.md",
+          "hours": 76,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 34,
+            "API": 28,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F06-004",
+          "seq": "004",
+          "name": "Question Component Segregation & Bank Privacy",
+          "slug": "question-component-segregation-and-bank-privacy",
+          "file": "modules/06-question-bank-and-content-authoring-tool/features/F06-004-question-component-segregation-and-bank-privacy.md",
+          "hours": 48,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 12,
+            "API": 24,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F06-005",
+          "seq": "005",
+          "name": "Field Test & Difficulty Calibration",
+          "slug": "field-test-and-difficulty-calibration",
+          "file": "modules/06-question-bank-and-content-authoring-tool/features/F06-005-field-test-and-difficulty-calibration.md",
+          "hours": 50,
+          "notes": "Conditional",
+          "areas": {
+            "UI": 22,
+            "API": 18,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F06-006",
+          "seq": "006",
+          "name": "Excel / CSV Question Import",
+          "slug": "excel-csv-question-import",
+          "file": "modules/06-question-bank-and-content-authoring-tool/features/F06-006-excel-csv-question-import.md",
+          "hours": 44,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 14,
+            "API": 20,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F06-007",
+          "seq": "007",
+          "name": "Mock & Main Question Bank Management",
+          "slug": "mock-and-main-question-bank-management",
+          "file": "modules/06-question-bank-and-content-authoring-tool/features/F06-007-mock-and-main-question-bank-management.md",
+          "hours": 46,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 16,
+            "API": 20,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F06-008",
+          "seq": "008",
+          "name": "Typing Test Passage Management",
+          "slug": "typing-test-passage-management",
+          "file": "modules/06-question-bank-and-content-authoring-tool/features/F06-008-typing-test-passage-management.md",
+          "hours": 29,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 10,
+            "API": 12,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        }
+      ]
+    },
+    {
+      "nn": "07",
+      "name": "Question Paper Generation & Mock Test",
+      "slug": "question-paper-generation-and-mock-test",
+      "type": "Business",
+      "folder": "modules/07-question-paper-generation-and-mock-test",
+      "feature_count": 4,
+      "total_hours": 176,
+      "features": [
+        {
+          "id": "F07-001",
+          "seq": "001",
+          "name": "Weightage & Difficulty-Based Paper Generation",
+          "slug": "weightage-and-difficulty-based-paper-generation",
+          "file": "modules/07-question-paper-generation-and-mock-test/features/F07-001-weightage-and-difficulty-based-paper-generation.md",
+          "hours": 66,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 10,
+            "API": 36,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 14,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F07-002",
+          "seq": "002",
+          "name": "Question & Option Jumbling per Candidate",
+          "slug": "question-and-option-jumbling-per-candidate",
+          "file": "modules/07-question-paper-generation-and-mock-test/features/F07-002-question-and-option-jumbling-per-candidate.md",
+          "hours": 31,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 20,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F07-003",
+          "seq": "003",
+          "name": "Sealed Paper Storage & Session Release",
+          "slug": "sealed-paper-storage-and-session-release",
+          "file": "modules/07-question-paper-generation-and-mock-test/features/F07-003-sealed-paper-storage-and-session-release.md",
+          "hours": 40,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 4,
+            "API": 24,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F07-004",
+          "seq": "004",
+          "name": "Mock Test Engine",
+          "slug": "mock-test-engine",
+          "file": "modules/07-question-paper-generation-and-mock-test/features/F07-004-mock-test-engine.md",
+          "hours": 39,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 12,
+            "API": 18,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        }
+      ]
+    },
+    {
+      "nn": "08",
+      "name": "Test Centre Operations & Candidate Validation",
+      "slug": "test-centre-operations-and-candidate-validation",
+      "type": "Business",
+      "folder": "modules/08-test-centre-operations-and-candidate-validation",
+      "feature_count": 6,
+      "total_hours": 320,
+      "features": [
+        {
+          "id": "F08-001",
+          "seq": "001",
+          "name": "Proctor Management, Authentication & Attendance",
+          "slug": "proctor-management-authentication-and-attendance",
+          "file": "modules/08-test-centre-operations-and-candidate-validation/features/F08-001-proctor-management-authentication-and-attendance.md",
+          "hours": 57,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 22,
+            "API": 24,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F08-002",
+          "seq": "002",
+          "name": "Centre Readiness Check & Session Start",
+          "slug": "centre-readiness-check-and-session-start",
+          "file": "modules/08-test-centre-operations-and-candidate-validation/features/F08-002-centre-readiness-check-and-session-start.md",
+          "hours": 58,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 18,
+            "API": 28,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F08-003",
+          "seq": "003",
+          "name": "Candidate Identity Validation & Photo Capture",
+          "slug": "candidate-identity-validation-and-photo-capture",
+          "file": "modules/08-test-centre-operations-and-candidate-validation/features/F08-003-candidate-identity-validation-and-photo-capture.md",
+          "hours": 64,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 22,
+            "API": 30,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F08-004",
+          "seq": "004",
+          "name": "Biometric & Aadhaar Authentication at Centre",
+          "slug": "biometric-and-aadhaar-authentication-at-centre",
+          "file": "modules/08-test-centre-operations-and-candidate-validation/features/F08-004-biometric-and-aadhaar-authentication-at-centre.md",
+          "hours": 56,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 10,
+            "API": 20,
+            "Database": 2,
+            "Integration": 16,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F08-005",
+          "seq": "005",
+          "name": "Seat Allocation & Hall Ticket Login Control",
+          "slug": "seat-allocation-and-hall-ticket-login-control",
+          "file": "modules/08-test-centre-operations-and-candidate-validation/features/F08-005-seat-allocation-and-hall-ticket-login-control.md",
+          "hours": 41,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 10,
+            "API": 22,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F08-006",
+          "seq": "006",
+          "name": "Attendance Sheets, Scans & Centre Incident Records",
+          "slug": "attendance-sheets-scans-and-centre-incident-records",
+          "file": "modules/08-test-centre-operations-and-candidate-validation/features/F08-006-attendance-sheets-scans-and-centre-incident-records.md",
+          "hours": 44,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 14,
+            "API": 22,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 2
+          }
+        }
+      ]
+    },
+    {
+      "nn": "09",
+      "name": "Online Examination Engine",
+      "slug": "online-examination-engine",
+      "type": "Business",
+      "folder": "modules/09-online-examination-engine",
+      "feature_count": 7,
+      "total_hours": 474,
+      "features": [
+        {
+          "id": "F09-001",
+          "seq": "001",
+          "name": "Secure Test Login & Language Selection",
+          "slug": "secure-test-login-and-language-selection",
+          "file": "modules/09-online-examination-engine/features/F09-001-secure-test-login-and-language-selection.md",
+          "hours": 52,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 16,
+            "API": 24,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F09-002",
+          "seq": "002",
+          "name": "Rich MCQ Delivery & Navigation",
+          "slug": "rich-mcq-delivery-and-navigation",
+          "file": "modules/09-online-examination-engine/features/F09-002-rich-mcq-delivery-and-navigation.md",
+          "hours": 90,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 54,
+            "API": 18,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 14,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F09-003",
+          "seq": "003",
+          "name": "Server-Synchronised Timer & Disruption Compensation",
+          "slug": "server-synchronised-timer-and-disruption-compensation",
+          "file": "modules/09-online-examination-engine/features/F09-003-server-synchronised-timer-and-disruption-compensation.md",
+          "hours": 60,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 16,
+            "API": 32,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F09-004",
+          "seq": "004",
+          "name": "English & Kannada Typing Test",
+          "slug": "english-and-kannada-typing-test",
+          "file": "modules/09-online-examination-engine/features/F09-004-english-and-kannada-typing-test.md",
+          "hours": 66,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 28,
+            "API": 26,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F09-005",
+          "seq": "005",
+          "name": "Response Autosave & Answer Integrity",
+          "slug": "response-autosave-and-answer-integrity",
+          "file": "modules/09-online-examination-engine/features/F09-005-response-autosave-and-answer-integrity.md",
+          "hours": 64,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 6,
+            "API": 36,
+            "Database": 6,
+            "Integration": 0,
+            "Testing": 14,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F09-006",
+          "seq": "006",
+          "name": "Submission, Early Exit & Immediate Score",
+          "slug": "submission-early-exit-and-immediate-score",
+          "file": "modules/09-online-examination-engine/features/F09-006-submission-early-exit-and-immediate-score.md",
+          "hours": 35,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 10,
+            "API": 16,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F09-007",
+          "seq": "007",
+          "name": "Secure Exam Client & Device Compatibility",
+          "slug": "secure-exam-client-and-device-compatibility",
+          "file": "modules/09-online-examination-engine/features/F09-007-secure-exam-client-and-device-compatibility.md",
+          "hours": 107,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 14,
+            "API": 26,
+            "Database": 2,
+            "Integration": 40,
+            "Testing": 20,
+            "Documentation": 5
+          }
+        }
+      ]
+    },
+    {
+      "nn": "10",
+      "name": "Screen Proctoring & Malpractice Management",
+      "slug": "screen-proctoring-and-malpractice-management",
+      "type": "Business",
+      "folder": "modules/10-screen-proctoring-and-malpractice-management",
+      "feature_count": 6,
+      "total_hours": 391,
+      "features": [
+        {
+          "id": "F10-001",
+          "seq": "001",
+          "name": "Continuous Screen Recording",
+          "slug": "continuous-screen-recording",
+          "file": "modules/10-screen-proctoring-and-malpractice-management/features/F10-001-continuous-screen-recording.md",
+          "hours": 62,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 6,
+            "API": 26,
+            "Database": 4,
+            "Integration": 16,
+            "Testing": 8,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F10-002",
+          "seq": "002",
+          "name": "Webcam Recording & Automated Monitoring",
+          "slug": "webcam-recording-and-automated-monitoring",
+          "file": "modules/10-screen-proctoring-and-malpractice-management/features/F10-002-webcam-recording-and-automated-monitoring.md",
+          "hours": 88,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 10,
+            "API": 32,
+            "Database": 4,
+            "Integration": 24,
+            "Testing": 16,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F10-003",
+          "seq": "003",
+          "name": "Browser Activity & Tab-Switch Detection",
+          "slug": "browser-activity-and-tab-switch-detection",
+          "file": "modules/10-screen-proctoring-and-malpractice-management/features/F10-003-browser-activity-and-tab-switch-detection.md",
+          "hours": 35,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 8,
+            "API": 16,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F10-004",
+          "seq": "004",
+          "name": "Real-Time Suspicious Activity Alerts",
+          "slug": "real-time-suspicious-activity-alerts",
+          "file": "modules/10-screen-proctoring-and-malpractice-management/features/F10-004-real-time-suspicious-activity-alerts.md",
+          "hours": 68,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 30,
+            "API": 26,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F10-005",
+          "seq": "005",
+          "name": "Malpractice Case Management & Reports",
+          "slug": "malpractice-case-management-and-reports",
+          "file": "modules/10-screen-proctoring-and-malpractice-management/features/F10-005-malpractice-case-management-and-reports.md",
+          "hours": 72,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 30,
+            "API": 30,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F10-006",
+          "seq": "006",
+          "name": "Recording Storage, Playback & Retention",
+          "slug": "recording-storage-playback-and-retention",
+          "file": "modules/10-screen-proctoring-and-malpractice-management/features/F10-006-recording-storage-playback-and-retention.md",
+          "hours": 66,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 28,
+            "API": 28,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        }
+      ]
+    },
+    {
+      "nn": "11",
+      "name": "Evaluation, Results & Digital Certification",
+      "slug": "evaluation-results-and-digital-certification",
+      "type": "Business",
+      "folder": "modules/11-evaluation-results-and-digital-certification",
+      "feature_count": 6,
+      "total_hours": 253,
+      "features": [
+        {
+          "id": "F11-001",
+          "seq": "001",
+          "name": "Automatic MCQ & Typing Evaluation",
+          "slug": "automatic-mcq-and-typing-evaluation",
+          "file": "modules/11-evaluation-results-and-digital-certification/features/F11-001-automatic-mcq-and-typing-evaluation.md",
+          "hours": 50,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 10,
+            "API": 26,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F11-002",
+          "seq": "002",
+          "name": "Answer Key Challenge",
+          "slug": "answer-key-challenge",
+          "file": "modules/11-evaluation-results-and-digital-certification/features/F11-002-answer-key-challenge.md",
+          "hours": 52,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 20,
+            "API": 22,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F11-003",
+          "seq": "003",
+          "name": "Result Finalisation & Signed Submission",
+          "slug": "result-finalisation-and-signed-submission",
+          "file": "modules/11-evaluation-results-and-digital-certification/features/F11-003-result-finalisation-and-signed-submission.md",
+          "hours": 50,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 16,
+            "API": 24,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F11-004",
+          "seq": "004",
+          "name": "Digitally Signed Certificate Generation",
+          "slug": "digitally-signed-certificate-generation",
+          "file": "modules/11-evaluation-results-and-digital-certification/features/F11-004-digitally-signed-certificate-generation.md",
+          "hours": 42,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 10,
+            "API": 22,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F11-005",
+          "seq": "005",
+          "name": "Certificate Issue Workflow & Download",
+          "slug": "certificate-issue-workflow-and-download",
+          "file": "modules/11-evaluation-results-and-digital-certification/features/F11-005-certificate-issue-workflow-and-download.md",
+          "hours": 39,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 12,
+            "API": 18,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F11-006",
+          "seq": "006",
+          "name": "Public Certificate Verification",
+          "slug": "public-certificate-verification",
+          "file": "modules/11-evaluation-results-and-digital-certification/features/F11-006-public-certificate-verification.md",
+          "hours": 20,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 8,
+            "API": 6,
+            "Database": 1,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        }
+      ]
+    },
+    {
+      "nn": "12",
+      "name": "Central Monitoring Centre & Examination Monitoring Unit",
+      "slug": "central-monitoring-centre-and-examination-monitoring-unit",
+      "type": "Business",
+      "folder": "modules/12-central-monitoring-centre-and-examination-monitoring-unit",
+      "feature_count": 4,
+      "total_hours": 219,
+      "features": [
+        {
+          "id": "F12-001",
+          "seq": "001",
+          "name": "Real-Time Centre & Session Monitoring",
+          "slug": "real-time-centre-and-session-monitoring",
+          "file": "modules/12-central-monitoring-centre-and-examination-monitoring-unit/features/F12-001-real-time-centre-and-session-monitoring.md",
+          "hours": 70,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 34,
+            "API": 22,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F12-002",
+          "seq": "002",
+          "name": "Exam-Day Control & Venue Change Handling",
+          "slug": "exam-day-control-and-venue-change-handling",
+          "file": "modules/12-central-monitoring-centre-and-examination-monitoring-unit/features/F12-002-exam-day-control-and-venue-change-handling.md",
+          "hours": 72,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 28,
+            "API": 32,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F12-003",
+          "seq": "003",
+          "name": "Central Monitoring Reports",
+          "slug": "central-monitoring-reports",
+          "file": "modules/12-central-monitoring-centre-and-examination-monitoring-unit/features/F12-003-central-monitoring-reports.md",
+          "hours": 37,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 6,
+            "API": 22,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F12-004",
+          "seq": "004",
+          "name": "Post-Test Wrap-Up & Archival",
+          "slug": "post-test-wrap-up-and-archival",
+          "file": "modules/12-central-monitoring-centre-and-examination-monitoring-unit/features/F12-004-post-test-wrap-up-and-archival.md",
+          "hours": 40,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 10,
+            "API": 20,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        }
+      ]
+    },
+    {
+      "nn": "13",
+      "name": "MIS, Dashboards & Reports",
+      "slug": "mis-dashboards-and-reports",
+      "type": "Business",
+      "folder": "modules/13-mis-dashboards-and-reports",
+      "feature_count": 4,
+      "total_hours": 181,
+      "features": [
+        {
+          "id": "F13-001",
+          "seq": "001",
+          "name": "Management Dashboard",
+          "slug": "management-dashboard",
+          "file": "modules/13-mis-dashboards-and-reports/features/F13-001-management-dashboard.md",
+          "hours": 44,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 18,
+            "API": 14,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F13-002",
+          "seq": "002",
+          "name": "Registration, Test & Result MIS Reports",
+          "slug": "registration-test-and-result-mis-reports",
+          "file": "modules/13-mis-dashboards-and-reports/features/F13-002-registration-test-and-result-mis-reports.md",
+          "hours": 66,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 20,
+            "API": 34,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F13-003",
+          "seq": "003",
+          "name": "Question Bank Quarterly Reports",
+          "slug": "question-bank-quarterly-reports",
+          "file": "modules/13-mis-dashboards-and-reports/features/F13-003-question-bank-quarterly-reports.md",
+          "hours": 25,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 6,
+            "API": 12,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F13-004",
+          "seq": "004",
+          "name": "Data Retrieval & Query Tool",
+          "slug": "data-retrieval-and-query-tool",
+          "file": "modules/13-mis-dashboards-and-reports/features/F13-004-data-retrieval-and-query-tool.md",
+          "hours": 46,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 16,
+            "API": 16,
+            "Database": 6,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        }
+      ]
+    },
+    {
+      "nn": "14",
+      "name": "Notifications & Helpdesk",
+      "slug": "notifications-and-helpdesk",
+      "type": "Shared",
+      "folder": "modules/14-notifications-and-helpdesk",
+      "feature_count": 4,
+      "total_hours": 192,
+      "features": [
+        {
+          "id": "F14-001",
+          "seq": "001",
+          "name": "Notification Templates & Event Engine",
+          "slug": "notification-templates-and-event-engine",
+          "file": "modules/14-notifications-and-helpdesk/features/F14-001-notification-templates-and-event-engine.md",
+          "hours": 48,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 16,
+            "API": 22,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F14-002",
+          "seq": "002",
+          "name": "E-mail & SMS Gateway Integration",
+          "slug": "e-mail-and-sms-gateway-integration",
+          "file": "modules/14-notifications-and-helpdesk/features/F14-002-e-mail-and-sms-gateway-integration.md",
+          "hours": 57,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 4,
+            "API": 20,
+            "Database": 2,
+            "Integration": 24,
+            "Testing": 6,
+            "Documentation": 1
+          }
+        },
+        {
+          "id": "F14-003",
+          "seq": "003",
+          "name": "Helpdesk Ticketing & Call Logging",
+          "slug": "helpdesk-ticketing-and-call-logging",
+          "file": "modules/14-notifications-and-helpdesk/features/F14-003-helpdesk-ticketing-and-call-logging.md",
+          "hours": 60,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 26,
+            "API": 22,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F14-004",
+          "seq": "004",
+          "name": "Notification Delivery Log",
+          "slug": "notification-delivery-log",
+          "file": "modules/14-notifications-and-helpdesk/features/F14-004-notification-delivery-log.md",
+          "hours": 27,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 8,
+            "API": 12,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 4,
+            "Documentation": 1
+          }
+        }
+      ]
+    },
+    {
+      "nn": "15",
+      "name": "Integration Hub",
+      "slug": "integration-hub",
+      "type": "Technical",
+      "folder": "modules/15-integration-hub",
+      "feature_count": 6,
+      "total_hours": 393,
+      "features": [
+        {
+          "id": "F15-001",
+          "seq": "001",
+          "name": "Integration Framework & Monitoring",
+          "slug": "integration-framework-and-monitoring",
+          "file": "modules/15-integration-hub/features/F15-001-integration-framework-and-monitoring.md",
+          "hours": 57,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 18,
+            "API": 24,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F15-002",
+          "seq": "002",
+          "name": "HRMS Integration",
+          "slug": "hrms-integration",
+          "file": "modules/15-integration-hub/features/F15-002-hrms-integration.md",
+          "hours": 82,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 4,
+            "API": 18,
+            "Database": 2,
+            "Integration": 48,
+            "Testing": 8,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F15-003",
+          "seq": "003",
+          "name": "Aadhaar Authentication & eKYC Integration",
+          "slug": "aadhaar-authentication-and-ekyc-integration",
+          "file": "modules/15-integration-hub/features/F15-003-aadhaar-authentication-and-ekyc-integration.md",
+          "hours": 76,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 24,
+            "Database": 2,
+            "Integration": 40,
+            "Testing": 8,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F15-004",
+          "seq": "004",
+          "name": "Payment Gateway Integration",
+          "slug": "payment-gateway-integration",
+          "file": "modules/15-integration-hub/features/F15-004-payment-gateway-integration.md",
+          "hours": 56,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 20,
+            "Database": 2,
+            "Integration": 24,
+            "Testing": 8,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F15-005",
+          "seq": "005",
+          "name": "HSM Key Management Integration",
+          "slug": "hsm-key-management-integration",
+          "file": "modules/15-integration-hub/features/F15-005-hsm-key-management-integration.md",
+          "hours": 68,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 6,
+            "API": 26,
+            "Database": 2,
+            "Integration": 24,
+            "Testing": 8,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F15-006",
+          "seq": "006",
+          "name": "DSC & e-Sign Integration",
+          "slug": "dsc-and-e-sign-integration",
+          "file": "modules/15-integration-hub/features/F15-006-dsc-and-e-sign-integration.md",
+          "hours": 54,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 4,
+            "API": 16,
+            "Database": 2,
+            "Integration": 24,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        }
+      ]
+    },
+    {
+      "nn": "16",
+      "name": "Security, Audit & Compliance",
+      "slug": "security-audit-and-compliance",
+      "type": "Technical",
+      "folder": "modules/16-security-audit-and-compliance",
+      "feature_count": 4,
+      "total_hours": 185,
+      "features": [
+        {
+          "id": "F16-001",
+          "seq": "001",
+          "name": "Data Encryption & Key Management",
+          "slug": "data-encryption-and-key-management",
+          "file": "modules/16-security-audit-and-compliance/features/F16-001-data-encryption-and-key-management.md",
+          "hours": 37,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 4,
+            "API": 18,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F16-002",
+          "seq": "002",
+          "name": "Tamper-Evident Audit Trail",
+          "slug": "tamper-evident-audit-trail",
+          "file": "modules/16-security-audit-and-compliance/features/F16-002-tamper-evident-audit-trail.md",
+          "hours": 59,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 10,
+            "API": 32,
+            "Database": 6,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F16-003",
+          "seq": "003",
+          "name": "Application Security & Safe-to-Host Support",
+          "slug": "application-security-and-safe-to-host-support",
+          "file": "modules/16-security-audit-and-compliance/features/F16-003-application-security-and-safe-to-host-support.md",
+          "hours": 39,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 4,
+            "API": 16,
+            "Database": 1,
+            "Integration": 0,
+            "Testing": 12,
+            "Documentation": 6
+          }
+        },
+        {
+          "id": "F16-004",
+          "seq": "004",
+          "name": "DPDP Compliance & Aadhaar Data Vault",
+          "slug": "dpdp-compliance-and-aadhaar-data-vault",
+          "file": "modules/16-security-audit-and-compliance/features/F16-004-dpdp-compliance-and-aadhaar-data-vault.md",
+          "hours": 50,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 14,
+            "API": 24,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        }
+      ]
+    },
+    {
+      "nn": "17",
+      "name": "Platform, Performance & Operations",
+      "slug": "platform-performance-and-operations",
+      "type": "Technical",
+      "folder": "modules/17-platform-performance-and-operations",
+      "feature_count": 4,
+      "total_hours": 159,
+      "features": [
+        {
+          "id": "F17-001",
+          "seq": "001",
+          "name": "SDC Deployment, Hardening & Release Management",
+          "slug": "sdc-deployment-hardening-and-release-management",
+          "file": "modules/17-platform-performance-and-operations/features/F17-001-sdc-deployment-hardening-and-release-management.md",
+          "hours": 38,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 4,
+            "API": 20,
+            "Database": 1,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 7
+          }
+        },
+        {
+          "id": "F17-002",
+          "seq": "002",
+          "name": "Scalability & Load Testing for 2,000 Concurrent Candidates",
+          "slug": "scalability-and-load-testing-for-2-000-concurrent-candidates",
+          "file": "modules/17-platform-performance-and-operations/features/F17-002-scalability-and-load-testing-for-2-000-concurrent-candidates.md",
+          "hours": 50,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 0,
+            "API": 22,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 20,
+            "Documentation": 4
+          }
+        },
+        {
+          "id": "F17-003",
+          "seq": "003",
+          "name": "Backup, Restore & Data Retention",
+          "slug": "backup-restore-and-data-retention",
+          "file": "modules/17-platform-performance-and-operations/features/F17-003-backup-restore-and-data-retention.md",
+          "hours": 25,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 4,
+            "API": 12,
+            "Database": 1,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        },
+        {
+          "id": "F17-004",
+          "seq": "004",
+          "name": "Availability Monitoring & SLA Reporting",
+          "slug": "availability-monitoring-and-sla-reporting",
+          "file": "modules/17-platform-performance-and-operations/features/F17-004-availability-monitoring-and-sla-reporting.md",
+          "hours": 46,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 18,
+            "API": 18,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        }
+      ]
+    },
+    {
+      "nn": "18",
+      "name": "Legacy CLT Data Porting",
+      "slug": "legacy-clt-data-porting",
+      "type": "Technical",
+      "folder": "modules/18-legacy-clt-data-porting",
+      "feature_count": 2,
+      "total_hours": 83,
+      "features": [
+        {
+          "id": "F18-001",
+          "seq": "001",
+          "name": "Legacy Data Templates & Porting",
+          "slug": "legacy-data-templates-and-porting",
+          "file": "modules/18-legacy-clt-data-porting/features/F18-001-legacy-data-templates-and-porting.md",
+          "hours": 53,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 12,
+            "API": 26,
+            "Database": 4,
+            "Integration": 0,
+            "Testing": 8,
+            "Documentation": 3
+          }
+        },
+        {
+          "id": "F18-002",
+          "seq": "002",
+          "name": "Ported Data Validation & Reconciliation",
+          "slug": "ported-data-validation-and-reconciliation",
+          "file": "modules/18-legacy-clt-data-porting/features/F18-002-ported-data-validation-and-reconciliation.md",
+          "hours": 30,
+          "notes": "Go-live",
+          "areas": {
+            "UI": 10,
+            "API": 10,
+            "Database": 2,
+            "Integration": 0,
+            "Testing": 6,
+            "Documentation": 2
+          }
+        }
+      ]
+    }
+  ]
+}
